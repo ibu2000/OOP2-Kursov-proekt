@@ -16,4 +16,6 @@ module bg.tu_varna.sit.library {
     opens bg.tu_varna.sit.library.application to javafx.fxml;
     exports bg.tu_varna.sit.library.presentation;
     opens bg.tu_varna.sit.library.presentation to javafx.fxml;
+    exports bg.tu_varna.sit.library.presentation.controllers;
+    opens bg.tu_varna.sit.library.presentation.controllers to javafx.fxml;
 }
