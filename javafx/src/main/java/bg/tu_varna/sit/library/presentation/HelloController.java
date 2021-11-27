@@ -1,4 +1,4 @@
-package bg.tu_varna.sit.library;
+package bg.tu_varna.sit.library.presentation;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
