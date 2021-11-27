@@ -12,4 +12,6 @@ module bg.tuvarna.sit.library {
 
     opens bg.tuvarna.sit.library to javafx.fxml;
     exports bg.tuvarna.sit.library;
+    exports bg.tuvarna.sit.library.application;
+    opens bg.tuvarna.sit.library.application to javafx.fxml;
 }

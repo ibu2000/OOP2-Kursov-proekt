@@ -1,4 +1,4 @@
-package bg.tuvarna.sit.library;
+package bg.tuvarna.sit.library.application;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
