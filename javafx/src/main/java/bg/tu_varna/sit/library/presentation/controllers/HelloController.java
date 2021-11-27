@@ -20,6 +20,12 @@ public class HelloController implements EventHandler<MouseEvent> {
         this.model = new HelloModel();
     }
 
+    @FXML
+    private void initialize()
+    {
+        helloButton.setOnMouseClicked(this::handle);
+    }
+
     @Override
     public void handle(MouseEvent mouseEvent) {
     welcomeText.setText(model.getWelcomeMessage());
