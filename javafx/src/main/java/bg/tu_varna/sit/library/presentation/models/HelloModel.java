@@ -5,7 +5,7 @@ public class HelloModel {
     private final String welcomeMessage;
     public  HelloModel ()
     {
-        this.welcomeMessage="Hello SIT I am Javafx Project";
+        this.welcomeMessage="Hello, SIT, I am Javafx Project";
     }
 
     public String getWelcomeMessage() {
