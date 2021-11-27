@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 public class HelloController implements EventHandler<MouseEvent> {
     @FXML
     private Label welcomeText;
+
     @FXML
     private Button helloButton;
 
@@ -17,11 +18,6 @@ public class HelloController implements EventHandler<MouseEvent> {
 
     public HelloController() {
         this.model = new HelloModel();
-    }
-    @FXML
-    private void initialize()
-    {
-        helloButton.setOnMouseClicked(this::handle);
     }
 
     @Override
