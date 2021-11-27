@@ -1,4 +1,4 @@
-package teodora_trifonova_ivelin_belinov.library;
+package teodora_trifonova_ivelin_belinov.library.presentation.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

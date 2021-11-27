@@ -14,4 +14,8 @@ module teodora_trifonova_ivelin_belinov.library {
     exports teodora_trifonova_ivelin_belinov.library;
     exports teodora_trifonova_ivelin_belinov.library.application;
     opens teodora_trifonova_ivelin_belinov.library.application to javafx.fxml;
+    exports teodora_trifonova_ivelin_belinov.library.presentation;
+    opens teodora_trifonova_ivelin_belinov.library.presentation to javafx.fxml;
+    exports teodora_trifonova_ivelin_belinov.library.presentation.controllers;
+    opens teodora_trifonova_ivelin_belinov.library.presentation.controllers to javafx.fxml;
 }
