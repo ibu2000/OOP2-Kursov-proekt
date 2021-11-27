@@ -113,7 +113,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                teodora_trifonova_ivelin_belinov.library/teodora_trifonova_ivelin_belinov.library.HelloApplication
+                                teodora_trifonova_ivelin_belinov.library/teodora_trifonova_ivelin_belinov.library.application.HelloApplication
                             </mainClass>
                         </configuration>
                     </execution>

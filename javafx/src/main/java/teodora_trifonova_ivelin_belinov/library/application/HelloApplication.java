@@ -1,4 +1,4 @@
-package teodora_trifonova_ivelin_belinov.library;
+package teodora_trifonova_ivelin_belinov.library.application;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
