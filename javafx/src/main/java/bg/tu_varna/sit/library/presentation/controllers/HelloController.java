@@ -40,8 +40,8 @@ public class HelloController implements EventHandler<MouseEvent> {
     {
     welcomeText.setText(model.getWelcomeMessage());
 
-    ObservableList<TaskListViewModel> tasklistViewModels = service.getAllTask();
-    listView.setItems(tasklistViewModels);
+    ObservableList<TaskListViewModel> taskListViewModels = service.getAllTask();
+    listView.setItems(taskListViewModels);
     }
 
 
