@@ -11,6 +11,7 @@ module bg.tu_varna.sit.library {
     requires eu.hansolo.tilesfx;
     requires log4j;
     requires org.hibernate.orm.core;
+    requires java.persistence;
 
     exports bg.tu_varna.sit.library.application;
     opens bg.tu_varna.sit.library.application to javafx.fxml;

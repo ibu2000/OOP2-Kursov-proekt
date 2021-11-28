@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.library.data.access;
 import org.apache.log4j.Logger;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -19,4 +20,16 @@ public class Connection {
             log.error("Initial SessionFactory created failed" + ex);
         }
     }
+
+    public static Session openSession()
+    {
+        return sessionFactory.openSession();
+    }
+
+
+    public static void openSessionClose()
+    {
+        sessionFactory.close();
+    }
+
 }
