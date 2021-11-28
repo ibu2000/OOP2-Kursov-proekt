@@ -21,7 +21,8 @@ public class Task implements Serializable
     @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "userId", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "userId", nullable = false)
     private User user;
 
     public long getId() {
