@@ -14,7 +14,7 @@ public class TaskRepository implements DAORepository<Task>{
 
     private static final Logger log = Logger.getLogger(TaskRepository.class);
 
-    private static TaskRepository getInstance() {return TaskRepository.TaskRepositoryHolder.INSTANCE;}
+    public static TaskRepository getInstance() {return TaskRepository.TaskRepositoryHolder.INSTANCE;}
 
     private static class TaskRepositoryHolder {
         public static final TaskRepository INSTANCE =new TaskRepository() ;
