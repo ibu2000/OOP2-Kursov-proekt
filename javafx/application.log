@@ -1,2 +1,8 @@
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.application.HelloApplication  - Sorry, the main fxml could not be loaded
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.application.HelloApplication  - Sorry, the main fxml could not be loaded
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedjava.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.internal.util.config.ConfigurationException: Could not locate cfg.xml resource [hibernate.cfg.xml]
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]

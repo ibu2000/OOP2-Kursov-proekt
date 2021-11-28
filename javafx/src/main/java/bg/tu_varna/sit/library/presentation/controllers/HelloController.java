@@ -3,6 +3,7 @@ package bg.tu_varna.sit.library.presentation.controllers;
 import bg.tu_varna.sit.library.buisness.services.TaskService;
 import bg.tu_varna.sit.library.presentation.TaskListViewModel;
 import bg.tu_varna.sit.library.presentation.models.HelloModel;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -38,7 +39,9 @@ public class HelloController implements EventHandler<MouseEvent> {
     public void handle(MouseEvent mouseEvent)
     {
     welcomeText.setText(model.getWelcomeMessage());
-    service.getAllTask();
+
+    ObservableList<TaskListViewModel> tasklistViewModels = service.getAllTask();
+    listView.setItems(tasklistViewModels);
     }
 
 

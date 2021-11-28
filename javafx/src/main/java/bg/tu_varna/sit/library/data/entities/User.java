@@ -19,7 +19,7 @@ public class User {
     private String lastName;
 
     @Column(name = "userName", nullable = false)
-    private User userName;
+    private String userName;
     @OneToMany(mappedBy = "user")
     private Set<Task> taskSet;
 
@@ -47,11 +47,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public User getUserName() {
+    public String getUserName() {
         return userName;
     }
 
-    public void setUserName(User userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 

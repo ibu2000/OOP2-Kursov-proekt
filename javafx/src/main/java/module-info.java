@@ -13,6 +13,15 @@ module bg.tu_varna.sit.library {
     requires org.hibernate.orm.core;
     requires java.persistence;
 
+    requires java.naming;
+    requires java.sql;
+
+    opens bg.tu_varna.sit.library.data.entities to org.hibernate.orm.core;
+    exports bg.tu_varna.sit.library.data.entities;
+
+    opens bg.tu_varna.sit.library.data.access to org.hibernate.orm.core;
+    exports bg.tu_varna.sit.library.data.access;
+
     exports bg.tu_varna.sit.library.application;
     opens bg.tu_varna.sit.library.application to javafx.fxml;
 
