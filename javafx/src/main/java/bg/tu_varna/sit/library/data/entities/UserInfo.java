@@ -9,7 +9,9 @@ import javax.persistence.*;
 public class UserInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name = "idUser", nullable = false)
+    @OneToOne(mappedBy = "idUser")
     private long idUser;
 
     @Column(name = "name", nullable = false)

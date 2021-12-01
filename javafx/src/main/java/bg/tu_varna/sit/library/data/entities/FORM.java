@@ -16,5 +16,6 @@ public class FORM {
     private Date submitionDate;
     
     @Column(name = "USER_idUser", nullable = false)
+    @OneToOne(mappedBy = "idUser")
     private long USER_idUser;
 }
