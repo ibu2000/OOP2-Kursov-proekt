@@ -14,3 +14,4 @@
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.repositories.TaskRepository  - Get Task Error: org.hibernate.hql.internal.ast.QuerySyntaxException: TASK is not mapped [SELECT t FROM TASK t]
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.repositories.TaskRepository  - Get Task Error: org.hibernate.hql.internal.ast.QuerySyntaxException: TASK is not mapped [SELECT t FROM TASK t]
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.repositories.TaskRepository  - Get Task Error: org.hibernate.hql.internal.ast.QuerySyntaxException: TASK is not mapped [SELECT t FROM TASK t]
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
