@@ -15,5 +15,6 @@ public class FORM {
     @Column(name = "submitionDate", nullable = false)
     private Date submitionDate;
     
-
+    @Column(name = "USER_idUser", nullable = false)
+    private long USER_idUser;
 }
