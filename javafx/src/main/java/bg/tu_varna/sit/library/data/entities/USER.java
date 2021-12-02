@@ -1,7 +1,7 @@
 package bg.tu_varna.sit.library.data.entities;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Table(name = "USER")
 @Entity

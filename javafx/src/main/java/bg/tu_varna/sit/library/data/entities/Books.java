@@ -22,7 +22,7 @@ public class Books {
     private String genre;
 
     @Column(name = "yearOfPublishing", nullable = false)
-    private Date yearOfPublishing;
+    private java.util.Date yearOfPublishing;
 
     @Column(name = "isItArchived", nullable = false)
     private boolean isitArchived;
@@ -59,8 +59,12 @@ public class Books {
         this.genre = genre;
     }
 
-    public Date getYearOfPublishing() {
+    public java.util.Date getYearOfPublishing() {
         return yearOfPublishing;
+    }
+
+    public void setYearOfPublishing(java.util.Date yearOfPublishing) {
+        this.yearOfPublishing = yearOfPublishing;
     }
 
     public void setYearOfPublishing(Date yearOfPublishing) {
