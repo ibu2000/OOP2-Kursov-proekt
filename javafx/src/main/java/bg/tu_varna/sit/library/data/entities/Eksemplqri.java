@@ -10,14 +10,13 @@ public class Eksemplqri {
     @Column(name = "isbnUnikalenNomer", nullable = false)
     private long isbnUnikalenNomer;
 
+    @Column(name = "BOOKS_idBook", nullable = false)
+    @OneToOne(mappedBy = "id_Book")
+    private long idBook;
 
-  @OneToOne(cascade = CascadeType.ALL)
-  @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "idBook", nullable = false)
-  private long idBook;
-
-   @OneToOne(cascade = CascadeType.ALL)
-   @JoinColumn(name = "STATEOFBOOKS_idState", referencedColumnName = "idState")
-   private String exsemplqri_stateOfBooks;
+    @Column(name = "STATEOFBOOKS_idState", nullable = false)
+    @OneToOne(mappedBy = "idState")
+    private String exsemplqri_stateOfBooks;
 
     public long getIsbnUnikalenNomer() {
         return isbnUnikalenNomer;

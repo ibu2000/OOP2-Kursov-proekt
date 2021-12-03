@@ -15,10 +15,9 @@ public class LENDBOOKS {
     @Column(name = "dateOfTaking",nullable = false)
     private Date dateOfTaking;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "USER_idUser",referencedColumnName = "idUser")
+    @Column(name = "USER_idUser",nullable = false)
+    @OneToOne(mappedBy = "idUser")
     private long USER_idUser;
-
 
     public long getIdLendBook() {
         return idLendBook;

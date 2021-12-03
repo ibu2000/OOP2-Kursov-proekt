@@ -25,17 +25,16 @@ public class USER {
     @Column(name = "rating", nullable = false)
     private String rating;
 
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "USERTYEPE_idUserType",referencedColumnName = "idUserType",nullable = false)
+    @Column(name = "USERTYEPE_idUserType",nullable = false)
+    @OneToOne(mappedBy = "idUserType")
     private long USERTYEPE_idUserType;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "STATUS_idStatus",referencedColumnName = "idStatus",nullable = false)
+    @Column(name = "STATUS_idStatus",nullable = false)
+    @OneToOne(mappedBy = "idStatus")
     private long STATUS_idStatus;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "LENDBOOKS_idLendBook",referencedColumnName = "idLendBook",nullable = false)
+    @Column(name = "LENDBOOKS_idLendBook",nullable = false)
+    @OneToOne(mappedBy = "idLendBook")
     private long LENDBOOKS_idLendBook;
 
 

@@ -1,6 +1,6 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
-//import bg.tu_varna.sit.library.buisness.services.TaskService;
+import bg.tu_varna.sit.library.buisness.services.TaskService;
 import bg.tu_varna.sit.library.presentation.TaskListViewModel;
 import bg.tu_varna.sit.library.presentation.models.HelloModel;
 import javafx.collections.ObservableList;
@@ -13,7 +13,7 @@ import javafx.scene.input.MouseEvent;
 
 public class HelloController implements EventHandler<MouseEvent> {
 
-   // private final TaskService service = TaskService.getInstance();
+    private final TaskService service = TaskService.getInstance();
     @FXML
     private Label welcomeText;
 
@@ -40,8 +40,8 @@ public class HelloController implements EventHandler<MouseEvent> {
     {
     welcomeText.setText(model.getWelcomeMessage());
 
-   // ObservableList<TaskListViewModel> taskListViewModels = service.getAllTask();
-//   listView.setItems(taskListViewModels);
+    ObservableList<TaskListViewModel> taskListViewModels = service.getAllTask();
+    listView.setItems(taskListViewModels);
     }
 
 
