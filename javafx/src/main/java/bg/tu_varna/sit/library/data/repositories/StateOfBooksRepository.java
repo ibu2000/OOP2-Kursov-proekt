@@ -2,7 +2,6 @@ package bg.tu_varna.sit.library.data.repositories;
 
 import bg.tu_varna.sit.library.data.access.Connection;
 import bg.tu_varna.sit.library.data.entities.StateOfBooks;
-import bg.tu_varna.sit.library.data.entities.UserType;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
