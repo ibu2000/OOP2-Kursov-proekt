@@ -1,4 +1,4 @@
-package bg.tu_varna.sit.library.data.repositories;
+/*package bg.tu_varna.sit.library.data.repositories;
 
 import bg.tu_varna.sit.library.data.access.Connection;
 import bg.tu_varna.sit.library.data.entities.User;
@@ -59,3 +59,4 @@ public class UserRepository implements DAORepository<User> {
 
 
 }
+*/

@@ -1,4 +1,4 @@
-package bg.tu_varna.sit.library.data.repositories;
+/*package bg.tu_varna.sit.library.data.repositories;
 
 import bg.tu_varna.sit.library.data.access.Connection;
 import bg.tu_varna.sit.library.data.entities.Task;
@@ -56,3 +56,4 @@ public class TaskRepository implements DAORepository<Task>{
         return tasks;
         }
     }
+*/
