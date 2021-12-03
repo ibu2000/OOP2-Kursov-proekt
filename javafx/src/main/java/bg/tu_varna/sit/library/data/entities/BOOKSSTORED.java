@@ -9,8 +9,8 @@ public class BOOKSSTORED {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "BOOKS_idBook",nullable = false)
-    @OneToOne(mappedBy = "idBook")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "idBook", nullable = false)
     private long BOOKS_idBook;
 
     @Column(name = "total")

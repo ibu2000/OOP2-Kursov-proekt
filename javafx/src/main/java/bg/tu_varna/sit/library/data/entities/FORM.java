@@ -15,7 +15,9 @@ public class FORM {
     @Column(name = "submitionDate", nullable = false)
     private Date submitionDate;
     
-    @Column(name = "USER_idUser", nullable = false)
-    @OneToOne(mappedBy = "idUser")
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "USER_idUser", referencedColumnName = "idUser")
     private long USER_idUser;
+
 }
