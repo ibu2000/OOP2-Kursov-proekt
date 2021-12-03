@@ -21,14 +21,51 @@ public class StatusRepository implements DAORepository<Status> {
 
     @Override
     public void save(Status obj) {
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.save(obj);
+            log.info("Status saved successfully");
+        }catch (Exception e)
+        {
+            log.error("Status save error" + e.getMessage());
+        }finally {
+            transaction.commit();
+            session.close();
+        }
     }
 
     @Override
     public void update(Status obj) {
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.update(obj);
+            log.info("Status updated successfully");
+        }catch (Exception e)
+        {
+            log.error("Status update error" + e.getMessage());
+        }finally {
+            transaction.commit();
+            session.close();
+        }
     }
 
     @Override
     public void delete(Status obj) {
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.delete(obj);
+            log.info("Status deleted successfully");
+        }catch (Exception e)
+        {
+            log.error("Status delete error" + e.getMessage());
+        }finally
+        {
+            transaction.commit();
+            session.close();
+        }
     }
 
     @Override
