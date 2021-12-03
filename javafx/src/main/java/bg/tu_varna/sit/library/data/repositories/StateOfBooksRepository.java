@@ -21,16 +21,51 @@ public class StateOfBooksRepository implements DAORepository<StateOfBooks>{
 
     @Override
     public void save(StateOfBooks obj) {
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.save(obj);
+            log.info("State of Books saved successfully");
+        }catch (Exception e)
+        {
+            log.error("State of Books save error" + e.getMessage());
+        }finally {
+            transaction.commit();
+            session.close();
+        }
     }
 
     @Override
     public void update(StateOfBooks obj) {
-
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.update(obj);
+            log.info("State of Books updated successfully");
+        }catch (Exception e)
+        {
+            log.error("State of Books update error" + e.getMessage());
+        }finally {
+            transaction.commit();
+            session.close();
+        }
     }
 
     @Override
     public void delete(StateOfBooks obj) {
-
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.delete(obj);
+            log.info("State of Books deleted successfully");
+        }catch (Exception e)
+        {
+            log.error("State of Books delete error" + e.getMessage());
+        }finally
+        {
+            transaction.commit();
+            session.close();
+        }
     }
 
     @Override
