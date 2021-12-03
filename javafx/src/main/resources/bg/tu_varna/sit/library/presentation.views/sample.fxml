@@ -11,7 +11,7 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="636.0" prefWidth="401.0" style="-fx-background-color: #FED700;">
+      <AnchorPane prefHeight="636.0" prefWidth="377.0" style="-fx-background-color: #FED700;">
          <children>
             <ImageView fitHeight="235.0" fitWidth="235.0" layoutX="62.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -29,7 +29,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="636.0" prefWidth="544.0">
+      <AnchorPane prefHeight="646.0" prefWidth="538.0">
          <children>
             <ImageView fitHeight="168.0" fitWidth="186.0" layoutX="159.0" layoutY="23.0" pickOnBounds="true">
                <image>
