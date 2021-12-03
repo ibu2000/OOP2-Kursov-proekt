@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.Query;
 import java.util.List;
 import java.util.Optional;
 
@@ -57,6 +58,10 @@ public class UserRepository implements DAORepository<USER> {
         Transaction transaction = session.beginTransaction();
         try{
             session.delete(obj);
+            Query query = session.createQuery("select username FROM USER WHERE username =: un");
+            query.setParameter("un","username1");
+            query.executeUpdate();
+            query.getResultList();
             log.info("User deleted successfully");
         }catch (Exception e)
         {

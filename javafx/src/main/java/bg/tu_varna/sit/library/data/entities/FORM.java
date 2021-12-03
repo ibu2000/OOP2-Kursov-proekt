@@ -18,6 +18,6 @@ public class FORM {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "USER_idUser", referencedColumnName = "idUser")
-    private long USER_idUser;
+    private USER USER_idUser;
 
 }
