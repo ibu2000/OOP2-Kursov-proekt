@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.library.data.repositories;
 
+import bg.tu_varna.sit.library.data.access.Connection;
 import bg.tu_varna.sit.library.data.entities.UserType;
 import bg.tu_varna.sit.library.data.entities.UserType;
 import org.apache.log4j.Logger;
@@ -23,14 +24,51 @@ public class UserTypeRepository implements DAORepository<UserType>{
 
     @Override
     public void save(UserType obj) {
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.save(obj);
+            log.info("User Type saved successfully");
+        }catch (Exception e)
+        {
+            log.error("User Type save error" + e.getMessage());
+        }finally {
+            transaction.commit();
+            session.close();
+        }
     }
 
     @Override
     public void update(UserType obj) {
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.update(obj);
+            log.info("User Type updated successfully");
+        }catch (Exception e)
+        {
+            log.error("User Type update error" + e.getMessage());
+        }finally {
+            transaction.commit();
+            session.close();
+        }
     }
 
     @Override
     public void delete(UserType obj) {
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.delete(obj);
+            log.info("User Type deleted successfully");
+        }catch (Exception e)
+        {
+            log.error("User Type delete error" + e.getMessage());
+        }finally
+        {
+            transaction.commit();
+            session.close();
+        }
     }
 
     @Override
