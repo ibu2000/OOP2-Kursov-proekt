@@ -11,13 +11,14 @@ public class LENDINFO {
     @Column(name = "idLendingInfo",nullable = false)
     private long idLendingInfo;
 
-    @Column(name = "BOOKS_idBook",nullable = false)
-    @OneToOne(mappedBy = "idBook")
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "idBook",nullable = false)
     private long BOOKS_idBook;
 
 
-        @Column(name = "LENDBOOKS_idLendBook",nullable = false)
-    @OneToOne(mappedBy = "idLendBook")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "LENDBOOKS_idLendBook",referencedColumnName = "idLendBook",nullable = false)
     private long LENDBOOKS_idLendBook;
 
 

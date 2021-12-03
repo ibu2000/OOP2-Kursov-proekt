@@ -1,15 +1,12 @@
-/*package bg.tu_varna.sit.library.data.repositories;
+package bg.tu_varna.sit.library.data.repositories;
 
-import bg.tu_varna.sit.library.data.access.Connection;
-import bg.tu_varna.sit.library.data.entities.User;
+import bg.tu_varna.sit.library.data.entities.USER;
 import org.apache.log4j.Logger;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 
 import java.util.List;
 import java.util.Optional;
 
-public class UserRepository implements DAORepository<User> {
+public class UserRepository implements DAORepository<USER> {
 
     private static final Logger log = Logger.getLogger(UserRepository.class);
 
@@ -20,43 +17,29 @@ public class UserRepository implements DAORepository<User> {
     }
 
     @Override
-    public void save(User obj) {
-    Session session = Connection.openSession();
-    Transaction transaction = session.beginTransaction();
-    try
-    {
-        session.save(obj);
-        log.info("User saved succesfully");
-    }
-    catch (Exception ex)
-    {
-        log.error("User save error" + ex.getMessage());
-    }
-    finally {
-        transaction.commit();
-    }
-    }
-
-    @Override
-    public void update(User obj) {
+    public void save(USER obj) {
 
     }
 
     @Override
-    public void delete(User obj) {
+    public void update(USER obj) {
 
     }
 
     @Override
-    public Optional<User> getByIg(Long id) {
+    public void delete(USER obj) {
+
+    }
+
+    @Override
+    public Optional<USER> getByIg(Long id) {
         return Optional.empty();
     }
 
     @Override
-    public List<User> getAll() {
+    public List<USER> getAll() {
         return null;
     }
 
 
 }
-*/
