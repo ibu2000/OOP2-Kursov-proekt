@@ -30,7 +30,7 @@ public class HelloApplication extends Application {
            Parent root =FXMLLoader.load(path);
             Scene scene = new Scene(root);
             //scene.setFill(Color.TRANSPARENT);
-            //stage.initStyle(StageStyle.UNDECORATED);
+            stage.initStyle(StageStyle.UNDECORATED);
 
            stage.setTitle(Constants.Values.Title);
             stage.setScene(scene);
