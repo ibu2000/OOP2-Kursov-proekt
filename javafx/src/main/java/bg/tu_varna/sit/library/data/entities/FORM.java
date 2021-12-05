@@ -20,4 +20,36 @@ public class FORM {
     @JoinColumn(name = "USER_idUser", referencedColumnName = "idUser")
     private USER USER_idUser;
 
+    public long getIdForm() {
+        return idForm;
+    }
+
+    public void setIdForm(long idForm) {
+        this.idForm = idForm;
+    }
+
+    public Date getSubmitionDate() {
+        return submitionDate;
+    }
+
+    public void setSubmitionDate(Date submitionDate) {
+        this.submitionDate = submitionDate;
+    }
+
+    public USER getUSER_idUser() {
+        return USER_idUser;
+    }
+
+    public void setUSER_idUser(USER USER_idUser) {
+        this.USER_idUser = USER_idUser;
+    }
+
+    @Override
+    public String toString() {
+        return "FORM{" +
+                "idForm=" + idForm +
+                ", submitionDate=" + submitionDate +
+                ", USER_idUser=" + USER_idUser +
+                '}';
+    }
 }
