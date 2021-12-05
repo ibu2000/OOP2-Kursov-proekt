@@ -2,6 +2,8 @@ package bg.tu_varna.sit.library.data.repositories;
 
 import bg.tu_varna.sit.library.data.access.Connection;
 import bg.tu_varna.sit.library.data.entities.Status;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -18,6 +20,9 @@ public class StatusRepository implements DAORepository<Status> {
     private static class StatusRepositoryHolder {
         public static final StatusRepository INSTANCE =new StatusRepository();
     }
+
+    @FXML
+    private Button button_log_in;
 
     @Override
     public void save(Status obj) {
