@@ -33,10 +33,10 @@ public class HelloApplication extends Application {
            stage.setTitle(Constants.Values.Title);
             stage.setScene(scene);
             stage.setResizable(false);
-            stage.setMaxWidth(1780);
+            /*stage.setMaxWidth(1780);
             stage.setMaxHeight(1630);
             stage.setWidth(1320);
-            stage.setHeight(940);
+            stage.setHeight(940);*/
             stage.show();
         }
         else
