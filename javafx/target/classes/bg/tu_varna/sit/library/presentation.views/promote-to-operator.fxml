@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="320.0" prefWidth="600.0" style="-fx-background-color: #81B0B2;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.library.presentation.controllers.PromoteToOperatorController">
+   <children>
+      <Button fx:id="button_promote_to_operator" layoutX="232.0" layoutY="262.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #00738C;" text="Promote" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Button>
+      <Pane layoutX="20.0" layoutY="73.0" prefHeight="161.0" prefWidth="568.0" style="-fx-background-color: #00738C;">
+         <children>
+            <Label layoutX="177.0" layoutY="8.0" prefHeight="24.0" prefWidth="214.0" style="-fx-background-color: #D6EAD4;" text="Please choose a user:">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="combo_box_users_to_promote_to_operator" layoutX="152.0" layoutY="64.0" prefHeight="25.0" prefWidth="265.0" promptText="users" style="-fx-background-color: #D6EAD4;" />
+         </children>
+      </Pane>
+      <Pane layoutY="-5.0" prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: #00738C;">
+         <children>
+            <Label layoutX="158.0" layoutY="17.0" text="Promote to operator" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="31.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="537.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@library_icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -4,6 +4,7 @@ import bg.tu_varna.sit.library.buisness.services.SampleServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class SampleController {
@@ -14,15 +15,18 @@ public class SampleController {
     @FXML
     private Button cancelButton;
 
+    @FXML
+    private Label loginMessageLabel;
+
+
     public void button_log_inOnAction(ActionEvent e)
     {
-        Stage stage = (Stage) button_log_in.getScene().getWindow();
-        stage.close();
+       loginMessageLabel.setText("You try to login");
     }
 
     public void cancelButtonOnAction(ActionEvent e)
     {
-        Stage stage = (Stage) button_log_in.getScene().getWindow();
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
 }

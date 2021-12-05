@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -28,7 +29,8 @@ public class HelloApplication extends Application {
         {
            Parent root =FXMLLoader.load(path);
             Scene scene = new Scene(root);
-            scene.setFill(Color.TRANSPARENT);
+            //scene.setFill(Color.TRANSPARENT);
+            //stage.initStyle(StageStyle.UNDECORATED);
 
            stage.setTitle(Constants.Values.Title);
             stage.setScene(scene);

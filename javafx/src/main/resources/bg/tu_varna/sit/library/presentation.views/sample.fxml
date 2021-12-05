@@ -69,11 +69,16 @@
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </TextField>
-            <Button fx:id="cancelButton" layoutX="733.0" layoutY="578.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="111.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Login">
+            <Button fx:id="cancelButton" layoutX="298.0" layoutY="566.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Cancel">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </Button>
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="257.0" layoutY="261.0" prefHeight="28.0" prefWidth="344.0" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
    </children>
 </HBox>
