@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="444.0" prefWidth="645.0" style="-fx-background-color: #D6EAD4;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.library.presentation.controllers.RegistrationController">
+   <children>
+      <Pane prefHeight="64.0" prefWidth="645.0" style="-fx-background-color: #00738C;">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="579.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@library_icon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="225.0" layoutY="7.0" text="Registration" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+               <font>
+                  <Font name="Bell MT Bold" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="150.0" layoutY="100.0" text="Name:">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="150.0" text="Username:">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="200.0" text="Password:">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="142.0" layoutY="250.0" text="E-mail:">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="300.0" text="Phone number:">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_RName" layoutX="250.0" layoutY="100.0" prefHeight="25.0" prefWidth="152.0" />
+      <TextField fx:id="tf_RUsername" layoutX="250.0" layoutY="150.0" prefHeight="25.0" prefWidth="152.0" />
+      <TextField fx:id="tf_RPassword" layoutX="250.0" layoutY="200.0" prefHeight="25.0" prefWidth="152.0" />
+      <TextField fx:id="tf_RE_mail" layoutX="250.0" layoutY="250.0" prefHeight="25.0" prefWidth="152.0" />
+      <TextField fx:id="tf_RPhone_number" layoutX="250.0" layoutY="300.0" prefHeight="25.0" prefWidth="152.0" />
+      <Button fx:id="button_RSign_up" layoutX="238.0" layoutY="338.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #00738C;" text="Sign up" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Button>
+      <CubicCurve controlX1="-256.5" controlX2="329.5" controlY1="190.0" controlY2="-212.0" endX="10.5" endY="173.0" fill="#00738c" layoutX="517.0" layoutY="264.0" opacity="0.41" startX="-61.0" startY="-178.0" stroke="WHITE" strokeDashOffset="11.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="1111.0" />
+      <Polyline fill="#81b0b2" layoutX="537.0" layoutY="190.0" opacity="0.09" points="-118.0, 69.5, 88.60015869140625, 63.5, -78.0, -105.0, -12.0, 248.0" stroke="WHITE" strokeType="INSIDE" />
+      <Text layoutX="159.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Once you submit this, one of our employees will review it shortly." wrappingWidth="366.0">
+         <font>
+            <Font name="Arial Narrow Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="241.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We appreaciate your patience!">
+         <font>
+            <Font name="Arial Narrow Italic" size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

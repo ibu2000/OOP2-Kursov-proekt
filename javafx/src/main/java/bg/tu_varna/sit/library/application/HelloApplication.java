@@ -22,21 +22,21 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
 
         PropertyConfigurator.configure(HelloApplication.class.getResource(Constants.Configurations.LOG4J_PROPERTIES));
-        URL path = getClass().getResource(Constants.View.HELLO_VIEW);
+        URL path = getClass().getResource(Constants.View.SAMPLE);
 
         if(path !=null)
         {
-            Parent root =FXMLLoader.load(path);
+           Parent root =FXMLLoader.load(path);
             Scene scene = new Scene(root);
             scene.setFill(Color.TRANSPARENT);
 
-            stage.setTitle(Constants.Values.Title);
+           stage.setTitle(Constants.Values.Title);
             stage.setScene(scene);
             stage.setResizable(false);
-            stage.setMaxWidth(780);
-            stage.setMaxHeight(630);
-            stage.setWidth(320);
-            stage.setHeight(240);
+            /*stage.setMaxWidth(1780);
+            stage.setMaxHeight(1630);
+            stage.setWidth(1320);
+            stage.setHeight(940);*/
             stage.show();
         }
         else
