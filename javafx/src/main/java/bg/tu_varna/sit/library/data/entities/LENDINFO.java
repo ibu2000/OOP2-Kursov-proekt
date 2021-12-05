@@ -14,12 +14,12 @@ public class LENDINFO {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "idBook",nullable = false)
-    private long BOOKS_idBook;
+    private Books BOOKS_idBook;
 
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "LENDBOOKS_idLendBook",referencedColumnName = "idLendBook",nullable = false)
-    private long LENDBOOKS_idLendBook;
+    private LENDBOOKS LENDBOOKS_idLendBook;
 
 
     public long getIdLendingInfo() {
@@ -30,19 +30,19 @@ public class LENDINFO {
         this.idLendingInfo = idLendingInfo;
     }
 
-    public long getBOOKS_idBook() {
+    public Books getBOOKS_idBook() {
         return BOOKS_idBook;
     }
 
-    public void setBOOKS_idBook(long BOOKS_idBook) {
+    public void setBOOKS_idBook(Books BOOKS_idBook) {
         this.BOOKS_idBook = BOOKS_idBook;
     }
 
-    public long getLENDBOOKS_idLendBook() {
+    public LENDBOOKS getLENDBOOKS_idLendBook() {
         return LENDBOOKS_idLendBook;
     }
 
-    public void setLENDBOOKS_idLendBook(long LENDBOOKS_idLendBook) {
+    public void setLENDBOOKS_idLendBook(LENDBOOKS LENDBOOKS_idLendBook) {
         this.LENDBOOKS_idLendBook = LENDBOOKS_idLendBook;
     }
 

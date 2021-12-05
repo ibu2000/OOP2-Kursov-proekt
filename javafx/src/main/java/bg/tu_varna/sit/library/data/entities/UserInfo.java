@@ -9,10 +9,10 @@ import javax.persistence.*;
 public class UserInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     @Column(name = "idUser", nullable = false)
-    @OneToOne(mappedBy = "idUser")
-    private long idUser;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "USER_idUser", referencedColumnName = "idUser")
+    private USER User_idUser;
 
     @Column(name = "name", nullable = false)
     private String name;
@@ -23,12 +23,12 @@ public class UserInfo {
     @Column(name = "email", nullable = false)
     private String email;
 
-    public long getIdUser() {
-        return idUser;
+    public USER getUser_idUser() {
+        return User_idUser;
     }
 
-    public void setIdUser(long id) {
-        this.idUser = id;
+    public void setUser_idUser(USER user_idUser) {
+        User_idUser = user_idUser;
     }
 
     public String getName() {
@@ -55,14 +55,13 @@ public class UserInfo {
         this.email = email;
     }
 
-
     @Override
     public String toString() {
         return "UserInfo{" +
-                "id: " + idUser +
-                ", Name: '" + name + '\'' +
-                ", phone: " + phone +
-                ", email: " + email +
+                "User_idUser=" + User_idUser +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

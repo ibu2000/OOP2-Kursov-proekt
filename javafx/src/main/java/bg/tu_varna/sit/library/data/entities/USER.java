@@ -28,15 +28,91 @@ public class USER {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "USERTYEPE_idUserType",referencedColumnName = "idUserType",nullable = false)
-    private long USERTYEPE_idUserType;
+    private UserType USERTYEPE_idUserType;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "STATUS_idStatus",referencedColumnName = "idStatus",nullable = false)
-    private long STATUS_idStatus;
+    private Status STATUS_idStatus;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "LENDBOOKS_idLendBook",referencedColumnName = "idLendBook",nullable = false)
-    private long LENDBOOKS_idLendBook;
+    private LENDBOOKS LENDBOOKS_idLendBook;
 
+    public long getIdUser() {
+        return idUser;
+    }
 
+    public void setIdUser(long idUser) {
+        this.idUser = idUser;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Date getDateOfUserApproval() {
+        return dateOfUserApproval;
+    }
+
+    public void setDateOfUserApproval(Date dateOfUserApproval) {
+        this.dateOfUserApproval = dateOfUserApproval;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public UserType getUSERTYEPE_idUserType() {
+        return USERTYEPE_idUserType;
+    }
+
+    public void setUSERTYEPE_idUserType(UserType USERTYEPE_idUserType) {
+        this.USERTYEPE_idUserType = USERTYEPE_idUserType;
+    }
+
+    public Status getSTATUS_idStatus() {
+        return STATUS_idStatus;
+    }
+
+    public void setSTATUS_idStatus(Status STATUS_idStatus) {
+        this.STATUS_idStatus = STATUS_idStatus;
+    }
+
+    public LENDBOOKS getLENDBOOKS_idLendBook() {
+        return LENDBOOKS_idLendBook;
+    }
+
+    public void setLENDBOOKS_idLendBook(LENDBOOKS LENDBOOKS_idLendBook) {
+        this.LENDBOOKS_idLendBook = LENDBOOKS_idLendBook;
+    }
+
+    @Override
+    public String toString() {
+        return "USER{" +
+                "idUser=" + idUser +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", dateOfUserApproval=" + dateOfUserApproval +
+                ", rating='" + rating + '\'' +
+                ", USERTYEPE_idUserType=" + USERTYEPE_idUserType +
+                ", STATUS_idStatus=" + STATUS_idStatus +
+                ", LENDBOOKS_idLendBook=" + LENDBOOKS_idLendBook +
+                '}';
+    }
 }

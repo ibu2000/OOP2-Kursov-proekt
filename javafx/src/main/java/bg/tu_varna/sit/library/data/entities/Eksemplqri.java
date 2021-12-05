@@ -13,11 +13,11 @@ public class Eksemplqri {
 
   @OneToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "idBook", nullable = false)
-  private long idBook;
+  private Books idBook;
 
    @OneToOne(cascade = CascadeType.ALL)
    @JoinColumn(name = "STATEOFBOOKS_idState", referencedColumnName = "idState")
-   private String exsemplqri_stateOfBooks;
+   private StateOfBooks exsemplqri_stateOfBooks;
 
     public long getIsbnUnikalenNomer() {
         return isbnUnikalenNomer;
@@ -27,19 +27,19 @@ public class Eksemplqri {
         this.isbnUnikalenNomer = isbnUnikalenNomer;
     }
 
-    public long getIdBook() {
+    public Books getIdBook() {
         return idBook;
     }
 
-    public void setIdBook(long idBook) {
+    public void setIdBook(Books idBook) {
         this.idBook = idBook;
     }
 
-    public String getExsemplqri_stateOfBooks() {
+    public StateOfBooks getExsemplqri_stateOfBooks() {
         return exsemplqri_stateOfBooks;
     }
 
-    public void setExsemplqri_stateOfBooks(String exsemplqri_stateOfBooks) {
+    public void setExsemplqri_stateOfBooks(StateOfBooks exsemplqri_stateOfBooks) {
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
     }
 
