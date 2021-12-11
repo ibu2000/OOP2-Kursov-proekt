@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="616.0" prefWidth="515.0" style="-fx-background-color: #e5fffe;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
+<AnchorPane prefHeight="616.0" prefWidth="515.0" style="-fx-background-color: #e5fffe;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="4.0" layoutY="3.0" prefHeight="586.0" prefWidth="443.0" style="-fx-background-color: #00738C;">
          <children>

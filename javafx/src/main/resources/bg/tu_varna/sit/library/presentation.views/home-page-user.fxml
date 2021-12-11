@@ -43,6 +43,11 @@
                         <Image url="@library_icon.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="buttonU_logout" layoutX="587.0" layoutY="84.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" style="-fx-background-color: #00738C;" text="logout" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
          </children>
