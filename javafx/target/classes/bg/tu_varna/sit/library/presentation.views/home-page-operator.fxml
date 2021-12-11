@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="541.0" prefWidth="925.0" style="-fx-background-color: #D6EAD4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.library.presentation.controllers.HomePageOperatorController">
+<AnchorPane prefHeight="541.0" prefWidth="925.0" style="-fx-background-color: #D6EAD4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="508.0" prefWidth="893.0" style="-fx-background-color: #00738C;">
          <children>
@@ -31,24 +31,24 @@
                         <Font name="Bell MT Bold" size="41.0" />
                      </font>
                   </Label>
-                  <AnchorPane layoutX="65.0" layoutY="223.0" prefHeight="193.0" prefWidth="743.0">
+                  <AnchorPane layoutX="26.0" layoutY="231.0" prefHeight="193.0" prefWidth="834.0">
                      <children>
-                        <Button fx:id="buttonO_user_rating" layoutX="546.0" layoutY="1.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #00738C;" text="User rating" textFill="WHITE">
+                        <Button fx:id="buttonO_user_rating" layoutX="615.0" layoutY="22.0" mnemonicParsing="false" onAction="#UserRatings" prefWidth="180.0" style="-fx-background-color: #00738C;" text="User rating" textFill="WHITE">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonO_return_book" layoutX="179.0" layoutY="1.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Return book" textFill="WHITE">
+                        <Button fx:id="buttonO_return_book" layoutX="201.0" layoutY="22.0" mnemonicParsing="false" onAction="#ReturnBook" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Return book" textFill="WHITE">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonO_search_books" layoutX="359.0" layoutY="1.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Search books" textFill="WHITE">
+                        <Button fx:id="buttonO_search_books" layoutX="408.0" layoutY="22.0" mnemonicParsing="false" onAction="#SearchBooks" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Search books" textFill="WHITE">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonO_lend_book" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Lend book" textFill="WHITE">
+                        <Button fx:id="buttonO_lend_book" layoutY="22.0" mnemonicParsing="false" onAction="#LendBook" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Lend book" textFill="WHITE">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="22.0" />
                            </font>
