@@ -6,28 +6,25 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class LoggedInController implements Initializable {
-
+    Stage s = new Stage();
     @FXML
     private Button button_logout;
     @FXML
     private Label label_welcome;
     @FXML
+    private Button button_log_in;
+    @FXML
     private Label label_fav_channel;
     @Override
-    public void initialize(URL location, ResourceBundle resources){
+    public void initialize(URL location, ResourceBundle resources)
+    {
 
-        button_logout.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle (ActionEvent event) {
-            //DBUtils.changeScene(event, "sample.fxml", "log in!", null, null);
-
-            }
-        });
     }
 
     public void setUserInformation(String username, String favChannel){
