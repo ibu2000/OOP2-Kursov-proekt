@@ -35,7 +35,7 @@
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </TextField>
-            <Button fx:id="button_log_in" layoutX="300.0" layoutY="461.0" mnemonicParsing="false" onAction="#button_log_inOnAction" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Login">
+            <Button fx:id="button_log_in" layoutX="300.0" layoutY="461.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Login">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>

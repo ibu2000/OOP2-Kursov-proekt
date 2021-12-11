@@ -29,16 +29,11 @@ public class HelloApplication extends Application {
         {
            Parent root =FXMLLoader.load(path);
             Scene scene = new Scene(root);
-            //scene.setFill(Color.TRANSPARENT);
             stage.initStyle(StageStyle.UNDECORATED);
-
            stage.setTitle(Constants.Values.Title);
             stage.setScene(scene);
             stage.setResizable(false);
-            /*stage.setMaxWidth(1780);
-            stage.setMaxHeight(1630);
-            stage.setWidth(1320);
-            stage.setHeight(940);*/
+
             stage.show();
         }
         else
