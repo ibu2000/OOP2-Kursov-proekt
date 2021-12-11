@@ -24,8 +24,6 @@ public class Books {
     @Column(name = "yearOfPublishing", nullable = false)
     private java.util.Date yearOfPublishing;
 
-    @Column(name = "isItArchived", nullable = false)
-    private boolean isitArchived;
 
     public long getIdBook() {
         return idBook;
@@ -71,15 +69,7 @@ public class Books {
         this.yearOfPublishing = yearOfPublishing;
     }
 
-    public boolean isIsitArchived() {
-        return isitArchived;
-    }
-
-    public void setIsitArchived(boolean isitArchived) {
-        this.isitArchived = isitArchived;
-    }
-
-    @Override
+     @Override
     public String toString() {
         return "Books{" +
                 "idBook: " + idBook +
@@ -87,7 +77,6 @@ public class Books {
                 ", author: '" + author + '\'' +
                 ", genre: '" + genre + '\'' +
                 ", yearOfPublishing: " + yearOfPublishing +
-                ", isitArchived: " + isitArchived +
                 '}';
     }
 }

@@ -19,6 +19,9 @@ public class Eksemplqri {
    @JoinColumn(name = "STATEOFBOOKS_idState", referencedColumnName = "idState")
    private StateOfBooks exsemplqri_stateOfBooks;
 
+    @Column(name = "isItArchived", nullable = false)
+    private boolean isitArchived;
+
     public long getIsbnUnikalenNomer() {
         return isbnUnikalenNomer;
     }
@@ -43,12 +46,21 @@ public class Eksemplqri {
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
     }
 
+    public boolean isIsitArchived() {
+        return isitArchived;
+    }
+
+    public void setIsitArchived(boolean isitArchived) {
+        this.isitArchived = isitArchived;
+    }
+
     @Override
     public String toString() {
         return "Eksemplqri{" +
-                "isbnUnikalenNomer: " + isbnUnikalenNomer +
-                ", idBook: " + idBook +
-                ", exsemplqri_stateOfBooks: '" + exsemplqri_stateOfBooks + '\'' +
+                "isbnUnikalenNomer=" + isbnUnikalenNomer +
+                ", idBook=" + idBook +
+                ", exsemplqri_stateOfBooks=" + exsemplqri_stateOfBooks +
+                ", isitArchived=" + isitArchived +
                 '}';
     }
 }

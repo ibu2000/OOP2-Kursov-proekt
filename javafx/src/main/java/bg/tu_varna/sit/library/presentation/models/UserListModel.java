@@ -6,6 +6,7 @@ import bg.tu_varna.sit.library.data.entities.UserType;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Objects;
 
 public class UserListModel {
 
@@ -97,5 +98,30 @@ public class UserListModel {
         this.LENDBOOKS_idLendBook = LENDBOOKS_idLendBook;
     }
 
-    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof UserListModel)) return false;
+        UserListModel that = (UserListModel) o;
+        return getIdUser() == that.getIdUser() && Objects.equals(getUserName(), that.getUserName()) && Objects.equals(getPassword(), that.getPassword()) && Objects.equals(getDateOfUserApproval(), that.getDateOfUserApproval()) && Objects.equals(getRating(), that.getRating()) && Objects.equals(getUSERTYEPE_idUserType(), that.getUSERTYEPE_idUserType()) && Objects.equals(getSTATUS_idStatus(), that.getSTATUS_idStatus()) && Objects.equals(getLENDBOOKS_idLendBook(), that.getLENDBOOKS_idLendBook());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdUser(), getUserName(), getPassword(), getDateOfUserApproval(), getRating(), getUSERTYEPE_idUserType(), getSTATUS_idStatus(), getLENDBOOKS_idLendBook());
+    }
+
+    @Override
+    public String toString() {
+        return "UserListModel{" +
+                "idUser=" + idUser +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", dateOfUserApproval=" + dateOfUserApproval +
+                ", rating='" + rating + '\'' +
+                ", USERTYEPE_idUserType=" + USERTYEPE_idUserType +
+                ", STATUS_idStatus=" + STATUS_idStatus +
+                ", LENDBOOKS_idLendBook=" + LENDBOOKS_idLendBook +
+                '}';
+    }
 }
