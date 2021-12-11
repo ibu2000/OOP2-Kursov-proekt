@@ -38,9 +38,9 @@ public class SampleController {
         try
         {
             s.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_USER));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_OPERATOR));
             Stage stage = new Stage();
-            fxmlLoader.setController(new HomePageUserController(stage));
+            fxmlLoader.setController(new HomePageOperatorController(stage));
             Parent root2 = fxmlLoader.load();
             stage.setScene(new Scene(root2));
             stage.show();
