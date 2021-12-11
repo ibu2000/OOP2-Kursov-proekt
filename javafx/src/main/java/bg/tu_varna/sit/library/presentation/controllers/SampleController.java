@@ -1,14 +1,15 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
-import bg.tu_varna.sit.library.buisness.services.SampleServices;
+import bg.tu_varna.sit.library.common.Constants;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class SampleController {
-
+    Stage s = new Stage();
     @FXML
     private Button button_log_in;
 
@@ -18,6 +19,27 @@ public class SampleController {
     @FXML
     private Label loginMessageLabel;
 
+    public void LoggedInController(Stage stage) {
+        s = stage;
+    }
+
+    @FXML
+    public void  userLogin()
+    {
+        try
+        {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.LogginPage.LOGGINPAGE));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new MolController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 
     public void button_log_inOnAction(ActionEvent e)
     {
