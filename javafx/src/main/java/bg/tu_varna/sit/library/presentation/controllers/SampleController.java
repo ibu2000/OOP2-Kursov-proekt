@@ -25,14 +25,11 @@ public class SampleController {
     @FXML
     private Label loginMessageLabel;
 
-    public void LoggedInController(Stage stage) {
-        s = stage;
-    }
-
+    public SampleController()
+    {}
     public SampleController(Stage stage)
     {
         s = stage;
-
     }
 
     @FXML
