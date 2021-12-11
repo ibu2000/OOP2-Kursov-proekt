@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D6EAD4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.library.presentation.controllers.CreateNewOperatorController">
    <children>
       <Pane prefHeight="101.0" prefWidth="600.0" style="-fx-background-color: #00738C;">
@@ -33,7 +32,7 @@
             <TextField fx:id="tf_OPassword" layoutX="200.0" layoutY="90.0" />
             <TextField fx:id="tf_OE_mail" layoutX="200.0" layoutY="130.0" />
             <TextField fx:id="tf_OPhone_number" layoutX="200.0" layoutY="170.0" />
-            <Button layoutX="182.0" layoutY="209.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="183.0" style="-fx-background-color: #00738C;" text="Create new operator" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+            <Button fx:id="buttonCNO_create_new_operator" layoutX="182.0" layoutY="209.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="183.0" style="-fx-background-color: #00738C;" text="Create new operator" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
                <font>
                   <Font name="Arial Rounded MT Bold" size="15.0" />
                </font>
@@ -68,6 +67,11 @@
                   <Image url="@books3.png" />
                </image>
             </ImageView>
+            <Button fx:id="buttonCNO_create_new_operator1" layoutX="401.0" layoutY="208.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="86.0" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

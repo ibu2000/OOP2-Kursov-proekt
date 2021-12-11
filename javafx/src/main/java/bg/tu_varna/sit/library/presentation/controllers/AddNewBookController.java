@@ -1,4 +1,4 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
-public class CreateOperatorController {
+public class AddNewBookController {
 }
