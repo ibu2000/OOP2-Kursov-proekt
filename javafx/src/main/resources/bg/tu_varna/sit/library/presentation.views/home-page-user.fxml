@@ -11,22 +11,22 @@
          <children>
             <AnchorPane layoutX="11.0" layoutY="9.0" prefHeight="265.0" prefWidth="794.0" style="-fx-background-color: #81B0B2;">
                <children>
-                  <Button layoutX="101.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Button" textFill="WHITE">
+                  <Button fx:id="button_lend_book" layoutX="21.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Lend book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Button>
-                  <Button layoutX="272.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Button" textFill="WHITE">
+                  <Button fx:id="button_return_book" layoutX="217.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Return book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Button>
-                  <Button layoutX="438.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Button" textFill="WHITE">
+                  <Button fx:id="button_search_books" layoutX="424.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Search books" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Button>
-                  <Button layoutX="592.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Button" textFill="WHITE">
+                  <Button fx:id="button_user_rating" layoutX="621.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="User rating" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
