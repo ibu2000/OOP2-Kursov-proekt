@@ -50,10 +50,12 @@ public class SampleController {
         }
     }
 
-    public void button_log_inOnAction(ActionEvent e)
+
+    public void Login()
     {
-       loginMessageLabel.setText("You try to login");
+
     }
+
 
     public void cancelButtonOnAction(ActionEvent e)
     {
