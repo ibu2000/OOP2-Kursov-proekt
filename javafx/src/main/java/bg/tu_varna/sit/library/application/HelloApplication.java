@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.library.application;
 
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.presentation.controllers.SampleController;
 import eu.hansolo.tilesfx.Section;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -27,14 +28,25 @@ public class HelloApplication extends Application {
 
         if(path !=null)
         {
-           Parent root =FXMLLoader.load(path);
+           //Parent root =FXMLLoader.load(path);
+            FXMLLoader fxmlLoader = new FXMLLoader(path);
+            fxmlLoader.setController(new SampleController(stage));
+            Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
+            scene.setFill(Color.TRANSPARENT);
+            stage.setTitle(Constants.Values.Title);
+            stage.setScene(scene);
+            stage.setResizable(false);
+           /* stage.setWidth(1600);
+            stage.setHeight(1400);*/
+            stage.show();
+          /*  Scene scene = new Scene(root);
             stage.initStyle(StageStyle.UNDECORATED);
            stage.setTitle(Constants.Values.Title);
             stage.setScene(scene);
             stage.setResizable(false);
 
-            stage.show();
+            stage.show();*/
         }
         else
         {

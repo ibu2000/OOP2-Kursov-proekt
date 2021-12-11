@@ -10,7 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
+ import static bg.tu_varna.sit.library.common.Constants.View.SAMPLE;
+import static bg.tu_varna.sit.library.common.Constants.View.HOMEPAGE_USER;
 import java.io.IOException;
 
 public class SampleController {
@@ -24,14 +25,15 @@ public class SampleController {
     @FXML
     private Label loginMessageLabel;
 
-    public void LoggedInController(Stage stage) {
+    public SampleController()
+    {}
+    public SampleController(Stage stage)
+    {
         s = stage;
     }
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+
     @FXML
-    public void userLogin() throws IOException
+    public void userLogin()
     {
         try
         {
