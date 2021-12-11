@@ -36,7 +36,7 @@ public class SampleController {
     }
 
     @FXML
-    public void userLogin() throws IOException
+    public void userLogin()
     {
         try
         {
