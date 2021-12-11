@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="391.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="389.0" prefWidth="734.0" style="-fx-background-color: #00738C;">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="86.0" prefHeight="239.0" prefWidth="725.0" style="-fx-background-color: #81B0B2;">
+               <children>
+                  <Button fx:id="buttonRB_return_book" layoutX="299.0" layoutY="121.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="149.0" style="-fx-background-color: #00738C;" text="Return" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="195.0" layoutY="14.0" prefHeight="41.0" prefWidth="370.0" text="Choose a book you'd like to return" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="249.0" prefHeight="86.0" prefWidth="263.0" text="Return a Book" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="41.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonRB_home" layoutX="337.0" layoutY="337.0" mnemonicParsing="false" style="-fx-background-color: #81B0B2;" text="Home" textFill="#00738c">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
