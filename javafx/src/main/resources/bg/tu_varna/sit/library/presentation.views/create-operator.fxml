@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller=""
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="391.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="389.0" prefWidth="734.0" style="-fx-background-color: #00738C;">
+         <children>
+            <AnchorPane layoutX="3.0" layoutY="86.0" prefHeight="239.0" prefWidth="728.0" style="-fx-background-color: #81B0B2;">
+               <children>
+                  <Button fx:id="buttonCO_create_operator" layoutX="238.0" layoutY="107.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Create Operator" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="69.0" layoutY="26.0" prefHeight="41.0" prefWidth="591.0" text="choose which user you'd like to promote to an operator" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="201.0" prefHeight="86.0" prefWidth="354.0" text="Create an Operator" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="41.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonCO_home" layoutX="331.0" layoutY="337.0" mnemonicParsing="false" style="-fx-background-color: #81B0B2;" text="Home" textFill="#00738c">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="666.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@library_icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
