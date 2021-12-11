@@ -6,25 +6,25 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="391.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.library.presentation.controllers.UserRatingController">
+<AnchorPane prefHeight="391.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
    <children>
       <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="389.0" prefWidth="734.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutX="4.0" layoutY="86.0" prefHeight="239.0" prefWidth="725.0" style="-fx-background-color: #81B0B2;">
+            <AnchorPane layoutX="4.0" layoutY="86.0" prefHeight="239.0" prefWidth="728.0" style="-fx-background-color: #81B0B2;">
                <children>
-                  <Button fx:id="buttonUR_find_user_rating" layoutX="201.0" layoutY="120.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="337.0" style="-fx-background-color: #00738C;" text="find?(workinproggress)" textFill="WHITE">
+                  <Button fx:id="buttonCU_create" layoutX="238.0" layoutY="107.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Create user" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Button>
-                  <Label layoutX="195.0" layoutY="14.0" prefHeight="41.0" prefWidth="370.0" text="Here you can find a user's rating" textFill="WHITE">
+                  <Label layoutX="262.0" layoutY="14.0" prefHeight="41.0" prefWidth="216.0" text="Review applications" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <Label layoutX="256.0" prefHeight="86.0" prefWidth="238.0" text="User Ratings" textFill="WHITE">
+            <Label layoutX="256.0" prefHeight="86.0" prefWidth="238.0" text="Create a user" textFill="WHITE">
                <font>
                   <Font name="Bell MT Bold" size="41.0" />
                </font>
