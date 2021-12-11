@@ -34,6 +34,10 @@ public class UserListModel {
 
     }
 
+    public UserListModel(String text, String text1) {
+    }
+
+
     public long getIdUser() {
         return idUser;
     }
