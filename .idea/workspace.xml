@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="709b0f8f-28bb-45c5-b92a-f72fd818ac52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/javafx/src/main/resources/bg/tu_varna/sit/library/presentation.views/registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/javafx/src/main/resources/bg/tu_varna/sit/library/presentation.views/registration.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="709b0f8f-28bb-45c5-b92a-f72fd818ac52" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
