@@ -5,13 +5,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="523.0" prefWidth="850.0" style="-fx-background-color: #D6EAD4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.library.presentation.controllers.HomePageUserController">
+<AnchorPane prefHeight="523.0" prefWidth="850.0" style="-fx-background-color: #D6EAD4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="18.0" layoutY="17.0" prefHeight="284.0" prefWidth="814.0" style="-fx-background-color: #00738C;">
          <children>
             <AnchorPane layoutX="11.0" layoutY="9.0" prefHeight="265.0" prefWidth="794.0" style="-fx-background-color: #81B0B2;">
                <children>
-                  <Button fx:id="button_lend_book" layoutX="21.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Lend book" textFill="WHITE">
+                  <Button fx:id="button_lend_book" layoutX="34.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Lend book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
@@ -21,7 +21,7 @@
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Button>
-                  <Button fx:id="button_search_books" layoutX="424.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Search books" textFill="WHITE">
+                  <Button fx:id="button_search_books" layoutX="409.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="Search books" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
