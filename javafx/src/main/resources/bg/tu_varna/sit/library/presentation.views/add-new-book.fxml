@@ -1,66 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.QuadCurve?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="616.0" prefWidth="515.0" style="-fx-background-color: #e5fffe;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="704.0" prefWidth="1056.0" style="-fx-background-color: #e5fffe;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="4.0" layoutY="3.0" prefHeight="586.0" prefWidth="443.0" style="-fx-background-color: #00738C;">
+      <AnchorPane layoutX="92.0" layoutY="45.0" prefHeight="586.0" prefWidth="447.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutX="30.0" layoutY="87.0" prefHeight="439.0" prefWidth="392.0" style="-fx-background-color: #81B0B2;">
+            <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="574.0" prefWidth="435.0" style="-fx-background-color: #81B0B2;">
                <children>
-                  <Button fx:id="buttonANB_add_book" layoutX="68.0" layoutY="384.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Add book" textFill="WHITE">
+                  <Button fx:id="buttonANB_add_book" layoutX="90.0" layoutY="490.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Add book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Button>
-                  <Label layoutX="13.0" layoutY="14.0" prefHeight="41.0" prefWidth="367.0" text="Describe the book you wish to add" textFill="WHITE">
+                  <Label layoutX="34.0" layoutY="130.0" prefHeight="41.0" prefWidth="367.0" text="Describe the book you wish to add" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="117.0" layoutY="300.0" />
-                  <TextField layoutX="115.0" layoutY="240.0" />
-                  <TextField layoutX="115.0" layoutY="170.0" />
-                  <TextField layoutX="117.0" layoutY="105.0" />
-                  <Label layoutX="175.0" layoutY="80.0" text="Label" />
-                  <Label layoutX="175.0" layoutY="150.0" text="Label" />
-                  <Label layoutX="175.0" layoutY="220.0" text="Label" />
-                  <Label layoutX="178.0" layoutY="280.0" text="Label" />
+                  <TextField fx:id="tfANB_year_of_publishing" layoutX="145.0" layoutY="400.0" style="-fx-background-color: #00738C;" />
+                  <TextField fx:id="tfANB_genre" layoutX="145.0" layoutY="340.0" style="-fx-background-color: #00738C;" />
+                  <TextField fx:id="tfANB_author" layoutX="145.0" layoutY="280.0" style="-fx-background-color: #00738C;" />
+                  <TextField fx:id="tfANB_name_of_book" layoutX="146.0" layoutY="220.0" style="-fx-background-color: #00738C;" />
+                  <Label layoutX="170.0" layoutY="200.0" text="Name of book" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font></Label>
+                  <Label layoutX="195.0" layoutY="320.0" text="Genre" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font></Label>
+                  <Label layoutX="190.0" layoutY="260.0" text="Author" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="151.0" layoutY="380.0" text="Year of publishing" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="73.0" layoutY="25.0" prefHeight="86.0" prefWidth="289.0" text="Add a new book" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT Bold" size="41.0" />
+                     </font>
+                  </Label>
+                  <QuadCurve controlX="405.0" controlY="331.0" endX="483.0" endY="25.0" fill="#3174b2" layoutX="-47.0" layoutY="-31.0" opacity="0.13" startX="482.0" startY="605.0" stroke="#81b0b2" strokeType="INSIDE" />
+                  <ImageView fitHeight="77.0" fitWidth="87.0" layoutX="28.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@books5.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
-            <Label layoutX="73.0" layoutY="1.0" prefHeight="86.0" prefWidth="289.0" text="Add a new book" textFill="WHITE">
-               <font>
-                  <Font name="Bell MT Bold" size="41.0" />
-               </font>
-            </Label>
-            <Button fx:id="buttonANB_home" layoutX="180.0" layoutY="533.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="22.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="386.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@library_icon.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
-      <QuadCurve controlX="498.0" controlY="302.0" endX="455.0" endY="3.0" fill="#3174b2" opacity="0.13" startX="455.0" startY="589.0" stroke="BLACK" strokeType="INSIDE" />
-      <QuadCurve controlX="498.0" controlY="302.0" endX="455.0" endY="3.0" fill="#3174b2" layoutX="10.0" layoutY="10.0" opacity="0.13" startX="455.0" startY="589.0" stroke="BLACK" strokeType="INSIDE" />
-      <QuadCurve controlX="498.0" controlY="302.0" endX="455.0" endY="3.0" fill="#3174b2" layoutX="20.0" layoutY="20.0" opacity="0.13" startX="455.0" startY="589.0" stroke="BLACK" strokeType="INSIDE" />
-      <QuadCurve controlX="498.0" controlY="302.0" endX="455.0" endY="3.0" fill="#3174b2" layoutX="30.0" layoutY="30.0" opacity="0.13" startX="455.0" startY="589.0" stroke="BLACK" strokeType="INSIDE" />
-      <QuadCurve controlX="498.0" controlY="302.0" endX="455.0" endY="3.0" fill="#3174b2" layoutX="40.0" layoutY="40.0" opacity="0.13" startX="455.0" startY="589.0" stroke="BLACK" strokeType="INSIDE" />
-      <QuadCurve controlX="498.0" controlY="302.0" endX="455.0" endY="3.0" fill="#3174b2" layoutX="50.0" layoutY="50.0" opacity="0.13" startX="455.0" startY="589.0" stroke="BLACK" strokeType="INSIDE" />
-      <QuadCurve controlX="498.0" controlY="302.0" endX="455.0" endY="3.0" fill="#3174b2" layoutX="60.0" layoutY="60.0" opacity="0.12" startX="456.66424560546875" startY="579.0" stroke="BLACK" strokeType="INSIDE" />
-      <CubicCurve controlX1="585.0" controlX2="145.0" controlY1="-20.0" controlY2="-2.0" endX="350.0" endY="35.66668701171875" fill="#00203c" layoutX="165.0" layoutY="609.0" opacity="0.15" startX="-151.0" startY="-9.0" stroke="#976363" strokeType="OUTSIDE" />
+      <AnchorPane layoutX="535.0" layoutY="45.0" prefHeight="586.0" prefWidth="443.0" style="-fx-background-color: #00738C;">
+         <children>
+            <AnchorPane layoutX="1.0" layoutY="6.0" prefHeight="574.0" prefWidth="438.0" style="-fx-background-color: #81B0B2;">
+               <children>
+                  <Button fx:id="buttonANB_add_copy" layoutX="41.0" layoutY="490.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Add copy" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="25.0" layoutY="130.0" prefHeight="41.0" prefWidth="367.0" text="describe the copy you wish to add" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfANB_isbn" layoutX="146.0" layoutY="220.0" style="-fx-background-color: #00738C;" />
+                  <Label layoutX="201.0" layoutY="200.0" text="Isbn" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="163.0" layoutY="260.0" text="Name of book" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="172.0" layoutY="320.0" text="State of book" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="combo_boxANB_name_of_book" layoutX="146.0" layoutY="280.0" prefWidth="150.0" style="-fx-background-color: #00738C;" />
+                  <ComboBox fx:id="combo_boxANB_state_of_book" layoutX="146.0" layoutY="340.0" prefWidth="150.0" style="-fx-background-color: #00738C;" />
+                  <Label layoutX="62.0" layoutY="25.0" prefHeight="86.0" prefWidth="289.0" text="Add a new copy" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT Bold" size="41.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="363.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@library_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="152.0" layoutY="383.0" prefHeight="86.0" prefWidth="141.0" style="-fx-background-color: #6c9fa1;">
+                     <children>
+                        <RadioButton fx:id="radio_buttonANB_archived" layoutX="13.0" layoutY="26.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="archived" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="radio_buttonANB_not_archived" layoutX="13.0" layoutY="56.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="not archived" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <Label layoutX="23.0" text="Is it archived" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <QuadCurve controlX="528.0" controlY="317.0" endX="455.0" endY="3.0" fill="#3174b2" layoutX="-455.0" layoutY="-2.0" opacity="0.13" startX="455.0" startY="576.0" stroke="#81b0b2" strokeType="INSIDE" />
+                  <Button fx:id="buttonANB_home" layoutX="325.0" layoutY="490.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <QuadCurve controlX="-18.0" controlY="31.0" endX="-4.0" fill="#00738c" startX="-436.0" startY="6.0" stroke="#065261" strokeType="INSIDE" />
+            <QuadCurve controlX="-82.0" controlY="36.0" endX="-134.0" fill="#00738c" layoutX="149.0" layoutY="4.0" startX="290.0" startY="2.0" stroke="#065261" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+      <QuadCurve controlX="463.0" controlY="311.0" endX="504.0" endY="288.0" fill="#e5fffe" layoutX="24.0" layoutY="-244.0" startX="68.0" startY="288.0" stroke="#81b0b2" strokeType="INSIDE" />
+      <QuadCurve controlX="582.0" controlY="314.0" endX="509.0" endY="275.0" fill="#e5fffe" layoutX="34.0" layoutY="-233.0" startX="956.0" startY="275.0" stroke="#81b0b2" strokeType="INSIDE" />
+      <QuadCurve controlX="488.0" controlY="261.0" endX="549.0" endY="306.0" fill="#e5fffe" layoutX="110.0" layoutY="-261.0" startX="76.0" startY="306.0" stroke="#e5fffe" strokeType="INSIDE" />
+      <QuadCurve controlX="564.0" controlY="262.0" endX="1077.0" endY="304.0" fill="#e5fffe" layoutX="-79.0" layoutY="-260.0" startX="631.0" startY="297.3333435058594" stroke="#e5fffe" strokeType="INSIDE" />
+      <QuadCurve controlX="728.0" controlY="281.0" endX="752.6666870117188" endY="299.0" fill="#00738c" layoutX="-190.0" layoutY="-249.0" startX="700.6666259765625" startY="299.0" stroke="#065261" strokeType="INSIDE" />
+      <QuadCurve controlX="-18.0" controlY="31.0" endX="-4.0" fill="#00738c" layoutX="540.0" layoutY="625.0" startX="-436.0" startY="6.0" stroke="#e5fffe" strokeType="INSIDE" />
+      <QuadCurve controlX="-117.0" controlY="26.0" endX="-130.33331298828125" endY="-7.0" fill="#00738c" layoutX="667.0" layoutY="632.0" startX="292.33331298828125" startY="-1.0" stroke="#e5fffe" strokeType="INSIDE" />
+      <QuadCurve controlX="728.0" controlY="281.0" endX="748.0" endY="293.0" fill="#00738c" layoutX="-192.0" layoutY="333.0" startX="705.3333129882812" startY="293.0" stroke="#065261" strokeType="INSIDE" />
+      <QuadCurve controlX="727.0" controlY="278.33331298828125" endX="761.0" endY="293.0" fill="#00738c" layoutX="-191.0" layoutY="339.0" startX="694.3333740234375" startY="293.0" stroke="#00738c" strokeType="INSIDE" />
+      <QuadCurve controlX="-18.0" controlY="31.0" endX="-4.0" fill="#81b0b2" layoutX="540.0" layoutY="619.0" startX="-436.0" startY="6.0" stroke="#e5fffe" strokeType="INSIDE" />
+      <QuadCurve controlX="-117.0" controlY="26.0" endX="-130.33331298828125" endY="-7.0" fill="#81b0b2" layoutX="666.0" layoutY="626.0" startX="292.33331298828125" startY="-1.0" stroke="#e5fffe" strokeType="INSIDE" />
    </children>
 </AnchorPane>
