@@ -17,9 +17,8 @@ public class UserListModel {
     private String rating;
     private UserType USERTYEPE_idUserType;
     private Status STATUS_idStatus;
-    private LENDBOOKS LENDBOOKS_idLendBook;
 
-    public UserListModel(long idUser, String userName, String password, Date dateOfUserApproval, String rating, UserType USERTYEPE_idUserType, Status STATUS_idStatus, LENDBOOKS LENDBOOKS_idLendBook) {
+    public UserListModel(long idUser, String userName, String password, Date dateOfUserApproval, String rating, UserType USERTYEPE_idUserType, Status STATUS_idStatus) {
         this.idUser = idUser;
         this.userName = userName;
         this.password = password;
@@ -27,8 +26,8 @@ public class UserListModel {
         this.rating = rating;
         this.USERTYEPE_idUserType = USERTYEPE_idUserType;
         this.STATUS_idStatus = STATUS_idStatus;
-        this.LENDBOOKS_idLendBook = LENDBOOKS_idLendBook;
     }
+
     public UserListModel()
     {
 
@@ -94,25 +93,17 @@ public class UserListModel {
         this.STATUS_idStatus = STATUS_idStatus;
     }
 
-    public LENDBOOKS getLENDBOOKS_idLendBook() {
-        return LENDBOOKS_idLendBook;
-    }
-
-    public void setLENDBOOKS_idLendBook(LENDBOOKS LENDBOOKS_idLendBook) {
-        this.LENDBOOKS_idLendBook = LENDBOOKS_idLendBook;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof UserListModel)) return false;
         UserListModel that = (UserListModel) o;
-        return getIdUser() == that.getIdUser() && Objects.equals(getUserName(), that.getUserName()) && Objects.equals(getPassword(), that.getPassword()) && Objects.equals(getDateOfUserApproval(), that.getDateOfUserApproval()) && Objects.equals(getRating(), that.getRating()) && Objects.equals(getUSERTYEPE_idUserType(), that.getUSERTYEPE_idUserType()) && Objects.equals(getSTATUS_idStatus(), that.getSTATUS_idStatus()) && Objects.equals(getLENDBOOKS_idLendBook(), that.getLENDBOOKS_idLendBook());
+        return getIdUser() == that.getIdUser() && Objects.equals(getUserName(), that.getUserName()) && Objects.equals(getPassword(), that.getPassword()) && Objects.equals(getDateOfUserApproval(), that.getDateOfUserApproval()) && Objects.equals(getRating(), that.getRating()) && Objects.equals(getUSERTYEPE_idUserType(), that.getUSERTYEPE_idUserType()) && Objects.equals(getSTATUS_idStatus(), that.getSTATUS_idStatus());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getIdUser(), getUserName(), getPassword(), getDateOfUserApproval(), getRating(), getUSERTYEPE_idUserType(), getSTATUS_idStatus(), getLENDBOOKS_idLendBook());
+        return Objects.hash(getIdUser(), getUserName(), getPassword(), getDateOfUserApproval(), getRating(), getUSERTYEPE_idUserType(), getSTATUS_idStatus());
     }
 
     @Override
@@ -125,7 +116,6 @@ public class UserListModel {
                 ", rating='" + rating + '\'' +
                 ", USERTYEPE_idUserType=" + USERTYEPE_idUserType +
                 ", STATUS_idStatus=" + STATUS_idStatus +
-                ", LENDBOOKS_idLendBook=" + LENDBOOKS_idLendBook +
                 '}';
     }
 }

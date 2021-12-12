@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import javax.persistence.Query;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
@@ -80,7 +81,22 @@ public class UserRepository implements DAORepository<USER> {
 
     @Override
     public List<USER> getAll() {
-        return null;
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        List<USER> users = new LinkedList<>();
+        try {
+            String jpql = "SELECT t FROM USER t";
+            users.addAll(session.createQuery(jpql, USER.class).getResultList());
+            log.info("Get all users");
+        }
+        catch (Exception e)
+        {
+            log.error("Get user error: " + e.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return users;
     }
 
 

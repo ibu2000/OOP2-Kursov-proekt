@@ -34,9 +34,6 @@ public class USER {
     @JoinColumn(name = "STATUS_idStatus",referencedColumnName = "idStatus",nullable = false)
     private Status STATUS_idStatus;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "LENDBOOKS_idLendBook",referencedColumnName = "idLendBook",nullable = false)
-    private LENDBOOKS LENDBOOKS_idLendBook;
 
     public long getIdUser() {
         return idUser;
@@ -94,14 +91,6 @@ public class USER {
         this.STATUS_idStatus = STATUS_idStatus;
     }
 
-    public LENDBOOKS getLENDBOOKS_idLendBook() {
-        return LENDBOOKS_idLendBook;
-    }
-
-    public void setLENDBOOKS_idLendBook(LENDBOOKS LENDBOOKS_idLendBook) {
-        this.LENDBOOKS_idLendBook = LENDBOOKS_idLendBook;
-    }
-
     @Override
     public String toString() {
         return "USER{" +
@@ -112,7 +101,7 @@ public class USER {
                 ", rating='" + rating + '\'' +
                 ", USERTYEPE_idUserType=" + USERTYEPE_idUserType +
                 ", STATUS_idStatus=" + STATUS_idStatus +
-                ", LENDBOOKS_idLendBook=" + LENDBOOKS_idLendBook +
                 '}';
     }
 }
+

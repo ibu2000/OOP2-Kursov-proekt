@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.event.ActionEvent;
@@ -13,9 +14,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
- import static bg.tu_varna.sit.library.common.Constants.View.SAMPLE;
+import org.hibernate.service.Service;
+
+import static bg.tu_varna.sit.library.common.Constants.View.SAMPLE;
 import static bg.tu_varna.sit.library.common.Constants.View.HOMEPAGE_USER;
 import java.io.IOException;
+import java.security.Provider;
 
 public class SampleController {
     Stage s = new Stage();
@@ -41,6 +45,7 @@ public class SampleController {
         s = stage;
     }
 
+    UserService service = new UserService();
     @FXML
     public void userLogin() {
         if (tf_password.getText().equals("") || tf_username.equals("")) {
@@ -50,8 +55,9 @@ public class SampleController {
         {
             loginMessageLabel.setText("not empty bruh");
             UserListModel userfind = new UserListModel(tf_username.getText(),tf_password.getText());
-        }
-        /*
+           if(service.UserLogin(userfind))
+           {
+
             try {
                 s.close();
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_OPERATOR));
@@ -60,9 +66,13 @@ public class SampleController {
                 Parent root2 = fxmlLoader.load();
                 stage.setScene(new Scene(root2));
                 stage.show();
-            } catch (Exception e) {
+            } catch (Exception e)
+            {
                 e.printStackTrace();
-            }*/
+            }
+           }
+        }
+
 
     }
 
