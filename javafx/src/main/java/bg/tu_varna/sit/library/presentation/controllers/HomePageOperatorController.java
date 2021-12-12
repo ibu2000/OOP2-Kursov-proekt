@@ -24,6 +24,8 @@ public class HomePageOperatorController {
     private Button button_delete_user;
     @FXML
     private Button button_forms;
+    @FXML
+    private Button buttonO_logout;
 
 
     Stage s;

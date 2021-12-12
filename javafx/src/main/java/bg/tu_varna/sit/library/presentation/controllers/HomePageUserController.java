@@ -19,6 +19,8 @@ public class HomePageUserController {
     private Button button_search_books;
     @FXML
     private Button button_user_rating;
+    @FXML
+    private Button buttonU_logout;
 
 
     Stage s;

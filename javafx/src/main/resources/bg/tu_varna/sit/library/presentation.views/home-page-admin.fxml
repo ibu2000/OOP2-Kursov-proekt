@@ -43,7 +43,7 @@
                         <Image url="@library_icon.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="buttonA_logout" layoutX="606.0" layoutY="45.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" style="-fx-background-color: #00738C;" text="logout" textFill="WHITE">
+                  <Button fx:id="buttonA_logout" layoutX="637.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" style="-fx-background-color: #00738C;" text="logout" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>

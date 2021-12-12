@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="391.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
    <children>
       <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="389.0" prefWidth="734.0" style="-fx-background-color: #00738C;">
@@ -29,7 +28,7 @@
                   <Font name="Bell MT Bold" size="41.0" />
                </font>
             </Label>
-            <Button fx:id="buttonDU_home" layoutX="331.0" layoutY="337.0" mnemonicParsing="false" style="-fx-background-color: #81B0B2;" text="Home" textFill="#00738c">
+            <Button fx:id="buttonDU_home" layoutX="331.0" layoutY="337.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
                <font>
                   <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>
