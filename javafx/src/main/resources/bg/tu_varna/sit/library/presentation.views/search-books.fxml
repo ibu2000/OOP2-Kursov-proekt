@@ -23,7 +23,7 @@
                   <Font name="Bell MT Bold" size="41.0" />
                </font>
             </Label>
-            <Button fx:id="buttonSB_home" layoutX="337.0" layoutY="243.0" mnemonicParsing="false" onAction="#ReturnToHomePage" style="-fx-background-color: #81B0B2;" text="Home" textFill="#00738c">
+            <Button fx:id="buttonSB_home" layoutX="337.0" layoutY="243.0" mnemonicParsing="false" onAction="#ReturnToHomePage" style="-fx-background-color: #ffffff;" text="Home" textFill="#00738c">
                <font>
                   <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>

@@ -38,6 +38,9 @@ public class SampleController {
     @FXML
     private PasswordField tf_password;
 
+    @FXML
+    private Button button_sign_up;
+
     public SampleController()
     {}
     public SampleController(Stage stage)

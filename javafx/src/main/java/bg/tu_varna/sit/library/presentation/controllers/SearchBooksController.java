@@ -1,12 +1,16 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
 import bg.tu_varna.sit.library.common.Constants;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class SearchBooksController {
+    @FXML
+private Button buttonSB_home;
     Stage s;
 
     public SearchBooksController()
