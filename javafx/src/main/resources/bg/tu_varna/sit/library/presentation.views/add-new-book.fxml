@@ -134,15 +134,15 @@
                   </Button>
                </children>
             </AnchorPane>
-            <QuadCurve controlX="-18.0" controlY="31.0" endX="-4.0" fill="#00738c" startX="-436.0" startY="6.0" stroke="#065261" strokeType="INSIDE" />
-            <QuadCurve controlX="-82.0" controlY="36.0" endX="-134.0" fill="#00738c" layoutX="149.0" layoutY="4.0" startX="290.0" startY="2.0" stroke="#065261" strokeType="INSIDE" />
+            <QuadCurve controlX="-39.2515869140625" controlY="30.0" endX="1.6666259765625" endY="5.0" fill="#00738c" startX="-436.0" startY="6.0" stroke="WHITE" strokeType="INSIDE" />
+            <QuadCurve controlX="-82.0" controlY="36.0" endX="-147.3333740234375" endY="1.0" fill="#00738c" layoutX="149.0" layoutY="4.0" startX="290.0" startY="2.0" stroke="WHITE" strokeType="INSIDE" />
          </children>
       </AnchorPane>
       <QuadCurve controlX="463.0" controlY="311.0" endX="504.0" endY="288.0" fill="#e5fffe" layoutX="24.0" layoutY="-244.0" startX="68.0" startY="288.0" stroke="#81b0b2" strokeType="INSIDE" />
       <QuadCurve controlX="582.0" controlY="314.0" endX="509.0" endY="275.0" fill="#e5fffe" layoutX="34.0" layoutY="-233.0" startX="956.0" startY="275.0" stroke="#81b0b2" strokeType="INSIDE" />
       <QuadCurve controlX="488.0" controlY="261.0" endX="549.0" endY="306.0" fill="#e5fffe" layoutX="110.0" layoutY="-261.0" startX="76.0" startY="306.0" stroke="#e5fffe" strokeType="INSIDE" />
       <QuadCurve controlX="564.0" controlY="262.0" endX="1077.0" endY="304.0" fill="#e5fffe" layoutX="-79.0" layoutY="-260.0" startX="631.0" startY="297.3333435058594" stroke="#e5fffe" strokeType="INSIDE" />
-      <QuadCurve controlX="728.0" controlY="281.0" endX="752.6666870117188" endY="299.0" fill="#00738c" layoutX="-190.0" layoutY="-249.0" startX="700.6666259765625" startY="299.0" stroke="#065261" strokeType="INSIDE" />
+      <QuadCurve controlX="728.0" controlY="286.0" endX="752.6666870117188" endY="299.0" fill="#00738c" layoutX="-190.0" layoutY="-250.0" startX="700.6666259765625" startY="299.0" stroke="WHITE" strokeType="INSIDE" />
       <QuadCurve controlX="-18.0" controlY="31.0" endX="-4.0" fill="#00738c" layoutX="540.0" layoutY="625.0" startX="-436.0" startY="6.0" stroke="#e5fffe" strokeType="INSIDE" />
       <QuadCurve controlX="-117.0" controlY="26.0" endX="-130.33331298828125" endY="-7.0" fill="#00738c" layoutX="667.0" layoutY="632.0" startX="292.33331298828125" startY="-1.0" stroke="#e5fffe" strokeType="INSIDE" />
       <QuadCurve controlX="728.0" controlY="281.0" endX="748.0" endY="293.0" fill="#00738c" layoutX="-192.0" layoutY="333.0" startX="705.3333129882812" startY="293.0" stroke="#065261" strokeType="INSIDE" />
