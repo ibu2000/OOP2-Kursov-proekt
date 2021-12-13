@@ -12,7 +12,7 @@
          <children>
             <AnchorPane layoutX="4.0" layoutY="86.0" prefHeight="239.0" prefWidth="725.0" style="-fx-background-color: #81B0B2;">
                <children>
-                  <Button fx:id="buttonRB_return_book" layoutX="299.0" layoutY="121.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="149.0" style="-fx-background-color: #00738C;" text="Return" textFill="WHITE">
+                  <Button fx:id="buttonRAB_return_book" layoutX="299.0" layoutY="121.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="149.0" style="-fx-background-color: #00738C;" text="Return" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
@@ -30,7 +30,7 @@
                   <Font name="Bell MT Bold" size="41.0" />
                </font>
             </Label>
-            <Button fx:id="buttonRB_home" layoutX="337.0" layoutY="337.0" mnemonicParsing="false" onAction="#ReturnToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
+            <Button fx:id="buttonRAB_home" layoutX="337.0" layoutY="337.0" mnemonicParsing="false" onAction="#ReturnToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
                <font>
                   <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>
