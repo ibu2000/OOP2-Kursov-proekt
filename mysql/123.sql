@@ -11,9 +11,9 @@ INSERT INTO books (idBook, bookName, author, genre, yearOfPublishing)VALUES (1, 
 INSERT INTO books (idBook, bookName, author, genre, yearOfPublishing)VALUES (2, 'bName2', 'author2', 'genre2', '2009-8-01');
 INSERT INTO books (idBook, bookName, author, genre, yearOfPublishing)VALUES (3, 'bName3', 'author3', 'genre3', '2017-7-12');
  
-INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (1, 'u1', 'pas1','2017-7-12', 'good', 1,1);
-INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (2, 'u2', 'pas2','2012-5-10', 'good', 2,2);
-INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (3, 'u3', 'pas3','2018-1-11', 'good', 3,3);
+INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (4, 'u1', 'pas1','2017-7-12', 'good', 1,1);
+INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (5, 'u2', 'pas2','2012-5-10', 'good', 2,2);
+INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (6, 'u3', 'pas3','2018-1-11', 'good', 3,3);
  
 
 
