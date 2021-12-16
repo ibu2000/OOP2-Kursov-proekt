@@ -1,6 +1,6 @@
 package bg.tu_varna.sit.library.data.entities;
 import javax.persistence.*;
-
+import java.util.Set;
 
 
 @Table(name = "STATUS")
@@ -11,6 +11,9 @@ public class Status {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idStatus", nullable = false)
     private long idStatus;
+
+    @OneToMany(mappedBy = "STATUS_idStatus")
+    private Set<USER> byStatus;
 
     @Column(name = "status",nullable = false)
     private String status;

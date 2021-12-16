@@ -56,7 +56,7 @@ public class SampleController {
             }
         else if(!tf_password.getText().equals("") && !tf_username.equals(""))
         {
-            loginMessageLabel.setText("not empty bruh");
+            loginMessageLabel.setText("not empty");
             UserListModel userfind = new UserListModel(tf_username.getText(),tf_password.getText());
            if(service.UserLogin(userfind))
            {
@@ -75,6 +75,7 @@ public class SampleController {
             }
            }
         }
+
 
 
     }

@@ -23,11 +23,12 @@ public class UserService {
     public ObservableList<UserListModel> getAllUsers()
     {
         List<USER> users = repositoryUser.getAll();
-        return FXCollections.observableList(
+        ObservableList<UserListModel> userlist = FXCollections.observableList(
                 users.stream().map(a -> new UserListModel(
                         a.getUserName(),
                         a.getPassword()
                 )).collect(Collectors.toList()));
+        return  userlist;
     }
 
     public boolean UserLogin(UserListModel a)

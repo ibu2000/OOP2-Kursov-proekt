@@ -13,12 +13,13 @@ public class UserInfo {
     private int idUser;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idUser",referencedColumnName = "idUser")
-    private USER byUSER;
-
-
     @JoinColumn(name = "USER_idUser", referencedColumnName = "idUser")
     private USER User_idUser;
+  /*
+    @JoinColumn(name = "idUser",referencedColumnName = "idUser")
+    private USER byUSER;*/
+
+
 
     @Column(name = "name", nullable = false)
     private String name;

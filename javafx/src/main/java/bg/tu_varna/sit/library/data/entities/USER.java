@@ -13,16 +13,16 @@ public class USER {
     @Column(name = "idUser",nullable = false)
     private long idUser;
 
-    @OneToOne(mappedBy = "byUSER")
+    /*@OneToOne(mappedBy = "byUSER")
     private UserInfo UserInfo;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="foreignUSERTYPE_idUserType",referencedColumnName = "USERTYPE_idUserType")
+    @JoinColumn(name="foreignUSERTYPE_idUserType",referencedColumnName = "idUserType")
     private UserType UserType;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="foreignidForm",referencedColumnName = "foreignidForm")
-    private FORM FORM;
+   @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="foreignidForm",referencedColumnName = "idForm")
+    private FORM FORM;*/
 
     @Column(name = "userName", nullable = false)
     private String userName;
@@ -37,14 +37,14 @@ public class USER {
     @Column(name = "rating", nullable = false)
     private String rating;
 
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "USERTYEPE_idUserType",referencedColumnName = "idUserType",nullable = false)
-    private UserType USERTYEPE_idUserType;
-
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "STATUS_idStatus",referencedColumnName = "idStatus",nullable = false)
     private Status STATUS_idStatus;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "USERTYPE_idUserType",referencedColumnName = "idUserType",nullable = false)
+    private UserType USERTYPE_idUserType;
+
 
 
     public long getIdUser() {
@@ -87,12 +87,12 @@ public class USER {
         this.rating = rating;
     }
 
-    public UserType getUSERTYEPE_idUserType() {
-        return USERTYEPE_idUserType;
+    public UserType getUSERTYPE_idUserType() {
+        return USERTYPE_idUserType;
     }
 
-    public void setUSERTYEPE_idUserType(UserType USERTYEPE_idUserType) {
-        this.USERTYEPE_idUserType = USERTYEPE_idUserType;
+    public void setUSERTYEPE_idUserType(UserType USERTYPE_idUserType) {
+        this.USERTYPE_idUserType = USERTYPE_idUserType;
     }
 
     public Status getSTATUS_idStatus() {
@@ -111,7 +111,6 @@ public class USER {
                 ", password='" + password + '\'' +
                 ", dateOfUserApproval=" + dateOfUserApproval +
                 ", rating='" + rating + '\'' +
-                ", USERTYEPE_idUserType=" + USERTYEPE_idUserType +
                 ", STATUS_idStatus=" + STATUS_idStatus +
                 '}';
     }

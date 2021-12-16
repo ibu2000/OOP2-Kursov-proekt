@@ -34,6 +34,8 @@ public class UserListModel {
     }
 
     public UserListModel(String text, String text1) {
+        this.userName = text;
+        this.password = text1;
     }
 
 

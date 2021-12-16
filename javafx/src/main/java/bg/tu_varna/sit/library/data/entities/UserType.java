@@ -2,6 +2,7 @@ package bg.tu_varna.sit.library.data.entities;
 
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Table(name = "USERTYPE")
 @Entity
@@ -12,8 +13,8 @@ public class UserType {
     @Column(name = "idUserType", nullable = false)
     private long idUserType;
 
-    @OneToOne(mappedBy = "idUserType")
-    private USER byUSER;
+    @OneToMany(mappedBy = "USERTYPE_idUserType")
+    private Set<USER> byType;
 
     @Column(name = "userType",nullable = false)
     private String userType;
