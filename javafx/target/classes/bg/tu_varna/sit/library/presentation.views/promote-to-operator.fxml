@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="320.0" prefWidth="600.0" style="-fx-background-color: #81B0B2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.library.presentation.controllers.PromoteToOperatorController">
    <children>
-      <Pane layoutX="20.0" layoutY="73.0" prefHeight="161.0" prefWidth="568.0" style="-fx-background-color: #00738C;">
+      <Pane layoutX="16.0" layoutY="73.0" prefHeight="161.0" prefWidth="568.0" style="-fx-background-color: #00738C;">
          <children>
             <Label layoutX="177.0" layoutY="8.0" prefHeight="24.0" prefWidth="214.0" style="-fx-background-color: #D6EAD4;" text="Please choose a user:">
                <font>

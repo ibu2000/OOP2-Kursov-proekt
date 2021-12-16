@@ -5,6 +5,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.shape.QuadCurve?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="527.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.library.presentation.controllers.HomePageAdminController">
@@ -13,7 +15,7 @@
          <children>
             <AnchorPane layoutX="4.0" layoutY="3.0" prefHeight="518.0" prefWidth="804.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="button_create_operator" layoutX="15.0" layoutY="120.0" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Create operator" textFill="WHITE">
+                  <Button fx:id="button_create_operator" layoutX="18.0" layoutY="120.0" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Create operator" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
@@ -23,7 +25,7 @@
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Button>
-                  <Button fx:id="button_scrapping" layoutX="15.0" layoutY="180.0" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Scrapping" textFill="WHITE">
+                  <Button fx:id="button_scrapping" layoutX="18.0" layoutY="180.0" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Scrapping" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
@@ -43,11 +45,22 @@
                         <Image url="@library_icon.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="buttonA_logout" layoutX="606.0" layoutY="45.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" style="-fx-background-color: #00738C;" text="logout" textFill="WHITE">
+                  <Button fx:id="buttonA_logout" layoutX="637.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" style="-fx-background-color: #00738C;" text="logout" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Button>
+                  <ImageView fitHeight="166.0" fitWidth="204.0" layoutX="319.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@books9.png" />
+                     </image>
+                  </ImageView>
+                  <QuadCurve controlX="-263.0" controlY="-270.0" endX="-251.0" endY="-424.0" fill="#00ffee" layoutX="258.0" layoutY="433.0" opacity="0.13" startX="-13.0" startY="-346.0" stroke="WHITE" strokeType="INSIDE" />
+                  <QuadCurve controlX="-273.0" controlY="-218.0" endX="-273.0" endY="-500.0" fill="#00ffee" layoutX="524.0" layoutY="585.0" opacity="0.13" startX="-166.0" startY="-479.0" stroke="WHITE" strokeType="INSIDE" />
+                  <QuadCurve controlX="-164.0" controlY="-191.0" endX="-253.0" endY="-479.0" fill="#00ffee" layoutX="708.0" layoutY="590.0" opacity="0.13" startX="-164.0" startY="-497.0" stroke="WHITE" strokeType="INSIDE" />
+                  <QuadCurve controlX="-138.0" controlY="-369.0" endX="-271.0" endY="-448.0" fill="#00ffee" layoutX="822.0" layoutY="538.0" opacity="0.13" startX="-201.0" startY="-505.0" stroke="WHITE" strokeType="INSIDE" />
+                  <QuadCurve controlX="-117.0" controlY="-476.0" endX="-266.0" endY="-470.0" fill="#30ff00" layoutX="619.0" layoutY="609.0" opacity="0.13" startX="-211.0" startY="-495.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Polyline fill="#33cfe1" layoutX="84.0" layoutY="124.0" points="686.3333129882812, 127.0, -50.0, 127.0, -50.0, 345.0, 686.3333129882812, 345.0" stroke="#00ddff" strokeType="INSIDE" />
                </children>
             </AnchorPane>
          </children>
@@ -76,5 +89,6 @@
             </Button>
          </children>
       </AnchorPane>
+      <QuadCurve controlX="555.0" controlY="210.0" endX="627.0" endY="10.0" fill="#00ffee" opacity="0.13" startX="14.0" startY="10.0" stroke="WHITE" strokeType="INSIDE" />
    </children>
 </AnchorPane>

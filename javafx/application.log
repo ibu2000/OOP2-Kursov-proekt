@@ -17,3 +17,4 @@
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.application.HelloApplication  - Sorry, the main fxml could not be loaded
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [bg.tu_varna.sit.library.data.entities.Task]

@@ -8,14 +8,23 @@
         <property name="connection.url">jdbc:mysql://127.0.0.1:3306/</property>
         <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="connection.username">root</property>
-        <property name="connection.password">watashiwaweebodes1</property>
+        <property name="connection.password">ivotediparola</property>
         <property name="connection.pool_size">3</property>
         <property name="current_session_context_class">thread</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
 
-        <mapping class="bg.tu_varna.sit.library.data.entities.Task"/>
-        <mapping class="bg.tu_varna.sit.library.data.entities.User"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.Books"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.BOOKSSTORED"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.Eksemplqri"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.FORM"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.LENDBOOKS"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.LENDINFO"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.StateOfBooks"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.Status"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.USER"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.UserInfo"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.UserType"/>
         </session-factory>
 </hibernate-configuration>

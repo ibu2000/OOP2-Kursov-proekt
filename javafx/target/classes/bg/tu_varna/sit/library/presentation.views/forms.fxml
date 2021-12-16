@@ -5,14 +5,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="392.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="389.0" prefWidth="734.0" style="-fx-background-color: #00738C;">
          <children>
             <AnchorPane layoutX="3.0" layoutY="86.0" prefHeight="239.0" prefWidth="728.0" style="-fx-background-color: #81B0B2;">
                <children>
-                  <Button fx:id="buttonF_they_are_not_that_cool_actually" layoutX="238.0" layoutY="129.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Cool forms bro" textFill="WHITE">
+                  <Button fx:id="buttonF_forms" layoutX="238.0" layoutY="129.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Cool forms bro" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
@@ -29,7 +28,7 @@
                   <Font name="Bell MT Bold" size="41.0" />
                </font>
             </Label>
-            <Button fx:id="buttonF_home" layoutX="331.0" layoutY="337.0" mnemonicParsing="false" style="-fx-background-color: #81B0B2;" text="Home" textFill="#00738c">
+            <Button fx:id="buttonF_home" layoutX="331.0" layoutY="337.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
                <font>
                   <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>
