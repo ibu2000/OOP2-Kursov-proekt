@@ -2,6 +2,7 @@ package bg.tu_varna.sit.library.data.entities;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Objects;
 
 @Table(name = "USER")
 @Entity
@@ -11,6 +12,17 @@ public class USER {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idUser",nullable = false)
     private long idUser;
+
+    @OneToOne(mappedBy = "byUSER")
+    private UserInfo UserInfo;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="foreignUSERTYPE_idUserType",referencedColumnName = "USERTYPE_idUserType")
+    private UserType UserType;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="foreignidForm",referencedColumnName = "foreignidForm")
+    private FORM FORM;
 
     @Column(name = "userName", nullable = false)
     private String userName;
@@ -102,6 +114,19 @@ public class USER {
                 ", USERTYEPE_idUserType=" + USERTYEPE_idUserType +
                 ", STATUS_idStatus=" + STATUS_idStatus +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        USER user = (USER) o;
+        return Objects.equals(userName, user.userName) && Objects.equals(password, user.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userName, password);
     }
 }
 

@@ -10,7 +10,13 @@ public class UserInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idUser", nullable = false)
+    private int idUser;
+
     @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idUser",referencedColumnName = "idUser")
+    private USER byUSER;
+
+
     @JoinColumn(name = "USER_idUser", referencedColumnName = "idUser")
     private USER User_idUser;
 

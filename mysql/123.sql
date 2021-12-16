@@ -15,7 +15,7 @@ INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYP
 INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (2, 'u2', 'pas2','2012-5-10', 'good', 2,2);
 INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (3, 'u3', 'pas3','2018-1-11', 'good', 3,3);
  
-
-
- 
  INSERT INTO userinfo (idUser, name, phone, email)VALUES (1, 'name1', 'phone1', 'email1');
+ INSERT INTO userinfo (idUser, name, phone, email)VALUES(2, 'ivo','001','abv');
+INSERT INTO userinfo (idUser, name, phone, email)VALUES(3, 'teodora','002','gmail');
+INSERT INTO userinfo (idUser, name, phone, email)VALUES(4, 'haki','003','bg');

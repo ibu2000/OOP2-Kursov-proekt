@@ -12,9 +12,12 @@ public class FORM {
     @Column(name = "idForm", nullable = false)
     private long idForm;
 
+    @OneToOne(mappedBy = "idForm")
+    private FORM byUSER;
+
     @Column(name = "submitionDate", nullable = false)
     private Date submitionDate;
-    
+
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "USER_idUser", referencedColumnName = "idUser")

@@ -12,6 +12,9 @@ public class UserType {
     @Column(name = "idUserType", nullable = false)
     private long idUserType;
 
+    @OneToOne(mappedBy = "idUserType")
+    private USER byUSER;
+
     @Column(name = "userType",nullable = false)
     private String userType;
 

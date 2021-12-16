@@ -18,3 +18,12 @@
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.application.HelloApplication  - Sorry, the main fxml could not be loaded
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [bg.tu_varna.sit.library.data.entities.Task]
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: bg.tu_varna.sit.library.data.entities.UserInfo.User_idUser
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: bg.tu_varna.sit.library.data.entities.UserInfo.User_idUser
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: bg.tu_varna.sit.library.data.entities.UserInfo.User_idUser
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: bg.tu_varna.sit.library.data.entities.UserInfo.User_idUser
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.library.data.access.Connection  - Initial SessionFactory created failedorg.hibernate.AnnotationException: @Column(s) not allowed on a @OneToOne property: bg.tu_varna.sit.library.data.entities.UserInfo.User_idUser
