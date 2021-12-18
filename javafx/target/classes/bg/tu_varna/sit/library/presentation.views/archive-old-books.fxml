@@ -7,13 +7,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="380.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="389.0" prefWidth="734.0" style="-fx-background-color: #00738C;">
+      <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="368.0" prefWidth="737.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutX="3.0" layoutY="86.0" prefHeight="239.0" prefWidth="728.0" style="-fx-background-color: #FFFFFF;">
+            <AnchorPane layoutY="87.0" pickOnBounds="false" prefHeight="177.0" prefWidth="737.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="buttonAOB_archive_old_book" layoutX="240.0" layoutY="134.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Archive old book" textFill="WHITE">
+                  <ImageView blendMode="DARKEN" depthTest="ENABLE" fitHeight="212.0" fitWidth="239.0" layoutX="264.0" layoutY="-15.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@books15.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttonAOB_archive_old_book" layoutX="240.0" layoutY="95.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Archive old book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
@@ -25,12 +30,12 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Label layoutX="214.0" prefHeight="86.0" prefWidth="328.0" text="Archive old books" textFill="WHITE">
+            <Label layoutX="214.0" layoutY="-3.0" prefHeight="86.0" prefWidth="328.0" text="Archive old books" textFill="WHITE">
                <font>
                   <Font name="Bell MT Bold" size="41.0" />
                </font>
             </Label>
-            <Button fx:id="buttonAOB_home" layoutX="331.0" layoutY="337.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
+            <Button fx:id="buttonAOB_home" layoutX="331.0" layoutY="306.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
                <font>
                   <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>
@@ -42,10 +47,5 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="49.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@books12.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
