@@ -36,11 +36,17 @@
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </Label>
+            <Label fx:id="loginMessageLabel" layoutX="322.0" layoutY="255.0" prefHeight="17.0" prefWidth="209.0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
             <TextField fx:id="tf_username" layoutX="306.0" layoutY="300.0" prefHeight="39.0" prefWidth="235.0">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </TextField>
+            <PasswordField fx:id="tf_password" layoutX="306.0" layoutY="362.0" prefHeight="44.0" prefWidth="235.0" />
             <Button fx:id="button_log_in" layoutX="294.0" layoutY="461.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Login">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
@@ -104,12 +110,6 @@
                   <Reflection fraction="0.43" topOpacity="0.45" />
                </effect>
             </Button>
-            <PasswordField fx:id="tf_password" layoutX="306.0" layoutY="362.0" prefHeight="44.0" prefWidth="235.0" />
-            <Label fx:id="loginMessageLabel" layoutX="322.0" layoutY="255.0" prefHeight="17.0" prefWidth="209.0">
-               <font>
-                  <Font size="27.0" />
-               </font>
-            </Label>
          </children></AnchorPane>
    </children>
 </HBox>

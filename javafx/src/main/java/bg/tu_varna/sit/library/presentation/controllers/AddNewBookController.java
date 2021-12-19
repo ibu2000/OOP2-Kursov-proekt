@@ -1,9 +1,19 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.ComboBox;
+import org.apache.log4j.lf5.util.Resource;
 
-public class AddNewBookController {
+
+import java.net.URL;
+
+public class AddNewBookController implements Initializable {
    @FXML
 private TextField tfANB_name_of_book;
    @FXML
@@ -28,4 +38,10 @@ private TextField tfANB_name_of_book;
     private RadioButton radio_buttonANB_archived;
     @FXML
     private RadioButton radio_buttonANB_not_archived;
-}
+
+    ObservableList<String> list = FXCollections.observableArrayList("Nova","Zapazena","Povredena");
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+     combo_boxANB_state_of_book.setItems(list);
+    }}
