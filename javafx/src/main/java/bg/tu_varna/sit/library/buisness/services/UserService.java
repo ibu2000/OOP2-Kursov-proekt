@@ -33,35 +33,7 @@ public class UserService {
         return  userlist;
     }
 
-    public int FindUserType(UserListModel a)
-    {
-        int type;
-        ObservableList<UserListModel> allUsers = getAllUsers();
-        for(UserListModel user : allUsers)
-        {
-            if(user.equals(a))
-            {
-                return type = getUserType();
-            }
-        }
-        return type = 146853 ;
-    }
 
-    private int getUserType(USER a) {
-        List<USER> users = repositoryUser.getAll();
-        USER temp = new USER();
-        for(USER gr:users)
-        {
-            if(gr.getUserType().equals(a))
-            {
-                return gr;
-            }
-        }
-
-    }
-=======
-=======
->>>>>>> Stashed changes
     public long FindUserType(UserListModel a)
     {
         USER usr = new USER(a.getUserName(),a.getPassword());
@@ -78,12 +50,7 @@ public class UserService {
         return 0;
     }
 
-
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-
+    
     public boolean UserLogin(UserListModel a)
     {
         ObservableList<UserListModel> allUsers = getAllUsers();
