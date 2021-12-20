@@ -2,6 +2,8 @@ package bg.tu_varna.sit.library.presentation.controllers;
 
 import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.data.entities.Books;
+import bg.tu_varna.sit.library.data.entities.USER;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,9 +22,11 @@ import static bg.tu_varna.sit.library.common.Constants.View.SAMPLE;
 import static bg.tu_varna.sit.library.common.Constants.View.HOMEPAGE_USER;
 import java.io.IOException;
 import java.security.Provider;
+import java.util.List;
 
 public class SampleController {
     Stage s = new Stage();
+
     @FXML
     private Button button_log_in;
 
@@ -48,6 +52,8 @@ public class SampleController {
         s = stage;
     }
 
+    public static int userType = 2;
+
     UserService service = new UserService();
     @FXML
     public void userLogin() {
@@ -57,7 +63,7 @@ public class SampleController {
         else if(!tf_password.getText().equals("") && !tf_username.equals(""))
         {
             UserListModel userfind = new UserListModel(tf_username.getText(),tf_password.getText());
-           if(service.UserLogin(userfind))
+           if(service.UserLogin(userfind) && )
            {
 
             try {

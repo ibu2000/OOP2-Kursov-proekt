@@ -18,4 +18,4 @@ INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYP
  INSERT INTO userinfo (idUser, name, phone, email)VALUES (1, 'name1', 'phone1', 'email1');
  INSERT INTO userinfo (idUser, name, phone, email)VALUES(2, 'ivo','001','abv');
 INSERT INTO userinfo (idUser, name, phone, email)VALUES(3, 'teodora','002','gmail');
-INSERT INTO userinfo (idUser, name, phone, email)VALUES(4, 'haki','003','bg');Columns
+INSERT INTO userinfo (idUser, name, phone, email)VALUES(4, 'haki','003','bg');

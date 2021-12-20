@@ -26,21 +26,33 @@
                   <Image url="@books3.png" />
                </image>
             </ImageView>
-            <Label layoutX="149.0" layoutY="307.0" text="Username:">
+            <Label fx:id="loginMessageLabel" layoutX="319.0" layoutY="416.0" prefHeight="17.0" prefWidth="209.0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="149.0" layoutY="303.0" text="Username:">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="151.0" layoutY="373.0" text="Password:">
+            <Label layoutX="151.0" layoutY="372.0" text="Password:">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="tf_username" layoutX="306.0" layoutY="300.0" prefHeight="39.0" prefWidth="235.0">
+            <TextField fx:id="tf_username" layoutX="306.0" layoutY="290.0" prefHeight="39.0" prefWidth="235.0">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
             </TextField>
+            <PasswordField fx:id="tf_password" layoutX="306.0" layoutY="362.0" prefHeight="44.0" prefWidth="235.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></PasswordField>
             <Button fx:id="button_log_in" layoutX="294.0" layoutY="461.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Login">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
@@ -104,12 +116,6 @@
                   <Reflection fraction="0.43" topOpacity="0.45" />
                </effect>
             </Button>
-            <PasswordField fx:id="tf_password" layoutX="306.0" layoutY="362.0" prefHeight="44.0" prefWidth="235.0" />
-            <Label fx:id="loginMessageLabel" layoutX="322.0" layoutY="255.0" prefHeight="17.0" prefWidth="209.0">
-               <font>
-                  <Font size="27.0" />
-               </font>
-            </Label>
          </children></AnchorPane>
    </children>
 </HBox>

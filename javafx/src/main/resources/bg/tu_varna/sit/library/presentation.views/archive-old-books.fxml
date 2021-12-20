@@ -1,51 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="380.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="368.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="368.0" prefWidth="737.0" style="-fx-background-color: #00738C;">
+      <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="353.0" prefWidth="737.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutY="87.0" pickOnBounds="false" prefHeight="177.0" prefWidth="737.0" style="-fx-background-color: #FFFFFF;">
+            <AnchorPane layoutY="78.0" pickOnBounds="false" prefHeight="181.0" prefWidth="737.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <ImageView blendMode="DARKEN" depthTest="ENABLE" fitHeight="212.0" fitWidth="239.0" layoutX="264.0" layoutY="-15.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@books15.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="buttonAOB_archive_old_book" layoutX="240.0" layoutY="95.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Archive old book" textFill="WHITE">
+                  <Button fx:id="buttonAOB_archive_old_book" layoutX="240.0" layoutY="117.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Archive old book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Button>
-                  <Label layoutX="36.0" layoutY="26.0" prefHeight="41.0" prefWidth="657.0" text="Choose between wich of these old books you'd like to archive" textFill="#0e868f">
+                  <Label layoutX="47.0" layoutY="22.0" prefHeight="41.0" prefWidth="657.0" text="Choose between wich of these old books you'd like to archive" textFill="#0e868f">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Label>
+                  <ComboBox layoutX="56.0" layoutY="67.0" prefHeight="25.0" prefWidth="302.0" promptText="Book tittle">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox layoutX="392.0" layoutY="67.0" prefHeight="25.0" prefWidth="302.0" promptText="Copy of book">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </ComboBox>
                </children>
+               <effect>
+                  <DropShadow height="148.26" radius="36.565" width="0.0">
+                     <color>
+                        <Color red="0.06578947603702545" green="0.06578947603702545" blue="0.06578947603702545" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </AnchorPane>
-            <Label layoutX="214.0" layoutY="-3.0" prefHeight="86.0" prefWidth="328.0" text="Archive old books" textFill="WHITE">
-               <font>
-                  <Font name="Bell MT Bold" size="41.0" />
-               </font>
-            </Label>
-            <Button fx:id="buttonAOB_home" layoutX="331.0" layoutY="306.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
+            <Button fx:id="buttonAOB_home" layoutX="331.0" layoutY="294.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
                <font>
                   <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>
+               <effect>
+                  <DropShadow height="255.0" radius="127.0" spread="0.01" width="255.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Button>
-            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="666.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="672.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@library_icon.png" />
                </image>
+               <effect>
+                  <DropShadow height="255.0" radius="127.0" spread="0.22" width="255.0" />
+               </effect>
             </ImageView>
+            <Label layoutX="222.0" layoutY="12.0" text="Archive old books" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="41.0" />
+               </font>
+               <effect>
+                  <Glow level="0.5" />
+               </effect>
+            </Label>
          </children>
+         <effect>
+            <DropShadow />
+         </effect>
       </AnchorPane>
    </children>
 </AnchorPane>
