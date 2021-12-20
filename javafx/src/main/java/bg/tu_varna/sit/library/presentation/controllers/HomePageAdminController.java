@@ -2,6 +2,7 @@ package bg.tu_varna.sit.library.presentation.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class HomePageAdminController {
     @FXML
@@ -22,6 +23,14 @@ public class HomePageAdminController {
     private Button buttonA_user_rating;
     @FXML
     private Button buttonA_logout;
+
+    Stage s;
+    public HomePageAdminController()
+    {}
+    public HomePageAdminController(Stage stage)
+    {
+        s = stage;
+    }
 
 
 }

@@ -45,7 +45,13 @@ public class USER {
     @JoinColumn(name = "USERTYPE_idUserType",referencedColumnName = "idUserType",nullable = false)
     private UserType USERTYPE_idUserType;
 
+    public USER(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
 
+    public USER() {
+    }
 
     public long getIdUser() {
         return idUser;
