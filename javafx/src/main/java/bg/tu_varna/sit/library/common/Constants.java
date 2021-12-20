@@ -12,6 +12,12 @@ public class Constants {
         public static final String SEARCH_BOOK = "/bg/tu_varna/sit/library/presentation.views/search-books.fxml";
         public static final String USER_RATINGS = "/bg/tu_varna/sit/library/presentation.views/user-rating.fxml";
         public static final String REGISTRATION = "/bg/tu_varna/sit/library/presentation.views/registration.fxml";
+        public static final String ADD_BOOKS = "/bg/tu_varna/sit/library/presentation.views/add-new-book.fxml";
+        public static final String PROMOTE_TO_OPERATOR = "/bg/tu_varna/sit/library/presentation.views/promote-to-operator.fxml";
+
+
+
+
     }
 
 

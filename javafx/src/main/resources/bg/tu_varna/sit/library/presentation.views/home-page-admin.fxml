@@ -15,12 +15,12 @@
          <children>
             <AnchorPane layoutX="4.0" layoutY="3.0" prefHeight="518.0" prefWidth="804.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="button_create_operator" layoutX="18.0" layoutY="120.0" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Create operator" textFill="WHITE">
+                  <Button fx:id="button_create_operator" layoutX="18.0" layoutY="120.0" mnemonicParsing="false" onAction="#PromoteToOperatorPage" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Create operator" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Button>
-                  <Button fx:id="button_add_new_book" layoutX="550.0" layoutY="120.0" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #00738C;" text="add new book" textFill="WHITE">
+                  <Button fx:id="button_add_new_book" layoutX="550.0" layoutY="120.0" mnemonicParsing="false" onAction="#addNewBook" prefWidth="230.0" style="-fx-background-color: #00738C;" text="add new book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>

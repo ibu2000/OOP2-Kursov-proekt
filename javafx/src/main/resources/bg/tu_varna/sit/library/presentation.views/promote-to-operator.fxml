@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="320.0" prefWidth="600.0" style="-fx-background-color: #81B0B2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.library.presentation.controllers.PromoteToOperatorController">
+<AnchorPane prefHeight="320.0" prefWidth="600.0" style="-fx-background-color: #81B0B2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="16.0" layoutY="73.0" prefHeight="161.0" prefWidth="568.0" style="-fx-background-color: #00738C;">
          <children>
@@ -18,7 +18,7 @@
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
             </Label>
-            <ComboBox fx:id="combo_box_users_to_promote_to_operator" layoutX="152.0" layoutY="64.0" prefHeight="25.0" prefWidth="265.0" promptText="users" style="-fx-background-color: #D6EAD4;" />
+            <ComboBox fx:id="combo_box_users_to_promote_to_operator" layoutX="104.0" layoutY="59.0" prefHeight="25.0" prefWidth="382.0" promptText="users" style="-fx-background-color: #D6EAD4;" />
             <Button fx:id="buttonPTO_promote_to_operator" layoutX="211.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #FFFFFF;" text="Promote" textFill="#00738c">
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
@@ -40,7 +40,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Button fx:id="buttonPTO_home" layoutX="260.0" layoutY="251.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="88.0" style="-fx-background-color: #00738C;" text="Home" textFill="WHITE">
+      <Button fx:id="buttonPTO_home" layoutX="260.0" layoutY="251.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="24.0" prefWidth="88.0" style="-fx-background-color: #00738C;" text="Home" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="18.0" />
          </font>

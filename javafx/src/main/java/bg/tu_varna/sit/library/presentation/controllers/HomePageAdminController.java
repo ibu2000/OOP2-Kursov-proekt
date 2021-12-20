@@ -55,6 +55,35 @@ public class HomePageAdminController {
             e.printStackTrace();
         }
     }
+    @FXML
+    public void  addNewBook() {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.ADD_BOOKS));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new AddNewBookController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void  PromoteToOperatorPage() {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.PROMOTE_TO_OPERATOR));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new PromoteToOperatorController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 
 

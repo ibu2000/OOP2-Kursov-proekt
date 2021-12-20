@@ -197,7 +197,7 @@
                      </children>
                   </Pane>
                   <QuadCurve controlX="528.0" controlY="317.0" endX="455.0" endY="3.0" fill="#3174b2" layoutX="-455.0" layoutY="-2.0" opacity="0.13" startX="455.0" startY="576.0" stroke="#81b0b2" strokeType="INSIDE" />
-                  <Button fx:id="buttonANB_home" layoutX="325.0" layoutY="490.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
+                  <Button fx:id="buttonANB_home" layoutX="325.0" layoutY="490.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
