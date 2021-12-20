@@ -65,8 +65,7 @@ public class SampleController {
     public void userLogin() {
         if (tf_password.getText().equals("") || tf_username.equals("")) {
             loginMessageLabel.setText("Please fill in the info");
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
             }
         else if(!tf_password.getText().equals("") && !tf_username.equals(""))
         {
