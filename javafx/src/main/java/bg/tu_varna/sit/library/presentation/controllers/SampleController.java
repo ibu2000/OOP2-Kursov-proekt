@@ -47,6 +47,10 @@ public class SampleController {
     private Button button_sign_up;
 
     public SampleController() {
+
+
+       // d
+    }
     }
 
     public SampleController(Stage stage) {
@@ -61,6 +65,7 @@ public class SampleController {
     public void userLogin() {
         if (tf_password.getText().equals("") || tf_username.equals("")) {
             loginMessageLabel.setText("Please fill in the info");
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             }
         else if(!tf_password.getText().equals("") && !tf_username.equals(""))
@@ -79,10 +84,15 @@ public class SampleController {
                 stage.show();
             } catch (Exception e)
 =======
+=======
+>>>>>>> Stashed changes
         } else if (!tf_password.getText().equals("") && !tf_username.equals("")) {
 
             UserListModel userfind = new UserListModel(tf_username.getText(), tf_password.getText());
             if (service.UserLogin(userfind))
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             {
                 try {

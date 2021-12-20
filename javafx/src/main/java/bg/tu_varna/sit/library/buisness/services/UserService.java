@@ -33,6 +33,7 @@ public class UserService {
         return  userlist;
     }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     public int FindUserType(UserListModel a)
     {
         int type;
@@ -60,6 +61,8 @@ public class UserService {
 
     }
 =======
+=======
+>>>>>>> Stashed changes
     public long FindUserType(UserListModel a)
     {
         USER usr = new USER(a.getUserName(),a.getPassword());
@@ -77,6 +80,9 @@ public class UserService {
     }
 
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     public boolean UserLogin(UserListModel a)
