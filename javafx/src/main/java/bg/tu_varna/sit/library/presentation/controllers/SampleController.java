@@ -109,6 +109,22 @@ public class SampleController {
         }
 
     }
+    @FXML
+    public void goToRegistration() {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.REGISTRATION));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new RegistrationController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+            } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
         public void cancelButtonOnAction (ActionEvent e)
         {

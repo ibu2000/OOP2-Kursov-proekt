@@ -1,6 +1,12 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.UserService;
+import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
@@ -25,12 +31,30 @@ public class HomePageAdminController {
     private Button buttonA_logout;
 
     Stage s;
-    public HomePageAdminController()
-    {}
-    public HomePageAdminController(Stage stage)
-    {
+
+    public HomePageAdminController() {
+    }
+
+    public HomePageAdminController(Stage stage) {
         s = stage;
     }
 
+    UserService service = new UserService();
 
+    @FXML
+    public void logOut() {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SAMPLE));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new SampleController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
+
+

@@ -101,4 +101,19 @@ public class HomePageUserController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void logOut() {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SAMPLE));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new SampleController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

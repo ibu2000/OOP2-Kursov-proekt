@@ -26,7 +26,7 @@
                   <Image url="@books3.png" />
                </image>
             </ImageView>
-            <Label fx:id="loginMessageLabel" layoutX="319.0" layoutY="416.0" prefHeight="17.0" prefWidth="209.0">
+            <Label fx:id="loginMessageLabel" layoutX="215.0" layoutY="245.0" prefHeight="39.0" prefWidth="420.0">
                <font>
                   <Font size="27.0" />
                </font>
@@ -69,7 +69,7 @@
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="button_sign_up" layoutX="445.0" layoutY="522.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#0051ff" underline="true">
+            <Button fx:id="button_sign_up" layoutX="445.0" layoutY="522.0" mnemonicParsing="false" onMouseClicked="#goToRegistration" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#0051ff" underline="true">
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
