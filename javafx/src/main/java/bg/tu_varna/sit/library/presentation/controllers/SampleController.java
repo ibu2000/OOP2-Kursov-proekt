@@ -4,6 +4,7 @@ import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.entities.USER;
+import bg.tu_varna.sit.library.data.entities.UserType;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -45,20 +46,22 @@ public class SampleController {
     @FXML
     private Button button_sign_up;
 
-    public SampleController()
-    {}
-    public SampleController(Stage stage)
-    {
+    public SampleController() {
+    }
+
+    public SampleController(Stage stage) {
         s = stage;
     }
 
     public static int userType = 2;
 
     UserService service = new UserService();
+
     @FXML
     public void userLogin() {
         if (tf_password.getText().equals("") || tf_username.equals("")) {
             loginMessageLabel.setText("Please fill in the info");
+<<<<<<< Updated upstream
             }
         else if(!tf_password.getText().equals("") && !tf_username.equals(""))
         {
@@ -75,22 +78,53 @@ public class SampleController {
                 stage.setScene(new Scene(root2));
                 stage.show();
             } catch (Exception e)
+=======
+        } else if (!tf_password.getText().equals("") && !tf_username.equals("")) {
+
+            UserListModel userfind = new UserListModel(tf_username.getText(), tf_password.getText());
+            if (service.UserLogin(userfind))
+>>>>>>> Stashed changes
             {
-                e.printStackTrace();
+                try {
+                    long a = service.FindUserType(userfind);
+                    if (a == 1) {
+                        s.close();
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_USER));
+                        Stage stage = new Stage();
+                        fxmlLoader.setController(new HomePageUserController(stage));
+                        Parent root2 = fxmlLoader.load();
+                        stage.setScene(new Scene(root2));
+                        stage.show();
+                    } else if (a == 2) {
+                        s.close();
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_OPERATOR));
+                        Stage stage = new Stage();
+                        fxmlLoader.setController(new HomePageOperatorController(stage));
+                        Parent root2 = fxmlLoader.load();
+                        stage.setScene(new Scene(root2));
+                        stage.show();
+                    } else if (a == 3) {
+                        s.close();
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_ADMIN));
+                        Stage stage = new Stage();
+                        fxmlLoader.setController(new HomePageAdminController(stage));
+                        Parent root2 = fxmlLoader.load();
+                        stage.setScene(new Scene(root2));
+
+                        stage.show();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-           }
         }
 
-
-
     }
 
-
-
-
-    public void cancelButtonOnAction(ActionEvent e)
-    {
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
-        stage.close();
+        public void cancelButtonOnAction (ActionEvent e)
+        {
+            Stage stage = (Stage) cancelButton.getScene().getWindow();
+            stage.close();
+        }
     }
-}
+

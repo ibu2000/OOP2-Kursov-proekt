@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.library.buisness.services;
 
 import bg.tu_varna.sit.library.data.entities.USER;
+import bg.tu_varna.sit.library.data.entities.UserType;
 import bg.tu_varna.sit.library.data.repositories.UserRepository;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.collections.FXCollections;
@@ -20,6 +21,7 @@ public class UserService {
         public static final UserService INSTANCE = new UserService();
     }
 
+
     public ObservableList<UserListModel> getAllUsers()
     {
         List<USER> users = repositoryUser.getAll();
@@ -30,6 +32,7 @@ public class UserService {
                 )).collect(Collectors.toList()));
         return  userlist;
     }
+<<<<<<< Updated upstream
     public int FindUserType(UserListModel a)
     {
         int type;
@@ -56,6 +59,25 @@ public class UserService {
         }
 
     }
+=======
+    public long FindUserType(UserListModel a)
+    {
+        USER usr = new USER(a.getUserName(),a.getPassword());
+        List<USER> users = repositoryUser.getAll();
+        for(USER user : users)
+        {
+            if(user.equals(usr))
+            {
+             long b = user.getUSERTYPE_idUserType().getIdUserType();
+             return b;
+            }
+        }
+
+        return 0;
+    }
+
+
+>>>>>>> Stashed changes
 
     public boolean UserLogin(UserListModel a)
     {
@@ -69,6 +91,7 @@ public class UserService {
         }
         return false;
     }
+
 
 
 
