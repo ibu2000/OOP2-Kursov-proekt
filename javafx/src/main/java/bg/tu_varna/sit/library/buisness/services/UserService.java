@@ -30,6 +30,32 @@ public class UserService {
                 )).collect(Collectors.toList()));
         return  userlist;
     }
+    public int FindUserType(UserListModel a)
+    {
+        int type;
+        ObservableList<UserListModel> allUsers = getAllUsers();
+        for(UserListModel user : allUsers)
+        {
+            if(user.equals(a))
+            {
+                return type = getUserType();
+            }
+        }
+        return type = 146853 ;
+    }
+
+    private int getUserType(USER a) {
+        List<USER> users = repositoryUser.getAll();
+        USER temp = new USER();
+        for(USER gr:users)
+        {
+            if(gr.getUserType().equals(a))
+            {
+                return gr;
+            }
+        }
+
+    }
 
     public boolean UserLogin(UserListModel a)
     {
