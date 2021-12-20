@@ -50,7 +50,7 @@ public class UserService {
         return 0;
     }
 
-    
+
     public boolean UserLogin(UserListModel a)
     {
         ObservableList<UserListModel> allUsers = getAllUsers();
