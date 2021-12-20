@@ -51,7 +51,7 @@ public class SampleController {
 
        // d
     }
-    }
+
 
     public SampleController(Stage stage) {
         s = stage;
@@ -69,30 +69,10 @@ public class SampleController {
             }
         else if(!tf_password.getText().equals("") && !tf_username.equals(""))
         {
-            UserListModel userfind = new UserListModel(tf_username.getText(),tf_password.getText());
-           if(service.UserLogin(userfind) && )
-           {
-
-            try {
-                s.close();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_OPERATOR));
-                Stage stage = new Stage();
-                fxmlLoader.setController(new HomePageOperatorController(stage));
-                Parent root2 = fxmlLoader.load();
-                stage.setScene(new Scene(root2));
-                stage.show();
-            } catch (Exception e)
-=======
-=======
->>>>>>> Stashed changes
-        } else if (!tf_password.getText().equals("") && !tf_username.equals("")) {
 
             UserListModel userfind = new UserListModel(tf_username.getText(), tf_password.getText());
             if (service.UserLogin(userfind))
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
             {
                 try {
                     long a = service.FindUserType(userfind);

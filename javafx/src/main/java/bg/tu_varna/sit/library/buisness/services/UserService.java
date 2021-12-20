@@ -32,8 +32,7 @@ public class UserService {
                 )).collect(Collectors.toList()));
         return  userlist;
     }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
     public int FindUserType(UserListModel a)
     {
         int type;
