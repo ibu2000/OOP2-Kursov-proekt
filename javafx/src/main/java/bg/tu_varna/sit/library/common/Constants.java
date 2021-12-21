@@ -14,6 +14,10 @@ public class Constants {
         public static final String REGISTRATION = "/bg/tu_varna/sit/library/presentation.views/registration.fxml";
         public static final String ADD_BOOKS = "/bg/tu_varna/sit/library/presentation.views/add-new-book.fxml";
         public static final String PROMOTE_TO_OPERATOR = "/bg/tu_varna/sit/library/presentation.views/promote-to-operator.fxml";
+        public static final String ARCHIVE_OLD_BOOK = "/bg/tu_varna/sit/library/presentation.views/archive-old-books.fxml";
+        public static final String CREATE_USER = "/bg/tu_varna/sit/library/presentation.views/create-user.fxml";
+        public static final String DELETE_USER = "/bg/tu_varna/sit/library/presentation.views/delete-user.fxml";
+        public static final String FORMS = "/bg/tu_varna/sit/library/presentation.views/forms.fxml";
 
 
 

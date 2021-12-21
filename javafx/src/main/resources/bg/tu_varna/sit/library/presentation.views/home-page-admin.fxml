@@ -30,7 +30,7 @@
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Button>
-                  <Button fx:id="button_archive_old_books" layoutX="550.0" layoutY="180.0" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Archive old books" textFill="WHITE">
+                  <Button fx:id="button_archive_old_books" layoutX="550.0" layoutY="180.0" mnemonicParsing="false" onAction="#archiveBookPage" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Archive old books" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>

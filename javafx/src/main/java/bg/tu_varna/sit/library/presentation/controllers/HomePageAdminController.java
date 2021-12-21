@@ -84,6 +84,21 @@ public class HomePageAdminController {
         }
     }
 
+    @FXML
+    public void  archiveBookPage() {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.ARCHIVE_OLD_BOOK));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new ArchiveOldBooksController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 
 
