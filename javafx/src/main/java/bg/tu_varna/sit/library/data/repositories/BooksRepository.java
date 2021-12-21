@@ -1,24 +1,27 @@
 package bg.tu_varna.sit.library.data.repositories;
 import bg.tu_varna.sit.library.data.access.Connection;
 import bg.tu_varna.sit.library.data.entities.Books;
+import bg.tu_varna.sit.library.data.entities.USER;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.locks.Condition;
 
 public class BooksRepository implements DAORepository<Books>{
 
     private static final Logger log = Logger.getLogger(BooksRepository.class);
 
-    private static BooksRepository getInstance() {return BooksRepositoryHolder.INSTANCE;}
+    public static BooksRepository getInstance() {return BooksRepositoryHolder.INSTANCE;}
 
     private static class BooksRepositoryHolder {
         public static final BooksRepository INSTANCE = new BooksRepository();
     }
 
-    @Override
+  @Override
    public void save(Books obj)
     {    Session session = Connection.openSession();
         Transaction transaction = session.beginTransaction();
@@ -76,6 +79,22 @@ public class BooksRepository implements DAORepository<Books>{
 
     @Override
     public List<Books> getAll() {
-        return null;
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        List<Books> books = new LinkedList<>();
+        try {
+            String jpql = "SELECT t FROM USER t";
+           books.addAll(session.createQuery(jpql, Books.class).getResultList());
+            log.info("Get all users");
+        }
+        catch (Exception e)
+        {
+            log.error("Get user error: " + e.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return books;
     }
 }
+

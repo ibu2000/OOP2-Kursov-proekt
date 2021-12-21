@@ -13,16 +13,6 @@ public class USER {
     @Column(name = "idUser",nullable = false)
     private long idUser;
 
-    /*@OneToOne(mappedBy = "byUSER")
-    private UserInfo UserInfo;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="foreignUSERTYPE_idUserType",referencedColumnName = "idUserType")
-    private UserType UserType;
-
-   @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="foreignidForm",referencedColumnName = "idForm")
-    private FORM FORM;*/
 
     @Column(name = "userName", nullable = false)
     private String userName;

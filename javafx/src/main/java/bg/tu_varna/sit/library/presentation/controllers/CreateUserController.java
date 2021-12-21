@@ -1,20 +1,23 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.BookService;
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.data.entities.Books;
+import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.time.LocalDate;
+
 public class CreateUserController {
-    @FXML
-    private Button buttonCU_create;
-    @FXML
-    private Button buttonUR_home;
+
 
     Stage s;
+
 
     public CreateUserController() {
     }
@@ -36,5 +39,8 @@ public class CreateUserController {
             e.printStackTrace();
         }
     }
+
+
+
 
 }

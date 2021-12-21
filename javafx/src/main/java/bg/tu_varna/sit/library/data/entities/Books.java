@@ -2,6 +2,7 @@ package bg.tu_varna.sit.library.data.entities;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.time.LocalDate;
 
 @Table(name = "books")
 @Entity
@@ -22,8 +23,17 @@ public class Books {
     private String genre;
 
     @Column(name = "yearOfPublishing", nullable = false)
-    private java.util.Date yearOfPublishing;
+    private LocalDate yearOfPublishing;
 
+    public Books()
+    {   }
+
+    public Books(String bookName, String author, String genre, LocalDate yearOfPublishing) {
+        this.bookName = bookName;
+        this.author = author;
+        this.genre = genre;
+        this.yearOfPublishing = yearOfPublishing;
+    }
 
     public long getIdBook() {
         return idBook;
@@ -57,19 +67,15 @@ public class Books {
         this.genre = genre;
     }
 
-    public java.util.Date getYearOfPublishing() {
+    public LocalDate getYearOfPublishing() {
         return yearOfPublishing;
     }
 
-    public void setYearOfPublishing(java.util.Date yearOfPublishing) {
+    public void setYearOfPublishing(LocalDate yearOfPublishing) {
         this.yearOfPublishing = yearOfPublishing;
     }
 
-    public void setYearOfPublishing(Date yearOfPublishing) {
-        this.yearOfPublishing = yearOfPublishing;
-    }
-
-     @Override
+    @Override
     public String toString() {
         return "Books{" +
                 "idBook: " + idBook +
