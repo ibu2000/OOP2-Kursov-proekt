@@ -64,11 +64,6 @@
                </font>
             </Label>
             <TextArea layoutX="31.0" layoutY="126.0" prefHeight="177.0" prefWidth="302.0" style="-fx-background-color: #00738C;" />
-            <Button fx:id="buttonLB_home" layoutX="117.0" layoutY="323.0" mnemonicParsing="false" onAction="#ReturnToHomePage" prefHeight="34.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="home" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
-               </font>
-            </Button>
          </children>
       </AnchorPane>
       <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#08ffc1" layoutY="-10.0" startX="338.0" startY="65.66666412353516" stroke="#d1deff" strokeType="INSIDE" />

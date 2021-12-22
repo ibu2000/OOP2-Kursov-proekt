@@ -113,6 +113,58 @@ public class HomePageAdminController {
         }
     }
 
+
+    @FXML
+    public void  ReturnBookPage()
+    {
+        try
+        {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.RETURN_BOOK));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new ReturnBookController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void  SearchBooksPage()
+    {
+        try
+        {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SEARCH_BOOK));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new SearchBooksController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void  UserRatingsPage()
+    {
+        try
+        {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.USER_RATINGS));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new UserRatingController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
 }
 
 
