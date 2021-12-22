@@ -60,7 +60,7 @@
             </Polygon>
          </children>
       </Pane>
-      <Button fx:id="buttonLB_lend_book" layoutX="132.0" layoutY="328.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books" textFill="WHITE">
+      <Button fx:id="buttonLB_lend_book" layoutX="132.0" layoutY="338.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -71,7 +71,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <ComboBox fx:id="combo_boxLB_lendable_books" layoutX="29.0" layoutY="213.0" prefHeight="25.0" prefWidth="444.0" style="-fx-background-color: #00738C;">
+      <ComboBox fx:id="combo_boxLB_lendable_books" layoutX="18.0" layoutY="213.0" prefHeight="42.0" prefWidth="470.0" style="-fx-background-color: #00738C;">
          <effect>
             <Lighting diffuseConstant="1.05" specularConstant="0.41" specularExponent="26.9">
                <bumpInput>
@@ -128,7 +128,7 @@
                </color>
             </DropShadow>
          </effect></CubicCurve>
-      <Button fx:id="buttonLB_lend_book1" layoutX="173.0" layoutY="251.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add" textFill="WHITE">
+      <Button fx:id="buttonLB_lend_book1" layoutX="173.0" layoutY="269.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
