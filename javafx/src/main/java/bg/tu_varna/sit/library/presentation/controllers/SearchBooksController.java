@@ -6,13 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 public class SearchBooksController {
     @FXML
 private Button buttonSB_home;
     Stage s;
-
+    @FXML
+    private TextArea text_area_search_books;
     public SearchBooksController()
     {}
     public SearchBooksController(Stage stage)
