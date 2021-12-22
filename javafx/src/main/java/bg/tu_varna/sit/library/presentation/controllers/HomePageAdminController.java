@@ -99,6 +99,20 @@ public class HomePageAdminController {
         }
     }
 
+    @FXML
+    public void  LendBooksPage() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.LEND_BOOK));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new LendingBooksController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 
 

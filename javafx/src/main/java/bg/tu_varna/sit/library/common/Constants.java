@@ -18,6 +18,8 @@ public class Constants {
         public static final String CREATE_USER = "/bg/tu_varna/sit/library/presentation.views/create-user.fxml";
         public static final String DELETE_USER = "/bg/tu_varna/sit/library/presentation.views/delete-user.fxml";
         public static final String FORMS = "/bg/tu_varna/sit/library/presentation.views/forms.fxml";
+        public static final String EXAMPLE = "/bg/tu_varna/sit/library/presentation.views/hello-view.fxml";
+
 
 
 

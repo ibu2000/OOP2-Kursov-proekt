@@ -28,7 +28,6 @@ public class HomePageOperatorController {
     {
         try
         {
-            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.LEND_BOOK));
             Stage stage = new Stage();
             fxmlLoader.setController(new SearchBooksController(stage));
@@ -46,7 +45,6 @@ public class HomePageOperatorController {
     {
         try
         {
-            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.RETURN_BOOK));
             Stage stage = new Stage();
             fxmlLoader.setController(new ReturnBookController(stage));
@@ -63,7 +61,6 @@ public class HomePageOperatorController {
     {
         try
         {
-            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SEARCH_BOOK));
             Stage stage = new Stage();
             fxmlLoader.setController(new SearchBooksController(stage));
@@ -80,7 +77,6 @@ public class HomePageOperatorController {
     {
         try
         {
-            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.USER_RATINGS));
             Stage stage = new Stage();
             fxmlLoader.setController(new UserRatingController(stage));
