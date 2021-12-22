@@ -1,39 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="391.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="389.0" prefWidth="734.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutX="4.0" layoutY="86.0" prefHeight="239.0" prefWidth="728.0" style="-fx-background-color: #81B0B2;">
+            <AnchorPane layoutY="90.0" prefHeight="185.0" prefWidth="734.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="buttonCU_create" layoutX="238.0" layoutY="107.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Create user" textFill="WHITE">
+                  <Button fx:id="buttonCU_create" layoutX="244.0" layoutY="113.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Create user" textFill="WHITE">
                      <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
                   </Button>
-                  <Label layoutX="262.0" layoutY="14.0" prefHeight="41.0" prefWidth="216.0" text="Review applications" textFill="WHITE">
+                  <Label layoutX="228.0" layoutY="14.0" prefHeight="41.0" prefWidth="297.0" text="Review applications" textFill="#00738c">
                      <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                   </Label>
+                  <ComboBox fx:id="combo_boxCAU_create_a_user" layoutX="108.0" layoutY="63.0" prefHeight="25.0" prefWidth="528.0">
+                     <effect>
+                        <Reflection bottomOpacity="0.2" fraction="0.83" topOpacity="0.57" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </ComboBox>
                </children>
+               <effect>
+                  <DropShadow height="134.82" radius="63.2475" width="120.17" />
+               </effect>
             </AnchorPane>
-            <Label layoutX="256.0" prefHeight="86.0" prefWidth="238.0" text="Create a user" textFill="WHITE">
+            <Label layoutX="194.0" prefHeight="86.0" prefWidth="353.0" text="Create a user" textFill="WHITE">
                <font>
-                  <Font name="Bell MT Bold" size="41.0" />
+                  <Font name="Bell MT Bold" size="60.0" />
                </font>
+               <effect>
+                  <Glow />
+               </effect>
             </Label>
-            <Button fx:id="buttonUR_home" layoutX="331.0" layoutY="337.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#088aa4">
+            <Button fx:id="buttonUR_home" layoutX="322.0" layoutY="316.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#088aa4">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="22.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
+               <effect>
+                  <DropShadow height="90.86" radius="45.6625" width="93.79">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
             </Button>
          </children>
       </AnchorPane>
+      <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="664.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@library_icon.png" />
+         </image>
+         <effect>
+            <DropShadow radius="68.5" width="255.0" />
+         </effect>
+      </ImageView>
    </children>
 </AnchorPane>

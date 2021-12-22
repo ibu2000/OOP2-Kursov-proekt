@@ -15,6 +15,9 @@ import java.time.LocalDate;
 
 public class CreateUserController {
 
+    @FXML
+    private ComboBox combo_boxCAU_create_a_user;
+
 
     Stage s;
 

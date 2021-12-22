@@ -1,35 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="391.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="389.0" prefWidth="734.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutX="4.0" layoutY="86.0" prefHeight="239.0" prefWidth="725.0" style="-fx-background-color: #81B0B2;">
+            <AnchorPane layoutY="74.0" prefHeight="275.0" prefWidth="734.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="buttonRAB_return_book" layoutX="299.0" layoutY="121.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="149.0" style="-fx-background-color: #00738C;" text="Return" textFill="WHITE">
+                  <Button fx:id="buttonRAB_return_book" layoutX="299.0" layoutY="164.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="149.0" style="-fx-background-color: #00738C;" text="Return" textFill="WHITE">
                      <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Label layoutX="195.0" layoutY="14.0" prefHeight="41.0" prefWidth="370.0" text="Choose a book you'd like to return" textFill="WHITE">
+                  <Label layoutX="130.0" layoutY="28.0" prefHeight="41.0" prefWidth="498.0" text="Choose a book you'd like to return" textFill="#00738c">
                      <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
+                     <effect>
+                        <DropShadow height="120.66" radius="64.10499999999999" width="137.76">
+                           <color>
+                              <Color green="0.4822542071342468" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </Label>
-                  <ComboBox fx:id="combo_boxRAB_choose_book_to_return" layoutX="201.0" layoutY="67.0" prefHeight="25.0" prefWidth="343.0" style="-fx-background-color: #00738C;" />
+                  <ComboBox fx:id="combo_boxRAB_choose_book_to_return" layoutX="75.0" layoutY="97.0" prefHeight="41.0" prefWidth="616.0" style="-fx-background-color: #00738C;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ComboBox>
                </children>
+               <effect>
+                  <DropShadow height="70.83" radius="34.182500000000005" width="67.9" />
+               </effect>
             </AnchorPane>
-            <Label layoutX="249.0" prefHeight="86.0" prefWidth="263.0" text="Return a Book" textFill="WHITE">
+            <Label layoutX="190.0" prefHeight="72.0" prefWidth="384.0" text="Return a Book" textFill="WHITE">
                <font>
-                  <Font name="Bell MT Bold" size="41.0" />
+                  <Font name="Bell MT Bold" size="60.0" />
                </font>
+               <effect>
+                  <Glow level="0.47" />
+               </effect>
             </Label>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="664.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@library_icon.png" />
+               </image>
+               <effect>
+                  <DropShadow radius="68.5" width="255.0" />
+               </effect>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
