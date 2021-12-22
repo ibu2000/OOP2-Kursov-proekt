@@ -7,6 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -26,10 +27,21 @@
                   <Image url="@books3.png" />
                </image>
             </ImageView>
-            <Label fx:id="loginMessageLabel" layoutX="207.0" layoutY="441.0" prefHeight="39.0" prefWidth="447.0">
+            <Label fx:id="loginMessageLabel" layoutX="300.0" layoutY="441.0" prefHeight="39.0" prefWidth="317.0">
                <font>
-                  <Font size="27.0" />
+                  <Font name="System Bold" size="27.0" />
                </font>
+               <effect>
+                  <Glow level="0.08">
+                     <input>
+                        <DropShadow height="53.25" radius="41.510000000000005" spread="0.02" width="114.79">
+                           <color>
+                              <Color green="1.0" blue="0.21666666865348816" />
+                           </color>
+                        </DropShadow>
+                     </input>
+                  </Glow>
+               </effect>
             </Label>
             <Label layoutX="149.0" layoutY="331.0" text="Username:">
                <font>
@@ -48,11 +60,31 @@
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" choke="0.11" height="58.62" radius="21.482499999999998" width="29.31">
+                     <input>
+                        <Glow />
+                     </input>
+                     <color>
+                        <Color red="1.0" opacity="0.05999999865889549" />
+                     </color>
+                  </InnerShadow>
+               </effect>
             </TextField>
             <PasswordField fx:id="tf_password" layoutX="306.0" layoutY="390.0" prefHeight="44.0" prefWidth="235.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
-               </cursor></PasswordField>
+               </cursor>
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" choke="0.11" height="58.62" radius="21.482499999999998" width="29.31">
+                     <input>
+                        <Glow />
+                     </input>
+                     <color>
+                        <Color red="1.0" opacity="0.05999999865889549" />
+                     </color>
+                  </InnerShadow>
+               </effect></PasswordField>
             <Button fx:id="button_log_in" layoutX="294.0" layoutY="489.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Login">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />

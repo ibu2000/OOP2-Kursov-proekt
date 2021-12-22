@@ -19,7 +19,7 @@
          <children>
             <AnchorPane layoutY="74.0" prefHeight="275.0" prefWidth="734.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="buttonRAB_return_book" layoutX="299.0" layoutY="164.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="149.0" style="-fx-background-color: #00738C;" text="Return" textFill="WHITE">
+                  <Button fx:id="buttonRAB_return_book" layoutX="302.0" layoutY="164.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="149.0" style="-fx-background-color: #00738C;" text="Return" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -42,10 +42,13 @@
                         </DropShadow>
                      </effect>
                   </Label>
-                  <ComboBox fx:id="combo_boxRAB_choose_book_to_return" layoutX="75.0" layoutY="97.0" prefHeight="41.0" prefWidth="616.0" style="-fx-background-color: #00738C;">
+                  <ComboBox fx:id="combo_boxRAB_choose_book_to_return" layoutX="70.0" layoutY="92.0" prefHeight="41.0" prefWidth="616.0" style="-fx-background-color: #00738C;">
                      <cursor>
                         <Cursor fx:constant="HAND" />
-                     </cursor></ComboBox>
+                     </cursor>
+                     <effect>
+                        <DropShadow height="117.24" radius="55.19" spread="0.14" width="105.52" />
+                     </effect></ComboBox>
                </children>
                <effect>
                   <DropShadow height="70.83" radius="34.182500000000005" width="67.9" />

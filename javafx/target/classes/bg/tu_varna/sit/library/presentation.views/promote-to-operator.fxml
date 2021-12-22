@@ -1,49 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="320.0" prefWidth="600.0" style="-fx-background-color: #81B0B2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="336.0" prefWidth="671.0" style="-fx-background-color: #81B0B2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="16.0" layoutY="73.0" prefHeight="161.0" prefWidth="568.0" style="-fx-background-color: #00738C;">
+      <Pane layoutX="42.0" layoutY="73.0" prefHeight="171.0" prefWidth="568.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <Label layoutX="177.0" layoutY="8.0" prefHeight="24.0" prefWidth="214.0" style="-fx-background-color: #D6EAD4;" text="Please choose a user:">
+            <Label layoutX="141.0" layoutY="14.0" prefHeight="36.0" prefWidth="325.0" style="-fx-background-color: #00738C;" text="Please choose a user:" textFill="WHITE">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="20.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
             </Label>
-            <ComboBox fx:id="combo_box_users_to_promote_to_operator" layoutX="104.0" layoutY="59.0" prefHeight="25.0" prefWidth="382.0" promptText="users" style="-fx-background-color: #D6EAD4;" />
-            <Button fx:id="buttonPTO_promote_to_operator" layoutX="211.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #FFFFFF;" text="Promote" textFill="#00738c">
+            <ComboBox fx:id="combo_box_users_to_promote_to_operator" layoutX="100.0" layoutY="59.0" prefHeight="25.0" prefWidth="382.0" promptText="users" style="-fx-background-color: #FFFFF;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Reflection />
+               </effect></ComboBox>
+            <Button fx:id="buttonPTO_promote_to_operator" layoutX="205.0" layoutY="102.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="166.0" style="-fx-background-color: #FFFFFF;" text="Promote" textFill="#00738c">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="76.21" radius="36.1375" width="70.34">
+                     <color>
+                        <Color green="0.45098039507865906" blue="0.5490196347236633" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Button>
          </children>
       </Pane>
-      <Pane layoutY="-5.0" prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: #00738C;">
+      <Pane layoutY="-5.0" prefHeight="85.0" prefWidth="671.0" style="-fx-background-color: #00738C;">
          <children>
-            <Label layoutX="158.0" layoutY="17.0" text="Promote to operator" textFill="WHITE">
+            <Label layoutX="57.0" layoutY="5.0" text="Promote to operator" textFill="WHITE">
                <font>
-                  <Font name="Bell MT Bold" size="31.0" />
+                  <Font name="Bell MT Bold" size="60.0" />
                </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Label>
-            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="537.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="603.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@library_icon.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Button fx:id="buttonPTO_home" layoutX="260.0" layoutY="251.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="24.0" prefWidth="88.0" style="-fx-background-color: #00738C;" text="Home" textFill="WHITE">
+      <Button fx:id="buttonPTO_home" layoutX="264.0" layoutY="262.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="56.0" prefWidth="128.0" style="-fx-background-color: #00738C;" text="Home" textFill="WHITE">
          <font>
-            <Font name="Arial Rounded MT Bold" size="18.0" />
+            <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow height="87.93" radius="47.8625" width="105.52">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
       </Button>
    </children>
 </AnchorPane>
