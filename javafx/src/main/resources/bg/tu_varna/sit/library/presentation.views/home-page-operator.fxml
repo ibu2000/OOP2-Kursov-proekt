@@ -35,22 +35,22 @@
                   </Label>
                   <AnchorPane layoutX="84.0" layoutY="258.0" prefHeight="210.0" prefWidth="729.0" style="-fx-background-color: #0a5868;">
                      <children>
-                        <Button fx:id="buttonO_user_rating" layoutX="544.0" layoutY="4.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="User rating" textFill="WHITE">
+                        <Button fx:id="buttonO_user_rating" layoutX="544.0" layoutY="4.0" mnemonicParsing="false" onAction="#UserRatings" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="User rating" textFill="WHITE">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonO_return_book" layoutX="184.0" layoutY="4.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Return book" textFill="WHITE">
+                        <Button fx:id="buttonO_return_book" layoutX="184.0" layoutY="4.0" mnemonicParsing="false" onAction="#ReturnBook" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Return book" textFill="WHITE">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonO_search_books" layoutX="364.0" layoutY="4.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Search books" textFill="WHITE">
+                        <Button fx:id="buttonO_search_books" layoutX="364.0" layoutY="4.0" mnemonicParsing="false" onAction="#SearchBook" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Search books" textFill="WHITE">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buttonO_lend_book" layoutX="4.0" layoutY="4.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Lend book" textFill="WHITE">
+                        <Button fx:id="buttonO_lend_book" layoutX="4.0" layoutY="4.0" mnemonicParsing="false" onAction="#LendBook" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Lend book" textFill="WHITE">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="22.0" />
                            </font>

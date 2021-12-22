@@ -13,8 +13,15 @@ public class HomePageOperatorController {
     @FXML
     private Button buttonO_lend_book;
     @FXML
+    private Button buttonO_return_book;
+    @FXML
+    private Button buttonO_search_books;
+    @FXML
+    private Button buttonO_user_rating;
+    @FXML
     private Button buttonO_logout;
-
+    @FXML
+    private Button button_create_user;
 
     Stage s;
     public HomePageOperatorController()

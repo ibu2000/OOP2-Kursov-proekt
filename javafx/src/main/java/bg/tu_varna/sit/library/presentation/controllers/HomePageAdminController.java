@@ -100,7 +100,7 @@ public class HomePageAdminController {
     }
 
     @FXML
-    public void  LendBooksPage() {
+    public void  LendBooks() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.LEND_BOOK));
             Stage stage = new Stage();
@@ -115,7 +115,7 @@ public class HomePageAdminController {
 
 
     @FXML
-    public void  ReturnBookPage()
+    public void  ReturnBook()
     {
         try
         {
@@ -132,7 +132,7 @@ public class HomePageAdminController {
     }
 
 
-    public void  SearchBooksPage()
+    public void  SearchBooks()
     {
         try
         {
@@ -149,7 +149,7 @@ public class HomePageAdminController {
     }
 
 
-    public void  UserRatingsPage()
+    public void  UserRatings()
     {
         try
         {

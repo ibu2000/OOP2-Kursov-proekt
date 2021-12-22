@@ -83,7 +83,7 @@
       </AnchorPane>
       <AnchorPane layoutX="43.0" layoutY="259.0" prefHeight="210.0" prefWidth="729.0" style="-fx-background-color: #0a5868;">
          <children>
-            <Button fx:id="buttonA_lend_book" layoutX="4.0" layoutY="4.0" mnemonicParsing="false" onAction="#LendBooksPage" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Lend book" textFill="WHITE">
+            <Button fx:id="buttonA_lend_book" layoutX="4.0" layoutY="4.0" mnemonicParsing="false" onAction="#LendBooks" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Lend book" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>
@@ -91,7 +91,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="buttonA_return_book" layoutX="184.0" layoutY="4.0" mnemonicParsing="false" onAction="#ReturnBookPage" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Return book" textFill="WHITE">
+            <Button fx:id="buttonA_return_book" layoutX="184.0" layoutY="4.0" mnemonicParsing="false" onAction="#ReturnBook" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Return book" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>
@@ -99,7 +99,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="buttonA_search_books" layoutX="364.0" layoutY="4.0" mnemonicParsing="false" onAction="#SearchBooksPage" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Search books" textFill="WHITE">
+            <Button fx:id="buttonA_search_books" layoutX="364.0" layoutY="4.0" mnemonicParsing="false" onAction="#SearchBooks" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="Search books" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>
@@ -107,7 +107,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="buttonA_user_rating" layoutX="544.0" layoutY="4.0" mnemonicParsing="false" onAction="#UserRatingsPage" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="User rating" textFill="WHITE">
+            <Button fx:id="buttonA_user_rating" layoutX="544.0" layoutY="4.0" mnemonicParsing="false" onAction="#UserRatings" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #00738C;" text="User rating" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>
