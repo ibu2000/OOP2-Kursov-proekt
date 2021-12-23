@@ -154,9 +154,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <effect>
-                        <InnerShadow choke="0.49" height="29.79" radius="19.525" width="50.31">
+                        <InnerShadow choke="0.49" height="40.05" radius="22.09" width="50.31">
                            <color>
-                              <Color green="0.8333333134651184" blue="1.0" />
+                              <Color red="0.43287035822868347" green="0.488811731338501" blue="0.5" />
                            </color>
                         </InnerShadow>
                      </effect>
