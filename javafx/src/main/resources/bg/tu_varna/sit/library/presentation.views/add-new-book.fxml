@@ -40,7 +40,7 @@
                         <DropShadow height="53.61" radius="26.825" spread="0.13" width="55.69" />
                      </effect>
                   </Label>
-                  <Label layoutX="170.0" layoutY="200.0" text="Name of book" textFill="WHITE">
+                  <Label layoutX="165.0" layoutY="250.0" text="Name of book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="15.0" />
                      </font>
@@ -48,7 +48,7 @@
                         <DropShadow />
                      </effect>
                   </Label>
-                  <Label layoutX="195.0" layoutY="320.0" text="Genre" textFill="WHITE">
+                  <Label layoutX="195.0" layoutY="364.0" text="Genre" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="15.0" />
                      </font>
@@ -56,7 +56,7 @@
                         <DropShadow />
                      </effect>
                   </Label>
-                  <Label layoutX="190.0" layoutY="260.0" text="Author" textFill="WHITE">
+                  <Label layoutX="187.0" layoutY="300.0" text="Author" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="15.0" />
                      </font>
@@ -64,7 +64,7 @@
                         <DropShadow />
                      </effect>
                   </Label>
-                  <Label layoutX="151.0" layoutY="380.0" text="Year of publishing" textFill="WHITE">
+                  <Label layoutX="152.0" layoutY="427.0" text="Year of publishing" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="15.0" />
                      </font>
@@ -81,6 +81,31 @@
                         <Glow level="0.5" />
                      </effect>
                   </Label>
+                  <TextField fx:id="idBook" layoutX="147.0" layoutY="195.0" promptText="enter genre" style="-fx-background-color: #FFFFFF;">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <DatePicker fx:id="year_of_publishing" layoutX="96.0" layoutY="451.0" onAction="#getDate" prefHeight="25.0" prefWidth="231.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </DatePicker>
+                  <TextField fx:id="genre" layoutX="147.0" layoutY="387.0" promptText="enter genre" style="-fx-background-color: #FFFFFF;">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="author" layoutX="143.0" layoutY="317.0" promptText="enter author" style="-fx-background-color: #FFFFFF;">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="name_of_book" layoutX="146.0" layoutY="267.0" promptText="enter name" style="-fx-background-color: #FFFFFF;">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
                </children>
             </AnchorPane>
          </children>
@@ -221,22 +246,6 @@
       <QuadCurve controlX="727.0" controlY="278.33331298828125" endX="761.0" endY="293.0" fill="#00738c" layoutX="-191.0" layoutY="339.0" startX="694.3333740234375" startY="293.0" stroke="#00738c" strokeType="INSIDE" />
       <QuadCurve controlX="-18.0" controlY="31.0" endX="-4.0" fill="#81b0b2" layoutX="540.0" layoutY="619.0" startX="-436.0" startY="6.0" stroke="#e5fffe" strokeType="INSIDE" />
       <QuadCurve controlX="-117.0" controlY="26.0" endX="-130.33331298828125" endY="-7.0" fill="#81b0b2" layoutX="666.0" layoutY="626.0" startX="292.33331298828125" startY="-1.0" stroke="#e5fffe" strokeType="INSIDE" />
-      <TextField fx:id="name_of_book" layoutX="239.0" layoutY="274.0" promptText="enter name" style="-fx-background-color: #FFFFFF;">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor></TextField>
-      <TextField fx:id="author" layoutX="239.0" layoutY="336.0" promptText="enter author" style="-fx-background-color: #FFFFFF;">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor></TextField>
-      <TextField fx:id="genre" layoutX="239.0" layoutY="394.0" promptText="enter genre" style="-fx-background-color: #FFFFFF;">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor></TextField>
-      <DatePicker fx:id="year_of_publishing" layoutX="199.0" layoutY="456.0" onAction="#getDate" prefHeight="25.0" prefWidth="231.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></DatePicker>
       <Button fx:id="buttonANB_add_book" layoutX="184.0" layoutY="538.0" mnemonicParsing="false" onAction="#addBook" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Add book" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="22.0" />
