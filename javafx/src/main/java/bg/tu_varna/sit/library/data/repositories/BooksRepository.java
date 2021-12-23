@@ -14,7 +14,7 @@ public class BooksRepository implements DAORepository<Books>{
 
     private static final Logger log = Logger.getLogger(BooksRepository.class);
 
-    public static BooksRepository getInstance() {return BooksRepositoryHolder.INSTANCE;}
+    public static BooksRepository getInstance() {return BooksRepository.BooksRepositoryHolder.INSTANCE;}
 
     private static class BooksRepositoryHolder {
         public static final BooksRepository INSTANCE = new BooksRepository();
