@@ -2,7 +2,6 @@ package bg.tu_varna.sit.library.buisness.services;
 
 import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.repositories.BooksRepository;
-import bg.tu_varna.sit.library.data.repositories.UserRepository;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
 
 import java.util.List;

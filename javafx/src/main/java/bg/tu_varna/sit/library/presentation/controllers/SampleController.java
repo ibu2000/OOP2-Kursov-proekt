@@ -70,7 +70,6 @@ public class SampleController {
 
             UserListModel userfind = new UserListModel(tf_username.getText(), tf_password.getText());
             if (service.UserLogin(userfind))
-
             {
                 try {
                     long a = service.FindUserType(userfind);

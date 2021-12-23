@@ -1,7 +1,6 @@
 package bg.tu_varna.sit.library.data.repositories;
 import bg.tu_varna.sit.library.data.access.Connection;
 import bg.tu_varna.sit.library.data.entities.Books;
-import bg.tu_varna.sit.library.data.entities.USER;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -83,13 +82,13 @@ public class BooksRepository implements DAORepository<Books>{
         Transaction transaction = session.beginTransaction();
         List<Books> books = new LinkedList<>();
         try {
-            String jpql = "SELECT t FROM USER t";
+            String jpql = "SELECT t FROM Books t";
            books.addAll(session.createQuery(jpql, Books.class).getResultList());
-            log.info("Get all users");
+            log.info("Get all books");
         }
         catch (Exception e)
         {
-            log.error("Get user error: " + e.getMessage());
+            log.error("Get book error: " + e.getMessage());
         }
         finally {
             transaction.commit();
