@@ -30,6 +30,8 @@ public class AddNewBookController implements Initializable {
     @FXML
     private TextField name_of_book;
     @FXML
+    private TextField idBook;
+    @FXML
     private TextField author;
     @FXML
     private DatePicker year_of_publishing;
@@ -96,7 +98,8 @@ public class AddNewBookController implements Initializable {
      @FXML
      public void addBook()
      {
-      BookListModel addBook = new BookListModel(name_of_book.getText(),author.getText(), genre.getText(), publishDate);
+         long idb = Integer.parseInt(idBook.getText());
+      BookListModel addBook = new BookListModel(idb, name_of_book.getText(),author.getText(), genre.getText(), publishDate);
       if(name_of_book.equals("") || author.equals("") || genre.equals("") || publishDate.equals(""))
       {
        Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
