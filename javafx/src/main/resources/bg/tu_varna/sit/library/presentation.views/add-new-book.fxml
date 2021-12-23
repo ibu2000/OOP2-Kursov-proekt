@@ -20,6 +20,133 @@
 
 <AnchorPane prefHeight="704.0" prefWidth="1063.0" style="-fx-background-color: #e5fffe;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <AnchorPane layoutX="535.0" layoutY="45.0" prefHeight="586.0" prefWidth="443.0" style="-fx-background-color: #00738C;">
+         <children>
+            <Label layoutX="95.0" layoutY="57.0" text="Add new copy" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="41.0" />
+               </font>
+               <effect>
+                  <Glow level="0.5" />
+               </effect>
+            </Label>
+            <AnchorPane layoutX="1.0" layoutY="6.0" prefHeight="574.0" prefWidth="438.0" style="-fx-background-color: #81B0B2;">
+               <children>
+                  <ImageView blendMode="DARKEN" fitHeight="396.0" fitWidth="388.0" layoutX="25.0" layoutY="118.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@books9.png" />
+                     </image>
+                     <effect>
+                        <Bloom threshold="0.0" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="363.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@library_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="186.0" layoutY="376.0" text="Is it archived" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="130.0" prefHeight="41.0" prefWidth="367.0" text="Describe the copy you wish to add" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="48.61" radius="25.575" spread="0.13" width="55.69" />
+                     </effect>
+                  </Label>
+                  <Label layoutX="201.0" layoutY="200.0" text="Isbn" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="163.0" layoutY="260.0" text="Name of book" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="172.0" layoutY="320.0" text="State of book" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <TextField fx:id="tfANB_isbn" layoutX="146.0" layoutY="220.0" promptText="enter isbn" style="-fx-background-color: #FFFFFF;">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <ComboBox fx:id="combo_boxANB_name_of_book" layoutX="146.0" layoutY="280.0" prefWidth="150.0" promptText="select book" style="-fx-background-color: #FFFFFF;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <ComboBox fx:id="combo_boxANB_state_of_book" layoutX="146.0" layoutY="340.0" prefWidth="150.0" promptText="select state of book" style="-fx-background-color: #FFFFFF;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <QuadCurve controlX="528.0" controlY="317.0" endX="455.0" endY="3.0" fill="#3174b2" layoutX="-455.0" layoutY="-2.0" opacity="0.13" startX="455.0" startY="576.0" stroke="#81b0b2" strokeType="INSIDE" />
+                  <RadioButton fx:id="radio_buttonANB_archived" layoutX="176.0" layoutY="402.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="archived" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="isItArchived" />
+                     </toggleGroup>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </RadioButton>
+                  <RadioButton fx:id="radio_buttonANB_not_archived" layoutX="176.0" layoutY="432.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="not archived" textAlignment="CENTER" textFill="WHITE" toggleGroup="$isItArchived">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </RadioButton>
+                  <Button fx:id="buttonANB_add_copy" layoutX="41.0" layoutY="490.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Add copy" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <Reflection fraction="0.74" topOpacity="0.13" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="buttonANB_home" layoutX="321.0" layoutY="490.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <Reflection fraction="0.74" topOpacity="0.13" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <QuadCurve controlX="-82.0" controlY="36.0" endX="-147.3333740234375" endY="1.0" fill="#00738c" layoutX="149.0" layoutY="4.0" startX="290.0" startY="2.0" stroke="WHITE" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
       <AnchorPane layoutX="92.0" layoutY="45.0" prefHeight="586.0" prefWidth="447.0" style="-fx-background-color: #00738C;">
          <children>
             <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="574.0" prefWidth="435.0" style="-fx-background-color: #81B0B2;">
@@ -32,6 +159,7 @@
                         <Bloom threshold="0.0" />
                      </effect>
                   </ImageView>
+                  <QuadCurve controlX="-39.2515869140625" controlY="30.0" endX="1.6666259765625" endY="5.0" fill="#00738c" layoutX="435.0" layoutY="-7.0" startX="-436.0" startY="6.0" stroke="WHITE" strokeType="INSIDE" />
                   <Label layoutX="34.0" layoutY="130.0" prefHeight="41.0" prefWidth="367.0" text="Describe the book you wish to add" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
@@ -109,7 +237,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <DatePicker fx:id="year_of_publishing" layoutX="136.0" layoutY="434.0" onAction="#getDate" prefHeight="25.0" prefWidth="170.0">
+                  <DatePicker fx:id="year_of_publishing" layoutX="136.0" layoutY="436.0" onAction="#getDate" prefHeight="25.0" prefWidth="170.0">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -127,131 +255,6 @@
                   </Button>
                </children>
             </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="535.0" layoutY="45.0" prefHeight="586.0" prefWidth="443.0" style="-fx-background-color: #00738C;">
-         <children>
-            <AnchorPane layoutX="1.0" layoutY="6.0" prefHeight="574.0" prefWidth="438.0" style="-fx-background-color: #81B0B2;">
-               <children>
-                  <ImageView blendMode="DARKEN" fitHeight="396.0" fitWidth="388.0" layoutX="25.0" layoutY="118.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@books9.png" />
-                     </image>
-                     <effect>
-                        <Bloom threshold="0.0" />
-                     </effect>
-                  </ImageView>
-                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="363.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@library_icon.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="186.0" layoutY="376.0" text="Is it archived" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="15.0" />
-                     </font>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Label>
-                  <Label layoutX="37.0" layoutY="130.0" prefHeight="41.0" prefWidth="367.0" text="Describe the copy you wish to add" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
-                     </font>
-                     <effect>
-                        <DropShadow height="48.61" radius="25.575" spread="0.13" width="55.69" />
-                     </effect>
-                  </Label>
-                  <Label layoutX="201.0" layoutY="200.0" text="Isbn" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="15.0" />
-                     </font>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Label>
-                  <Label layoutX="163.0" layoutY="260.0" text="Name of book" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="15.0" />
-                     </font>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Label>
-                  <Label layoutX="172.0" layoutY="320.0" text="State of book" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="15.0" />
-                     </font>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Label>
-                  <TextField fx:id="tfANB_isbn" layoutX="146.0" layoutY="220.0" promptText="enter isbn" style="-fx-background-color: #FFFFFF;">
-                     <cursor>
-                        <Cursor fx:constant="TEXT" />
-                     </cursor></TextField>
-                  <ComboBox fx:id="combo_boxANB_name_of_book" layoutX="146.0" layoutY="280.0" prefWidth="150.0" promptText="select book" style="-fx-background-color: #FFFFFF;">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor></ComboBox>
-                  <ComboBox fx:id="combo_boxANB_state_of_book" layoutX="146.0" layoutY="340.0" prefWidth="150.0" promptText="select state of book" style="-fx-background-color: #FFFFFF;">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor></ComboBox>
-                  <QuadCurve controlX="528.0" controlY="317.0" endX="455.0" endY="3.0" fill="#3174b2" layoutX="-455.0" layoutY="-2.0" opacity="0.13" startX="455.0" startY="576.0" stroke="#81b0b2" strokeType="INSIDE" />
-                  <RadioButton fx:id="radio_buttonANB_archived" layoutX="176.0" layoutY="402.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="archived" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="15.0" />
-                     </font>
-                     <toggleGroup>
-                        <ToggleGroup fx:id="isItArchived" />
-                     </toggleGroup>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </RadioButton>
-                  <RadioButton fx:id="radio_buttonANB_not_archived" layoutX="176.0" layoutY="432.0" mnemonicParsing="false" style="-fx-background-color: #00738C;" text="not archived" textAlignment="CENTER" textFill="WHITE" toggleGroup="$isItArchived">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="15.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </RadioButton>
-                  <Button fx:id="buttonANB_add_copy" layoutX="41.0" layoutY="490.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Add copy" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
-                     </font>
-                     <effect>
-                        <Reflection fraction="0.74" topOpacity="0.13" />
-                     </effect>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button fx:id="buttonANB_home" layoutX="321.0" layoutY="490.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
-                     </font>
-                     <effect>
-                        <Reflection fraction="0.74" topOpacity="0.13" />
-                     </effect>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <QuadCurve controlX="-39.2515869140625" controlY="30.0" endX="1.6666259765625" endY="5.0" fill="#00738c" startX="-436.0" startY="6.0" stroke="WHITE" strokeType="INSIDE" />
-            <QuadCurve controlX="-82.0" controlY="36.0" endX="-147.3333740234375" endY="1.0" fill="#00738c" layoutX="149.0" layoutY="4.0" startX="290.0" startY="2.0" stroke="WHITE" strokeType="INSIDE" />
-            <Label layoutX="95.0" layoutY="57.0" text="Add new copy" textFill="WHITE">
-               <font>
-                  <Font name="Bell MT Bold" size="41.0" />
-               </font>
-               <effect>
-                  <Glow level="0.5" />
-               </effect>
-            </Label>
          </children>
       </AnchorPane>
       <QuadCurve controlX="463.0" controlY="311.0" endX="504.0" endY="288.0" fill="#e5fffe" layoutX="24.0" layoutY="-244.0" startX="68.0" startY="288.0" stroke="#81b0b2" strokeType="INSIDE" />
