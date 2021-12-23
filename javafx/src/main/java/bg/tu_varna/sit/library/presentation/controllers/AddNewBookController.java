@@ -99,7 +99,7 @@ public class AddNewBookController implements Initializable {
      public void addBook()
      {
          long idb = Integer.parseInt(idBook.getText());
-      BookListModel addBook = new BookListModel(5, name_of_book.getText(),author.getText(), genre.getText(), publishDate);
+      BookListModel addBook = new BookListModel(idb, name_of_book.getText(),author.getText(), genre.getText(), publishDate);
       if(name_of_book.equals("") || author.equals("") || genre.equals("") || publishDate.equals(""))
       {
        Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
