@@ -21,10 +21,6 @@ INSERT INTO userinfo (idUser, name, phone, email)VALUES(3, 'teodora','002','gmai
 INSERT INTO userinfo (idUser, name, phone, email)VALUES(4, 'haki','003','bg');
 
 
- 
 INSERT INTO stateofbooks (idState, stateOfbooks)VALUES (1, 'new');
 INSERT INTO stateofbooks (idState, stateOfbooks)VALUES (2, 'well preserved');
 INSERT INTO stateofbooks (idState, stateOfbooks)VALUES (3, 'damaged');
-
-
-

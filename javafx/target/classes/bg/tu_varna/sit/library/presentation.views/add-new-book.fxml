@@ -112,7 +112,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </RadioButton>
-                  <Button fx:id="buttonANB_add_copy" layoutX="41.0" layoutY="490.0" mnemonicParsing="false" onAction="#addCopy" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Add copy" textFill="WHITE">
+                  <Button fx:id="buttonANB_add_copy" layoutX="41.0" layoutY="490.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Add copy" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
@@ -168,7 +168,7 @@
                         <DropShadow height="53.61" radius="26.825" spread="0.13" width="55.69" />
                      </effect>
                   </Label>
-                  <Label layoutX="165.0" layoutY="238.0" text="Name of book" textFill="WHITE">
+                  <Label layoutX="165.0" layoutY="207.0" text="Name of book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="15.0" />
                      </font>
@@ -176,7 +176,7 @@
                         <DropShadow />
                      </effect>
                   </Label>
-                  <Label layoutX="195.0" layoutY="354.0" text="Genre" textFill="WHITE">
+                  <Label layoutX="195.0" layoutY="323.0" text="Genre" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="15.0" />
                      </font>
@@ -184,7 +184,7 @@
                         <DropShadow />
                      </effect>
                   </Label>
-                  <Label layoutX="190.0" layoutY="298.0" text="Author" textFill="WHITE">
+                  <Label layoutX="190.0" layoutY="267.0" text="Author" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="15.0" />
                      </font>
@@ -192,15 +192,7 @@
                         <DropShadow />
                      </effect>
                   </Label>
-                  <Label layoutX="152.0" layoutY="414.0" text="Year of publishing" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="15.0" />
-                     </font>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Label>
-                  <Label layoutX="188.0" layoutY="180.0" text="book ID" textFill="WHITE">
+                  <Label layoutX="152.0" layoutY="383.0" text="Year of publishing" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="15.0" />
                      </font>
@@ -217,27 +209,22 @@
                         <Glow level="0.5" />
                      </effect>
                   </Label>
-                  <TextField fx:id="idBook" layoutX="145.0" layoutY="202.0" promptText="enter book id" style="-fx-background-color: #FFFFFF;">
+                  <TextField fx:id="name_of_book" layoutX="145.0" layoutY="228.0" promptText="enter name" style="-fx-background-color: #FFFFFF;">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <TextField fx:id="name_of_book" layoutX="145.0" layoutY="259.0" promptText="enter name" style="-fx-background-color: #FFFFFF;">
+                  <TextField fx:id="author" layoutX="145.0" layoutY="286.0" promptText="enter author" style="-fx-background-color: #FFFFFF;">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <TextField fx:id="author" layoutX="145.0" layoutY="317.0" promptText="enter author" style="-fx-background-color: #FFFFFF;">
+                  <TextField fx:id="genre" layoutX="145.0" layoutY="343.0" promptText="enter genre" style="-fx-background-color: #FFFFFF;">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <TextField fx:id="genre" layoutX="145.0" layoutY="374.0" promptText="enter genre" style="-fx-background-color: #FFFFFF;">
-                     <cursor>
-                        <Cursor fx:constant="TEXT" />
-                     </cursor>
-                  </TextField>
-                  <DatePicker fx:id="year_of_publishing" layoutX="136.0" layoutY="436.0" onAction="#getDate" prefHeight="25.0" prefWidth="170.0">
+                  <DatePicker fx:id="year_of_publishing" layoutX="136.0" layoutY="405.0" onAction="#getDate" prefHeight="25.0" prefWidth="170.0">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>

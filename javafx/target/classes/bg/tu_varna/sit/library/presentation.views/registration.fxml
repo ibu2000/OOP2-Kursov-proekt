@@ -21,7 +21,7 @@
    <children>
       <Pane prefHeight="85.0" prefWidth="782.0" style="-fx-background-color: #00738C;" AnchorPane.bottomAnchor="551.0">
          <children>
-            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="715.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="libraryImage" fitHeight="65.0" fitWidth="65.0" layoutX="715.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@library_icon.png" />
                </image>
