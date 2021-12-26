@@ -13,7 +13,7 @@ import java.util.Optional;
 public class EksemplqriRepository implements DAORepository<Eksemplqri> {
     private static final Logger log = Logger.getLogger(EksemplqriRepository.class);
 
-    private static EksemplqriRepository getInstance() {return EksemplqriRepository.EksemplqriRepositoryHolder.INSTANCE;}
+    public static EksemplqriRepository getInstance() {return EksemplqriRepository.EksemplqriRepositoryHolder.INSTANCE;}
 
     private static class EksemplqriRepositoryHolder {
         public static final EksemplqriRepository INSTANCE =new EksemplqriRepository() ;

@@ -6,7 +6,10 @@ import java.util.ResourceBundle;
 import bg.tu_varna.sit.library.buisness.services.BookService;
 import bg.tu_varna.sit.library.buisness.services.StateofBooksService;
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.data.entities.Books;
+import bg.tu_varna.sit.library.data.entities.StateOfBooks;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
+import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import javafx.event.ActionEvent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -132,12 +135,28 @@ public class AddNewBookController implements Initializable {
          combo_boxANB_state_of_book.getItems().clear();
          combo_boxANB_state_of_book.getItems().addAll(stateOfBooksService.getBookStates());
      }
+
+
+
+     boolean isArchived;
+
     @FXML
     public void addCopy()
     {
+        if(radio_buttonANB_archived.isSelected())
+        {
+            isArchived=true;
+        }
+       else if(radio_buttonANB_not_archived.isSelected())
+        {
+            isArchived=false;
+        }
 
-        BookListModel addBook = new BookListModel(name_of_book.getText(),author.getText(), genre.getText(), publishDate);
-        if(name_of_book.equals("") || author.equals("") || genre.equals("") || publishDate.equals(""))
+       String bookname=combo_boxANB_name_of_book.getValue().toString();
+        BookListModel book = new BookListModel(bookname);
+       StateOfBooks state = new StateOfBooks(1 ,combo_boxANB_state_of_book.getValue().toString());
+        ExemplqrModel addBook = new ExemplqrModel(Long.parseLong(tfANB_isbn.getText()), id, isArchived, state);
+        if(tfANB_isbn.equals("") || author.equals("") || genre.equals("") || publishDate.equals(""))
         {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
             alert.show();

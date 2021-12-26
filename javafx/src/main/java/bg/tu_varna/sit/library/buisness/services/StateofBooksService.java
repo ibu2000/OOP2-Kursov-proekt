@@ -2,18 +2,21 @@ package bg.tu_varna.sit.library.buisness.services;
 
 import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.entities.StateOfBooks;
+import bg.tu_varna.sit.library.data.repositories.BooksRepository;
 import bg.tu_varna.sit.library.data.repositories.StateOfBooksRepository;
 import bg.tu_varna.sit.library.data.repositories.UserRepository;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import bg.tu_varna.sit.library.presentation.models.StateOfBooksModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class StateofBooksService {
+
 
     private final StateOfBooksRepository repositoryStateOfBooks = StateOfBooksRepository.getInstance();
 

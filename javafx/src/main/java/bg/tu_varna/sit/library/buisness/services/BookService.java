@@ -62,4 +62,20 @@ public class BookService {
         return true;
     }
 
+    public Books GetBook(BookListModel a)
+    {
+        long bookid = 0;
+
+        Books bk = new Books(a.getIdBook());
+        ObservableList<BookListModel> allBooks = getAllBooks();
+        for(BookListModel b : allBooks)
+        {
+            if(b.equals(bk))
+            {
+
+            }
+        }
+        return bookid;
+    }
+
 }

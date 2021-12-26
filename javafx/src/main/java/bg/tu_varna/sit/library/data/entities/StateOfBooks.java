@@ -14,6 +14,14 @@ public class StateOfBooks {
     @Column(name = "stateOfBooks",nullable = false)
     private String stateOfBooks;
 
+    public StateOfBooks(long idState, String stateOfBooks) {
+        this.idState = idState;
+        this.stateOfBooks = stateOfBooks;
+    }
+
+    public StateOfBooks() {
+    }
+
     public long getIdState() {
         return idState;
     }
