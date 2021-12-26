@@ -37,16 +37,8 @@ public class HelloApplication extends Application {
             stage.setTitle(Constants.Values.Title);
             stage.setScene(scene);
             stage.setResizable(false);
-           /* stage.setWidth(1600);
-            stage.setHeight(1400);*/
             stage.show();
-          /*  Scene scene = new Scene(root);
-            stage.initStyle(StageStyle.UNDECORATED);
-           stage.setTitle(Constants.Values.Title);
-            stage.setScene(scene);
-            stage.setResizable(false);
 
-            stage.show();*/
         }
         else
         {

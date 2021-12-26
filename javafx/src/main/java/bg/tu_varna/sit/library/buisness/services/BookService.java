@@ -47,16 +47,7 @@ public class BookService {
         return booknames;
     }
 
-    public ArrayList<String> getBookStates()
-    {
-        ObservableList<BookListModel> allBooks = getAllBooks();
-        ArrayList<String> bookstate= new ArrayList<>();
-        for(BookListModel book : allBooks)
-        {
-            bookstate.add(book.getB);
-        }
-        return bookstate;
-    }
+
     public boolean AddBook(BookListModel addBook) {
         List<Books> books = repositoryBook.getAll();
         Books book = new Books(addBook.getBookName(), addBook.getAuthor(), addBook.getGenre(), addBook.getYearOfPublishing());

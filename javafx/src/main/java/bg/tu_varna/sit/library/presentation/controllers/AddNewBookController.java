@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import bg.tu_varna.sit.library.buisness.services.BookService;
+import bg.tu_varna.sit.library.buisness.services.StateofBooksService;
 import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import javafx.event.ActionEvent;
@@ -57,9 +58,8 @@ public class AddNewBookController implements Initializable {
 
 
     LocalDate publishDate;
-
-     ObservableList<String> list = FXCollections.observableArrayList("Nova","Zapazena","Povredena");
      BookService BookService = new BookService();
+     StateofBooksService stateOfBooksService = new StateofBooksService();
 
      Stage s;
      public AddNewBookController() {
@@ -72,11 +72,14 @@ public class AddNewBookController implements Initializable {
      @Override
         public void initialize(URL url, ResourceBundle rb) {
 
-         combo_boxANB_state_of_book.setItems(list);
+
 
          combo_boxANB_name_of_book.getItems().clear();
          combo_boxANB_name_of_book.getItems().addAll(BookService. getBookNames());
 
+
+         combo_boxANB_state_of_book.getItems().clear();
+         combo_boxANB_state_of_book.getItems().addAll(stateOfBooksService.getBookStates());
      }
 
 
@@ -106,8 +109,8 @@ public class AddNewBookController implements Initializable {
      @FXML
      public void addBook()
      {
-         long idb = Integer.parseInt(idBook.getText());
-      BookListModel addBook = new BookListModel(idb, name_of_book.getText(),author.getText(), genre.getText(), publishDate);
+
+      BookListModel addBook = new BookListModel(name_of_book.getText(),author.getText(), genre.getText(), publishDate);
       if(name_of_book.equals("") || author.equals("") || genre.equals("") || publishDate.equals(""))
       {
        Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
@@ -126,11 +129,34 @@ public class AddNewBookController implements Initializable {
           alert.show();
          }
       }
+         combo_boxANB_state_of_book.getItems().clear();
+         combo_boxANB_state_of_book.getItems().addAll(stateOfBooksService.getBookStates());
      }
     @FXML
     public void addCopy()
     {
 
+        BookListModel addBook = new BookListModel(name_of_book.getText(),author.getText(), genre.getText(), publishDate);
+        if(name_of_book.equals("") || author.equals("") || genre.equals("") || publishDate.equals(""))
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
+            alert.show();
+        }
+        else
+        {
+            bookAlreadyExists = BookService.AddBook(addBook);
+            if(bookAlreadyExists)
+            {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The book has been added!", ButtonType.OK);
+                alert.show();
+            } else
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "Book already exists!", ButtonType.OK);
+                alert.show();
+            }
+        }
+        combo_boxANB_state_of_book.getItems().clear();
+        combo_boxANB_state_of_book.getItems().addAll(stateOfBooksService.getBookStates());
     }
 
     }

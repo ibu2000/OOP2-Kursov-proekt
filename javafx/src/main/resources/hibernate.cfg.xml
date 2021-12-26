@@ -19,15 +19,17 @@
         <mapping class="bg.tu_varna.sit.library.data.entities.USER"/>
         <mapping class="bg.tu_varna.sit.library.data.entities.UserType"/>
         <mapping class="bg.tu_varna.sit.library.data.entities.Status"/>
-
+        <mapping class="bg.tu_varna.sit.library.data.entities.Eksemplqri"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.StateOfBooks"/>
         <!--
 
-         <mapping class="bg.tu_varna.sit.library.data.entities.FORM"/>  <mapping class="bg.tu_varna.sit.library.data.entities.BOOKSSTORED"/>
-        <mapping class="bg.tu_varna.sit.library.data.entities.Eksemplqri"/>
+         <mapping class="bg.tu_varna.sit.library.data.entities.FORM"/>
+         <mapping class="bg.tu_varna.sit.library.data.entities.BOOKSSTORED"/>
+
 
         <mapping class="bg.tu_varna.sit.library.data.entities.LENDBOOKS"/>
         <mapping class="bg.tu_varna.sit.library.data.entities.LENDINFO"/>
-        <mapping class="bg.tu_varna.sit.library.data.entities.StateOfBooks"/>
+
         <mapping class="bg.tu_varna.sit.library.data.entities.Status"/>
 
         <mapping class="bg.tu_varna.sit.library.data.entities.UserInfo"/>

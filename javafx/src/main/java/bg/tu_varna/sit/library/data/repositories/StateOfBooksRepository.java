@@ -1,11 +1,13 @@
 package bg.tu_varna.sit.library.data.repositories;
 
 import bg.tu_varna.sit.library.data.access.Connection;
+import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.entities.StateOfBooks;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,7 +15,7 @@ public class StateOfBooksRepository implements DAORepository<StateOfBooks>{
 
     private static final Logger log = Logger.getLogger(StateOfBooksRepository.class);
 
-    private static StateOfBooksRepository getInstance() {return StateOfBooksRepositoryHolder.INSTANCE;}
+    public static StateOfBooksRepository getInstance() {return StateOfBooksRepositoryHolder.INSTANCE;}
 
     private static class StateOfBooksRepositoryHolder {
         public static final StateOfBooksRepository INSTANCE = new StateOfBooksRepository();
@@ -75,6 +77,22 @@ public class StateOfBooksRepository implements DAORepository<StateOfBooks>{
 
     @Override
     public List<StateOfBooks> getAll() {
-        return null;
+            Session session = Connection.openSession();
+            Transaction transaction = session.beginTransaction();
+            List<StateOfBooks> stateOfBooks = new LinkedList<>();
+            try {
+                String jpql = "SELECT t FROM StateOfBooks t";
+                stateOfBooks.addAll(session.createQuery(jpql, StateOfBooks.class).getResultList());
+                log.info("Get all states of books");
+            }
+            catch (Exception e)
+            {
+                log.error("Get book state error: " + e.getMessage());
+            }
+            finally {
+                transaction.commit();
+            }
+            return stateOfBooks;
+
     }
 }
