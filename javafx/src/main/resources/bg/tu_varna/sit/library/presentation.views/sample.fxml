@@ -27,9 +27,9 @@
                   <Image url="@books3.png" />
                </image>
             </ImageView>
-            <Label fx:id="loginMessageLabel" layoutX="300.0" layoutY="441.0" prefHeight="39.0" prefWidth="317.0">
+            <Label fx:id="loginMessageLabel" layoutX="299.0" layoutY="441.0" prefHeight="39.0" prefWidth="317.0">
                <font>
-                  <Font name="System Bold" size="27.0" />
+                  <Font name="System Italic" size="27.0" />
                </font>
                <effect>
                   <Glow level="0.08">
