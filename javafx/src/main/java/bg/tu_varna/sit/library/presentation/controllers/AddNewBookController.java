@@ -117,9 +117,6 @@ public class AddNewBookController implements Initializable {
           Alert alert = new Alert(Alert.AlertType.ERROR, "Book already exists!", ButtonType.OK);
           alert.show();
          }
-
       }
-
      }
-
     }

@@ -18,7 +18,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.effect.*;
+import javafx.scene.effect.Bloom;
+import javafx.scene.effect.Effect;
 import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -74,15 +75,11 @@ public class SampleController {
     @FXML
     public void userLogin() {
         if (tf_password.getText().equals("") || tf_username.equals("")) {
-           //button effect
-            button_log_in.setText("Try again");
-            button_log_in.setEffect(new InnerShadow());
-            //
-            loginMessageLabel.setText("Please fill in the info");}
 
-            else if (!tf_password.getText().equals("") && !tf_username.equals("")) {
+            loginMessageLabel.setText("Please fill in the info");
 
-                button_log_in.setEffect(new InnerShadow());
+        } else if (!tf_password.getText().equals("") && !tf_username.equals("")) {
+
 
             UserListModel userfind = new UserListModel(tf_username.getText(), tf_password.getText());
             if (service.UserLogin(userfind)) {
