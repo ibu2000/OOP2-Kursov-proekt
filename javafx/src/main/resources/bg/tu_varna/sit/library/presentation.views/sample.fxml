@@ -27,7 +27,7 @@
                   <Image url="@books3.png" />
                </image>
             </ImageView>
-            <Label fx:id="loginMessageLabel" layoutX="299.0" layoutY="441.0" prefHeight="39.0" prefWidth="317.0">
+            <Label fx:id="loginMessageLabel" layoutX="300.0" layoutY="441.0" prefHeight="39.0" prefWidth="317.0">
                <font>
                   <Font name="System Italic" size="27.0" />
                </font>
@@ -85,7 +85,7 @@
                      </color>
                   </InnerShadow>
                </effect></PasswordField>
-            <Button fx:id="button_log_in" layoutX="294.0" layoutY="489.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Login">
+            <Button fx:id="button_log_in" layoutX="294.0" layoutY="489.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" stylesheets="@blue.css" text="Login">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -93,7 +93,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <effect>
-                  <Reflection fraction="0.39" topOpacity="0.34" />
+                  <Reflection />
                </effect>
             </Button>
             <Label layoutX="316.0" layoutY="555.0" text="Not a user yet?">
