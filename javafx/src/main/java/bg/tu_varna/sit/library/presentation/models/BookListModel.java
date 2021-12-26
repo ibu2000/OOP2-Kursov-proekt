@@ -27,6 +27,10 @@ public class BookListModel {
         this.yearOfPublishing = yearOfPublishing;
     }
 
+    public BookListModel(String bookName) {
+        this.bookName = bookName;
+    }
+
     public BookListModel() {
     }
 

@@ -49,11 +49,14 @@ public class AddNewBookController implements Initializable {
     @FXML
     private ComboBox combo_boxANB_state_of_book;
     @FXML
+    private ComboBox combo_boxANB_name_of_book;
+    @FXML
     private RadioButton radio_buttonANB_archived;
     @FXML
     private RadioButton radio_buttonANB_not_archived;
-    LocalDate publishDate;
 
+
+    LocalDate publishDate;
 
      ObservableList<String> list = FXCollections.observableArrayList("Nova","Zapazena","Povredena");
      BookService BookService = new BookService();
@@ -68,8 +71,13 @@ public class AddNewBookController implements Initializable {
 
      @Override
         public void initialize(URL url, ResourceBundle rb) {
+
          combo_boxANB_state_of_book.setItems(list);
-        }
+
+         combo_boxANB_name_of_book.getItems().clear();
+         combo_boxANB_name_of_book.getItems().addAll(BookService. getBookNames());
+
+     }
 
 
      @FXML
@@ -119,4 +127,10 @@ public class AddNewBookController implements Initializable {
          }
       }
      }
+    @FXML
+    public void addCopy()
+    {
+
+    }
+
     }
