@@ -22,14 +22,6 @@
    <children>
       <AnchorPane layoutX="535.0" layoutY="45.0" prefHeight="586.0" prefWidth="443.0" style="-fx-background-color: #00738C;">
          <children>
-            <Label layoutX="95.0" layoutY="57.0" text="Add new copy" textFill="WHITE">
-               <font>
-                  <Font name="Bell MT Bold" size="41.0" />
-               </font>
-               <effect>
-                  <Glow level="0.5" />
-               </effect>
-            </Label>
             <AnchorPane layoutX="1.0" layoutY="6.0" prefHeight="574.0" prefWidth="438.0" style="-fx-background-color: #81B0B2;">
                <children>
                   <ImageView blendMode="DARKEN" fitHeight="396.0" fitWidth="388.0" layoutX="25.0" layoutY="118.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
@@ -144,6 +136,14 @@
                   </Button>
                </children>
             </AnchorPane>
+            <Label layoutX="95.0" layoutY="57.0" text="Add new copy" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="41.0" />
+               </font>
+               <effect>
+                  <Glow level="0.5" />
+               </effect>
+            </Label>
             <QuadCurve controlX="-82.0" controlY="36.0" endX="-147.3333740234375" endY="1.0" fill="#00738c" layoutX="149.0" layoutY="4.0" startX="290.0" startY="2.0" stroke="WHITE" strokeType="INSIDE" />
          </children>
       </AnchorPane>
