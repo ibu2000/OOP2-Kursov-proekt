@@ -33,6 +33,21 @@
                   </DropShadow>
                </effect>
             </ImageView>
+            <Button fx:id="buttonR_go_back" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="170.0" style="-fx-background-color: #FFFFFF;" text="Go Back" textFill="#00738c">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color green="1.0" blue="0.8833333253860474" opacity="0.31168830394744873" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
          <effect>
             <DropShadow height="255.0" radius="63.25" spread="0.54" width="0.0">
@@ -117,7 +132,7 @@
          <effect>
             <Reflection bottomOpacity="0.13" fraction="0.14" topOpacity="0.41" />
          </effect></TextField>
-      <Button fx:id="button_RSign_up" layoutX="319.0" layoutY="477.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #00738C;" text="Sign up" textFill="WHITE">
+      <Button fx:id="button_RSign_up" layoutX="319.0" layoutY="481.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #00738C;" text="Sign up" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -128,8 +143,8 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <CubicCurve controlX1="-256.5" controlX2="329.5" controlY1="190.0" controlY2="-212.0" endX="10.5" endY="173.0" fill="#00738c" layoutX="658.0" layoutY="351.0" opacity="0.41" startX="-61.0" startY="-178.0" stroke="WHITE" strokeDashOffset="11.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="1111.0" />
-      <Polyline fill="#81b0b2" layoutX="677.0" layoutY="272.0" opacity="0.09" points="-118.0, 69.5, 88.60015869140625, 63.5, -78.0, -105.0, -12.0, 248.0" stroke="WHITE" strokeType="INSIDE" />
+      <CubicCurve controlX1="-303.0" controlX2="329.5" controlY1="181.0" controlY2="-212.0" endX="35.0" endY="181.0" fill="#00738c" layoutX="665.0" layoutY="351.0" opacity="0.41" startX="-93.0" startY="-245.0" stroke="WHITE" strokeDashOffset="11.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="1111.0" />
+      <Polyline fill="#81b0b2" layoutX="677.0" layoutY="272.0" opacity="0.09" points="-134.0, 65.0, 97.0, 53.0, -99.0, -167.0, 20.0, 261.0" stroke="WHITE" strokeType="INSIDE" />
       <Text layoutX="113.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Once you submit this, one of our employees will review it shortly." wrappingWidth="589.0">
          <font>
             <Font name="Arial Narrow Italic" size="25.0" />
@@ -148,7 +163,7 @@
             <Glow level="0.5" />
          </effect>
       </Label>
-      <ImageView blendMode="MULTIPLY" depthTest="ENABLE" fitHeight="228.0" fitWidth="195.0" layoutX="566.0" layoutY="229.0" opacity="0.86" pickOnBounds="true" preserveRatio="true">
+      <ImageView blendMode="MULTIPLY" depthTest="ENABLE" fitHeight="245.0" fitWidth="253.0" layoutX="533.0" layoutY="193.0" opacity="0.86" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@books9.png" />
          </image>
