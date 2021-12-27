@@ -38,6 +38,9 @@ public class UserListModel {
         this.password = text1;
     }
 
+    public UserListModel(String userName) {
+        this.userName = userName;
+    }
 
     public long getIdUser() {
         return idUser;

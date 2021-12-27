@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
 import bg.tu_varna.sit.library.buisness.services.BookService;
+import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
@@ -10,16 +11,21 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
+import javafx.fxml.Initializable;
+import java.net.URL;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 
-public class CreateUserController {
+public class CreateUserController implements Initializable{
 
     @FXML
     private ComboBox combo_boxCAU_create_a_user;
 
 
     Stage s;
+    UserService  UserService= new UserService();
+
+
 
 
     public CreateUserController() {
@@ -28,6 +34,15 @@ public class CreateUserController {
     public CreateUserController(Stage stage) {
         s = stage;
     }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+
+        combo_boxCAU_create_a_user.getItems().clear();
+        combo_boxCAU_create_a_user.getItems().addAll(UserService.getUserForComboBox());
+    }
+
     @FXML
     public void  goToHomePage() {
         try {

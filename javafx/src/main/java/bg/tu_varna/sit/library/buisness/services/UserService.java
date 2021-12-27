@@ -3,10 +3,12 @@ package bg.tu_varna.sit.library.buisness.services;
 import bg.tu_varna.sit.library.data.entities.USER;
 import bg.tu_varna.sit.library.data.entities.UserType;
 import bg.tu_varna.sit.library.data.repositories.UserRepository;
+import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,11 +29,21 @@ public class UserService {
         List<USER> users = repositoryUser.getAll();
         ObservableList<UserListModel> userlist = FXCollections.observableList(
                 users.stream().map(a -> new UserListModel(
-                        a.getUserName(),
-                        a.getPassword()
+                        a.getUserName(), a.getPassword()
                 )).collect(Collectors.toList()));
         return  userlist;
     }
+
+    public ObservableList<UserListModel> getAllUserNames()
+    {
+        List<USER> users = repositoryUser.getAll();
+        ObservableList<UserListModel> userlist = FXCollections.observableList(
+                users.stream().map(a -> new UserListModel(
+                        a.getUserName()
+                )).collect(Collectors.toList()));
+        return  userlist;
+    }
+
 
 
     public long FindUserType(UserListModel a)
@@ -48,6 +60,18 @@ public class UserService {
         }
 
         return 0;
+    }
+
+
+    public ArrayList<String> getUserForComboBox()
+    {
+        ObservableList<UserListModel> allUsers = getAllUserNames();
+        ArrayList<String> usernames = new ArrayList<>();
+        for(UserListModel user : allUsers)
+        {
+            usernames.add(user.getUserName());
+        }
+        return usernames;
     }
 
 

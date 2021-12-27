@@ -77,11 +77,8 @@ public class AddNewBookController implements Initializable {
      @Override
         public void initialize(URL url, ResourceBundle rb) {
 
-
-
          combo_boxANB_name_of_book.getItems().clear();
          combo_boxANB_name_of_book.getItems().addAll(BookService. getBookNames());
-
 
          combo_boxANB_state_of_book.getItems().clear();
          combo_boxANB_state_of_book.getItems().addAll(stateOfBooksService.getBookStates());
