@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import bg.tu_varna.sit.library.buisness.services.BookService;
+import bg.tu_varna.sit.library.buisness.services.ExemplqrService;
 import bg.tu_varna.sit.library.buisness.services.StateofBooksService;
 import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.data.entities.Books;
@@ -62,6 +63,7 @@ public class AddNewBookController implements Initializable {
 
     LocalDate publishDate;
      BookService BookService = new BookService();
+     ExemplqrService ExemplqrService = new ExemplqrService();
      StateofBooksService stateOfBooksService = new StateofBooksService();
 
      Stage s;
@@ -151,26 +153,27 @@ public class AddNewBookController implements Initializable {
         {
             isArchived=false;
         }
-
        String bookname=combo_boxANB_name_of_book.getValue().toString();
-        BookListModel book = new BookListModel(bookname);
+       BookListModel b = BookService.GetBook(bookname);
+       Books book = BookService.listviewToEntity(b);
        StateOfBooks state = new StateOfBooks(1 ,combo_boxANB_state_of_book.getValue().toString());
-        ExemplqrModel addBook = new ExemplqrModel(Long.parseLong(tfANB_isbn.getText()), id, isArchived, state);
-        if(tfANB_isbn.equals("") || author.equals("") || genre.equals("") || publishDate.equals(""))
+        ExemplqrModel addBook = new ExemplqrModel(Long.parseLong(tfANB_isbn.getText()), book, isArchived, state);
+        if(tfANB_isbn.equals("") || combo_boxANB_name_of_book.equals("") ||
+        (!radio_buttonANB_archived.isSelected() && !radio_buttonANB_not_archived.isSelected()) || combo_boxANB_state_of_book.equals(""))
         {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
             alert.show();
         }
         else
         {
-            bookAlreadyExists = BookService.AddBook(addBook);
+            bookAlreadyExists = ExemplqrService.AddCopy(addBook);
             if(bookAlreadyExists)
             {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The book has been added!", ButtonType.OK);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has been added!", ButtonType.OK);
                 alert.show();
             } else
             {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "Book already exists!", ButtonType.OK);
+                Alert alert = new Alert(Alert.AlertType.ERROR, "Copy already exists!", ButtonType.OK);
                 alert.show();
             }
         }

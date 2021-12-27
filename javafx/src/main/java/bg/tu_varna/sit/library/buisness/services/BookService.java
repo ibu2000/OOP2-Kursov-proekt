@@ -31,7 +31,7 @@ public class BookService {
         List<Books> books = repositoryBook.getAll();
         ObservableList<BookListModel> booklist = FXCollections.observableList(
                 books.stream().map(a -> new BookListModel(
-                        a.getBookName()
+                        a.getBookName(), a.getAuthor(),a.getGenre(), a.getYearOfPublishing()
                 )).collect(Collectors.toList()));
         return  booklist;
     }
@@ -45,6 +45,20 @@ public class BookService {
            booknames.add(book.getBookName());
         }
         return booknames;
+    }
+
+    public Books listviewToEntity(BookListModel a)
+    {
+        Books temp = new Books(a.getBookName(),a.getAuthor(),a.getGenre(),a.getYearOfPublishing());
+        List<Books> books = repositoryBook.getAll();
+        for(Books b: books)
+        {
+            if(b.equals(temp))
+            {
+                return b;
+            }
+        }
+        return  null;
     }
 
 
@@ -62,20 +76,19 @@ public class BookService {
         return true;
     }
 
-    public Books GetBook(BookListModel a)
+   public BookListModel GetBook(String a)
     {
-        long bookid = 0;
-
-        Books bk = new Books(a.getIdBook());
         ObservableList<BookListModel> allBooks = getAllBooks();
         for(BookListModel b : allBooks)
         {
-            if(b.equals(bk))
+            if(b.equals(a))
             {
 
+                return b;
             }
         }
-        return bookid;
+        return null;
+
     }
 
 }

@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.library.data.repositories;
 import bg.tu_varna.sit.library.data.access.Connection;
 import bg.tu_varna.sit.library.data.entities.Books;
+import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -73,8 +74,9 @@ public class BooksRepository implements DAORepository<Books>{
 
     @Override
     public Optional<Books> getByIg(Long id) {
-        return Optional.empty();
+       return Optional.empty();
     }
+
 
     @Override
     public List<Books> getAll() {

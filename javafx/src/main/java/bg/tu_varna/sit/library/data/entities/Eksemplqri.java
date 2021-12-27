@@ -22,6 +22,16 @@ public class Eksemplqri {
     @Column(name = "isItArchived", nullable = false)
     private boolean isitArchived;
 
+    public Eksemplqri(long isbnUnikalenNomer, Books idBook, StateOfBooks exsemplqri_stateOfBooks, boolean isitArchived) {
+        this.isbnUnikalenNomer = isbnUnikalenNomer;
+        this.idBook = idBook;
+        this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
+        this.isitArchived = isitArchived;
+    }
+
+    public Eksemplqri() {
+    }
+
     public long getIsbnUnikalenNomer() {
         return isbnUnikalenNomer;
     }
@@ -37,6 +47,7 @@ public class Eksemplqri {
     public void setIdBook(Books idBook) {
         this.idBook = idBook;
     }
+
 
     public StateOfBooks getExsemplqri_stateOfBooks() {
         return exsemplqri_stateOfBooks;
