@@ -12,7 +12,7 @@ public class Eksemplqri {
 
 
   @OneToOne(cascade = CascadeType.ALL)
-  @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "idBook", nullable = false)
+  @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "books_idBook", nullable = false)
   private Books idBook;
 
    @OneToOne(cascade = CascadeType.ALL)

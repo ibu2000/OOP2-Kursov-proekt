@@ -49,7 +49,7 @@ public class BookService {
 
     public Books listviewToEntity(BookListModel a)
     {
-        Books temp = new Books(a.getBookName(),a.getAuthor(),a.getGenre(),a.getYearOfPublishing());
+        Books temp = new Books(a.getBookName());
         List<Books> books = repositoryBook.getAll();
         for(Books b: books)
         {
@@ -77,11 +77,11 @@ public class BookService {
     }
 
    public BookListModel GetBook(String a)
-    {
+    {   BookListModel temp = new BookListModel(a);
         ObservableList<BookListModel> allBooks = getAllBooks();
         for(BookListModel b : allBooks)
         {
-            if(b.equals(a))
+            if(b.getBookName().equals(temp.getBookName()))
             {
 
                 return b;

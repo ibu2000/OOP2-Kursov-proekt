@@ -1,12 +1,14 @@
 package bg.tu_varna.sit.library.data.repositories;
 
 import bg.tu_varna.sit.library.data.access.Connection;
+import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.entities.Eksemplqri;
 import bg.tu_varna.sit.library.data.entities.LENDINFO;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
@@ -77,6 +79,21 @@ public class EksemplqriRepository implements DAORepository<Eksemplqri> {
 
     @Override
     public List<Eksemplqri> getAll() {
-        return null;
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        List<Eksemplqri> copies = new LinkedList<>();
+        try {
+            String jpql = "SELECT t FROM Eksemplqri t";
+            copies.addAll(session.createQuery(jpql, Eksemplqri.class).getResultList());
+            log.info("Get all copies");
+        }
+        catch (Exception e)
+        {
+            log.error("Get copy error: " + e.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return copies;
     }
 }

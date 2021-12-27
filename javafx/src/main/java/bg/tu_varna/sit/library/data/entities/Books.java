@@ -35,9 +35,8 @@ public class Books {
         this.yearOfPublishing = yearOfPublishing;
     }
 
-
-    public Books(long idBook) {
-        this.idBook = idBook;
+    public Books(String bookName) {
+        this.bookName = bookName;
     }
 
     public long getIdBook() {
