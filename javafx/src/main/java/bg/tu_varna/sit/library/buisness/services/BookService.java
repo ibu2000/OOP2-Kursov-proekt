@@ -31,7 +31,7 @@ public class BookService {
         List<Books> books = repositoryBook.getAll();
         ObservableList<BookListModel> booklist = FXCollections.observableList(
                 books.stream().map(a -> new BookListModel(
-                        a.getBookName(), a.getAuthor(),a.getGenre(), a.getYearOfPublishing()
+                        a.getIdBook(),a.getBookName(), a.getAuthor(),a.getGenre(), a.getYearOfPublishing()
                 )).collect(Collectors.toList()));
         return  booklist;
     }
@@ -53,7 +53,7 @@ public class BookService {
         List<Books> books = repositoryBook.getAll();
         for(Books b: books)
         {
-            if(b.equals(temp))
+            if(b.getBookName().equals(temp.getBookName()))
             {
                 return b;
             }
