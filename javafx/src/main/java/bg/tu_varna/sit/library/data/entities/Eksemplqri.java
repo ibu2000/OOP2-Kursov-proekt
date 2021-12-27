@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.library.data.entities;
 import javax.persistence.*;
+import java.util.Set;
 
 @Table(name = "EKSEMPLQRI")
 @Entity
@@ -11,18 +12,20 @@ public class Eksemplqri {
     private long isbnUnikalenNomer;
 
 
-  @OneToOne(cascade = CascadeType.ALL)
-  @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "books_idBook", nullable = false)
-  private Books idBook;
+  @OneToMany(mappedBy = "idBook")
+//  @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "idBook", nullable = false)
+ // private Books idBook;
+  private Set<Books> idBook;
 
-   @OneToOne(cascade = CascadeType.ALL)
+
+    @OneToOne(cascade = CascadeType.ALL)
    @JoinColumn(name = "STATEOFBOOKS_idState", referencedColumnName = "idState")
    private StateOfBooks exsemplqri_stateOfBooks;
 
     @Column(name = "isItArchived", nullable = false)
     private boolean isitArchived;
 
-    public Eksemplqri(long isbnUnikalenNomer, Books idBook, StateOfBooks exsemplqri_stateOfBooks, boolean isitArchived) {
+    public Eksemplqri(long isbnUnikalenNomer, Set<Books> idBook, StateOfBooks exsemplqri_stateOfBooks, boolean isitArchived) {
         this.isbnUnikalenNomer = isbnUnikalenNomer;
         this.idBook = idBook;
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
@@ -40,14 +43,13 @@ public class Eksemplqri {
         this.isbnUnikalenNomer = isbnUnikalenNomer;
     }
 
-    public Books getIdBook() {
+    public Set<Books> getIdBook() {
         return idBook;
     }
 
-    public void setIdBook(Books idBook) {
+    public void setIdBook(Set<Books> idBook) {
         this.idBook = idBook;
     }
-
 
     public StateOfBooks getExsemplqri_stateOfBooks() {
         return exsemplqri_stateOfBooks;
