@@ -11,6 +11,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="391.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
@@ -19,7 +21,7 @@
          <children>
             <AnchorPane layoutY="74.0" prefHeight="275.0" prefWidth="734.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="buttonRAB_return_book" layoutX="302.0" layoutY="164.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="149.0" style="-fx-background-color: #00738C;" text="Return" textFill="WHITE">
+                  <Button fx:id="buttonRAB_return_book" layoutX="302.0" layoutY="164.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="149.0" style="-fx-background-color: #00738C;" text="Return">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -29,25 +31,57 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.6018957345971564">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.7194244861602783" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Button>
-                  <Label layoutX="130.0" layoutY="28.0" prefHeight="41.0" prefWidth="498.0" text="Choose a book you'd like to return" textFill="#00738c">
+                  <Label layoutX="130.0" layoutY="28.0" prefHeight="41.0" prefWidth="498.0" text="Choose a book you'd like to return">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                      <effect>
-                        <DropShadow height="120.66" radius="64.10499999999999" width="137.76">
+                        <DropShadow height="31.05" radius="16.7875" width="38.1">
                            <color>
-                              <Color green="0.4822542071342468" blue="1.0" />
+                              <Color red="0.7368420958518982" green="0.7368420958518982" blue="0.7368420958518982" />
                            </color>
                         </DropShadow>
                      </effect>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.3744075829383886">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.3651798665523529" blue="0.5400000214576721" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.7194244861602783" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Label>
                   <ComboBox fx:id="combo_boxRAB_choose_book_to_return" layoutX="70.0" layoutY="92.0" prefHeight="41.0" prefWidth="616.0" style="-fx-background-color: #00738C;">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <effect>
-                        <DropShadow height="117.24" radius="55.19" spread="0.14" width="105.52" />
+                        <DropShadow height="20.52" radius="9.024999999999999" width="17.58" />
                      </effect></ComboBox>
                </children>
                <effect>
