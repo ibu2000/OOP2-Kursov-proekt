@@ -8,18 +8,19 @@ import javax.persistence.*;
 @Entity
 public class UserInfo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idUser", nullable = false)
-    private int idUser;
-
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "USER_idUser", referencedColumnName = "idUser")
+    @JoinColumn(name = "user_idUser", referencedColumnName = "idUser")
     private USER User_idUser;
-  /*
-    @JoinColumn(name = "idUser",referencedColumnName = "idUser")
-    private USER byUSER;*/
 
+    public UserInfo(USER user_idUser, String name, String phone, String email) {
+        User_idUser = user_idUser;
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+    }
 
+    public UserInfo() {
+    }
 
     @Column(name = "name", nullable = false)
     private String name;
@@ -30,13 +31,6 @@ public class UserInfo {
     @Column(name = "email", nullable = false)
     private String email;
 
-    public USER getUser_idUser() {
-        return User_idUser;
-    }
-
-    public void setUser_idUser(USER user_idUser) {
-        User_idUser = user_idUser;
-    }
 
     public String getName() {
         return name;

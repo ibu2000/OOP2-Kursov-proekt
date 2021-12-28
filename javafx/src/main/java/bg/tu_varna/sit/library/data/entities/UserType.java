@@ -13,11 +13,17 @@ public class UserType {
     @Column(name = "idUserType", nullable = false)
     private long idUserType;
 
-    @OneToMany(mappedBy = "USERTYPE_idUserType")
-    private Set<USER> byType;
 
-    @Column(name = "userType",nullable = false)
+    @JoinColumn(name = "userType",referencedColumnName = "userType",nullable = false)
     private String userType;
+
+    public UserType(long idUserType, String userType) {
+        this.idUserType = idUserType;
+        this.userType = userType;
+    }
+
+    public UserType() {
+    }
 
     public long getIdUserType() {
         return idUserType;

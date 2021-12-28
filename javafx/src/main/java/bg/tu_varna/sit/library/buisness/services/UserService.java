@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.library.buisness.services;
 
+import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.entities.USER;
 import bg.tu_varna.sit.library.data.entities.UserType;
 import bg.tu_varna.sit.library.data.repositories.UserRepository;
@@ -88,6 +89,20 @@ public class UserService {
         return false;
     }
 
+
+    public boolean AddUser(UserListModel addUser) {
+        List<USER> users = repositoryUser.getAll();
+        USER user = new USER(addUser.getIdUser(),addUser.getUserName(),addUser.getPassword(),addUser.getDateOfUserApproval(),addUser.getRating(),addUser.getSTATUS_idStatus(),addUser.getUSERTYEPE_idUserType());
+        for(USER u : users)
+        {
+            if(u.equals(user))
+            {
+                return false;
+            }
+        }
+        repositoryUser.save(user);
+        return true;
+    }
 
 
 

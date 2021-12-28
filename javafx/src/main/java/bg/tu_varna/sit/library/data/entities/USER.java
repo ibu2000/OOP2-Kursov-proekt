@@ -27,11 +27,11 @@ public class USER {
     @Column(name = "rating", nullable = false)
     private String rating;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "STATUS_idStatus",referencedColumnName = "idStatus",nullable = false)
     private Status STATUS_idStatus;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "USERTYPE_idUserType",referencedColumnName = "idUserType",nullable = false)
     private UserType USERTYPE_idUserType;
 
@@ -41,6 +41,16 @@ public class USER {
     }
 
     public USER() {
+    }
+
+    public USER(long idUser, String userName, String password, Date dateOfUserApproval, String rating, Status STATUS_idStatus, UserType USERTYPE_idUserType) {
+        this.idUser = idUser;
+        this.userName = userName;
+        this.password = password;
+        this.dateOfUserApproval = dateOfUserApproval;
+        this.rating = rating;
+        this.STATUS_idStatus = STATUS_idStatus;
+        this.USERTYPE_idUserType = USERTYPE_idUserType;
     }
 
     public long getIdUser() {

@@ -12,11 +12,17 @@ public class Status {
     @Column(name = "idStatus", nullable = false)
     private long idStatus;
 
-    @OneToMany(mappedBy = "STATUS_idStatus")
-    private Set<USER> byStatus;
 
     @Column(name = "status",nullable = false)
     private String status;
+
+    public Status(long idStatus, String status) {
+        this.idStatus = idStatus;
+        this.status = status;
+    }
+
+    public Status() {
+    }
 
     public long getIdStatus() {
         return idStatus;

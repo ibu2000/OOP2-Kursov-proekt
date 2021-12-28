@@ -8,9 +8,8 @@ import java.util.Set;
 public class BOOKSSTORED {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "idBook", nullable = false)
+    @JoinColumn(name = "books_idBook",referencedColumnName = "idBook", nullable = false)
     private long BOOKS_idBook;
 
     @Column(name = "total")

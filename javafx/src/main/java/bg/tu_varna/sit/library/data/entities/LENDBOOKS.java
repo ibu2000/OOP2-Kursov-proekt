@@ -16,7 +16,7 @@ public class LENDBOOKS {
     private Date dateOfTaking;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "USER_idUser",referencedColumnName = "idUser")
+    @JoinColumn(name = "user_idUser", referencedColumnName = "idUser")
     private USER USER_idUser;
 
 

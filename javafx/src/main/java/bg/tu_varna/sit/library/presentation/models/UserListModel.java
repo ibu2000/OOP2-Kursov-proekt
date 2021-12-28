@@ -33,6 +33,15 @@ public class UserListModel {
 
     }
 
+    public UserListModel(String userName, String password, Date dateOfUserApproval, String rating, UserType USERTYEPE_idUserType, Status STATUS_idStatus) {
+        this.userName = userName;
+        this.password = password;
+        this.dateOfUserApproval = dateOfUserApproval;
+        this.rating = rating;
+        this.USERTYEPE_idUserType = USERTYEPE_idUserType;
+        this.STATUS_idStatus = STATUS_idStatus;
+    }
+
     public UserListModel(String text, String text1) {
         this.userName = text;
         this.password = text1;

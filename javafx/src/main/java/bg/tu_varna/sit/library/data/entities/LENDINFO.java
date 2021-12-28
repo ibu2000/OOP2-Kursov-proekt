@@ -13,12 +13,12 @@ public class LENDINFO {
 
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "BOOKS_idBook",referencedColumnName = "idBook",nullable = false)
+    @JoinColumn(name = "books_idBook",referencedColumnName = "idBook",nullable = false)
     private Books BOOKS_idBook;
 
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "LENDBOOKS_idLendBook",referencedColumnName = "idLendBook",nullable = false)
+    @JoinColumn(name = "lendingbooks_idLendBook",referencedColumnName = "idLendBook",nullable = false)
     private LENDBOOKS LENDBOOKS_idLendBook;
 
 
