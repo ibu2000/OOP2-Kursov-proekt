@@ -1,34 +1,25 @@
-package bg.tu_varna.sit.library.data.entities;
+package bg.tu_varna.sit.library.presentation.models;
 
-import javax.persistence.*;
-import java.io.Serializable;
+import bg.tu_varna.sit.library.data.entities.USER;
 
+import javax.persistence.Column;
+import java.util.Objects;
 
-@Table(name = "USERINFO")
-@Entity
-public class UserInfo implements Serializable {
-    @Id
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_idUser", referencedColumnName = "idUser")
+public class UserInfoListModel {
+
     private USER User_idUser;
-
-    @Column(name = "name", nullable = false)
     private String name;
-
-    @Column(name = "phone", nullable = false)
     private String phone;
-
-    @Column(name = "email", nullable = false)
     private String email;
 
-    public UserInfo(USER user_idUser, String name, String phone, String email) {
+    public UserInfoListModel() {
+    }
+
+    public UserInfoListModel(USER user_idUser, String name, String phone, String email) {
         User_idUser = user_idUser;
         this.name = name;
         this.phone = phone;
         this.email = email;
-    }
-
-    public UserInfo() {
     }
 
     public USER getUser_idUser() {
@@ -64,8 +55,21 @@ public class UserInfo implements Serializable {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof UserInfoListModel)) return false;
+        UserInfoListModel that = (UserInfoListModel) o;
+        return Objects.equals(getUser_idUser(), that.getUser_idUser()) && Objects.equals(getName(), that.getName()) && Objects.equals(getPhone(), that.getPhone()) && Objects.equals(getEmail(), that.getEmail());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getUser_idUser(), getName(), getPhone(), getEmail());
+    }
+
+    @Override
     public String toString() {
-        return "UserInfo{" +
+        return "UserInfoListModel{" +
                 "User_idUser=" + User_idUser +
                 ", name='" + name + '\'' +
                 ", phone='" + phone + '\'' +

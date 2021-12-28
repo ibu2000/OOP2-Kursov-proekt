@@ -63,6 +63,19 @@ public class UserService {
         return 0;
     }
 
+    public USER listviewToEntity(UserListModel a)
+    {
+        USER temp = new USER(a.getUserName());
+        List<USER> users = repositoryUser.getAll();
+        for(USER u: users)
+        {
+            if(u.getUserName().equals(temp.getUserName()))
+            {
+                return u;
+            }
+        }
+        return  null;
+    }
 
     public ArrayList<String> getUserForComboBox()
     {

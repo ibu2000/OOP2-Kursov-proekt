@@ -21,6 +21,8 @@
         <mapping class="bg.tu_varna.sit.library.data.entities.Status"/>
         <mapping class="bg.tu_varna.sit.library.data.entities.Eksemplqri"/>
         <mapping class="bg.tu_varna.sit.library.data.entities.StateOfBooks"/>
+        <mapping class="bg.tu_varna.sit.library.data.entities.UserInfo"/>
+
         <!--
 
          <mapping class="bg.tu_varna.sit.library.data.entities.FORM"/>
@@ -30,9 +32,6 @@
         <mapping class="bg.tu_varna.sit.library.data.entities.LENDBOOKS"/>
         <mapping class="bg.tu_varna.sit.library.data.entities.LENDINFO"/>
 
-        <mapping class="bg.tu_varna.sit.library.data.entities.Status"/>
-
-        <mapping class="bg.tu_varna.sit.library.data.entities.UserInfo"/>
-        <mapping class="bg.tu_varna.sit.library.data.entities.UserType"/> -->
+          -->
         </session-factory>
 </hibernate-configuration>
