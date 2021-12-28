@@ -365,6 +365,55 @@
                         </LinearGradient>
                      </fill>
                   </QuadCurve>
+                  <Polyline layoutX="167.0" layoutY="65.0" points="145.0, 35.0, 162.0, 75.0, 174.0, 41.0, 563.0, 35.0" strokeLineCap="ROUND" strokeLineJoin="ROUND">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.5260663507109005" startY="0.6492890995260664">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.43851957182920565">
+                                 <color>
+                                    <Color red="0.028813352808356285" green="0.40469664335250854" blue="0.5657894611358643" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.6833333373069763" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                     <fill>
+                        <LinearGradient endX="0.6824644549763033" endY="0.29383886255924174">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.4933048939447803">
+                                 <color>
+                                    <Color green="0.699999988079071" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.05921052768826485" green="0.34934210777282715" blue="0.4736842215061188" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Polyline>
                </children>
                <effect>
                   <DropShadow height="57.18" radius="27.8375" spread="0.05" width="56.17" />
