@@ -8,9 +8,7 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.effect.SepiaTone?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -31,22 +29,15 @@
                   <Font name="Bell MT Bold" size="60.0" />
                </font>
                <effect>
-                  <Lighting diffuseConstant="2.0" specularConstant="1.2" specularExponent="36.55" surfaceScale="5.87">
-                     <bumpInput>
-                        <Shadow blurType="ONE_PASS_BOX" height="26.38" radius="6.095" width="0.0">
+                  <SepiaTone level="0.0">
+                     <input>
+                        <DropShadow height="41.04" radius="28.08" spread="0.17" width="73.28">
                            <color>
-                              <Color red="0.0623781681060791" green="0.5432098507881165" blue="0.8421052694320679" />
+                              <Color red="0.14351852238178253" green="0.5580856204032898" blue="0.8157894611358643" />
                            </color>
-                        </Shadow>
-                     </bumpInput>
-                     <light>
-                        <Light.Distant azimuth="355.34" elevation="32.59">
-                           <color>
-                              <Color red="0.09880000352859497" green="0.7599999904632568" blue="0.7029179930686951" />
-                           </color>
-                        </Light.Distant>
-                     </light>
-                  </Lighting>
+                        </DropShadow>
+                     </input>
+                  </SepiaTone>
                </effect>
             </Text>
             <Polygon fill="#299ba8" layoutX="136.0" layoutY="67.0" points="-134.0, 7.0, -134.0, -68.0, -79.166748046875, -68.0" stroke="#077570" strokeLineJoin="ROUND" strokeType="OUTSIDE">
@@ -59,37 +50,41 @@
                </effect>
             </Polygon>
          </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.09019608050584793" green="1.0" blue="0.8235294222831726" />
+               </color>
+            </DropShadow>
+         </effect>
       </Pane>
       <Button fx:id="buttonLB_lend_book" layoutX="132.0" layoutY="338.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
-         <effect>
-            <Glow level="0.17" />
-         </effect>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color green="0.9399999976158142" blue="0.6762589812278748" />
+               </color>
+            </DropShadow>
+         </effect>
       </Button>
       <ComboBox fx:id="combo_boxLB_lendable_books" layoutX="18.0" layoutY="213.0" prefHeight="42.0" prefWidth="470.0" style="-fx-background-color: #00738C;">
          <effect>
-            <Lighting diffuseConstant="1.05" specularConstant="0.41" specularExponent="26.9">
-               <bumpInput>
-                  <Shadow height="11.73" radius="7.5600000000000005" width="20.51">
-                     <color>
-                        <Color red="0.006099999882280827" green="0.6100000143051147" blue="0.37850499153137207" />
-                     </color>
-                  </Shadow>
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="222.93" elevation="127.76" />
-               </light>
-            </Lighting>
+            <DropShadow blurType="TWO_PASS_BOX" height="20.51" radius="9.025" width="17.59">
+               <color>
+                  <Color green="1.0" blue="0.5833333134651184" />
+               </color>
+            </DropShadow>
          </effect>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ComboBox>
-      <Label layoutX="35.0" layoutY="103.0" prefHeight="100.0" prefWidth="430.0" style="-fx-background-color: #00738C;" text="Pick a book you'd like to lend!" textFill="WHITE">
+      <Label layoutX="40.0" layoutY="103.0" prefHeight="100.0" prefWidth="430.0" style="-fx-background-color: #00738C;" text="Pick a book you'd like to lend!" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -132,12 +127,16 @@
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
-         <effect>
-            <Glow level="0.17" />
-         </effect>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color green="0.9399999976158142" blue="0.6762589812278748" />
+               </color>
+            </DropShadow>
+         </effect>
       </Button>
       <AnchorPane layoutX="534.0" prefHeight="618.0" prefWidth="503.0">
          <children>
@@ -161,6 +160,13 @@
                      </effect>
                   </Polygon>
                </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.09019608050584793" green="1.0" blue="0.8235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Pane>
             <Label layoutX="120.0" layoutY="99.0" prefHeight="56.0" prefWidth="281.0" style="-fx-background-color: #00738C;" text="Here are the books" textFill="WHITE">
                <font>
@@ -188,6 +194,13 @@
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7871999740600586" green="0.9488115310668945" blue="0.9599999785423279" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </TextArea>
          </children>
       </AnchorPane>
