@@ -46,7 +46,7 @@ public class PromoteToOperatorController  implements Initializable {
 
 
 
-    @FXML
+  /*  @FXML
     public void promoteToOperator()
     {
         String username=combo_box_users_to_promote_to_operator.getValue().toString();
@@ -55,7 +55,7 @@ public class PromoteToOperatorController  implements Initializable {
         ExemplqrModel addBook = new ExemplqrModel(Long.parseLong(tfANB_isbn.getText()), book, isArchived, state);
 
 
-    }
+    }*/
 
     @FXML
     public void goToHomePage() {
