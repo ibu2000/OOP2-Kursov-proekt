@@ -2,6 +2,12 @@ package bg.tu_varna.sit.library.presentation.controllers;
 
 import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.data.entities.Books;
+import bg.tu_varna.sit.library.data.entities.StateOfBooks;
+import bg.tu_varna.sit.library.data.entities.USER;
+import bg.tu_varna.sit.library.presentation.models.BookListModel;
+import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
+import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -37,6 +43,19 @@ public class PromoteToOperatorController  implements Initializable {
         combo_box_users_to_promote_to_operator.getItems().addAll(userService.getUserForComboBox());
     }
 
+
+
+
+  /*  @FXML
+    public void promoteToOperator()
+    {
+        String username=combo_box_users_to_promote_to_operator.getValue().toString();
+        UserListModel b = userService.GetUser(username);
+        USER user = userService.listviewToEntity(b);
+        ExemplqrModel addBook = new ExemplqrModel(Long.parseLong(tfANB_isbn.getText()), book, isArchived, state);
+
+
+    }*/
 
     @FXML
     public void goToHomePage() {

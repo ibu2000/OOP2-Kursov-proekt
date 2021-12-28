@@ -118,5 +118,21 @@ public class UserService {
     }
 
 
+    public UserListModel GetUser(String a)
+    {   UserListModel temp = new UserListModel(a);
+        ObservableList<UserListModel> allUsers = getAllUsers();
+        for(UserListModel b : allUsers)
+        {
+            if(b.getUserName().equals(temp.getUserName()))
+            {
+
+                return b;
+            }
+        }
+        return null;
+
+    }
+
+
 
 }
