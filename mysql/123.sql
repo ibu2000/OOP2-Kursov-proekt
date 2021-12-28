@@ -15,6 +15,10 @@ INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYP
 INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (2, 'u2', 'pas2','2012-5-10', 'good', 2,2);
 INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (3, 'u3', 'pas3','2018-1-11', 'good', 3,2);
 INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (4, 'u4', 'pas4','2018-1-11', 'good', 1,2);
+INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (5, 'u5', 'pas4','2018-1-11', 'good', 1,2);
+INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (6, 'u6', 'pas4','2018-1-11', 'good', 1,2);
+INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (7, 'u7', 'pas4','2018-1-11', 'good', 1,2);
+   
   
  INSERT INTO userinfo (idUser, name, phone, email)VALUES (1, 'name1', 'phone1', 'email1');
  INSERT INTO userinfo (idUser, name, phone, email)VALUES(2, 'ivo','001','abv');

@@ -59,10 +59,6 @@ public class UserRepository implements DAORepository<USER> {
         Transaction transaction = session.beginTransaction();
         try{
             session.delete(obj);
-            Query query = session.createQuery("select username FROM USER WHERE username =: un");
-            query.setParameter("un","username1");
-            query.executeUpdate();
-            query.getResultList();
             log.info("User deleted successfully");
         }catch (Exception e)
         {

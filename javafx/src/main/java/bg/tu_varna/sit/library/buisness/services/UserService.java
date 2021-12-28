@@ -35,6 +35,16 @@ public class UserService {
         return  userlist;
     }
 
+    public ObservableList<UserListModel> getAllUsersWithTypes()
+    {
+        List<USER> users = repositoryUser.getAll();
+        ObservableList<UserListModel> userlist = FXCollections.observableList(
+                users.stream().map(a -> new UserListModel(
+                        a.getUserName(), a.getPassword(), a.getUSERTYPE_idUserType()
+                )).collect(Collectors.toList()));
+        return  userlist;
+
+    }
     public ObservableList<UserListModel> getAllUserNames()
     {
         List<USER> users = repositoryUser.getAll();
@@ -89,6 +99,21 @@ public class UserService {
     }
 
 
+    public ArrayList<String> getOnlyUserForComboBox()
+    {
+        UserType type = new UserType(1, "user");
+        ObservableList<UserListModel> allUsers = getAllUsersWithTypes();
+        ArrayList<String> usernames = new ArrayList<>();
+        for(UserListModel user : allUsers)
+        {
+           if((user.getUSERTYEPE_idUserType()).getUserType().equals(type.getUserType()))
+           {
+               usernames.add(user.getUserName());
+           }
+        }
+        return usernames;
+    }
+
     public boolean UserLogin(UserListModel a)
     {
         ObservableList<UserListModel> allUsers = getAllUsers();
@@ -131,7 +156,19 @@ public class UserService {
                 return true;
             }
         }
-
+        return true;
+    }
+    public boolean DeleteUser(UserListModel addUser) {
+        List<USER> users = repositoryUser.getAll();
+        USER user = new USER(addUser.getIdUser(),addUser.getUserName(),addUser.getPassword(),addUser.getDateOfUserApproval(),addUser.getRating(),addUser.getSTATUS_idStatus(),addUser.getUSERTYEPE_idUserType());
+        for(USER u : users)
+        {
+            if(u.getUserName().equals(user.getUserName()))
+            {
+                repositoryUser.delete(u);
+                return true;
+            }
+        }
         return true;
     }
 

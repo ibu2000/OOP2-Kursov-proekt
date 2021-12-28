@@ -18,7 +18,7 @@
          <children>
             <AnchorPane layoutY="94.0" prefHeight="189.0" prefWidth="734.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="buttonDU_delete_user" layoutX="242.0" layoutY="119.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Delete user" textFill="WHITE">
+                  <Button fx:id="buttonDU_delete_user" layoutX="242.0" layoutY="119.0" mnemonicParsing="false" onAction="#DeleteUser" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Delete user" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -34,7 +34,7 @@
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                   </Label>
-                  <ComboBox layoutX="135.0" layoutY="63.0" prefHeight="32.0" prefWidth="461.0">
+                  <ComboBox fx:id="combobox_deleteUser" layoutX="135.0" layoutY="63.0" prefHeight="32.0" prefWidth="461.0">
                      <effect>
                         <Reflection />
                      </effect>

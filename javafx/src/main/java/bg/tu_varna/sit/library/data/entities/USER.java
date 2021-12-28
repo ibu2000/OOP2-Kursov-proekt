@@ -27,11 +27,11 @@ public class USER {
     @Column(name = "rating", nullable = false)
     private String rating;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne//(cascade = CascadeType.ALL)
     @JoinColumn(name = "STATUS_idStatus",referencedColumnName = "idStatus",nullable = false)
     private Status STATUS_idStatus;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne//(cascade = CascadeType.ALL)
     @JoinColumn(name = "USERTYPE_idUserType",referencedColumnName = "idUserType",nullable = false)
     private UserType USERTYPE_idUserType;
 

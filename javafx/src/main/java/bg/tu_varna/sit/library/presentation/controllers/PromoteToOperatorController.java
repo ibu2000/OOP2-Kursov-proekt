@@ -75,8 +75,6 @@ public class PromoteToOperatorController  implements Initializable {
                alert.show();
            }
         }
-
-
     }
 
     @FXML

@@ -1,26 +1,46 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
-public class DeleteUserController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class DeleteUserController implements Initializable {
     @FXML
     private Button buttonDU_delete_user;
     @FXML
     private Button buttonDU_home;
+    @FXML
+    private ComboBox combobox_deleteUser;
 
     Stage s;
+    UserService userService = new UserService();
+    public DeleteUserController()
+    {}
 
-    public DeleteUserController() {
+    public DeleteUserController(Stage stage)
+    {
+        s = stage;
     }
 
-    public DeleteUserController(Stage stage) {
-        s = stage;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+       combobox_deleteUser.getItems().clear();
+       combobox_deleteUser.getItems().addAll(userService.getOnlyUserForComboBox());
+
     }
     @FXML
     public void  goToHomePage() {
@@ -36,5 +56,35 @@ public class DeleteUserController {
             e.printStackTrace();
         }
     }
+
+
+    boolean isDeleted;
+    @FXML
+    public void DeleteUser()
+    {
+        String username=combobox_deleteUser.getValue().toString();
+        UserListModel b = userService.GetUser(username);
+        if(combobox_deleteUser.equals(""))
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
+            alert.show();
+        }
+        else
+        {
+            isDeleted = userService.DeleteUser(b);
+
+            if (isDeleted)
+            {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The user has been deleted!", ButtonType.OK);
+                alert.show();
+            }
+            else
+            {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The user has not been deleted!", ButtonType.OK);
+                alert.show();
+            }
+        }
+    }
+
 
 }

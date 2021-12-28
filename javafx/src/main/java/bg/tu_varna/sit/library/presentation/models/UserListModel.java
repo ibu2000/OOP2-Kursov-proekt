@@ -51,6 +51,12 @@ public class UserListModel {
         this.userName = userName;
     }
 
+    public UserListModel(String userName, String password, UserType USERTYEPE_idUserType) {
+        this.userName = userName;
+        this.password = password;
+        this.USERTYEPE_idUserType = USERTYEPE_idUserType;
+    }
+
     public long getIdUser() {
         return idUser;
     }
