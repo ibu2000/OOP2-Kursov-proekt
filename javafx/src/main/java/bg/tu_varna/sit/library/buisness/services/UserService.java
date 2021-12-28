@@ -118,6 +118,23 @@ public class UserService {
     }
 
 
+    public boolean UpdateUser(UserListModel addUser) {
+        List<USER> users = repositoryUser.getAll();
+        USER user = new USER(addUser.getIdUser(),addUser.getUserName(),addUser.getPassword(),addUser.getDateOfUserApproval(),addUser.getRating(),addUser.getSTATUS_idStatus(),addUser.getUSERTYEPE_idUserType());
+        for(USER u : users)
+        {
+            if(u.getUserName().equals(user.getUserName()))
+            {
+                UserType userType = new UserType(2, "operator");
+                u.setUSERTYEPE_idUserType(userType);
+                repositoryUser.update(u);
+                return true;
+            }
+        }
+
+        return true;
+    }
+
     public UserListModel GetUser(String a)
     {   UserListModel temp = new UserListModel(a);
         ObservableList<UserListModel> allUsers = getAllUsers();

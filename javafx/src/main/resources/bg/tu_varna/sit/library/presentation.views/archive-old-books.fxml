@@ -35,7 +35,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label layoutX="47.0" layoutY="22.0" prefHeight="41.0" prefWidth="657.0" text="Choose between wich of these old books you'd like to archive" textFill="#0e868f">
+                  <Label layoutX="47.0" layoutY="22.0" prefHeight="41.0" prefWidth="657.0" text="Choose between which of these old books you'd like to archive" textFill="#0e868f">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>

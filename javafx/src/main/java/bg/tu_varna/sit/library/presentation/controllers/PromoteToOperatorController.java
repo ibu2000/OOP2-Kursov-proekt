@@ -13,7 +13,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
@@ -46,16 +48,36 @@ public class PromoteToOperatorController  implements Initializable {
 
 
 
-  /*  @FXML
+    boolean isUpdated;
+
+    @FXML
     public void promoteToOperator()
     {
         String username=combo_box_users_to_promote_to_operator.getValue().toString();
         UserListModel b = userService.GetUser(username);
-        USER user = userService.listviewToEntity(b);
-        ExemplqrModel addBook = new ExemplqrModel(Long.parseLong(tfANB_isbn.getText()), book, isArchived, state);
+        if(combo_box_users_to_promote_to_operator.equals(""))
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
+            alert.show();
+        }
+        else
+        {
+           isUpdated = userService.UpdateUser(b);
+
+           if (isUpdated)
+           {
+               Alert alert = new Alert(Alert.AlertType.INFORMATION, "The user has been promoted to operator!", ButtonType.OK);
+               alert.show();
+           }
+           else
+           {
+               Alert alert = new Alert(Alert.AlertType.INFORMATION, "The user has not been promoted to operator!", ButtonType.OK);
+               alert.show();
+           }
+        }
 
 
-    }*/
+    }
 
     @FXML
     public void goToHomePage() {
