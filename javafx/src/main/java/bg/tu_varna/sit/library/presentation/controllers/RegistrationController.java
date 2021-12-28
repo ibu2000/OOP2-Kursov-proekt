@@ -2,6 +2,7 @@ package bg.tu_varna.sit.library.presentation.controllers;
 
 import bg.tu_varna.sit.library.buisness.services.UserInfoService;
 import bg.tu_varna.sit.library.buisness.services.UserService;
+import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.data.entities.Status;
 import bg.tu_varna.sit.library.data.entities.USER;
 import bg.tu_varna.sit.library.data.entities.UserType;
@@ -9,6 +10,9 @@ import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import bg.tu_varna.sit.library.presentation.models.UserInfoListModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
@@ -97,11 +101,22 @@ public class RegistrationController {
                 Alert alert1 = new Alert(Alert.AlertType.INFORMATION, "The Userinfo already exists!", ButtonType.OK);
                 alert1.show();
             }
-
         }
-     /*   combo_boxANB_state_of_book.getItems().clear();
-        combo_boxANB_state_of_book.getItems().addAll(stateOfBooksService.getBookStates());
-        */
     }
 
+
+    @FXML
+    public void goBack() {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SAMPLE));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new SampleController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

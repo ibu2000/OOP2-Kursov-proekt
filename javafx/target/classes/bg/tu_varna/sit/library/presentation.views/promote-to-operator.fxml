@@ -15,14 +15,14 @@
 
 <AnchorPane prefHeight="336.0" prefWidth="671.0" style="-fx-background-color: #81B0B2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="42.0" layoutY="73.0" prefHeight="171.0" prefWidth="568.0" style="-fx-background-color: #FFFFFF;">
+      <Pane layoutX="42.0" layoutY="73.0" prefHeight="171.0" prefWidth="568.0" style="-fx-background-color: WHITE;">
          <children>
             <Label layoutX="141.0" layoutY="14.0" prefHeight="36.0" prefWidth="325.0" style="-fx-background-color: #00738C;" text="Please choose a user:" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
             </Label>
-            <ComboBox fx:id="combo_box_users_to_promote_to_operator" layoutX="100.0" layoutY="59.0" prefHeight="25.0" prefWidth="382.0" promptText="users" style="-fx-background-color: #FFFFF;">
+            <ComboBox fx:id="combo_box_users_to_promote_to_operator" layoutX="100.0" layoutY="59.0" prefHeight="25.0" prefWidth="382.0" promptText="users">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

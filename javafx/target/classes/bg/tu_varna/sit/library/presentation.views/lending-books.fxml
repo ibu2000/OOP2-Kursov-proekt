@@ -98,24 +98,26 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
          <textFill>
-            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.5876777251184834">
+            <LinearGradient endX="1.0" endY="0.3933649289099526" startX="1.0">
                <stops>
                   <Stop>
                      <color>
-                        <Color green="0.8273380994796753" blue="1.0" />
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color green="0.8273380994796753" blue="1.0" />
+                        <Color green="0.534649133682251" blue="0.6973684430122375" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </textFill>
-         <effect>
-            <DropShadow height="4.4" radius="1.3325" width="2.93" />
-         </effect>
       </Label>
       <ImageView fitHeight="143.0" fitWidth="143.0" layoutX="172.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -206,24 +208,26 @@
                   <Cursor fx:constant="TEXT" />
                </cursor>
                <textFill>
-                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.5876777251184834">
+                  <LinearGradient endX="1.0" endY="0.3933649289099526" startX="1.0">
                      <stops>
                         <Stop>
                            <color>
-                              <Color green="0.8273380994796753" blue="1.0" />
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color green="0.8273380994796753" blue="1.0" />
+                              <Color green="0.534649133682251" blue="0.6973684430122375" />
                            </color>
                         </Stop>
                      </stops>
                   </LinearGradient>
                </textFill>
-               <effect>
-                  <DropShadow height="4.4" radius="1.3325" width="2.93" />
-               </effect>
             </Label>
             <Label layoutX="93.0" layoutY="158.0" prefHeight="67.0" prefWidth="337.0" text="you've picked to lend!!!">
                <font>
@@ -233,24 +237,26 @@
                   <Cursor fx:constant="TEXT" />
                </cursor>
                <textFill>
-                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.5876777251184834">
+                  <LinearGradient endX="1.0" endY="0.3933649289099526" startX="1.0">
                      <stops>
                         <Stop>
                            <color>
-                              <Color green="0.8273380994796753" blue="1.0" />
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color green="0.8273380994796753" blue="1.0" />
+                              <Color green="0.534649133682251" blue="0.6973684430122375" />
                            </color>
                         </Stop>
                      </stops>
                   </LinearGradient>
                </textFill>
-               <effect>
-                  <DropShadow height="4.4" radius="1.3325" width="2.93" />
-               </effect>
             </Label>
             <TextArea layoutX="41.0" layoutY="241.0" prefHeight="350.0" prefWidth="453.0" style="-fx-background-color: #00738C;">
                <cursor>
