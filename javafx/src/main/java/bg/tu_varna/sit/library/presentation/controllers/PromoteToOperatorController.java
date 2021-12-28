@@ -1,15 +1,20 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
-public class PromoteToOperatorController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class PromoteToOperatorController  implements Initializable {
     @FXML
     private ComboBox combo_box_users_to_promote_to_operator;
     @FXML
@@ -18,12 +23,18 @@ public class PromoteToOperatorController {
     private Button buttonPTO_home;
 
     Stage s;
-
+    UserService userService = new UserService();
     public PromoteToOperatorController() {
     }
 
     public PromoteToOperatorController(Stage stage) {
         s = stage;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        combo_box_users_to_promote_to_operator.getItems().clear();
+        combo_box_users_to_promote_to_operator.getItems().addAll(userService.getUserForComboBox());
     }
 
 
@@ -41,14 +52,6 @@ public class PromoteToOperatorController {
             e.printStackTrace();
         }
     }
-
-
-
-
-
-
-
-
 
 
 
