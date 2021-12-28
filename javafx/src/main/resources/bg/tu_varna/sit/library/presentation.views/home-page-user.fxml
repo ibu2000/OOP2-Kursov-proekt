@@ -22,35 +22,40 @@
          <children>
             <AnchorPane layoutX="11.0" layoutY="10.0" prefHeight="272.0" prefWidth="1039.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="button_lend_book" layoutX="14.0" layoutY="154.0" mnemonicParsing="false" onAction="#LendBook" prefWidth="241.0" style="-fx-background-color: #00738C;" text="Lend book">
+                  <Button fx:id="button_lend_book" layoutX="14.0" layoutY="159.0" mnemonicParsing="false" onAction="#LendBook" prefWidth="241.0" style="-fx-background-color: #00738C;" text="Lend book">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="0.7582938388625593" startX="1.0">
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.3744075829383886">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="1.0" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
-                              <Stop offset="0.44827586206896486">
+                              <Stop offset="0.26053639846743293">
                                  <color>
-                                    <Color red="0.0828000009059906" green="0.39599713683128357" blue="0.9200000166893005" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.946360153256705">
+                                 <color>
+                                    <Color green="0.935251772403717" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="1.0" blue="0.8920863270759583" />
+                                    <Color />
                                  </color>
                               </Stop>
                            </stops>
                         </LinearGradient>
                      </textFill>
                      <effect>
-                        <Reflection fraction="0.59" topOpacity="0.78">
+                        <Reflection fraction="0.4" topOpacity="0.51">
                            <input>
-                              <DropShadow height="0.0" radius="4.63" spread="0.15" width="20.52">
+                              <DropShadow height="10.26" radius="2.065" spread="0.15" width="0.0">
                                  <color>
                                     <Color green="0.8999999761581421" blue="0.6863309144973755" />
                                  </color>
@@ -59,35 +64,40 @@
                         </Reflection>
                      </effect>
                   </Button>
-                  <Button fx:id="button_return_book" layoutX="265.0" layoutY="154.0" mnemonicParsing="false" onAction="#ReturnBook" prefWidth="241.0" style="-fx-background-color: #00738C;" text="Return book">
+                  <Button fx:id="button_return_book" layoutX="265.0" layoutY="159.0" mnemonicParsing="false" onAction="#ReturnBook" prefWidth="241.0" style="-fx-background-color: #00738C;" text="Return book">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="0.7582938388625593" startX="1.0">
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.3744075829383886">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="1.0" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
-                              <Stop offset="0.44827586206896486">
+                              <Stop offset="0.26053639846743293">
                                  <color>
-                                    <Color red="0.08235294371843338" green="0.3960784375667572" blue="0.9215686321258545" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.946360153256705">
+                                 <color>
+                                    <Color green="0.935251772403717" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="1.0" blue="0.8920863270759583" />
+                                    <Color />
                                  </color>
                               </Stop>
                            </stops>
                         </LinearGradient>
                      </textFill>
                      <effect>
-                        <Reflection fraction="0.59" topOpacity="0.78">
+                        <Reflection fraction="0.4" topOpacity="0.51">
                            <input>
-                              <DropShadow height="0.0" radius="4.63" spread="0.15" width="20.52">
+                              <DropShadow height="10.26" radius="2.065" spread="0.15" width="0.0">
                                  <color>
                                     <Color green="0.8999999761581421" blue="0.6863309144973755" />
                                  </color>
@@ -96,35 +106,40 @@
                         </Reflection>
                      </effect>
                   </Button>
-                  <Button fx:id="button_search_books" layoutX="516.0" layoutY="154.0" mnemonicParsing="false" onAction="#SearchBooks" prefHeight="56.0" prefWidth="241.0" style="-fx-background-color: #00738C;" text="Search books">
+                  <Button fx:id="button_search_books" layoutX="516.0" layoutY="159.0" mnemonicParsing="false" onAction="#SearchBooks" prefHeight="56.0" prefWidth="241.0" style="-fx-background-color: #00738C;" text="Search books">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="0.7582938388625593" startX="1.0">
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.3744075829383886">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="1.0" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
-                              <Stop offset="0.44827586206896486">
+                              <Stop offset="0.26053639846743293">
                                  <color>
-                                    <Color red="0.0828000009059906" green="0.39599713683128357" blue="0.9200000166893005" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.946360153256705">
+                                 <color>
+                                    <Color green="0.935251772403717" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="1.0" blue="0.8901960849761963" />
+                                    <Color />
                                  </color>
                               </Stop>
                            </stops>
                         </LinearGradient>
                      </textFill>
                      <effect>
-                        <Reflection fraction="0.59" topOpacity="0.78">
+                        <Reflection fraction="0.4" topOpacity="0.51">
                            <input>
-                              <DropShadow height="0.0" radius="4.63" spread="0.15" width="20.52">
+                              <DropShadow height="10.26" radius="2.065" spread="0.15" width="0.0">
                                  <color>
                                     <Color green="0.8999999761581421" blue="0.6863309144973755" />
                                  </color>
@@ -133,35 +148,40 @@
                         </Reflection>
                      </effect>
                   </Button>
-                  <Button fx:id="button_user_rating" layoutX="767.0" layoutY="154.0" mnemonicParsing="false" onAction="#UserRatings" prefWidth="241.0" style="-fx-background-color: #00738C;" text="User rating">
+                  <Button fx:id="button_user_rating" layoutX="767.0" layoutY="159.0" mnemonicParsing="false" onAction="#UserRatings" prefWidth="241.0" style="-fx-background-color: #00738C;" text="User rating">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="0.7582938388625593" startX="1.0">
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.3744075829383886">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="1.0" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
-                              <Stop offset="0.44827586206896486">
+                              <Stop offset="0.26053639846743293">
                                  <color>
-                                    <Color red="0.0828000009059906" green="0.39599713683128357" blue="0.9200000166893005" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.946360153256705">
+                                 <color>
+                                    <Color green="0.935251772403717" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="1.0" blue="0.8920863270759583" />
+                                    <Color />
                                  </color>
                               </Stop>
                            </stops>
                         </LinearGradient>
                      </textFill>
                      <effect>
-                        <Reflection fraction="0.59" topOpacity="0.78">
+                        <Reflection fraction="0.4" topOpacity="0.51">
                            <input>
-                              <DropShadow height="0.0" radius="4.63" spread="0.15" width="20.52">
+                              <DropShadow height="10.26" radius="2.065" spread="0.15" width="0.0">
                                  <color>
                                     <Color green="0.8999999761581421" blue="0.6863309144973755" />
                                  </color>
@@ -175,11 +195,11 @@
                         <Font name="Bell MT Bold" size="60.0" />
                      </font>
                      <textFill>
-                        <LinearGradient endY="0.95260663507109">
+                        <LinearGradient endX="1.0" endY="0.7914691943127963" startX="1.0" startY="0.35071090047393366">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="0.5400000214576721" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="0.5312635778330765">
@@ -189,7 +209,7 @@
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="0.38333332538604736" blue="1.0" />
+                                    <Color />
                                  </color>
                               </Stop>
                            </stops>
@@ -233,83 +253,93 @@
                         </DropShadow>
                      </effect>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="0.7298578199052134" startX="1.0">
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.3744075829383886">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="1.0" green="0.1388888955116272" blue="0.1388888955116272" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
-                              <Stop offset="0.4827586206896549">
+                              <Stop offset="0.26053639846743293">
                                  <color>
-                                    <Color red="0.06440000236034393" green="0.3844805657863617" blue="0.9200000166893005" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.946360153256705">
+                                 <color>
+                                    <Color green="0.935251772403717" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="1.0" blue="0.8920863270759583" />
+                                    <Color />
                                  </color>
                               </Stop>
                            </stops>
                         </LinearGradient>
                      </textFill>
                   </Button>
-                  <Polyline layoutX="50.0" layoutY="53.0" points="-50.0, -53.0, 326.0, -53.0, -38.0, -40.0, -50.0, 219.0" strokeType="INSIDE">
+                  <Polyline layoutX="50.0" layoutY="52.0" opacity="0.33" points="-50.0, -53.0, 326.0, -53.0, -38.0, -40.0, -50.0, 219.0" strokeType="INSIDE">
                      <stroke>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="1.0" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="0.9136690497398376" blue="1.0" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                            </stops>
                         </LinearGradient>
                      </stroke>
                      <fill>
-                        <LinearGradient endX="1.0" endY="0.7582938388625593" startX="0.30805687203791465">
+                        <LinearGradient endX="0.09004739336492895" endY="0.06161137440758291">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="1.0" />
+                                    <Color green="1.0" blue="0.8901960849761963" />
                                  </color>
                               </Stop>
-                              <Stop offset="0.11877394636015258">
+                              <Stop offset="0.007662835249042145">
                                  <color>
-                                    <Color red="0.0828000009059906" green="0.39599713683128357" blue="0.9200000166893005" />
+                                    <Color green="1.0" blue="0.8901960849761963" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.7011494252873557">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="1.0" blue="0.8901960849761963" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                            </stops>
                         </LinearGradient>
                      </fill>
                   </Polyline>
-                  <QuadCurve controlX="108.0" controlY="42.0" endX="128.0" endY="-82.0" layoutX="911.0" layoutY="82.0" startX="128.0" startY="190.0" strokeType="INSIDE">
+                  <QuadCurve controlX="116.0" controlY="43.0" endX="128.0" endY="-82.0" layoutX="911.0" layoutY="82.0" startX="128.0" startY="190.0" strokeType="INSIDE">
                      <stroke>
                         <LinearGradient endX="1.0" endY="0.7582938388625593" startX="1.0">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="1.0" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="0.44827586206896486">
                                  <color>
-                                    <Color red="0.0828000009059906" green="0.39599713683128357" blue="0.9200000166893005" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="1.0" blue="0.8901960849761963" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                            </stops>
@@ -320,12 +350,12 @@
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="1.0" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="0.7625899314880371" blue="1.0" />
+                                    <Color green="0.949999988079071" blue="1.0" />
                                  </color>
                               </Stop>
                            </stops>
@@ -334,11 +364,7 @@
                   </QuadCurve>
                </children>
                <effect>
-                  <DropShadow height="58.19" radius="28.09" spread="0.05" width="56.17">
-                     <color>
-                        <Color red="1.0" />
-                     </color>
-                  </DropShadow>
+                  <DropShadow height="57.18" radius="27.8375" spread="0.05" width="56.17" />
                </effect>
             </AnchorPane>
          </children>
