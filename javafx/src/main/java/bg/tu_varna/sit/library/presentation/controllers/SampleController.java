@@ -14,10 +14,7 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.effect.Bloom;
 import javafx.scene.effect.Effect;
 import javafx.scene.layout.Background;
@@ -78,9 +75,8 @@ public class SampleController {
 
             loginMessageLabel.setText("Please fill in the info");
 
-        } else if (!tf_password.getText().equals("") && !tf_username.equals("")) {
-
-
+        } else if (!tf_password.getText().equals("") && !tf_username.equals(""))
+        {
             UserListModel userfind = new UserListModel(tf_username.getText(), tf_password.getText());
             if (service.UserLogin(userfind)) {
                 try {
@@ -114,6 +110,11 @@ public class SampleController {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            }
+            else
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "Wrong username or password!", ButtonType.OK);
+                alert.show();
             }
         }
 
