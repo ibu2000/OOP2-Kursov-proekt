@@ -1,9 +1,12 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.UserInfoService;
 import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.data.entities.Status;
+import bg.tu_varna.sit.library.data.entities.USER;
 import bg.tu_varna.sit.library.data.entities.UserType;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
+import bg.tu_varna.sit.library.presentation.models.UserInfoListModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -36,6 +39,7 @@ public class RegistrationController {
         s = stage;
     }
     UserService userService = new UserService();
+    UserInfoService userInfoService = new UserInfoService();
 
     public static Date parseDate(String date) {
         try {
@@ -46,6 +50,7 @@ public class RegistrationController {
     }
 
     boolean userAlreadyExists;
+    boolean userInfoAlreadyExists;
     @FXML
     public void addUser()
     {
@@ -53,7 +58,11 @@ public class RegistrationController {
         String rating = "no rating yet";
         Status status = new Status(1, "pending");
         Date myDate = parseDate("2000-11-04");
+
+
         UserListModel addUser = new UserListModel(tf_RUsername.getText(), tf_RPassword.getText(),myDate, rating, userType, status);
+
+
 
         if(tf_RUsername.equals("") || tf_RPassword.equals("") || tf_RName.equals("") || tf_RE_mail.equals("") || tf_RPhone_number.equals(""))
         {
@@ -63,15 +72,32 @@ public class RegistrationController {
         else
         {
            userAlreadyExists =  userService.AddUser(addUser);
+
             if(userAlreadyExists)
             {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The book has been added!", ButtonType.OK);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The User has been added!", ButtonType.OK);
                 alert.show();
             } else
             {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "Book already exists!", ButtonType.OK);
+                Alert alert = new Alert(Alert.AlertType.ERROR, "User already exists!", ButtonType.OK);
                 alert.show();
             }
+
+            USER user = userService.listviewToEntity(addUser);
+            UserInfoListModel addUserInfo = new UserInfoListModel(user, tf_RName.getText(), tf_RPhone_number.getText(), tf_RE_mail.getText());
+
+            userInfoAlreadyExists = userInfoService.AddUserInfo(addUserInfo);
+            if(userInfoAlreadyExists)
+            {
+                Alert alert1 = new Alert(Alert.AlertType.INFORMATION, "The Userinfo has been added!", ButtonType.OK);
+                alert1.show();
+            }
+            else
+            {
+                Alert alert1 = new Alert(Alert.AlertType.INFORMATION, "The Userinfo already exists!", ButtonType.OK);
+                alert1.show();
+            }
+
         }
      /*   combo_boxANB_state_of_book.getItems().clear();
         combo_boxANB_state_of_book.getItems().addAll(stateOfBooksService.getBookStates());

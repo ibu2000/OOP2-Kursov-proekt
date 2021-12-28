@@ -53,6 +53,10 @@ public class USER {
         this.USERTYPE_idUserType = USERTYPE_idUserType;
     }
 
+    public USER(String userName) {
+        this.userName = userName;
+    }
+
     public long getIdUser() {
         return idUser;
     }
