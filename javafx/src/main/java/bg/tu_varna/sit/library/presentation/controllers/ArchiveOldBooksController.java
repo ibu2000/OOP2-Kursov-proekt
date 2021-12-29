@@ -41,6 +41,8 @@ public class ArchiveOldBooksController implements Initializable {
     private TableColumn<ExemplqrModel, Books> BookIdCol;
 
 
+
+
     BookService bookService = new BookService();
     ExemplqrService exemplqrService = new ExemplqrService();
     Stage s;
@@ -56,11 +58,15 @@ public class ArchiveOldBooksController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         combobox_copyOfBook.getItems().clear();
         combobox_copyOfBook.setItems(exemplqrService.getBookCopyWhereDamaged());
-        isbnCol.setCellValueFactory(new PropertyValueFactory<>("ISBN"));
-        StateOfBookCol.setCellValueFactory(new PropertyValueFactory<>("State of Book"));
-        BookIdCol.setCellValueFactory(new PropertyValueFactory<>("BookID"));
+
+
+        isbnCol.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
+        StateOfBookCol.setCellValueFactory(new PropertyValueFactory<>("exsemplqri_stateOfBooks"));
+        BookIdCol.setCellValueFactory(new PropertyValueFactory<>("idBook"));
         allDamagedBooks.getStyleClass().add("bg-1");
         allDamagedBooks.setPadding(new Insets(5));
+        ObservableList<ExemplqrModel> list= exemplqrService.getBookCopyWhereDamaged();
+        allDamagedBooks.setItems(list);
     }
 
     @FXML

@@ -41,6 +41,12 @@ public class ExemplqrModel {
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
     }
 
+    public ExemplqrModel(long isbnUnikalenNomer, Books idBook, StateOfBooks exsemplqri_stateOfBooks) {
+        this.isbnUnikalenNomer = isbnUnikalenNomer;
+        this.idBook = idBook;
+        this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
+    }
+
     public long getIsbnUnikalenNomer() {
         return isbnUnikalenNomer;
     }

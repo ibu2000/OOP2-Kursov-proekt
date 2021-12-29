@@ -92,7 +92,7 @@ public class ExemplqrService {
         {
             if(copy.getExsemplqri_stateOfBooks().getStateOfBooks().equals(e.getExsemplqri_stateOfBooks().getStateOfBooks()) && !(copy.isIsitArchived()))
             {
-                copies.add(copy);//copy.getIdBook().getBookName()
+                copies.add(copy);
             }
         }
         return copies;

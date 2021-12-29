@@ -39,7 +39,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ComboBox>
-                  <Button fx:id="buttonAOB_archive_old_book" layoutX="32.0" layoutY="128.0" mnemonicParsing="false" onAction="#ArchiveOldBooks" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Archive old book" textFill="WHITE">
+                  <Button fx:id="buttonAOB_archive_old_book" layoutX="24.0" layoutY="166.0" mnemonicParsing="false" onAction="#ArchiveOldBooks" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Archive old book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
@@ -65,11 +65,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TableView fx:id="allDamagedBooks" layoutX="181.0" layoutY="189.0" prefHeight="652.0" prefWidth="692.0">
+                  <TableView fx:id="allDamagedBooks" layoutX="102.0" layoutY="248.0" prefHeight="652.0" prefWidth="692.0">
                     <columns>
                       <TableColumn fx:id="isbnCol" prefWidth="132.0" text="ISBN" />
                       <TableColumn fx:id="StateOfBookCol" prefWidth="230.0" text="State Of Book" />
-                        <TableColumn fx:id="BookIdCol" minWidth="0.0" prefWidth="328.0" text="BookID" />
+                        <TableColumn fx:id="BookIdCol" minWidth="0.0" prefWidth="329.0" text="BookID" />
                     </columns>
                   </TableView>
                </children>
