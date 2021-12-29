@@ -9,6 +9,7 @@ import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import bg.tu_varna.sit.library.buisness.services.BookService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,9 +69,7 @@ public class ExemplqrService {
     }
 
   public ExemplqrModel GetCopy(ExemplqrModel a)
-    {
-
-        ObservableList<ExemplqrModel> allCopies = getAllCopies();
+    {    ObservableList<ExemplqrModel> allCopies = getAllCopies();
         for(ExemplqrModel b : allCopies)
         {
             if(b.equals(a))
@@ -83,16 +82,17 @@ public class ExemplqrService {
     }
 
 
-    public ArrayList<String> getBookCopyWhereDamaged()
+    public  ObservableList<ExemplqrModel> getBookCopyWhereDamaged()
     {
         StateOfBooks state = new StateOfBooks(3, "damaged");
+        Eksemplqri e = new Eksemplqri(state,false);
         ObservableList<ExemplqrModel> allCopies = getAllCopies();
-        ArrayList<String> copies = new ArrayList<>();
+        ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
         for(ExemplqrModel copy : allCopies)
         {
-            if(copy.getExsemplqri_stateOfBooks().getStateOfBooks().equals(state) || !copy.isIsitArchived())
+            if(copy.getExsemplqri_stateOfBooks().getStateOfBooks().equals(e.getExsemplqri_stateOfBooks().getStateOfBooks()) && !(copy.isIsitArchived()))
             {
-                copies.add(copy.toString());//copy.getIdBook().getBookName()
+                copies.add(copy);//copy.getIdBook().getBookName()
             }
         }
         return copies;

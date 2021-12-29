@@ -3,17 +3,20 @@ package bg.tu_varna.sit.library.presentation.controllers;
 import bg.tu_varna.sit.library.buisness.services.BookService;
 import bg.tu_varna.sit.library.buisness.services.ExemplqrService;
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.data.entities.Books;
+import bg.tu_varna.sit.library.data.entities.Eksemplqri;
+import bg.tu_varna.sit.library.data.entities.StateOfBooks;
 import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -27,7 +30,16 @@ public class ArchiveOldBooksController implements Initializable {
     @FXML
     private ComboBox combobox_bookName;
     @FXML
-    private ComboBox combobox_copyOfBook;
+    private ComboBox<ExemplqrModel> combobox_copyOfBook;
+    @FXML
+    private TableView<ExemplqrModel> allDamagedBooks;
+    @FXML
+    private TableColumn<ExemplqrModel, Long> isbnCol;
+    @FXML
+    private TableColumn<ExemplqrModel, StateOfBooks> StateOfBookCol;
+    @FXML
+    private TableColumn<ExemplqrModel, Books> BookIdCol;
+
 
     BookService bookService = new BookService();
     ExemplqrService exemplqrService = new ExemplqrService();
@@ -43,7 +55,12 @@ public class ArchiveOldBooksController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         combobox_copyOfBook.getItems().clear();
-        combobox_copyOfBook.getItems().addAll(exemplqrService.getBookCopyWhereDamaged());
+        combobox_copyOfBook.setItems(exemplqrService.getBookCopyWhereDamaged());
+        isbnCol.setCellValueFactory(new PropertyValueFactory<>("ISBN"));
+        StateOfBookCol.setCellValueFactory(new PropertyValueFactory<>("State of Book"));
+        BookIdCol.setCellValueFactory(new PropertyValueFactory<>("BookID"));
+        allDamagedBooks.getStyleClass().add("bg-1");
+        allDamagedBooks.setPadding(new Insets(5));
     }
 
     @FXML
@@ -67,8 +84,10 @@ public class ArchiveOldBooksController implements Initializable {
     @FXML
     public void ArchiveOldBooks()
     {
-        ExemplqrModel copyname = exemplqrService.listviewToEntity(combobox_copyOfBook.getValue());
-        ExemplqrModel b = exemplqrService.GetCopy(copyname);
+        ExemplqrModel copyname = new ExemplqrModel((combobox_copyOfBook.getValue()).getIsbnUnikalenNomer(),(combobox_copyOfBook.getValue()).getIdBook(),(combobox_copyOfBook.getValue()).isIsitArchived(),(combobox_copyOfBook.getValue()).getExsemplqri_stateOfBooks());
+       // ExemplqrModel b = exemplqrService.GetCopy(copyname);
+       /* ObservableList<ExemplqrModel> productsInPeriod = productService.getAllProductsByStatInPeriod(myFromDate, myToDate, isAvailable);
+        allProdByStatTable.setItems(productsInPeriod);*/
         if(combobox_copyOfBook.equals(""))
         {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
@@ -76,7 +95,7 @@ public class ArchiveOldBooksController implements Initializable {
         }
         else
         {
-            isArchived = exemplqrService.ArchiveCopy(b);
+            isArchived = exemplqrService.ArchiveCopy(copyname);
 
             if (isArchived)
             {

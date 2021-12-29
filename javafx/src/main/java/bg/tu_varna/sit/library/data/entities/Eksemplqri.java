@@ -36,6 +36,11 @@ public class Eksemplqri {
         this.isbnUnikalenNomer = isbnUnikalenNomer;
     }
 
+    public Eksemplqri(StateOfBooks exsemplqri_stateOfBooks, boolean isitArchived) {
+        this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
+        this.isitArchived = isitArchived;
+    }
+
     public long getIsbnUnikalenNomer() {
         return isbnUnikalenNomer;
     }

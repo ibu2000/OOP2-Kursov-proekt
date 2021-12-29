@@ -34,8 +34,11 @@ public class ExemplqrModel {
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
     }
 
-    public ExemplqrModel(Books idBook) {
-        this.idBook = idBook;
+
+    public ExemplqrModel(long isbnUnikalenNomer,boolean isitArchived, StateOfBooks exsemplqri_stateOfBooks) {
+        this.isbnUnikalenNomer = isbnUnikalenNomer;
+        this.isitArchived = isitArchived;
+        this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
     }
 
     public long getIsbnUnikalenNomer() {
@@ -85,6 +88,11 @@ public class ExemplqrModel {
 
     @Override
     public String toString() {
-        return isbnUnikalenNomer + "-" + idBook;
+        return "ExemplqrModel{" +
+                "isbnUnikalenNomer=" + isbnUnikalenNomer +
+                ", idBook=" + idBook +
+                ", isitArchived=" + isitArchived +
+                ", exsemplqri_stateOfBooks=" + exsemplqri_stateOfBooks +
+                '}';
     }
 }
