@@ -1,14 +1,16 @@
 package bg.tu_varna.sit.library.buisness.services;
 
-import bg.tu_varna.sit.library.data.entities.Books;
-import bg.tu_varna.sit.library.data.entities.Eksemplqri;
+import bg.tu_varna.sit.library.data.entities.*;
 import bg.tu_varna.sit.library.data.repositories.EksemplqriRepository;
 import bg.tu_varna.sit.library.data.repositories.StateOfBooksRepository;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
+import bg.tu_varna.sit.library.presentation.models.UserListModel;
+import bg.tu_varna.sit.library.buisness.services.BookService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,6 +19,9 @@ public class ExemplqrService {
     private final EksemplqriRepository repositoryExemplqri = EksemplqriRepository.getInstance();
 
     public static ExemplqrService getInstance() {return ExemplqrService.ExemplqrServiceHolder.INSTANCE;}
+
+
+
 
     private static class  ExemplqrServiceHolder
     {
@@ -49,4 +54,50 @@ public class ExemplqrService {
         return true;
     }
 
+  public ExemplqrModel GetCopy(ExemplqrModel a)
+    {
+
+        ObservableList<ExemplqrModel> allCopies = getAllCopies();
+        for(ExemplqrModel b : allCopies)
+        {
+            if(b.equals(a))
+            {
+                return b;
+            }
+        }
+        return null;
+
+    }
+
+
+    public ArrayList<String> getBookCopyWhereDamaged()
+    {
+        StateOfBooks state = new StateOfBooks(3, "damaged");
+        ObservableList<ExemplqrModel> allCopies = getAllCopies();
+        ArrayList<String> copies = new ArrayList<>();
+        for(ExemplqrModel copy : allCopies)
+        {
+            if(copy.getExsemplqri_stateOfBooks().getStateOfBooks().equals(state) || !copy.isIsitArchived())
+            {
+                copies.add(copy.toString());//copy.getIdBook().getBookName()
+            }
+        }
+        return copies;
+    }
+
+
+    public boolean ArchiveCopy(ExemplqrModel b) {
+        List<Eksemplqri> copies = repositoryExemplqri.getAll();
+        Eksemplqri copy = new Eksemplqri(b.getIsbnUnikalenNomer(), b.getIdBook(), b.getExsemplqri_stateOfBooks(), b.isIsitArchived());
+        for(Eksemplqri u : copies)
+        {
+            if(u.equals(copy))
+            {
+                u.setIsitArchived(true);
+               repositoryExemplqri.update(u);
+                return true;
+            }
+        }
+        return true;
+    }
 }

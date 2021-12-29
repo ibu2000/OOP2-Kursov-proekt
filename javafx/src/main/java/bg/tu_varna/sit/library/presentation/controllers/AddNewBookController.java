@@ -154,9 +154,9 @@ public class AddNewBookController implements Initializable {
        BookListModel b = BookService.GetBook(bookname);
        Books book = BookService.listviewToEntity(b);
        StateOfBooks state = new StateOfBooks(1 ,combo_boxANB_state_of_book.getValue().toString());
-        ExemplqrModel addBook = new ExemplqrModel(Long.parseLong(tfANB_isbn.getText()), book, isArchived, state);
-        if(tfANB_isbn.equals("") || combo_boxANB_name_of_book.equals("") ||
-        (!radio_buttonANB_archived.isSelected() && !radio_buttonANB_not_archived.isSelected()) || combo_boxANB_state_of_book.equals(""))
+        ExemplqrModel addBook = new ExemplqrModel(book, isArchived, state);
+        if(combo_boxANB_name_of_book.equals("") || (!radio_buttonANB_archived.isSelected() && !radio_buttonANB_not_archived.isSelected())
+                || combo_boxANB_state_of_book.equals(""))
         {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
             alert.show();
@@ -174,8 +174,7 @@ public class AddNewBookController implements Initializable {
                 alert.show();
             }
         }
-        combo_boxANB_state_of_book.getItems().clear();
-        combo_boxANB_state_of_book.getItems().addAll(stateOfBooksService.getBookStates());
+
     }
 
     }

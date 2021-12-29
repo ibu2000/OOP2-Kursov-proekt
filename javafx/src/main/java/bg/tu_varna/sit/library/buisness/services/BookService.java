@@ -19,12 +19,13 @@ public class BookService {
 
     public static BookService getInstance() {return BookService.BookServiceHolder.INSTANCE;}
 
-
-
     private static class BookServiceHolder
     {
         public static final BookService INSTANCE = new BookService();
     }
+
+
+
 
     public ObservableList<BookListModel> getAllBooks()
     {
@@ -46,6 +47,7 @@ public class BookService {
         }
         return booknames;
     }
+
 
     public Books listviewToEntity(BookListModel a)
     {

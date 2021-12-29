@@ -24,7 +24,28 @@
                         <Image url="@books15.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="buttonAOB_archive_old_book" layoutX="240.0" layoutY="117.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Archive old book" textFill="WHITE">
+                  <Label layoutX="47.0" layoutY="22.0" prefHeight="41.0" prefWidth="657.0" text="Choose between which of these old books you'd like to archive" textFill="#0e868f">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="combobox_bookName" layoutX="56.0" layoutY="67.0" prefHeight="25.0" prefWidth="302.0" promptText="Book tittle">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <ComboBox fx:id="combobox_copyOfBook" layoutX="392.0" layoutY="67.0" prefHeight="25.0" prefWidth="302.0" promptText="Copy of book">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <Button fx:id="buttonAOB_archive_old_book" layoutX="240.0" layoutY="117.0" mnemonicParsing="false" onAction="#ArchiveOldBooks" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Archive old book" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
@@ -35,27 +56,6 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label layoutX="47.0" layoutY="22.0" prefHeight="41.0" prefWidth="657.0" text="Choose between which of these old books you'd like to archive" textFill="#0e868f">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
-                     </font>
-                  </Label>
-                  <ComboBox layoutX="56.0" layoutY="67.0" prefHeight="25.0" prefWidth="302.0" promptText="Book tittle">
-                     <effect>
-                        <Reflection />
-                     </effect>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ComboBox>
-                  <ComboBox layoutX="392.0" layoutY="67.0" prefHeight="25.0" prefWidth="302.0" promptText="Copy of book">
-                     <effect>
-                        <Reflection />
-                     </effect>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ComboBox>
                </children>
                <effect>
                   <DropShadow height="148.26" radius="36.565" width="0.0">
