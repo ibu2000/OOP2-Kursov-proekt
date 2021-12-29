@@ -39,6 +39,19 @@ public class ExemplqrService {
         return  copylist;
     }
 
+    public Eksemplqri listviewToEntity(ExemplqrModel a)
+    {
+       Eksemplqri temp = new Eksemplqri(a.getIsbnUnikalenNomer());
+        List<Eksemplqri> copies = repositoryExemplqri.getAll();
+        for(Eksemplqri u: copies)
+        {
+            if(u.getIsbnUnikalenNomer()==(temp.getIsbnUnikalenNomer()))
+            {
+                return u;
+            }
+        }
+        return  null;
+    }
 
     public boolean AddCopy(ExemplqrModel addCopy) {
         List<Eksemplqri> copies = repositoryExemplqri.getAll();

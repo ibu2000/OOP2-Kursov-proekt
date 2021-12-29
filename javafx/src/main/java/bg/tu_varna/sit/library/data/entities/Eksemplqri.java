@@ -32,6 +32,10 @@ public class Eksemplqri {
     public Eksemplqri() {
     }
 
+    public Eksemplqri(long isbnUnikalenNomer) {
+        this.isbnUnikalenNomer = isbnUnikalenNomer;
+    }
+
     public long getIsbnUnikalenNomer() {
         return isbnUnikalenNomer;
     }

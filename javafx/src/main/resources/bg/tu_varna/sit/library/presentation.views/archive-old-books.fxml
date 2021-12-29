@@ -29,15 +29,7 @@
                         <Font name="Arial Rounded MT Bold" size="22.0" />
                      </font>
                   </Label>
-                  <ComboBox fx:id="combobox_bookName" layoutX="56.0" layoutY="67.0" prefHeight="25.0" prefWidth="302.0" promptText="Book tittle">
-                     <effect>
-                        <Reflection />
-                     </effect>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ComboBox>
-                  <ComboBox fx:id="combobox_copyOfBook" layoutX="392.0" layoutY="67.0" prefHeight="25.0" prefWidth="302.0" promptText="Copy of book">
+                  <ComboBox fx:id="combobox_copyOfBook" layoutX="202.0" layoutY="70.0" prefHeight="25.0" prefWidth="325.0" promptText="Copy of book">
                      <effect>
                         <Reflection />
                      </effect>
@@ -65,21 +57,6 @@
                   </DropShadow>
                </effect>
             </AnchorPane>
-            <Button fx:id="buttonAOB_home" layoutX="331.0" layoutY="294.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="22.0" />
-               </font>
-               <effect>
-                  <DropShadow height="255.0" radius="127.0" spread="0.01" width="255.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </DropShadow>
-               </effect>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
             <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="672.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@library_icon.png" />
@@ -96,6 +73,21 @@
                   <Glow level="0.5" />
                </effect>
             </Label>
+            <Button fx:id="buttonAOB_home" layoutX="322.0" layoutY="294.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow height="82.07" radius="42.0" spread="0.01" width="87.93">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
          <effect>
             <DropShadow />

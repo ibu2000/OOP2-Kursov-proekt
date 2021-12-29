@@ -67,7 +67,7 @@ public class ArchiveOldBooksController implements Initializable {
     @FXML
     public void ArchiveOldBooks()
     {
-        ExemplqrModel copyname= (ExemplqrModel) combobox_copyOfBook.getValue();
+        ExemplqrModel copyname = exemplqrService.listviewToEntity(combobox_copyOfBook.getValue());
         ExemplqrModel b = exemplqrService.GetCopy(copyname);
         if(combobox_copyOfBook.equals(""))
         {
