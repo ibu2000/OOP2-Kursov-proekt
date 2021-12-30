@@ -11,15 +11,17 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1076.0" prefWidth="1118.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="899.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="7.0" layoutY="1.0" prefHeight="1076.0" prefWidth="1118.0" style="-fx-background-color: #00738C;">
+      <AnchorPane layoutX="7.0" prefHeight="892.0" prefWidth="921.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutY="86.0" prefHeight="226.0" prefWidth="734.0" style="-fx-background-color: #FFFFFF;">
+            <AnchorPane layoutX="31.0" layoutY="111.0" prefHeight="759.0" prefWidth="860.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="buttonF_forms" layoutX="244.0" layoutY="133.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Cool forms bro" textFill="WHITE">
+                  <Button fx:id="buttonF_forms" layoutX="302.0" layoutY="56.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Cool forms bro">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -29,56 +31,147 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.843601895734597" startX="1.0" startY="0.3459715639810427">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.8368421196937561" blue="0.9473684430122375" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color green="0.8368421196937561" blue="0.9473684430122375" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Button>
-                  <Label layoutX="275.0" layoutY="14.0" prefHeight="41.0" prefWidth="208.0" text="uhm... forms?" textFill="#07b5af">
+                  <Label layoutX="326.0" layoutY="11.0" prefHeight="41.0" prefWidth="208.0" text="uhm... forms?">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
+                     <textFill>
+                        <LinearGradient endX="0.3033175355450237" endY="1.0" startX="0.2938388625592417" startY="0.0900473933649289">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.550000011920929" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color green="0.550000011920929" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.45625898241996765" blue="0.5600000023841858" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Label>
+                  <TableView layoutX="24.0" layoutY="175.0" prefHeight="551.0" prefWidth="813.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                     <effect>
+                        <DropShadow height="102.59" radius="58.2425" spread="0.32" width="132.38">
+                           <color>
+                              <Color red="0.025499999523162842" green="0.4168179929256439" blue="0.5099999904632568" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </TableView>
                </children>
                <effect>
                   <DropShadow height="108.45" radius="49.447500000000005" width="91.34" />
                </effect>
             </AnchorPane>
-            <Label layoutX="294.0" layoutY="-4.0" prefHeight="86.0" prefWidth="169.0" text="Forms" textFill="WHITE">
+            <Label layoutX="377.0" layoutY="11.0" prefHeight="86.0" prefWidth="169.0" text="Forms">
                <font>
                   <Font name="Bell MT Bold" size="60.0" />
                </font>
                <effect>
-                  <DropShadow height="134.83" radius="63.9825" width="123.1">
+                  <DropShadow height="48.37" radius="21.85" width="41.03">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.6546762585639954" blue="1.0" />
                      </color>
                   </DropShadow>
                </effect>
+               <textFill>
+                  <LinearGradient endX="0.9620853080568721" endY="0.7345971563981042" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.9868420958518982" blue="0.9868420958518982" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color green="0.9868420958518982" blue="0.9868420958518982" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Label>
-            <Button fx:id="buttonF_home" layoutX="310.0" layoutY="324.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="56.0" prefWidth="126.0" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="847.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@library_icon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonF_home" layoutX="712.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="56.0" prefWidth="126.0" style="-fx-background-color: #FFFFFF;" text="Home">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
                <effect>
-                  <DropShadow height="120.17" radius="61.05" width="126.03">
+                  <DropShadow height="124.57" radius="62.15" width="126.03">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color red="0.16453459858894348" green="0.4868420958518982" blue="0.47609850764274597" />
                      </color>
                   </DropShadow>
                </effect>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <textFill>
+                  <LinearGradient endX="0.9620853080568721" endY="0.6350710900473933" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.45625898241996765" blue="0.5600000023841858" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
-            <TableView layoutX="57.0" layoutY="443.0" prefHeight="507.0" prefWidth="813.0">
-              <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
-              </columns>
-            </TableView>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="663.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@library_icon.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
