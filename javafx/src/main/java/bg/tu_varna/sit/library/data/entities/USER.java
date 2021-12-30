@@ -62,6 +62,11 @@ public class USER {
         this.userName = userName;
     }
 
+    public USER(long idUser, String userName) {
+        this.idUser = idUser;
+        this.userName = userName;
+    }
+
     public long getIdUser() {
         return idUser;
     }

@@ -22,6 +22,10 @@ public class UserInfoListModel {
         this.email = email;
     }
 
+    public UserInfoListModel(USER user_idUser) {
+        User_idUser = user_idUser;
+    }
+
     public USER getUser_idUser() {
         return User_idUser;
     }

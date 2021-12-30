@@ -8,7 +8,7 @@ import java.io.Serializable;
 @Entity
 public class UserInfo implements Serializable {
     @Id
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne//(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_idUser", referencedColumnName = "idUser")
     private USER User_idUser;
 

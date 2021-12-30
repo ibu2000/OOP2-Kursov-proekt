@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.library.buisness.services;
 
 import bg.tu_varna.sit.library.data.entities.*;
+import bg.tu_varna.sit.library.data.repositories.UserInfoRepository;
 import bg.tu_varna.sit.library.data.repositories.UserRepository;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
@@ -26,6 +27,7 @@ public class UserService {
         public static final UserService INSTANCE = new UserService();
     }
 
+    private final UserInfoRepository repositoryUserInfo = UserInfoRepository.getInstance();
 
     public ObservableList<UserListModel> getAllUsers()
     {
@@ -231,7 +233,7 @@ public class UserService {
                 return true;
             }
         }
-        return true;
+        return false;
     }
 
     public UserListModel GetUser(String a)

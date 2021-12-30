@@ -1,7 +1,9 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.UserInfoService;
 import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.presentation.models.UserInfoListModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,6 +29,7 @@ public class DeleteUserController implements Initializable {
 
     Stage s;
     UserService userService = new UserService();
+    UserInfoService userInfoService = new UserInfoService();
     public DeleteUserController()
     {}
 
@@ -58,12 +61,14 @@ public class DeleteUserController implements Initializable {
     }
 
 
-    boolean isDeleted;
+    boolean isDeletedUser;
+    boolean isDeletedInfo;
     @FXML
     public void DeleteUser()
     {
         String username=combobox_deleteUser.getValue().toString();
         UserListModel b = userService.GetUser(username);
+        UserInfoListModel a = userInfoService.getUserInfo(b);
         if(combobox_deleteUser.equals(""))
         {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
@@ -71,9 +76,11 @@ public class DeleteUserController implements Initializable {
         }
         else
         {
-            isDeleted = userService.DeleteUser(b);
+            isDeletedInfo = userInfoService.DeleteUserInfo(a);
+            isDeletedUser = userService.DeleteUser(b);
 
-            if (isDeleted)
+
+            if (isDeletedUser && isDeletedInfo)
             {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION, "The user has been deleted!", ButtonType.OK);
                 alert.show();
