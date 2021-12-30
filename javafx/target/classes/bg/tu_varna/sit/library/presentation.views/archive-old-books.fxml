@@ -2,46 +2,38 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
-<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="368.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutY="6.0" prefHeight="1075.0" prefWidth="981.0" style="-fx-background-color: #00738C;">
+      <AnchorPane prefHeight="924.0" prefWidth="981.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutY="78.0" pickOnBounds="false" prefHeight="997.0" prefWidth="981.0" style="-fx-background-color: #FFFFFF;">
+            <AnchorPane layoutY="92.0" pickOnBounds="false" prefHeight="814.0" prefWidth="981.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <ImageView blendMode="DARKEN" depthTest="ENABLE" fitHeight="212.0" fitWidth="239.0" layoutX="264.0" layoutY="-15.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+                  <ImageView blendMode="DARKEN" depthTest="ENABLE" fitHeight="111.0" fitWidth="212.0" layoutX="420.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@books15.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="47.0" layoutY="22.0" prefHeight="41.0" prefWidth="657.0" text="Choose between which of these old books you'd like to archive" textFill="#0e868f">
+                  <Label layoutX="41.0" layoutY="7.0" prefHeight="41.0" prefWidth="912.0" text="Choose between which of these old books you'd like to archive" textFill="#0e868f">
                      <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                   </Label>
-                  <ComboBox fx:id="combobox_copyOfBook" layoutX="202.0" layoutY="70.0" prefHeight="25.0" prefWidth="325.0" promptText="Copy of book">
-                     <effect>
-                        <Reflection />
-                     </effect>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ComboBox>
-                  <Button fx:id="buttonAOB_archive_old_book" layoutX="24.0" layoutY="166.0" mnemonicParsing="false" onAction="#ArchiveOldBooks" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Archive old book" textFill="WHITE">
+                  <Button fx:id="buttonAOB_archive_old_book" layoutX="346.0" layoutY="52.0" mnemonicParsing="false" onAction="#ArchiveOldBooks" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #00738C;" text="Archive old book">
                      <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                      <effect>
                         <DropShadow />
@@ -49,28 +41,46 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <textFill>
+                        <LinearGradient endX="0.9810426540284358" endY="0.824644549763033" startX="0.9810426540284359">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.004629629664123058" green="0.9502314925193787" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="0.004629629664123058" green="0.9502314925193787" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.743295019157088">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Button>
-                  <Button fx:id="buttonAOB_home" layoutX="129.0" layoutY="914.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="22.0" />
-                     </font>
+                  <TableView fx:id="allDamagedBooks" layoutX="141.0" layoutY="121.0" prefHeight="652.0" prefWidth="692.0">
+                    <columns>
+                      <TableColumn fx:id="isbnCol" prefWidth="164.0" text="ISBN" />
+                      <TableColumn fx:id="StateOfBookCol" prefWidth="251.0" text="State Of Book" />
+                        <TableColumn fx:id="BookIdCol" minWidth="0.0" prefWidth="276.0" text="BookID" />
+                    </columns>
                      <effect>
-                        <DropShadow height="82.07" radius="42.0" spread="0.01" width="87.93">
+                        <DropShadow height="94.03" radius="52.4375" spread="0.28" width="117.72">
                            <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
+                              <Color red="0.01461988314986229" green="0.3386939465999603" blue="0.5263158082962036" />
                            </color>
                         </DropShadow>
                      </effect>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <TableView fx:id="allDamagedBooks" layoutX="102.0" layoutY="248.0" prefHeight="652.0" prefWidth="692.0">
-                    <columns>
-                      <TableColumn fx:id="isbnCol" prefWidth="154.0" text="ISBN" />
-                      <TableColumn fx:id="StateOfBookCol" prefWidth="261.0" text="State Of Book" />
-                        <TableColumn fx:id="BookIdCol" minWidth="0.0" prefWidth="276.0" text="BookID" />
-                    </columns>
                   </TableView>
                </children>
                <effect>
@@ -81,7 +91,7 @@
                   </DropShadow>
                </effect>
             </AnchorPane>
-            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="672.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="916.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@library_icon.png" />
                </image>
@@ -89,14 +99,46 @@
                   <DropShadow height="255.0" radius="127.0" spread="0.22" width="255.0" />
                </effect>
             </ImageView>
-            <Label layoutX="222.0" layoutY="12.0" text="Archive old books" textFill="WHITE">
+            <Label layoutX="252.0" layoutY="9.0" text="Archive old books" textFill="WHITE">
                <font>
-                  <Font name="Bell MT Bold" size="41.0" />
+                  <Font name="Bell MT Bold" size="60.0" />
                </font>
                <effect>
                   <Glow level="0.5" />
                </effect>
             </Label>
+            <Button fx:id="buttonAOB_home" layoutX="775.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: WHITE;" text="Home">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow height="35.17" radius="17.817500000000003" spread="0.01" width="38.1" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <textFill>
+                  <LinearGradient endX="0.9905213270142178" endY="1.0" startX="1.0" startY="0.5924170616113744">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.015350877307355404" green="0.445175439119339" blue="0.5526315569877625" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.45593869731800757">
+                           <color>
+                              <Color red="0.015350877307355404" green="0.445175439119339" blue="0.5526315569877625" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
          </children>
          <effect>
             <DropShadow />
