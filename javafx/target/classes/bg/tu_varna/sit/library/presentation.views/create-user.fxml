@@ -19,7 +19,7 @@
          <children>
             <AnchorPane layoutY="90.0" prefHeight="185.0" prefWidth="734.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button fx:id="buttonCU_create" layoutX="244.0" layoutY="113.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Create user" textFill="WHITE">
+                  <Button fx:id="buttonCU_create" layoutX="244.0" layoutY="113.0" mnemonicParsing="false" onAction="#createUser" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Create user" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>

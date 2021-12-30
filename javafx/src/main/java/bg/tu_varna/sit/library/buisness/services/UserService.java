@@ -1,15 +1,17 @@
 package bg.tu_varna.sit.library.buisness.services;
 
-import bg.tu_varna.sit.library.data.entities.Books;
-import bg.tu_varna.sit.library.data.entities.USER;
-import bg.tu_varna.sit.library.data.entities.UserType;
+import bg.tu_varna.sit.library.data.entities.*;
 import bg.tu_varna.sit.library.data.repositories.UserRepository;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
+import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -55,7 +57,15 @@ public class UserService {
         return  userlist;
     }
 
-
+    public ObservableList<UserListModel> getAllFields()
+    {
+        List<USER> users = repositoryUser.getAll();
+        ObservableList<UserListModel> userlist = FXCollections.observableList(
+                users.stream().map(a -> new UserListModel(
+                      a.getIdUser(), a.getUserName(),a.getPassword(), a.getDateOfUserApproval(), a.getRating(), a.getUSERTYPE_idUserType(),a.getSTATUS_idStatus()
+                )).collect(Collectors.toList()));
+        return  userlist;
+    }
 
     public long FindUserType(UserListModel a)
     {
@@ -98,6 +108,23 @@ public class UserService {
         return usernames;
     }
 
+    public ArrayList<String> getUserForApproval()
+    {
+        Status status = new Status(1,"pending");
+        UserListModel usr = new UserListModel(1,status);
+        ObservableList<UserListModel> allUsers = getAllFields();
+        ArrayList<String> usernames = new ArrayList<>();
+        for(UserListModel user : allUsers)
+        {
+            if(user.getSTATUS_idStatus().getIdStatus()==(usr.getSTATUS_idStatus().getIdStatus())) {
+                usernames.add(user.getUserName());
+            }
+        }
+        return usernames;
+
+
+    }
+
 
     public ArrayList<String> getOnlyUserForComboBox()
     {
@@ -115,13 +142,17 @@ public class UserService {
     }
 
     public boolean UserLogin(UserListModel a)
-    {
-        ObservableList<UserListModel> allUsers = getAllUsers();
+    {   Status status =new Status(2,"not pending");
+        UserListModel b = new UserListModel(1, status);
+        ObservableList<UserListModel> allUsers = getAllFields();
         for(UserListModel user : allUsers)
         {
-            if(user.equals(a))
+            if(user.getUserName().equals(a.getUserName()) && (user.getPassword().equals(a.getPassword())))
             {
-                return true;
+                if((user.getSTATUS_idStatus().getIdStatus()==(b.getSTATUS_idStatus().getIdStatus())))
+                {
+                    return true;
+                }
             }
         }
         return false;
@@ -158,6 +189,37 @@ public class UserService {
         }
         return true;
     }
+
+
+    public static Date parseDate(String date)
+    {
+        try {
+            return new SimpleDateFormat("yyyy-MM-dd").parse(date);
+        } catch (ParseException e) {
+            return null;
+        }
+    }
+
+
+    public boolean CreateUser(UserListModel addUser) {
+        List<USER> users = repositoryUser.getAll();
+        USER user = new USER(addUser.getIdUser(),addUser.getUserName(),addUser.getPassword(),addUser.getDateOfUserApproval(),addUser.getRating(),addUser.getSTATUS_idStatus(),addUser.getUSERTYEPE_idUserType());
+        for(USER u : users)
+        {
+            if(u.getUserName().equals(user.getUserName()))
+            {
+                Date myDate = parseDate(java.time.LocalDate.now().toString());
+                Status status = new Status(2,"not pending");
+                u.setSTATUS_idStatus(status);
+                u.setDateOfUserApproval(myDate);
+                repositoryUser.update(u);
+                return true;
+            }
+        }
+        return true;
+    }
+
+
     public boolean DeleteUser(UserListModel addUser) {
         List<USER> users = repositoryUser.getAll();
         USER user = new USER(addUser.getIdUser(),addUser.getUserName(),addUser.getPassword(),addUser.getDateOfUserApproval(),addUser.getRating(),addUser.getSTATUS_idStatus(),addUser.getUSERTYEPE_idUserType());

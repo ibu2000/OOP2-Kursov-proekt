@@ -57,6 +57,11 @@ public class UserListModel {
         this.USERTYEPE_idUserType = USERTYEPE_idUserType;
     }
 
+    public UserListModel(long idUser, Status STATUS_idStatus) {
+        this.idUser = idUser;
+        this.STATUS_idStatus = STATUS_idStatus;
+    }
+
     public long getIdUser() {
         return idUser;
     }

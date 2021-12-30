@@ -53,6 +53,11 @@ public class USER {
         this.USERTYPE_idUserType = USERTYPE_idUserType;
     }
 
+    public USER(long idUser, Status STATUS_idStatus) {
+        this.idUser = idUser;
+        this.STATUS_idStatus = STATUS_idStatus;
+    }
+
     public USER(String userName) {
         this.userName = userName;
     }
