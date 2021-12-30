@@ -3,42 +3,36 @@ package bg.tu_varna.sit.library.presentation.controllers;
 import bg.tu_varna.sit.library.common.Constants;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
 
-public class LendingBooksController {
-
+public class ScrapBookController {
     @FXML
-    private ComboBox combo_boxLB_lendable_books;
+    private ComboBox combo_box_scrap_book;
     @FXML
-    private Button buttonLB_lend_book;
+    private Button buttonScrapBook_scrap_book;
     @FXML
-    private Button buttonLB_home;
-    @FXML
-    private RadioButton radio_button_reading_room;
-    @FXML
-    private RadioButton radio_button_read_at_home;
-
+    private Button button_scrap_book;
 
     Stage s;
-    public LendingBooksController() {}
-    public LendingBooksController(Stage stage)
-    {
-        s = stage;
-    }
 
-    public void ReturnToHomePage()
+    public ScrapBookController() {}
+    public ScrapBookController(Stage stage) {
+            s = stage;
+        }
+
+    public void ScrapBookHomeToAdmin()
     {
         try
         {
             s.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_USER));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_ADMIN));
             Stage stage = new Stage();
-            fxmlLoader.setController(new HomePageUserController(stage));
+            fxmlLoader.setController(new HomePageAdminController(stage));
             Parent root2 = fxmlLoader.load();
             stage.setScene(new Scene(root2));
             stage.show();

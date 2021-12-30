@@ -149,7 +149,25 @@
                            </stops>
                         </LinearGradient>
                      </fill></QuadCurve>
-                  <Button fx:id="button_create_operator" layoutX="18.0" layoutY="221.0" mnemonicParsing="false" onAction="#PromoteToOperatorPage" prefHeight="56.0" prefWidth="315.0" style="-fx-background-color: #00738C;" text="Create operator">
+                  <QuadCurve controlX="-374.6367492675781" controlY="-136.0" endX="-281.6367492675781" endY="-498.0" layoutX="724.0" layoutY="672.0" opacity="0.13" startX="-153.63671875" startY="-498.0" stroke="WHITE" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.8057553768157959" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </QuadCurve>
+                  <Button fx:id="button_add_new_book" layoutX="47.0" layoutY="126.0" mnemonicParsing="false" onAction="#addNewBook" prefHeight="56.0" prefWidth="245.0" style="-fx-background-color: #00738C;" text="add new book">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -179,7 +197,7 @@
                         </LinearGradient>
                      </textFill>
                   </Button>
-                  <Button fx:id="button_add_new_book" layoutX="353.0" layoutY="221.0" mnemonicParsing="false" onAction="#addNewBook" prefHeight="56.0" prefWidth="315.0" style="-fx-background-color: #00738C;" text="add new book">
+                  <Button fx:id="button_create_operator" layoutX="77.0" layoutY="220.0" mnemonicParsing="false" onAction="#PromoteToOperatorPage" prefHeight="56.0" prefWidth="277.0" style="-fx-background-color: #00738C;" text="Create operator">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -190,7 +208,8 @@
                         <Reflection fraction="0.52" topOpacity="0.46">
                            <input>
                               <Glow level="0.1" />
-                           </input></Reflection>
+                           </input>
+                        </Reflection>
                      </effect>
                      <textFill>
                         <LinearGradient endX="1.0" endY="0.5545023696682465" startX="1.0" startY="1.0">
@@ -209,7 +228,38 @@
                         </LinearGradient>
                      </textFill>
                   </Button>
-                  <Button fx:id="button_archive_old_books" layoutX="691.0" layoutY="221.0" mnemonicParsing="false" onAction="#archiveBookPage" prefHeight="56.0" prefWidth="315.0" style="-fx-background-color: #00738C;" text="Archive old books">
+                  <Button fx:id="buttonA_scrap_book" layoutX="737.0" layoutY="126.0" mnemonicParsing="false" onAction="#ScrapBookPage" prefHeight="56.0" prefWidth="209.0" style="-fx-background-color: #00738C;" text="scrap book">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Reflection fraction="0.52" topOpacity="0.46">
+                           <input>
+                              <Glow level="0.1" />
+                           </input>
+                        </Reflection>
+                     </effect>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.5545023696682465" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.699999988079071" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="button_archive_old_books" layoutX="630.0" layoutY="220.0" mnemonicParsing="false" onAction="#archiveBookPage" prefHeight="56.0" prefWidth="304.0" style="-fx-background-color: #00738C;" text="Archive old books">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -291,14 +341,14 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <effect>
-                        <InnerShadow choke="0.49" height="45.18" radius="23.372500000000002" width="50.31">
+                        <InnerShadow choke="0.49" height="47.75" radius="24.015" width="50.31">
                            <color>
-                              <Color green="0.5249999761581421" blue="0.75" />
+                              <Color green="0.4421052634716034" blue="0.6315789222717285" />
                            </color>
                         </InnerShadow>
                      </effect>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="0.9478672985781991" startX="1.0" startY="1.0">
+                        <LinearGradient endX="1.0" endY="0.48815165876777256" startX="1.0" startY="1.0">
                            <stops>
                               <Stop>
                                  <color>

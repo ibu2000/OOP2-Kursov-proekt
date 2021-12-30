@@ -29,7 +29,8 @@ public class HomePageAdminController {
     private Button buttonA_user_rating;
     @FXML
     private Button buttonA_logout;
-
+    @FXML
+    private Button buttonA_scrap_book;
     Stage s;
 
     public HomePageAdminController() {
@@ -91,6 +92,20 @@ public class HomePageAdminController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.ARCHIVE_OLD_BOOK));
             Stage stage = new Stage();
             fxmlLoader.setController(new ArchiveOldBooksController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+   @FXML
+    public void  ScrapBookPage() {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SCRAP_BOOK));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new ScrapBookController(stage));
             Parent root2 = fxmlLoader.load();
             stage.setScene(new Scene(root2));
             stage.show();

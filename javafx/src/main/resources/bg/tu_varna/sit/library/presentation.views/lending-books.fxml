@@ -4,8 +4,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.InnerShadow?>
@@ -57,41 +59,35 @@
             <DropShadow height="73.28" radius="23.07" />
          </effect>
       </Pane>
-      <Button fx:id="buttonLB_lend_book" layoutX="132.0" layoutY="301.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="30.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
+      <CubicCurve controlX1="69.66667175292969" controlX2="282.6666564941406" controlY1="-150.33334350585938" controlY2="-135.0" endX="315.0" endY="37.0" fill="#00203c" layoutX="186.0" layoutY="557.0" opacity="0.15" startX="315.0" startY="-150.3333740234375" stroke="#976363" strokeType="OUTSIDE">
          <effect>
-            <DropShadow blurType="TWO_PASS_BOX" height="17.95" radius="8.385" width="17.59" />
-         </effect>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.6635071090047393">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color green="0.8273380994796753" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Button>
-      <ComboBox fx:id="combo_boxLB_lendable_books" layoutX="18.0" layoutY="178.0" prefHeight="42.0" prefWidth="470.0" style="-fx-background-color: #00738C;">
+            <DropShadow>
+               <color>
+                  <Color green="0.8920863270759583" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect></CubicCurve>
+      <CubicCurve controlX1="381.6666564941406" controlX2="163.0" controlY1="106.0" controlY2="86.66668701171875" endX="137.0" endY="-76.33334350585938" fill="#00203c" layoutX="-133.0" layoutY="526.0" opacity="0.15" startX="137.0" startY="95.5" stroke="#976363" strokeType="OUTSIDE">
          <effect>
-            <DropShadow blurType="TWO_PASS_BOX" height="17.95" radius="8.385" width="17.59" />
+            <DropShadow>
+               <color>
+                  <Color green="1.0" blue="0.935251772403717" />
+               </color>
+            </DropShadow>
+         </effect></CubicCurve>
+      <ImageView fitHeight="143.0" fitWidth="143.0" layoutX="172.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@books7.png" />
+         </image>
+         <effect>
+            <DropShadow height="62.03" radius="78.7575" width="255.0">
+               <color>
+                  <Color green="0.8999999761581421" blue="1.0" />
+               </color>
+            </DropShadow>
          </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></ComboBox>
-      <Label layoutX="40.0" layoutY="103.0" prefHeight="100.0" prefWidth="430.0" text="Pick a book you'd like to lend!">
+      </ImageView>
+      <Label layoutX="162.0" layoutY="84.0" prefHeight="42.0" prefWidth="174.0" text="Pick a book">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -120,35 +116,86 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <ImageView fitHeight="143.0" fitWidth="143.0" layoutX="172.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@books7.png" />
-         </image>
+      <ComboBox fx:id="combo_boxLB_lendable_books" layoutX="18.0" layoutY="162.0" prefHeight="42.0" prefWidth="470.0" style="-fx-background-color: #00738C;">
          <effect>
-            <DropShadow height="62.03" radius="78.7575" width="255.0">
-               <color>
-                  <Color green="0.8999999761581421" blue="1.0" />
-               </color>
-            </DropShadow>
+            <DropShadow blurType="TWO_PASS_BOX" height="17.95" radius="8.385" width="17.59" />
          </effect>
-      </ImageView>
-      <CubicCurve controlX1="69.66667175292969" controlX2="282.6666564941406" controlY1="-150.33334350585938" controlY2="-135.0" endX="315.0" endY="37.0" fill="#00203c" layoutX="89.0" layoutY="551.0" opacity="0.15" startX="315.0" startY="-145.0" stroke="#976363" strokeType="OUTSIDE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <RadioButton layoutX="168.0" layoutY="222.0" mnemonicParsing="false" text="Reading room">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8530805687203792" endY="1.0" startX="0.8436018957345972" startY="0.5118483412322274">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.4421052634716034" blue="0.5526315569877625" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <toggleGroup>
+            <ToggleGroup fx:id="radioGROUP" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="168.0" layoutY="259.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Home" toggleGroup="$radioGROUP">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8530805687203792" endY="1.0" startX="0.8436018957345972" startY="0.5118483412322274">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.4421052634716034" blue="0.5526315569877625" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </RadioButton>
+      <Button fx:id="buttonLB_lend_book1" layoutX="173.0" layoutY="303.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
          <effect>
-            <DropShadow>
-               <color>
-                  <Color green="0.8920863270759583" blue="1.0" />
-               </color>
-            </DropShadow>
-         </effect></CubicCurve>
-      <CubicCurve controlX1="381.6666564941406" controlX2="163.0" controlY1="106.0" controlY2="86.66668701171875" endX="137.0" endY="-76.33334350585938" fill="#00203c" layoutX="-49.0" layoutY="520.0" opacity="0.15" startX="137.0" startY="95.5" stroke="#976363" strokeType="OUTSIDE">
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color green="1.0" blue="0.935251772403717" />
-               </color>
-            </DropShadow>
-         </effect></CubicCurve>
-      <Button fx:id="buttonLB_lend_book1" layoutX="173.0" layoutY="232.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add">
+            <DropShadow blurType="TWO_PASS_BOX" height="17.95" radius="8.385" width="17.59" />
+         </effect>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.6635071090047393">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.8273380994796753" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="buttonLB_lend_book" layoutX="132.0" layoutY="375.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -230,7 +277,7 @@
                   </LinearGradient>
                </textFill>
             </Label>
-            <Label layoutX="93.0" layoutY="158.0" prefHeight="67.0" prefWidth="337.0" text="you've picked to lend!!!">
+            <Label layoutX="93.0" layoutY="126.0" prefHeight="67.0" prefWidth="337.0" text="you've picked to lend!!!">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
@@ -553,5 +600,34 @@
             </DropShadow>
          </effect>
       </CubicCurve>
+      <Label layoutX="99.0" layoutY="116.0" prefHeight="42.0" prefWidth="297.0" text="And where to read it">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.3933649289099526" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.534649133682251" blue="0.6973684430122375" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>
