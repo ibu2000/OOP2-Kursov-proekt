@@ -39,6 +39,15 @@ public class ExemplqrService {
                 )).collect(Collectors.toList()));
         return  copylist;
     }
+    public ObservableList<ExemplqrModel> getAllDamagedCopies()
+    {
+        List<Eksemplqri> copies = repositoryExemplqri.getAll();
+        ObservableList<ExemplqrModel> copylist = FXCollections.observableList(
+                copies.stream().map(a -> new ExemplqrModel(
+                        a.getIsbnUnikalenNomer(),a.getIdBook(), a.getExsemplqri_stateOfBooks()
+                )).collect(Collectors.toList()));
+        return  copylist;
+    }
 
 
 
@@ -88,8 +97,8 @@ public class ExemplqrService {
     public  ObservableList<ExemplqrModel> getBookCopyWhereDamaged()
     {
         StateOfBooks state = new StateOfBooks(3, "damaged");
-        Eksemplqri e = new Eksemplqri(state,false);
-        ObservableList<ExemplqrModel> allCopies = getAllCopies();
+        Eksemplqri e = new Eksemplqri( state,false);
+        ObservableList<ExemplqrModel> allCopies = getAllDamagedCopies();
         ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
         for(ExemplqrModel copy : allCopies)
         {

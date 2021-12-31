@@ -70,9 +70,9 @@
                   </Button>
                   <TableView fx:id="allDamagedBooks" layoutX="43.0" layoutY="117.0" prefHeight="652.0" prefWidth="895.0">
                     <columns>
-                      <TableColumn fx:id="isbnCol" prefWidth="164.0" text="ISBN" />
-                      <TableColumn fx:id="StateOfBookCol" prefWidth="251.0" text="State Of Book" />
-                        <TableColumn fx:id="BookIdCol" minWidth="0.0" prefWidth="276.0" text="BookID" />
+                      <TableColumn fx:id="isbnCol" prefWidth="265.0" text="ISBN" />
+                        <TableColumn fx:id="BookIdCol" minWidth="0.0" prefWidth="356.0" text="BookID" />
+                      <TableColumn fx:id="StateOfBookCol" prefWidth="272.0" text="State Of Book" />
                     </columns>
                      <effect>
                         <DropShadow height="94.03" radius="52.4375" spread="0.28" width="117.72">

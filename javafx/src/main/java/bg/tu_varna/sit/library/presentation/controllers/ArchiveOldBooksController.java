@@ -6,8 +6,11 @@ import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.entities.Eksemplqri;
 import bg.tu_varna.sit.library.data.entities.StateOfBooks;
+import bg.tu_varna.sit.library.data.repositories.DAORepository;
 import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleLongProperty;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -41,8 +44,6 @@ public class ArchiveOldBooksController implements Initializable {
     private TableColumn<ExemplqrModel, Books> BookIdCol;
 
 
-
-
     BookService bookService = new BookService();
     ExemplqrService exemplqrService = new ExemplqrService();
     Stage s;
@@ -61,12 +62,15 @@ public class ArchiveOldBooksController implements Initializable {
 
 
         isbnCol.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
+
         StateOfBookCol.setCellValueFactory(new PropertyValueFactory<>("exsemplqri_stateOfBooks"));
         BookIdCol.setCellValueFactory(new PropertyValueFactory<>("idBook"));
-        allDamagedBooks.getStyleClass().add("bg-1");
-        allDamagedBooks.setPadding(new Insets(5));
+
         ObservableList<ExemplqrModel> list= exemplqrService.getBookCopyWhereDamaged();
-        allDamagedBooks.setItems(list);
+        for(ExemplqrModel u : list)
+        {
+            allDamagedBooks.getItems().add(u);
+        }
     }
 
     @FXML

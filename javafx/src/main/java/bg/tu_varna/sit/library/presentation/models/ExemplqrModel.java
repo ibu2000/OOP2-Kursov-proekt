@@ -56,14 +56,6 @@ public class ExemplqrModel {
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
     }
 
-    public boolean isIsitAvailable() {
-        return isitAvailable;
-    }
-
-    public void setIsitAvailable(boolean isitAvailable) {
-        this.isitAvailable = isitAvailable;
-    }
-
     public long getIsbnUnikalenNomer() {
         return isbnUnikalenNomer;
     }
@@ -94,6 +86,14 @@ public class ExemplqrModel {
 
     public void setExsemplqri_stateOfBooks(StateOfBooks exsemplqri_stateOfBooks) {
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
+    }
+
+    public boolean isIsitAvailable() {
+        return isitAvailable;
+    }
+
+    public void setIsitAvailable(boolean isitAvailable) {
+        this.isitAvailable = isitAvailable;
     }
 
     @Override
