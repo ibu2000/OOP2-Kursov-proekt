@@ -22,6 +22,10 @@ public class StateOfBooks {
     public StateOfBooks() {
     }
 
+    public StateOfBooks(String stateOfBooks) {
+        this.stateOfBooks = stateOfBooks;
+    }
+
     public long getIdState() {
         return idState;
     }

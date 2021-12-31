@@ -61,7 +61,7 @@ public class AddNewBookController implements Initializable {
     private RadioButton radio_buttonANB_not_archived;
 
 
-    LocalDate publishDate;
+     LocalDate publishDate;
      BookService BookService = new BookService();
      ExemplqrService ExemplqrService = new ExemplqrService();
      StateofBooksService stateOfBooksService = new StateofBooksService();
@@ -153,7 +153,8 @@ public class AddNewBookController implements Initializable {
        String bookname=combo_boxANB_name_of_book.getValue().toString();
        BookListModel b = BookService.GetBook(bookname);
        Books book = BookService.listviewToEntity(b);
-       StateOfBooks state = new StateOfBooks(1 ,combo_boxANB_state_of_book.getValue().toString());
+       long id= stateOfBooksService.getBookState(combo_boxANB_state_of_book.getValue().toString());
+       StateOfBooks state = new StateOfBooks(id,combo_boxANB_state_of_book.getValue().toString());
         ExemplqrModel addBook = new ExemplqrModel(book, isArchived, state);
         if(combo_boxANB_name_of_book.equals("") || (!radio_buttonANB_archived.isSelected() && !radio_buttonANB_not_archived.isSelected())
                 || combo_boxANB_state_of_book.equals(""))

@@ -40,6 +40,9 @@ public class ExemplqrService {
         return  copylist;
     }
 
+
+
+
     public Eksemplqri listviewToEntity(ExemplqrModel a)
     {
        Eksemplqri temp = new Eksemplqri(a.getIsbnUnikalenNomer());

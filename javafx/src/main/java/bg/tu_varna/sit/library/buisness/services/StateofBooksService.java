@@ -22,6 +22,8 @@ public class StateofBooksService {
 
     public static StateofBooksService getInstance() {return StateofBooksService.StateofBooksServiceHolder.INSTANCE;}
 
+
+
     private static class  StateofBooksServiceHolder
     {
         public static final StateofBooksService INSTANCE = new StateofBooksService();
@@ -34,7 +36,7 @@ public class StateofBooksService {
         List<StateOfBooks> stateOfBooks = repositoryStateOfBooks.getAll();
         ObservableList<StateOfBooksModel> stateofbooklist = FXCollections.observableList(
                 stateOfBooks.stream().map(a -> new StateOfBooksModel(
-                        a.getStateOfBooks()
+                      a.getIdState(),  a.getStateOfBooks()
                 )).collect(Collectors.toList()));
         return  stateofbooklist;
     }
@@ -51,4 +53,21 @@ public class StateofBooksService {
         }
         return bookstate;
     }
+
+    public long getBookState(String a) {
+        StateOfBooks temp = new StateOfBooks(a);
+        ObservableList<StateOfBooksModel> allBooks = getAllBookStates();
+        for(StateOfBooksModel state : allBooks)
+        {
+            if(state.getStateOfBooks().equals(temp.getStateOfBooks()))
+            {
+                return state.getIdState();
+            }
+        }
+        return 0;
+    }
+
+
+
+
 }
