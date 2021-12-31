@@ -56,8 +56,8 @@ public class ArchiveOldBooksController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        combobox_copyOfBook.getItems().clear();
-        combobox_copyOfBook.setItems(exemplqrService.getBookCopyWhereDamaged());
+       // combobox_copyOfBook.getItems().clear();
+   //     combobox_copyOfBook.setItems(exemplqrService.getBookCopyWhereDamaged());
 
 
         isbnCol.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
@@ -85,12 +85,12 @@ public class ArchiveOldBooksController implements Initializable {
     }
 
 
-
+    boolean isitAvailable = true;
     boolean isArchived;
     @FXML
     public void ArchiveOldBooks()
     {
-        ExemplqrModel copyname = new ExemplqrModel((combobox_copyOfBook.getValue()).getIsbnUnikalenNomer(),(combobox_copyOfBook.getValue()).getIdBook(),(combobox_copyOfBook.getValue()).isIsitArchived(),(combobox_copyOfBook.getValue()).getExsemplqri_stateOfBooks());
+        ExemplqrModel copyname = new ExemplqrModel((combobox_copyOfBook.getValue()).getIsbnUnikalenNomer(),(combobox_copyOfBook.getValue()).getIdBook(),(combobox_copyOfBook.getValue()).isIsitArchived(),(combobox_copyOfBook.getValue()).getExsemplqri_stateOfBooks(),isitAvailable);
        // ExemplqrModel b = exemplqrService.GetCopy(copyname);
        /* ObservableList<ExemplqrModel> productsInPeriod = productService.getAllProductsByStatInPeriod(myFromDate, myToDate, isAvailable);
         allProdByStatTable.setItems(productsInPeriod);*/

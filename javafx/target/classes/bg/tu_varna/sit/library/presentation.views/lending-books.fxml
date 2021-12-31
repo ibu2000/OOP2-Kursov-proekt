@@ -123,7 +123,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ComboBox>
-      <RadioButton layoutX="168.0" layoutY="222.0" mnemonicParsing="false" text="Reading room">
+      <RadioButton fx:id="radio_button_reading_room" layoutX="168.0" layoutY="222.0" mnemonicParsing="false" text="Reading room">
          <font>
             <Font size="19.0" />
          </font>
@@ -147,7 +147,7 @@
             <ToggleGroup fx:id="radioGROUP" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="168.0" layoutY="259.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Home" toggleGroup="$radioGROUP">
+      <RadioButton fx:id="radio_button_read_at_home" layoutX="168.0" layoutY="259.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Home" toggleGroup="$radioGROUP">
          <font>
             <Font size="19.0" />
          </font>

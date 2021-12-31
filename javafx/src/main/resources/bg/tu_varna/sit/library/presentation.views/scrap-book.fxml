@@ -16,17 +16,60 @@
 <?import javafx.scene.shape.QuadCurve?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="315.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="315.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutY="93.0" prefHeight="155.0" prefWidth="852.0" style="-fx-background-color: #00738C;">
+      <QuadCurve controlX="-218.0" controlY="-218.0" endX="299.0" endY="114.86529541015625" layoutX="554.0" layoutY="20.0" opacity="0.98" startX="299.0" startY="-19.99999237060547" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="0.023696682464455" endY="0.3649289099526064" startX="0.95260663507109" startY="0.4123222748815165">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.4638157784938812" blue="0.6184210777282715" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color green="0.4638157784938812" blue="0.6184210777282715" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.4786729857819905" startY="0.872037914691943">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.13026819923371646">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </QuadCurve>
+      <AnchorPane layoutY="93.0" prefHeight="155.0" prefWidth="853.0" style="-fx-background-color: #00738C;">
          <children>
-            <ImageView blendMode="MULTIPLY" fitHeight="154.0" fitWidth="166.0" layoutX="329.0" layoutY="1.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
+            <ImageView blendMode="MULTIPLY" fitHeight="152.0" fitWidth="492.0" layoutX="352.0" layoutY="1.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@books9.png" />
                </image>
             </ImageView>
-            <Button fx:id="buttonScrapBook_scrap_book" layoutX="198.0" layoutY="66.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="209.0" style="-fx-background-color: WHITE;" text="scrap book">
+            <Button fx:id="buttonScrapBook_scrap_book" layoutX="219.0" layoutY="66.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="209.0" style="-fx-background-color: WHITE;" text="scrap book">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
@@ -61,8 +104,11 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <ComboBox fx:id="combo_box_scrap_book" layoutX="138.0" layoutY="17.0" prefHeight="25.0" prefWidth="535.0" />
-            <Button fx:id="buttonScrapBook_home" layoutX="447.0" layoutY="66.0" mnemonicParsing="false" onAction="#ScrapBookHomeToAdmin" prefHeight="56.0" prefWidth="127.0" style="-fx-background-color: WHITE;" text="home">
+            <ComboBox fx:id="combo_box_scrap_book" layoutX="159.0" layoutY="17.0" prefHeight="25.0" prefWidth="535.0">
+               <effect>
+                  <DropShadow />
+               </effect></ComboBox>
+            <Button fx:id="buttonScrapBook_home" layoutX="468.0" layoutY="66.0" mnemonicParsing="false" onAction="#ScrapBookHomeToAdmin" prefHeight="56.0" prefWidth="127.0" style="-fx-background-color: WHITE;" text="home">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
@@ -102,7 +148,7 @@
             <DropShadow height="44.45" radius="20.9925" width="41.52" />
          </effect>
       </AnchorPane>
-      <Label layoutX="263.0" layoutY="1.0" prefHeight="86.0" prefWidth="302.0" text="Scrap Book">
+      <Label layoutX="286.0" layoutY="1.0" prefHeight="86.0" prefWidth="302.0" text="Scrap Book">
          <font>
             <Font name="Bell MT Bold" size="60.0" />
          </font>
@@ -177,7 +223,7 @@
             </LinearGradient>
          </stroke>
       </QuadCurve>
-      <QuadCurve controlX="-312.0" controlY="15.0" endX="540.0" endY="72.0" layoutX="312.0" layoutY="243.0" opacity="0.98" startX="540.0" startY="5.0" strokeType="INSIDE">
+      <QuadCurve controlX="-312.0" controlY="15.0" endX="540.0" endY="72.0" layoutX="313.0" layoutY="243.0" opacity="0.98" startX="540.0" startY="5.0" strokeType="INSIDE">
          <fill>
             <LinearGradient endX="0.023696682464455" endY="0.3649289099526064" startX="0.95260663507109" startY="0.4123222748815165">
                <stops>
@@ -244,7 +290,7 @@
             </LinearGradient>
          </fill>
          <stroke>
-            <LinearGradient endX="1.0" endY="1.0">
+            <LinearGradient endX="0.5971563981042654" endY="0.34123222748815163" startY="0.14218009478672985">
                <stops>
                   <Stop>
                      <color>

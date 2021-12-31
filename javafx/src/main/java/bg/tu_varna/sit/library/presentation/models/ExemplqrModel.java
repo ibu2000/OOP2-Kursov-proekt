@@ -16,13 +16,15 @@ public class ExemplqrModel {
     private Books idBook;
     private boolean isitArchived;
     private StateOfBooks exsemplqri_stateOfBooks;
+    private boolean isitAvailable;
 
 
-    public ExemplqrModel(long isbnUnikalenNomer, Books idBook, boolean isitArchived, StateOfBooks exsemplqri_stateOfBooks) {
+    public ExemplqrModel(long isbnUnikalenNomer, Books idBook, boolean isitArchived, StateOfBooks exsemplqri_stateOfBooks, boolean isitAvailable) {
         this.isbnUnikalenNomer = isbnUnikalenNomer;
         this.idBook = idBook;
         this.isitArchived = isitArchived;
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
+        this.isitAvailable = isitAvailable;
     }
 
     public ExemplqrModel() {
@@ -45,6 +47,21 @@ public class ExemplqrModel {
         this.isbnUnikalenNomer = isbnUnikalenNomer;
         this.idBook = idBook;
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
+    }
+
+    public ExemplqrModel(long isbnUnikalenNomer, Books idBook, boolean isitArchived, StateOfBooks exsemplqri_stateOfBooks) {
+        this.isbnUnikalenNomer = isbnUnikalenNomer;
+        this.idBook = idBook;
+        this.isitArchived = isitArchived;
+        this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
+    }
+
+    public boolean isIsitAvailable() {
+        return isitAvailable;
+    }
+
+    public void setIsitAvailable(boolean isitAvailable) {
+        this.isitAvailable = isitAvailable;
     }
 
     public long getIsbnUnikalenNomer() {
@@ -80,25 +97,26 @@ public class ExemplqrModel {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof ExemplqrModel)) return false;
-        ExemplqrModel that = (ExemplqrModel) o;
-        return getIsbnUnikalenNomer() == that.getIsbnUnikalenNomer() && isIsitArchived() == that.isIsitArchived() && Objects.equals(getIdBook(), that.getIdBook()) && Objects.equals(getExsemplqri_stateOfBooks(), that.getExsemplqri_stateOfBooks());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getIsbnUnikalenNomer(), getIdBook(), isIsitArchived(), getExsemplqri_stateOfBooks());
-    }
-
-    @Override
     public String toString() {
         return "ExemplqrModel{" +
                 "isbnUnikalenNomer=" + isbnUnikalenNomer +
                 ", idBook=" + idBook +
                 ", isitArchived=" + isitArchived +
                 ", exsemplqri_stateOfBooks=" + exsemplqri_stateOfBooks +
+                ", isitAvailable=" + isitAvailable +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ExemplqrModel that = (ExemplqrModel) o;
+        return isbnUnikalenNomer == that.isbnUnikalenNomer && isitArchived == that.isitArchived && isitAvailable == that.isitAvailable && Objects.equals(idBook, that.idBook) && Objects.equals(exsemplqri_stateOfBooks, that.exsemplqri_stateOfBooks);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(isbnUnikalenNomer, idBook, isitArchived, exsemplqri_stateOfBooks, isitAvailable);
     }
 }

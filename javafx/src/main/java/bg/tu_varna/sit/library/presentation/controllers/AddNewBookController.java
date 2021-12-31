@@ -131,8 +131,8 @@ public class AddNewBookController implements Initializable {
           alert.show();
          }
       }
-         combo_boxANB_state_of_book.getItems().clear();
-         combo_boxANB_state_of_book.getItems().addAll(stateOfBooksService.getBookStates());
+         combo_boxANB_name_of_book.getItems().clear();
+         combo_boxANB_name_of_book.getItems().addAll(BookService. getBookNames());
      }
 
 

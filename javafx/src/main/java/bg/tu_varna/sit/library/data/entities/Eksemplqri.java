@@ -22,14 +22,18 @@ public class Eksemplqri {
     @Column(name = "isItArchived", nullable = false)
     private boolean isitArchived;
 
-    public Eksemplqri(long isbnUnikalenNomer, Books idBook, StateOfBooks exsemplqri_stateOfBooks, boolean isitArchived) {
+    @Column(name = "isitAvailable", nullable = false)
+    private boolean isitAvailable;
+
+    public Eksemplqri() {
+    }
+
+    public Eksemplqri(long isbnUnikalenNomer, Books idBook, StateOfBooks exsemplqri_stateOfBooks, boolean isitArchived, boolean isitAvailable) {
         this.isbnUnikalenNomer = isbnUnikalenNomer;
         this.idBook = idBook;
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
         this.isitArchived = isitArchived;
-    }
-
-    public Eksemplqri() {
+        this.isitAvailable = isitAvailable;
     }
 
     public Eksemplqri(long isbnUnikalenNomer) {
@@ -39,6 +43,14 @@ public class Eksemplqri {
     public Eksemplqri(StateOfBooks exsemplqri_stateOfBooks, boolean isitArchived) {
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
         this.isitArchived = isitArchived;
+    }
+
+    public boolean isIsitAvailable() {
+        return isitAvailable;
+    }
+
+    public void setIsitAvailable(boolean isitAvailable) {
+        this.isitAvailable = isitAvailable;
     }
 
     public long getIsbnUnikalenNomer() {
@@ -81,6 +93,7 @@ public class Eksemplqri {
                 ", idBook=" + idBook +
                 ", exsemplqri_stateOfBooks=" + exsemplqri_stateOfBooks +
                 ", isitArchived=" + isitArchived +
+                ", isitAvailable=" + isitAvailable +
                 '}';
     }
 }

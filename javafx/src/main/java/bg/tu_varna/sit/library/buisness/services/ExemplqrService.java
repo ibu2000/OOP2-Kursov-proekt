@@ -35,7 +35,7 @@ public class ExemplqrService {
         List<Eksemplqri> copies = repositoryExemplqri.getAll();
         ObservableList<ExemplqrModel> copylist = FXCollections.observableList(
                 copies.stream().map(a -> new ExemplqrModel(
-                        a.getIsbnUnikalenNomer(),a.getIdBook(), a.isIsitArchived(), a.getExsemplqri_stateOfBooks()
+                        a.getIsbnUnikalenNomer(),a.getIdBook(), a.isIsitArchived(), a.getExsemplqri_stateOfBooks(),a.isIsitAvailable()
                 )).collect(Collectors.toList()));
         return  copylist;
     }
@@ -56,7 +56,7 @@ public class ExemplqrService {
 
     public boolean AddCopy(ExemplqrModel addCopy) {
         List<Eksemplqri> copies = repositoryExemplqri.getAll();
-        Eksemplqri copy = new Eksemplqri(addCopy.getIsbnUnikalenNomer(),addCopy.getIdBook(),addCopy.getExsemplqri_stateOfBooks(),addCopy.isIsitArchived());
+        Eksemplqri copy = new Eksemplqri(addCopy.getIsbnUnikalenNomer(),addCopy.getIdBook(),addCopy.getExsemplqri_stateOfBooks(),addCopy.isIsitArchived(), addCopy.isIsitAvailable());
         for(Eksemplqri e : copies)
         {
             if(e.equals(copy))
@@ -101,7 +101,7 @@ public class ExemplqrService {
 
     public boolean ArchiveCopy(ExemplqrModel b) {
         List<Eksemplqri> copies = repositoryExemplqri.getAll();
-        Eksemplqri copy = new Eksemplqri(b.getIsbnUnikalenNomer(), b.getIdBook(), b.getExsemplqri_stateOfBooks(), b.isIsitArchived());
+        Eksemplqri copy = new Eksemplqri(b.getIsbnUnikalenNomer(), b.getIdBook(), b.getExsemplqri_stateOfBooks(), b.isIsitArchived(),b.isIsitAvailable());
         for(Eksemplqri u : copies)
         {
             if(u.equals(copy))

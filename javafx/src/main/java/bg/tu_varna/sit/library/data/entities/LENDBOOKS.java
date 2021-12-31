@@ -15,10 +15,31 @@ public class LENDBOOKS {
     @Column(name = "dateOfTaking",nullable = false)
     private Date dateOfTaking;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne//(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_idUser", referencedColumnName = "idUser")
     private USER USER_idUser;
 
+    @Column(name = "dateOfReturn",nullable = false)
+    private Date dateOfreturn;
+
+
+    public Date getDateOfreturn() {
+        return dateOfreturn;
+    }
+
+    public void setDateOfreturn(Date dateOfreturn) {
+        this.dateOfreturn = dateOfreturn;
+    }
+
+    public LENDBOOKS(long idLendBook, Date dateOfTaking, USER USER_idUser, Date dateOfreturn) {
+        this.idLendBook = idLendBook;
+        this.dateOfTaking = dateOfTaking;
+        this.USER_idUser = USER_idUser;
+        this.dateOfreturn = dateOfreturn;
+    }
+
+    public LENDBOOKS() {
+    }
 
     public long getIdLendBook() {
         return idLendBook;
@@ -50,6 +71,7 @@ public class LENDBOOKS {
                 "idLendBook=" + idLendBook +
                 ", dateOfTaking=" + dateOfTaking +
                 ", USER_idUser=" + USER_idUser +
+                ", dateOfreturn=" + dateOfreturn +
                 '}';
     }
 }
