@@ -44,9 +44,7 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`booksstored` (
   PRIMARY KEY (`books_idBook`),
   CONSTRAINT `fk_booksstored_books1`
     FOREIGN KEY (`books_idBook`)
-    REFERENCES `bookstore`.`books` (`idBook`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `bookstore`.`books` (`idBook`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -72,17 +70,16 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`eksemplqri` (
   `STATEOFBOOKS_idState` INT NOT NULL,
   `isItArchived` TINYINT NULL DEFAULT NULL,
   `books_idBook` INT NOT NULL,
+  `isitAvailable` TINYINT NULL DEFAULT NULL,
   PRIMARY KEY (`isbnUnikalenNomer`),
   INDEX `fk_EKSEMPLQRI_STATEOFBOOKS1_idx` (`STATEOFBOOKS_idState` ASC) VISIBLE,
   INDEX `fk_eksemplqri_books1_idx` (`books_idBook` ASC) VISIBLE,
-  CONSTRAINT `fk_EKSEMPLQRI_STATEOFBOOKS1`
-    FOREIGN KEY (`STATEOFBOOKS_idState`)
-    REFERENCES `bookstore`.`stateofbooks` (`idState`),
   CONSTRAINT `fk_eksemplqri_books1`
     FOREIGN KEY (`books_idBook`)
-    REFERENCES `bookstore`.`books` (`idBook`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `bookstore`.`books` (`idBook`),
+  CONSTRAINT `fk_EKSEMPLQRI_STATEOFBOOKS1`
+    FOREIGN KEY (`STATEOFBOOKS_idState`)
+    REFERENCES `bookstore`.`stateofbooks` (`idState`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -128,15 +125,12 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`user` (
   INDEX `fk_user_usertype1_idx` (`usertype_idUserType` ASC) VISIBLE,
   CONSTRAINT `fk_user_status1`
     FOREIGN KEY (`status_idStatus`)
-    REFERENCES `bookstore`.`status` (`idStatus`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES `bookstore`.`status` (`idStatus`),
   CONSTRAINT `fk_user_usertype1`
     FOREIGN KEY (`usertype_idUserType`)
-    REFERENCES `bookstore`.`usertype` (`idUserType`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `bookstore`.`usertype` (`idUserType`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -153,9 +147,7 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`form` (
   INDEX `fk_form_user1_idx` (`user_idUser` ASC) VISIBLE,
   CONSTRAINT `fk_form_user1`
     FOREIGN KEY (`user_idUser`)
-    REFERENCES `bookstore`.`user` (`idUser`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `bookstore`.`user` (`idUser`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -168,13 +160,12 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`lendbooks` (
   `idLendBook` INT NOT NULL AUTO_INCREMENT,
   `dateOfTaking` DATE NULL DEFAULT NULL,
   `user_idUser` INT NOT NULL,
+  `dateOfReturn` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`idLendBook`),
   INDEX `fk_lendbooks_user1_idx` (`user_idUser` ASC) VISIBLE,
   CONSTRAINT `fk_lendbooks_user1`
     FOREIGN KEY (`user_idUser`)
-    REFERENCES `bookstore`.`user` (`idUser`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `bookstore`.`user` (`idUser`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -187,17 +178,21 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`lendinfo` (
   `idLendInfo` INT NOT NULL AUTO_INCREMENT,
   `lendbooks_idLendBook` INT NOT NULL,
   `books_idBook` INT NOT NULL,
-  PRIMARY KEY (`idLendInfo`),
+  `eksemplqri_isbnUnikalenNomer` INT NOT NULL,
+  `inChitalnq` TINYINT NULL DEFAULT NULL,
+  PRIMARY KEY (`idLendInfo`, `eksemplqri_isbnUnikalenNomer`),
   INDEX `fk_lendinfo_lendbooks1_idx` (`lendbooks_idLendBook` ASC) VISIBLE,
   INDEX `fk_lendinfo_books1_idx` (`books_idBook` ASC) VISIBLE,
-  CONSTRAINT `fk_lendinfo_lendbooks1`
-    FOREIGN KEY (`lendbooks_idLendBook`)
-    REFERENCES `bookstore`.`lendbooks` (`idLendBook`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+  INDEX `fk_lendinfo_eksemplqri1_idx` (`eksemplqri_isbnUnikalenNomer` ASC) VISIBLE,
   CONSTRAINT `fk_lendinfo_books1`
     FOREIGN KEY (`books_idBook`)
-    REFERENCES `bookstore`.`books` (`idBook`)
+    REFERENCES `bookstore`.`books` (`idBook`),
+  CONSTRAINT `fk_lendinfo_lendbooks1`
+    FOREIGN KEY (`lendbooks_idLendBook`)
+    REFERENCES `bookstore`.`lendbooks` (`idLendBook`),
+  CONSTRAINT `fk_lendinfo_eksemplqri1`
+    FOREIGN KEY (`eksemplqri_isbnUnikalenNomer`)
+    REFERENCES `bookstore`.`eksemplqri` (`isbnUnikalenNomer`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -210,17 +205,16 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bookstore`.`userinfo` (
   `user_idUser` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(30) NULL,
+  `name` VARCHAR(30) NULL DEFAULT NULL,
   `phone` VARCHAR(15) NULL DEFAULT NULL,
-  `email` VARCHAR(30) NULL,
+  `email` VARCHAR(30) NULL DEFAULT NULL,
   PRIMARY KEY (`user_idUser`),
   INDEX `fk_userinfo_user1_idx` (`user_idUser` ASC) VISIBLE,
   CONSTRAINT `fk_userinfo_user1`
     FOREIGN KEY (`user_idUser`)
-    REFERENCES `bookstore`.`user` (`idUser`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `bookstore`.`user` (`idUser`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
