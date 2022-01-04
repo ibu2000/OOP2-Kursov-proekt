@@ -31,7 +31,7 @@
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                   </Label>
-                  <Button fx:id="buttonAOB_archive_old_book" layoutX="346.0" layoutY="52.0" mnemonicParsing="false" onAction="#ArchiveOldBooks" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #00738C;" text="Archive old book">
+                  <Button fx:id="buttonAOB_archive_old_book" layoutX="333.0" layoutY="65.0" mnemonicParsing="false" onAction="#ArchiveOldBooks" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #00738C;" text="Archive old book">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -68,7 +68,7 @@
                         </LinearGradient>
                      </textFill>
                   </Button>
-                  <TableView fx:id="allDamagedBooks" layoutX="43.0" layoutY="117.0" prefHeight="652.0" prefWidth="895.0">
+                  <TableView fx:id="allDamagedBooks" layoutX="40.0" layoutY="166.0" prefHeight="628.0" prefWidth="883.0">
                     <columns>
                       <TableColumn fx:id="isbnCol" prefWidth="265.0" text="ISBN" />
                         <TableColumn fx:id="BookIdCol" minWidth="0.0" prefWidth="356.0" text="BookID" />

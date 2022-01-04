@@ -71,6 +71,35 @@ public class ArchiveOldBooksController implements Initializable {
         }
     }
 
+    boolean isitAvailable = true;
+    boolean isArchived;
+    @FXML
+    public void ArchiveOldBooks()
+    {
+ // ExemplqrModel e = allDamagedBooks.getSelectionModel().getSelectedItems();
+
+        if(allDamagedBooks.getSelectionModel().getSelectedItems() ==null)
+        {
+           Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
+            alert.show();
+        }
+        else
+        {
+          //  isArchived = exemplqrService.ArchiveCopy(copyname);
+
+            if (isArchived)
+            {
+               Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has been archived!", ButtonType.OK);
+                alert.show();
+            }
+            else
+            {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has not been archived!", ButtonType.OK);
+                alert.show();
+            }
+        }
+    }
+
     @FXML
     public void  goToHomePage() {
         try {
@@ -85,41 +114,4 @@ public class ArchiveOldBooksController implements Initializable {
             e.printStackTrace();
         }
     }
-
-
-    boolean isitAvailable = true;
-    boolean isArchived;
-    @FXML
-    public void ArchiveOldBooks()
-    {
-        ExemplqrModel copyname = new ExemplqrModel((combobox_copyOfBook.getValue()).getIsbnUnikalenNomer(),(combobox_copyOfBook.getValue()).getIdBook(),(combobox_copyOfBook.getValue()).isIsitArchived(),(combobox_copyOfBook.getValue()).getExsemplqri_stateOfBooks(),isitAvailable);
-       // ExemplqrModel b = exemplqrService.GetCopy(copyname);
-       /* ObservableList<ExemplqrModel> productsInPeriod = productService.getAllProductsByStatInPeriod(myFromDate, myToDate, isAvailable);
-        allProdByStatTable.setItems(productsInPeriod);*/
-        Alert alert = new Alert(Alert.AlertType.ERROR,  allDamagedBooks.getSelectionModel().getSelectedItems().toString(), ButtonType.OK);
-        alert.show();
-        if(allDamagedBooks.getSelectionModel().getSelectedItems() ==null)
-        {
-          //  Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
-            alert.show();
-        }
-        else
-        {
-            isArchived = exemplqrService.ArchiveCopy(copyname);
-
-            if (isArchived)
-            {
-             //   Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has been archived!", ButtonType.OK);
-                alert.show();
-            }
-            else
-            {
-              //  Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has not been archived!", ButtonType.OK);
-                alert.show();
-            }
-        }
-    }
-
-
-
 }
