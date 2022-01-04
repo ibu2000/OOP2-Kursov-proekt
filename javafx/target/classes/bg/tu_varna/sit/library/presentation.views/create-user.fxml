@@ -45,7 +45,7 @@
                   </ComboBox>
                </children>
                <effect>
-                  <DropShadow height="134.82" radius="63.2475" width="120.17" />
+                  <DropShadow height="54.23" radius="26.2475" width="52.76" />
                </effect>
             </AnchorPane>
             <Label layoutX="194.0" prefHeight="86.0" prefWidth="353.0" text="Create a user" textFill="WHITE">
