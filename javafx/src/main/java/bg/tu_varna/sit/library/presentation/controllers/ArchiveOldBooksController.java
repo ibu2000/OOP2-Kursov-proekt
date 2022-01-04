@@ -57,9 +57,7 @@ public class ArchiveOldBooksController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       // combobox_copyOfBook.getItems().clear();
-   //     combobox_copyOfBook.setItems(exemplqrService.getBookCopyWhereDamaged());
-
+   
 
         isbnCol.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
 

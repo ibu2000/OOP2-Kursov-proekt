@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -43,17 +44,16 @@
                      </cursor>
                   </ComboBox>
                </children>
+               <effect>
+                  <DropShadow height="40.05" radius="35.2775" width="103.06" />
+               </effect>
             </AnchorPane>
-            <Label layoutX="212.0" prefHeight="86.0" prefWidth="352.0" text="Delete a user" textFill="WHITE">
+            <Label layoutX="198.0" prefHeight="86.0" prefWidth="352.0" text="Delete a user" textFill="WHITE">
                <font>
                   <Font name="Bell MT Bold" size="60.0" />
                </font>
                <effect>
-                  <DropShadow height="73.76" radius="47.25" width="117.24">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </DropShadow>
+                  <Glow level="0.47" />
                </effect>
             </Label>
             <Button fx:id="buttonDU_home" layoutX="307.0" layoutY="309.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: #FFFFFF;" text="Home" textFill="#00738c">

@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -21,17 +22,16 @@
                <image>
                   <Image url="@library_icon.png" />
                </image>
+               <effect>
+                  <DropShadow height="62.03" radius="25.387500000000003" width="41.52" />
+               </effect>
             </ImageView>
             <Label layoutX="194.0" layoutY="13.0" text="Create a Reader" textFill="WHITE">
                <font>
                   <Font name="Bell MT Bold" size="61.0" />
                </font>
                <effect>
-                  <DropShadow height="86.71" radius="51.22" width="120.17">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </DropShadow>
+                  <Glow level="0.61" />
                </effect>
             </Label>
          </children>
@@ -75,15 +75,18 @@
             </Button>
          </children>
          <effect>
-            <Reflection fraction="0.51" />
+            <Reflection fraction="0.6" topOpacity="0.39">
+               <input>
+                  <DropShadow height="0.0" radius="0.9650000000000001" width="5.86" />
+               </input></Reflection>
          </effect>
       </Pane>
-      <Button fx:id="buttonCAR_home" layoutX="340.0" layoutY="373.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="132.0" style="-fx-background-color: #00738C;" text="Home" textFill="WHITE">
+      <Button fx:id="buttonCAR_home" layoutX="340.0" layoutY="373.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="132.0" style="-fx-background-color: WHITE;" text="Home" textFill="#00738f">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
          <effect>
-            <DropShadow height="255.0" radius="127.0" width="255.0">
+            <DropShadow height="131.9" radius="68.38" width="143.62">
                <color>
                   <Color red="1.0" green="1.0" blue="1.0" />
                </color>
