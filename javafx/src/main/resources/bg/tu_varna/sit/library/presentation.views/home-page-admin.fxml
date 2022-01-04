@@ -175,10 +175,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <effect>
-                        <Reflection fraction="0.52" topOpacity="0.46">
+                        <Glow level="0.22">
                            <input>
-                              <Glow level="0.1" />
-                           </input></Reflection>
+                              <Reflection />
+                           </input>
+                        </Glow>
                      </effect>
                      <textFill>
                         <LinearGradient endX="1.0" endY="0.5545023696682465" startX="1.0" startY="1.0">
@@ -205,11 +206,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <effect>
-                        <Reflection fraction="0.52" topOpacity="0.46">
+                        <Glow level="0.22">
                            <input>
-                              <Glow level="0.1" />
+                              <Reflection />
                            </input>
-                        </Reflection>
+                        </Glow>
                      </effect>
                      <textFill>
                         <LinearGradient endX="1.0" endY="0.5545023696682465" startX="1.0" startY="1.0">
@@ -236,11 +237,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <effect>
-                        <Reflection fraction="0.52" topOpacity="0.46">
+                        <Glow level="0.22">
                            <input>
-                              <Glow level="0.1" />
+                              <Reflection />
                            </input>
-                        </Reflection>
+                        </Glow>
                      </effect>
                      <textFill>
                         <LinearGradient endX="1.0" endY="0.5545023696682465" startX="1.0" startY="1.0">
@@ -267,10 +268,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <effect>
-                        <Reflection fraction="0.52" topOpacity="0.46">
+                        <Glow level="0.22">
                            <input>
-                              <Glow level="0.1" />
-                           </input></Reflection>
+                              <Reflection />
+                           </input>
+                        </Glow>
                      </effect>
                      <textFill>
                         <LinearGradient endX="1.0" endY="0.5545023696682465" startX="1.0" startY="1.0">
