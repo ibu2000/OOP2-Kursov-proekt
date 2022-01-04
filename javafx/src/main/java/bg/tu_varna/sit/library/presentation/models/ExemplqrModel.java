@@ -12,12 +12,12 @@ import java.util.Objects;
 
 public class ExemplqrModel {
 
+
     private long isbnUnikalenNomer;
     private Books idBook;
     private boolean isitArchived;
     private StateOfBooks exsemplqri_stateOfBooks;
     private boolean isitAvailable;
-
 
     public ExemplqrModel(long isbnUnikalenNomer, Books idBook, boolean isitArchived, StateOfBooks exsemplqri_stateOfBooks, boolean isitAvailable) {
         this.isbnUnikalenNomer = isbnUnikalenNomer;
@@ -55,6 +55,7 @@ public class ExemplqrModel {
         this.isitArchived = isitArchived;
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
     }
+
 
     public long getIsbnUnikalenNomer() {
         return isbnUnikalenNomer;
@@ -106,6 +107,15 @@ public class ExemplqrModel {
                 ", isitAvailable=" + isitAvailable +
                 '}';
     }
+
+    /*
+          @Override
+            public String toString()
+            {
+                return  isbnUnikalenNomer +""+ idBook.getBookName() + "" + exsemplqri_stateOfBooks.getStateOfBooks() + "" + isitAvailable;
+            }
+     */
+
 
     @Override
     public boolean equals(Object o) {

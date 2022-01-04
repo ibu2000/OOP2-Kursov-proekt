@@ -44,6 +44,7 @@ public class ArchiveOldBooksController implements Initializable {
     private TableColumn<ExemplqrModel, Books> BookIdCol;
 
 
+
     BookService bookService = new BookService();
     ExemplqrService exemplqrService = new ExemplqrService();
     Stage s;
@@ -57,17 +58,16 @@ public class ArchiveOldBooksController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-   
+
 
         isbnCol.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
-
         StateOfBookCol.setCellValueFactory(new PropertyValueFactory<>("exsemplqri_stateOfBooks"));
         BookIdCol.setCellValueFactory(new PropertyValueFactory<>("idBook"));
 
         ObservableList<ExemplqrModel> list= exemplqrService.getBookCopyWhereDamaged();
         for(ExemplqrModel u : list)
         {
-            allDamagedBooks.getItems().add(u);
+          allDamagedBooks.getItems().add(u);
         }
     }
 
@@ -96,9 +96,11 @@ public class ArchiveOldBooksController implements Initializable {
        // ExemplqrModel b = exemplqrService.GetCopy(copyname);
        /* ObservableList<ExemplqrModel> productsInPeriod = productService.getAllProductsByStatInPeriod(myFromDate, myToDate, isAvailable);
         allProdByStatTable.setItems(productsInPeriod);*/
-        if(combobox_copyOfBook.equals(""))
+        Alert alert = new Alert(Alert.AlertType.ERROR,  allDamagedBooks.getSelectionModel().getSelectedItems().toString(), ButtonType.OK);
+        alert.show();
+        if(allDamagedBooks.getSelectionModel().getSelectedItems() ==null)
         {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
+          //  Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
             alert.show();
         }
         else
@@ -107,12 +109,12 @@ public class ArchiveOldBooksController implements Initializable {
 
             if (isArchived)
             {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has been archived!", ButtonType.OK);
+             //   Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has been archived!", ButtonType.OK);
                 alert.show();
             }
             else
             {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has not been archived!", ButtonType.OK);
+              //  Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has not been archived!", ButtonType.OK);
                 alert.show();
             }
         }

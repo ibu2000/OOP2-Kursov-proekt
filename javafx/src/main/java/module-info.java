@@ -16,6 +16,7 @@ module bg.tu_varna.sit.library {
     requires java.naming;
     requires java.sql;
 
+
     opens bg.tu_varna.sit.library.data.entities to org.hibernate.orm.core;
     exports bg.tu_varna.sit.library.data.entities;
 
@@ -27,4 +28,10 @@ module bg.tu_varna.sit.library {
 
     exports bg.tu_varna.sit.library.presentation.controllers;
     opens bg.tu_varna.sit.library.presentation.controllers to javafx.fxml;
+
+    exports bg.tu_varna.sit.library.presentation.models;
+    opens bg.tu_varna.sit.library.presentation.models to javafx.base;
+
+
+
 }

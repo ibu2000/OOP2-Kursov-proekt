@@ -44,9 +44,6 @@ public class StateOfBooks {
 
     @Override
     public String toString() {
-        return "StateOfBooks{" +
-                "idState: " + idState +
-                ", stateOfBook: ='" + stateOfBooks + '\'' +
-                '}';
+        return stateOfBooks;
     }
 }

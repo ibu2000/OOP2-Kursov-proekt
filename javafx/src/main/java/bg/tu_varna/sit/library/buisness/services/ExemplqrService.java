@@ -39,6 +39,8 @@ public class ExemplqrService {
                 )).collect(Collectors.toList()));
         return  copylist;
     }
+
+
     public ObservableList<ExemplqrModel> getAllDamagedCopies()
     {
         List<Eksemplqri> copies = repositoryExemplqri.getAll();
