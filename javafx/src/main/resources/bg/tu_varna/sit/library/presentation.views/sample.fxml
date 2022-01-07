@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
 
 
    <children>
       <AnchorPane prefHeight="601.0" prefWidth="824.0" style="-fx-background-color: #D6EAD4;">
          <children>
-            <ImageView fitHeight="202.0" fitWidth="207.0" layoutX="594.0" layoutY="311.0" opacity="0.61" pickOnBounds="true">
+            <ImageView fitHeight="202.0" fitWidth="207.0" layoutX="594.0" layoutY="301.0" opacity="0.61" pickOnBounds="true">
                <image>
                   <Image url="@books3.png" />
                </image>
@@ -35,17 +43,17 @@
                   </Glow>
                </effect>
             </Label>
-            <Label layoutX="149.0" layoutY="331.0" text="Username:">
+            <Label layoutX="149.0" layoutY="315.0" text="Username:">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="151.0" layoutY="400.0" text="Password:">
+            <Label layoutX="151.0" layoutY="384.0" text="Password:">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="tf_username" layoutX="306.0" layoutY="318.0" prefHeight="39.0" prefWidth="235.0">
+            <TextField fx:id="tf_username" layoutX="306.0" layoutY="302.0" prefHeight="39.0" prefWidth="235.0">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -63,7 +71,7 @@
                   </InnerShadow>
                </effect>
             </TextField>
-            <PasswordField fx:id="tf_password" layoutX="306.0" layoutY="390.0" prefHeight="44.0" prefWidth="235.0">
+            <PasswordField fx:id="tf_password" layoutX="306.0" layoutY="374.0" prefHeight="44.0" prefWidth="235.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -77,7 +85,7 @@
                      </color>
                   </InnerShadow>
                </effect></PasswordField>
-            <Button fx:id="button_log_in" layoutX="294.0" layoutY="489.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Login">
+            <Button fx:id="button_log_in" layoutX="294.0" layoutY="473.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Login">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -88,19 +96,19 @@
                   <Reflection />
                </effect>
             </Button>
-            <Label layoutX="316.0" layoutY="555.0" text="Not a user yet?">
+            <Label layoutX="316.0" layoutY="539.0" text="Not a user yet?">
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="button_sign_up" layoutX="445.0" layoutY="550.0" mnemonicParsing="false" onMouseClicked="#goToRegistration" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#0051ff" underline="true">
+            <Button fx:id="button_sign_up" layoutX="445.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#goToRegistration" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#0051ff" underline="true">
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </Button>
-            <AnchorPane prefHeight="190.0" prefWidth="858.0" style="-fx-background-color: #00738C;">
+            <AnchorPane prefHeight="219.0" prefWidth="858.0" style="-fx-background-color: #00738C;">
                <children>
-                  <ImageView fitHeight="199.0" fitWidth="196.0" layoutX="331.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="142.0" fitWidth="196.0" layoutX="358.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@library_icon.png" />
                      </image>
@@ -112,9 +120,9 @@
                         </DropShadow>
                      </effect>
                   </ImageView>
-                  <Label layoutX="172.0" layoutY="196.0" text="Welcome to the old Orchard" textFill="WHITE">
+                  <Label layoutX="53.0" layoutY="142.0" text="Welcome to the old Orchard" textFill="WHITE">
                      <font>
-                        <Font name="Bell MT Bold" size="41.0" />
+                        <Font name="Bell MT Bold" size="60.0" />
                      </font>
                      <effect>
                         <Glow level="0.5" />
@@ -122,14 +130,14 @@
                   </Label>
                </children>
                <effect>
-                  <DropShadow height="72.36" radius="17.59" spread="0.48" width="0.0">
+                  <DropShadow height="146.55" radius="36.1375" width="0.0">
                      <color>
                         <Color red="1.0" green="1.0" blue="1.0" />
                      </color>
                   </DropShadow>
                </effect>
             </AnchorPane>
-            <Button fx:id="cancelButton" layoutX="292.0" layoutY="594.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Cancel">
+            <Button fx:id="cancelButton" layoutX="292.0" layoutY="578.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #97A675; -fx-cursor: hand;" text="Cancel">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -137,7 +145,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <effect>
-                  <Reflection fraction="0.43" topOpacity="0.45" />
+                  <Reflection bottomOpacity="0.02" fraction="0.61" topOpacity="0.45" />
                </effect>
             </Button>
          </children></AnchorPane>
