@@ -78,7 +78,7 @@ public class ArchiveOldBooksController implements Initializable {
     {
  // ExemplqrModel e = allDamagedBooks.getSelectionModel().getSelectedItems();
 
-        if(allDamagedBooks.getSelectionModel().getSelectedItems() ==null)
+        if(allDamagedBooks.getSelectionModel().getSelectedItems() == null)
         {
            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
             alert.show();
