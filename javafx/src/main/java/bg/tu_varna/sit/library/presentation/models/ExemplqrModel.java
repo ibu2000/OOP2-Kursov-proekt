@@ -99,14 +99,15 @@ public class ExemplqrModel {
 
     @Override
     public String toString() {
-        return "ExemplqrModel{" +
-                "isbnUnikalenNomer=" + isbnUnikalenNomer +
-                ", idBook=" + idBook +
-                ", isitArchived=" + isitArchived +
-                ", exsemplqri_stateOfBooks=" + exsemplqri_stateOfBooks +
-                ", isitAvailable=" + isitAvailable +
-                '}';
+        return isbnUnikalenNomer +
+                " " + idBook +
+                " " + isitArchived +
+                " " + exsemplqri_stateOfBooks +
+                " " + isitAvailable;
     }
+
+
+
 
     /*
           @Override

@@ -71,32 +71,48 @@ public class ArchiveOldBooksController implements Initializable {
         }
     }
 
+
+    @FXML
+    public void getRow()
+    {
+        exemplqrModel = allDamagedBooks.getSelectionModel().getSelectedItem();
+    }
+
+    ExemplqrModel exemplqrModel;
     boolean isitAvailable = true;
     boolean isArchived;
+
     @FXML
     public void ArchiveOldBooks()
     {
- // ExemplqrModel e = allDamagedBooks.getSelectionModel().getSelectedItems();
 
-        if(allDamagedBooks.getSelectionModel().getSelectedItems() == null)
+        if(allDamagedBooks.getSelectionModel().getSelectedItems() != null)
         {
-           Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
-            alert.show();
-        }
-        else
-        {
-          //  isArchived = exemplqrService.ArchiveCopy(copyname);
-
+            isArchived = exemplqrService.ArchiveCopy(exemplqrModel);
             if (isArchived)
             {
-               Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has been archived!", ButtonType.OK);
+              Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has been archived!", ButtonType.OK);
                 alert.show();
             }
             else
             {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has not been archived!", ButtonType.OK);
+               Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has not been archived!", ButtonType.OK);
                 alert.show();
             }
+
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
+            alert.show();
+
+
+        }
+        allDamagedBooks.getItems().clear();
+        ObservableList<ExemplqrModel> list= exemplqrService.getBookCopyWhereDamaged();
+        for(ExemplqrModel u : list)
+        {
+            allDamagedBooks.getItems().add(u);
         }
     }
 

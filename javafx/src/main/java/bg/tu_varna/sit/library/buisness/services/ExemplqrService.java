@@ -100,7 +100,7 @@ public class ExemplqrService {
     {
         StateOfBooks state = new StateOfBooks(3, "damaged");
         Eksemplqri e = new Eksemplqri( state,false);
-        ObservableList<ExemplqrModel> allCopies = getAllDamagedCopies();
+        ObservableList<ExemplqrModel> allCopies = getAllCopies();
         ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
         for(ExemplqrModel copy : allCopies)
         {
@@ -118,10 +118,10 @@ public class ExemplqrService {
         Eksemplqri copy = new Eksemplqri(b.getIsbnUnikalenNomer(), b.getIdBook(), b.getExsemplqri_stateOfBooks(), b.isIsitArchived(),b.isIsitAvailable());
         for(Eksemplqri u : copies)
         {
-            if(u.equals(copy))
+            if(u.getIsbnUnikalenNomer() == copy.getIsbnUnikalenNomer())
             {
                 u.setIsitArchived(true);
-               repositoryExemplqri.update(u);
+                repositoryExemplqri.update(u);
                 return true;
             }
         }

@@ -96,4 +96,11 @@ public class Eksemplqri {
                 ", isitAvailable=" + isitAvailable +
                 '}';
     }
+    /*
+          return  isbnUnikalenNomer +" "
+                + idBook +
+                " " + exsemplqri_stateOfBooks +
+                " " + isitArchived +
+                " " + isitAvailable;
+     */
 }
