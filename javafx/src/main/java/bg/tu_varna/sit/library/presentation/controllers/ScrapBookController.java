@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.BookService;
 import bg.tu_varna.sit.library.common.Constants;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
-public class ScrapBookController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ScrapBookController implements Initializable {
     @FXML
     private ComboBox combo_box_scrap_book;
     @FXML
@@ -19,12 +23,17 @@ public class ScrapBookController {
     private Button button_scrap_book;
 
     Stage s;
-
+    BookService bookService = new BookService();
     public ScrapBookController() {}
     public ScrapBookController(Stage stage) {
             s = stage;
         }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        combo_box_scrap_book.getItems().clear();
+        combo_box_scrap_book.getItems().addAll(bookService.getOnlyUserForComboBox());
 
+    }
     public void ScrapBookHomeToAdmin()
     {
         try
@@ -41,5 +50,6 @@ public class ScrapBookController {
             e.printStackTrace();
         }
     }
+
 
 }
