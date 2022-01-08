@@ -1,7 +1,10 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
 import bg.tu_varna.sit.library.buisness.services.BookService;
+import bg.tu_varna.sit.library.buisness.services.ExemplqrService;
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.data.entities.Books;
+import bg.tu_varna.sit.library.data.entities.StateOfBooks;
 import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,10 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -26,9 +26,19 @@ public class ScrapBookController implements Initializable {
     private Button buttonScrapBook_scrap_book;
     @FXML
     private Button button_scrap_book;
+    @FXML
+    private TableView<ExemplqrModel> allDamagedBooks;
+    @FXML
+    private TableColumn<ExemplqrModel, Long> isbnCol;
+    @FXML
+    private TableColumn<ExemplqrModel, StateOfBooks> StateOfBookCol;
+    @FXML
+    private TableColumn<ExemplqrModel, Books> BookIdCol;
+
+
 
     Stage s;
-    BookService bookService = new BookService();
+    ExemplqrService exemplqrService = new ExemplqrService();
     public ScrapBookController() {}
     public ScrapBookController(Stage stage) {
             s = stage;
