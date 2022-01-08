@@ -1,20 +1,43 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.data.entities.Books;
+import bg.tu_varna.sit.library.data.entities.StateOfBooks;
+import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.w3c.dom.Text;
+
+import java.time.LocalDate;
 
 public class SearchBooksController {
     @FXML
-private Button buttonSB_home;
-    Stage s;
+    private Button buttonSB_home;
     @FXML
-    private TextArea text_area_search_books;
+    private Button buttonSB_searchBook;
+    @FXML
+    private TextField tfSB_search_book;
+
+    @FXML
+    private TableView<ExemplqrModel> allBooks;
+    @FXML
+    private TableColumn<ExemplqrModel, Long> isbn;
+    @FXML
+    private TableColumn<ExemplqrModel, StateOfBooks> stateOfBook;
+    @FXML
+    private TableColumn<ExemplqrModel, String> author;
+    @FXML
+    private TableColumn<ExemplqrModel, String> genre;
+    @FXML
+    private TableColumn<ExemplqrModel, LocalDate> yearOfRelease;
+
+
+    Stage s;
+
     public SearchBooksController()
     {}
     public SearchBooksController(Stage stage)
