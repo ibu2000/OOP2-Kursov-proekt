@@ -8,6 +8,7 @@ import bg.tu_varna.sit.library.data.repositories.EksemplqriRepository;
 import bg.tu_varna.sit.library.data.repositories.StateOfBooksRepository;
 import org.apache.log4j.Logger;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class ExemplqrModel {
@@ -18,13 +19,15 @@ public class ExemplqrModel {
     private boolean isitArchived;
     private StateOfBooks exsemplqri_stateOfBooks;
     private boolean isitAvailable;
+    private LocalDate copyDate;
 
-    public ExemplqrModel(long isbnUnikalenNomer, Books idBook, boolean isitArchived, StateOfBooks exsemplqri_stateOfBooks, boolean isitAvailable) {
+    public ExemplqrModel(long isbnUnikalenNomer, Books idBook, boolean isitArchived, StateOfBooks exsemplqri_stateOfBooks, boolean isitAvailable, LocalDate copyDate) {
         this.isbnUnikalenNomer = isbnUnikalenNomer;
         this.idBook = idBook;
         this.isitArchived = isitArchived;
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
         this.isitAvailable = isitAvailable;
+        this.copyDate = copyDate;
     }
 
     public ExemplqrModel() {
@@ -93,6 +96,14 @@ public class ExemplqrModel {
         return isitAvailable;
     }
 
+    public LocalDate getCopyDate() {
+        return copyDate;
+    }
+
+    public void setCopyDate(LocalDate copyDate) {
+        this.copyDate = copyDate;
+    }
+
     public void setIsitAvailable(boolean isitAvailable) {
         this.isitAvailable = isitAvailable;
     }
@@ -103,31 +114,20 @@ public class ExemplqrModel {
                 " " + idBook +
                 " " + isitArchived +
                 " " + exsemplqri_stateOfBooks +
-                " " + isitAvailable;
+                " " + isitAvailable +
+                " " + copyDate;
     }
-
-
-
-
-    /*
-          @Override
-            public String toString()
-            {
-                return  isbnUnikalenNomer +""+ idBook.getBookName() + "" + exsemplqri_stateOfBooks.getStateOfBooks() + "" + isitAvailable;
-            }
-     */
-
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof ExemplqrModel)) return false;
         ExemplqrModel that = (ExemplqrModel) o;
-        return isbnUnikalenNomer == that.isbnUnikalenNomer && isitArchived == that.isitArchived && isitAvailable == that.isitAvailable && Objects.equals(idBook, that.idBook) && Objects.equals(exsemplqri_stateOfBooks, that.exsemplqri_stateOfBooks);
+        return getIsbnUnikalenNomer() == that.getIsbnUnikalenNomer() && isIsitArchived() == that.isIsitArchived() && isIsitAvailable() == that.isIsitAvailable() && Objects.equals(getIdBook(), that.getIdBook()) && Objects.equals(getExsemplqri_stateOfBooks(), that.getExsemplqri_stateOfBooks()) && Objects.equals(getCopyDate(), that.getCopyDate());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(isbnUnikalenNomer, idBook, isitArchived, exsemplqri_stateOfBooks, isitAvailable);
+        return Objects.hash(getIsbnUnikalenNomer(), getIdBook(), isIsitArchived(), getExsemplqri_stateOfBooks(), isIsitAvailable(), getCopyDate());
     }
 }

@@ -58,6 +58,7 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`stateofbooks` (
   `stateOfBooks` VARCHAR(30) NULL DEFAULT NULL,
   PRIMARY KEY (`idState`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -71,6 +72,7 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`eksemplqri` (
   `isItArchived` TINYINT NULL DEFAULT NULL,
   `books_idBook` INT NOT NULL,
   `isitAvailable` TINYINT NULL DEFAULT NULL,
+  `copyDate` DATE NULL,
   PRIMARY KEY (`isbnUnikalenNomer`),
   INDEX `fk_EKSEMPLQRI_STATEOFBOOKS1_idx` (`STATEOFBOOKS_idState` ASC) VISIBLE,
   INDEX `fk_eksemplqri_books1_idx` (`books_idBook` ASC) VISIBLE,
@@ -81,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`eksemplqri` (
     FOREIGN KEY (`STATEOFBOOKS_idState`)
     REFERENCES `bookstore`.`stateofbooks` (`idState`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 28
+AUTO_INCREMENT = 37
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 

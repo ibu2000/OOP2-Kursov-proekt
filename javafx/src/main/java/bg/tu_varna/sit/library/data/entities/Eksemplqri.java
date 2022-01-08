@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.library.data.entities;
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Table(name = "EKSEMPLQRI")
 @Entity
@@ -25,15 +26,19 @@ public class Eksemplqri {
     @Column(name = "isitAvailable", nullable = false)
     private boolean isitAvailable;
 
+    @Column(name = "copyDate", nullable = false)
+    private LocalDate copyDate;
+
     public Eksemplqri() {
     }
 
-    public Eksemplqri(long isbnUnikalenNomer, Books idBook, StateOfBooks exsemplqri_stateOfBooks, boolean isitArchived, boolean isitAvailable) {
+    public Eksemplqri(long isbnUnikalenNomer, Books idBook, StateOfBooks exsemplqri_stateOfBooks, boolean isitArchived, boolean isitAvailable, LocalDate copyDate) {
         this.isbnUnikalenNomer = isbnUnikalenNomer;
         this.idBook = idBook;
         this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
         this.isitArchived = isitArchived;
         this.isitAvailable = isitAvailable;
+        this.copyDate = copyDate;
     }
 
     public Eksemplqri(long isbnUnikalenNomer) {
@@ -86,6 +91,14 @@ public class Eksemplqri {
         this.isitArchived = isitArchived;
     }
 
+    public LocalDate getCopyDate() {
+        return copyDate;
+    }
+
+    public void setCopyDate(LocalDate copyDate) {
+        this.copyDate = copyDate;
+    }
+
     @Override
     public String toString() {
         return "Eksemplqri{" +
@@ -94,13 +107,7 @@ public class Eksemplqri {
                 ", exsemplqri_stateOfBooks=" + exsemplqri_stateOfBooks +
                 ", isitArchived=" + isitArchived +
                 ", isitAvailable=" + isitAvailable +
+                ", copyDate=" + copyDate +
                 '}';
     }
-    /*
-          return  isbnUnikalenNomer +" "
-                + idBook +
-                " " + exsemplqri_stateOfBooks +
-                " " + isitArchived +
-                " " + isitAvailable;
-     */
 }

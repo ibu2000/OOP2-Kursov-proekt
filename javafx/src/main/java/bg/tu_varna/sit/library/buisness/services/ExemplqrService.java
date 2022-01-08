@@ -35,7 +35,7 @@ public class ExemplqrService {
         List<Eksemplqri> copies = repositoryExemplqri.getAll();
         ObservableList<ExemplqrModel> copylist = FXCollections.observableList(
                 copies.stream().map(a -> new ExemplqrModel(
-                        a.getIsbnUnikalenNomer(),a.getIdBook(), a.isIsitArchived(), a.getExsemplqri_stateOfBooks(),a.isIsitAvailable()
+                        a.getIsbnUnikalenNomer(),a.getIdBook(), a.isIsitArchived(), a.getExsemplqri_stateOfBooks(),a.isIsitAvailable(), a.getCopyDate()
                 )).collect(Collectors.toList()));
         return  copylist;
     }
@@ -70,7 +70,7 @@ public class ExemplqrService {
 
     public boolean AddCopy(ExemplqrModel addCopy) {
         List<Eksemplqri> copies = repositoryExemplqri.getAll();
-        Eksemplqri copy = new Eksemplqri(addCopy.getIsbnUnikalenNomer(),addCopy.getIdBook(),addCopy.getExsemplqri_stateOfBooks(),addCopy.isIsitArchived(), addCopy.isIsitAvailable());
+        Eksemplqri copy = new Eksemplqri(addCopy.getIsbnUnikalenNomer(),addCopy.getIdBook(),addCopy.getExsemplqri_stateOfBooks(),addCopy.isIsitArchived(), addCopy.isIsitAvailable(),addCopy.getCopyDate());
         for(Eksemplqri e : copies)
         {
             if(e.equals(copy))
@@ -115,7 +115,7 @@ public class ExemplqrService {
 
     public boolean ArchiveCopy(ExemplqrModel b) {
         List<Eksemplqri> copies = repositoryExemplqri.getAll();
-        Eksemplqri copy = new Eksemplqri(b.getIsbnUnikalenNomer(), b.getIdBook(), b.getExsemplqri_stateOfBooks(), b.isIsitArchived(),b.isIsitAvailable());
+        Eksemplqri copy = new Eksemplqri(b.getIsbnUnikalenNomer(), b.getIdBook(), b.getExsemplqri_stateOfBooks(), b.isIsitArchived(),b.isIsitAvailable(),b.getCopyDate());
         for(Eksemplqri u : copies)
         {
             if(u.getIsbnUnikalenNomer() == copy.getIsbnUnikalenNomer())
@@ -131,7 +131,7 @@ public class ExemplqrService {
 
     public boolean DeleteCopy(ExemplqrModel addUser) {
         List<Eksemplqri> users = repositoryExemplqri.getAll();
-        Eksemplqri user = new Eksemplqri(addUser.getIsbnUnikalenNomer(),addUser.getIdBook(),addUser.getExsemplqri_stateOfBooks(),addUser.isIsitArchived(),addUser.isIsitAvailable());
+        Eksemplqri user = new Eksemplqri(addUser.getIsbnUnikalenNomer(),addUser.getIdBook(),addUser.getExsemplqri_stateOfBooks(),addUser.isIsitArchived(),addUser.isIsitAvailable(),addUser.getCopyDate());
         for(Eksemplqri u : users)
         {
             if(u.getIsbnUnikalenNomer()==(user.getIsbnUnikalenNomer()))
