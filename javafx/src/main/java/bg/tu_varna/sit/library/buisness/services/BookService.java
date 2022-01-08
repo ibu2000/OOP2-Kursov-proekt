@@ -4,6 +4,7 @@ import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.entities.USER;
 import bg.tu_varna.sit.library.data.repositories.BooksRepository;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
+import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,6 +19,7 @@ public class BookService {
     private final BooksRepository repositoryBook = BooksRepository.getInstance();
 
     public static BookService getInstance() {return BookService.BookServiceHolder.INSTANCE;}
+
 
     private static class BookServiceHolder
     {
@@ -36,6 +38,13 @@ public class BookService {
                 )).collect(Collectors.toList()));
         return  booklist;
     }
+
+ /*   public ObservableList<BookListModel> getOldBooks() {
+        BookListModel b = new BookListModel();
+        ObservableList<BookListModel> allCopies = getAllBooks();
+        ObservableList<BookListModel> copies = FXCollections.observableArrayList();
+
+    }*/
 
     public ArrayList<String> getBookNames()
     {

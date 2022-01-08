@@ -308,14 +308,19 @@
             </LinearGradient>
          </stroke>
       </QuadCurve>
-      <TableView layoutX="25.0" layoutY="325.0" prefHeight="666.0" prefWidth="820.0">
-        <columns>
-          <TableColumn fx:id="idCol" prefWidth="52.0" text="ID" />
-          <TableColumn fx:id="nameCol" prefWidth="227.0" text="Name" />
-            <TableColumn fx:id="authorCol" minWidth="0.0" prefWidth="304.0" text="Author" />
-            <TableColumn fx:id="genreCol" minWidth="0.0" prefWidth="118.0" text="Genre" />
-            <TableColumn fx:id="yearCol" prefWidth="119.0" text="Year of publishing" />
-        </columns>
+      <TableView fx:id="allDamagedBooks" layoutX="32.0" layoutY="334.0" onMouseClicked="#getRow" prefHeight="628.0" prefWidth="895.0">
+         <columns>
+            <TableColumn fx:id="isbnCol" prefWidth="265.0" text="ISBN" />
+            <TableColumn fx:id="BookIdCol" minWidth="0.0" prefWidth="356.0" text="BookID" />
+            <TableColumn fx:id="StateOfBookCol" prefWidth="272.0" text="State Of Book" />
+         </columns>
+         <effect>
+            <DropShadow height="94.03" radius="52.4375" spread="0.28" width="117.72">
+               <color>
+                  <Color red="0.01461988314986229" green="0.3386939465999603" blue="0.5263158082962036" />
+               </color>
+            </DropShadow>
+         </effect>
       </TableView>
    </children>
 </AnchorPane>
