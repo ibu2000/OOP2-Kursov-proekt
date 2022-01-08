@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`books` (
   `yearOfPublishing` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`idBook`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 13
+AUTO_INCREMENT = 14
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`stateofbooks` (
   `stateOfBooks` VARCHAR(30) NULL DEFAULT NULL,
   PRIMARY KEY (`idState`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 9
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `bookstore`.`eksemplqri` (
     FOREIGN KEY (`STATEOFBOOKS_idState`)
     REFERENCES `bookstore`.`stateofbooks` (`idState`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 37
+AUTO_INCREMENT = 49
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
