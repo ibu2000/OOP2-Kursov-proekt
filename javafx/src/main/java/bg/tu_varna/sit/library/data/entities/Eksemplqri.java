@@ -11,11 +11,11 @@ public class Eksemplqri {
     private long isbnUnikalenNomer;
 
 
-  @OneToOne(cascade = CascadeType.ALL)
+  @OneToOne//(cascade = CascadeType.ALL)
   @JoinColumn(name = "books_idBook",referencedColumnName = "idBook", nullable = false)
   private Books idBook;
 
-   @OneToOne(cascade = CascadeType.ALL)
+   @OneToOne//(cascade = CascadeType.ALL)
    @JoinColumn(name = "STATEOFBOOKS_idState", referencedColumnName = "idState")
    private StateOfBooks exsemplqri_stateOfBooks;
 

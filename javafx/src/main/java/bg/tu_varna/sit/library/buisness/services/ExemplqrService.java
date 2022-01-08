@@ -127,4 +127,20 @@ public class ExemplqrService {
         }
         return true;
     }
+
+
+    public boolean DeleteCopy(ExemplqrModel addUser) {
+        List<Eksemplqri> users = repositoryExemplqri.getAll();
+        Eksemplqri user = new Eksemplqri(addUser.getIsbnUnikalenNomer(),addUser.getIdBook(),addUser.getExsemplqri_stateOfBooks(),addUser.isIsitArchived(),addUser.isIsitAvailable());
+        for(Eksemplqri u : users)
+        {
+            if(u.getIsbnUnikalenNomer()==(user.getIsbnUnikalenNomer()))
+            {
+                repositoryExemplqri.delete(u);
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

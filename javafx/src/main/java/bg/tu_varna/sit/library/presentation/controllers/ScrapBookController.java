@@ -58,32 +58,29 @@ public class ScrapBookController implements Initializable {
         }
     }
 
-
+    ExemplqrModel exemplqrModel;
     @FXML
     public void getRow()
     {
         exemplqrModel = allDamagedBooks.getSelectionModel().getSelectedItem();
     }
 
-    ExemplqrModel exemplqrModel;
-    boolean isitAvailable = true;
-    boolean isArchived;
-
+    boolean isDeleted;
     @FXML
-    public void ArchiveOldBooks()
+    public void DeleteOldBooks()
     {
 
         if(allDamagedBooks.getSelectionModel().getSelectedItems() != null)
         {
-            isArchived = exemplqrService.ArchiveCopy(exemplqrModel);
-            if (isArchived)
+            isDeleted = exemplqrService.DeleteCopy(exemplqrModel);
+            if (isDeleted)
             {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has been archived!", ButtonType.OK);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has been deleted!", ButtonType.OK);
                 alert.show();
             }
             else
             {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has not been archived!", ButtonType.OK);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The copy has not been deleted!", ButtonType.OK);
                 alert.show();
             }
 
