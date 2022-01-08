@@ -104,7 +104,7 @@ public class ScrapBookController implements Initializable {
     }
 
     @FXML
-    public void  goToHomePage() {
+    public void  ScrapBookHomeToAdmin() {
         try {
             s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_ADMIN));
