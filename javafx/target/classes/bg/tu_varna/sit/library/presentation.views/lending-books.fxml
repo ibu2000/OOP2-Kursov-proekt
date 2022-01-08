@@ -311,7 +311,7 @@
             <DropShadow />
          </effect>
       </TableView>
-      <TableView fx:id="lendBooks" layoutX="572.0" layoutY="409.0" onMouseClicked="#getRow" prefHeight="435.0" prefWidth="416.0">
+      <TableView fx:id="lendBooks" layoutX="572.0" layoutY="409.0" prefHeight="435.0" prefWidth="416.0">
          <columns>
             <TableColumn fx:id="isbnLend" prefWidth="125.0" text="ISBN" />
             <TableColumn fx:id="bookIdLend" minWidth="0.0" prefWidth="149.0" text="BookID" />
