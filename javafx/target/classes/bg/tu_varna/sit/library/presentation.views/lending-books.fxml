@@ -19,17 +19,16 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.CubicCurve?>
 <?import javafx.scene.shape.Polygon?>
-<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Polyline?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="628.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="861.0" prefWidth="1034.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="-2.0" prefHeight="75.0" prefWidth="535.0" style="-fx-background-color: #00738C;">
+      <Pane layoutX="-3.0" prefHeight="75.0" prefWidth="1037.0" style="-fx-background-color: #00738C;">
          <children>
-            <Text fill="WHITE" layoutX="65.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lending books">
+            <Text fill="WHITE" layoutX="324.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lending books">
                <font>
                   <Font name="Bell MT Bold" size="60.0" />
                </font>
@@ -54,40 +53,33 @@
                   </Glow>
                </effect>
             </Polygon>
+            <Polygon fill="#299ba8" layoutX="1040.0" layoutY="147.0" points="-3.0, -148.0, -3.0, -73.52579498291016, -63.0, -73.52579498291016" stroke="#077570" strokeLineJoin="ROUND" strokeType="OUTSIDE">
+               <effect>
+                  <Glow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </Glow>
+               </effect>
+            </Polygon>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="920.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@library_icon.png" />
+               </image>
+               <effect>
+                  <DropShadow height="196.5" radius="112.375" width="255.0">
+                     <color>
+                        <Color green="0.8109112977981567" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
          </children>
          <effect>
             <DropShadow height="73.28" radius="23.07" />
          </effect>
       </Pane>
-      <CubicCurve controlX1="69.66667175292969" controlX2="282.6666564941406" controlY1="-150.33334350585938" controlY2="-135.0" endX="315.0" endY="37.0" fill="#00203c" layoutX="186.0" layoutY="557.0" opacity="0.15" startX="315.0" startY="-150.3333740234375" stroke="#976363" strokeType="OUTSIDE">
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color green="0.8920863270759583" blue="1.0" />
-               </color>
-            </DropShadow>
-         </effect></CubicCurve>
-      <CubicCurve controlX1="381.6666564941406" controlX2="163.0" controlY1="106.0" controlY2="86.66668701171875" endX="137.0" endY="-76.33334350585938" fill="#00203c" layoutX="-133.0" layoutY="526.0" opacity="0.15" startX="137.0" startY="95.5" stroke="#976363" strokeType="OUTSIDE">
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color green="1.0" blue="0.935251772403717" />
-               </color>
-            </DropShadow>
-         </effect></CubicCurve>
-      <ImageView fitHeight="143.0" fitWidth="143.0" layoutX="172.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@books7.png" />
-         </image>
-         <effect>
-            <DropShadow height="62.03" radius="78.7575" width="255.0">
-               <color>
-                  <Color green="0.8999999761581421" blue="1.0" />
-               </color>
-            </DropShadow>
-         </effect>
-      </ImageView>
-      <Label layoutX="162.0" layoutY="84.0" prefHeight="42.0" prefWidth="174.0" text="Pick a book">
+      <Label layoutX="429.0" layoutY="87.0" prefHeight="42.0" prefWidth="174.0" text="username:">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -95,7 +87,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
          <textFill>
-            <LinearGradient endX="1.0" endY="0.3933649289099526" startX="1.0">
+            <LinearGradient endX="1.0" endY="0.48815165876777256" startX="1.0" startY="0.2227488151658768">
                <stops>
                   <Stop>
                      <color>
@@ -116,14 +108,14 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <ComboBox fx:id="combo_boxLB_lendable_books" layoutX="18.0" layoutY="162.0" prefHeight="42.0" prefWidth="470.0" style="-fx-background-color: #00738C;">
+      <ComboBox fx:id="combo_boxLB_username" layoutX="319.0" layoutY="129.0" prefHeight="42.0" prefWidth="382.0" style="-fx-background-color: #00738C;">
          <effect>
             <DropShadow blurType="TWO_PASS_BOX" height="17.95" radius="8.385" width="17.59" />
          </effect>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ComboBox>
-      <RadioButton fx:id="radio_button_reading_room" layoutX="168.0" layoutY="222.0" mnemonicParsing="false" text="Reading room">
+      <RadioButton fx:id="radio_button_reading_room" layoutX="176.0" layoutY="249.0" mnemonicParsing="false" text="Reading room">
          <font>
             <Font size="19.0" />
          </font>
@@ -147,7 +139,7 @@
             <ToggleGroup fx:id="radioGROUP" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="radio_button_read_at_home" layoutX="168.0" layoutY="259.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Home" toggleGroup="$radioGROUP">
+      <RadioButton fx:id="radio_button_read_at_home" layoutX="176.0" layoutY="285.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="135.0" text="Home" toggleGroup="$radioGROUP">
          <font>
             <Font size="19.0" />
          </font>
@@ -168,7 +160,7 @@
             </LinearGradient>
          </textFill>
       </RadioButton>
-      <Button fx:id="buttonLB_lend_book1" layoutX="173.0" layoutY="303.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add">
+      <Button fx:id="buttonLB_lend_book1" layoutX="189.0" layoutY="333.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -195,7 +187,7 @@
             </LinearGradient>
          </textFill>
       </Button>
-      <Button fx:id="buttonLB_lend_book" layoutX="132.0" layoutY="375.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books">
+      <Button fx:id="buttonLB_lend_book" layoutX="673.0" layoutY="333.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -222,385 +214,36 @@
             </LinearGradient>
          </textFill>
       </Button>
-      <AnchorPane layoutX="534.0" prefHeight="618.0" prefWidth="503.0">
-         <children>
-            <Pane prefHeight="76.0" prefWidth="520.0" style="-fx-background-color: #00738C;">
-               <children>
-                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="227.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@library_icon.png" />
-                     </image>
-                     <effect>
-                        <DropShadow radius="68.5" width="255.0" />
-                     </effect>
-                  </ImageView>
-                  <Polygon fill="#299ba8" layoutX="523.0" layoutY="148.0" points="-3.0, -148.0, -3.0, -73.52579498291016, -63.0, -73.52579498291016" stroke="#077570" strokeLineJoin="ROUND" strokeType="OUTSIDE">
-                     <effect>
-                        <Glow>
-                           <input>
-                              <InnerShadow />
-                           </input>
-                        </Glow>
-                     </effect>
-                  </Polygon>
-               </children>
-               <effect>
-                  <DropShadow height="73.28" radius="23.07" />
-               </effect>
-            </Pane>
-            <Label layoutX="120.0" layoutY="99.0" prefHeight="56.0" prefWidth="281.0" text="Here are the books">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="30.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="0.3933649289099526" startX="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.007662835249042145">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color green="0.534649133682251" blue="0.6973684430122375" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-            </Label>
-            <Label layoutX="93.0" layoutY="126.0" prefHeight="67.0" prefWidth="337.0" text="you've picked to lend!!!">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="30.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="0.3933649289099526" startX="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.007662835249042145">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color green="0.534649133682251" blue="0.6973684430122375" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-            </Label>
-            <TableView layoutX="57.0" layoutY="225.0" prefHeight="368.0" prefWidth="407.0">
-              <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
-              </columns>
-            </TableView>
-         </children>
-      </AnchorPane>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="-2.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="138.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="118.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="98.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="78.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="58.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="38.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="18.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="158.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="298.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="278.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="258.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="238.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="218.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="198.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="178.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="318.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="-22.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="-42.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="-62.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect></QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="396.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="536.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="516.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="496.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="476.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="456.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="436.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="416.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="554.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="376.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="356.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <QuadCurve controlX="353.0" controlY="77.66666412353516" endX="366.6666564941406" endY="65.66666412353516" fill="#1e77dd" layoutX="182.0" layoutY="336.0" opacity="0.69" startX="338.0" startY="65.66666412353516" stroke="#6fa7b2" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="246.69" radius="66.4225">
-               <color>
-                  <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
-               </color>
-            </DropShadow>
-         </effect>
-      </QuadCurve>
-      <CubicCurve controlX1="294.0" controlX2="298.6666564941406" controlY1="-440.1166076660156" controlY2="246.42144775390625" endX="348.33331298828125" endY="224.66668701171875" layoutX="186.0" layoutY="401.0" opacity="0.02" startX="346.0" startY="-400.0" stroke="#976363" strokeType="OUTSIDE">
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color red="1.0" green="1.0" blue="1.0" />
-               </color>
-            </DropShadow>
-         </effect>
-      </CubicCurve>
-      <CubicCurve controlX1="362.33331298828125" controlX2="362.33331298828125" controlY1="-424.859130859375" controlY2="295.80755615234375" endX="315.11810302734375" endY="243.550048828125" layoutX="221.0" layoutY="379.0" opacity="0.02" startX="313.33331298828125" startY="-375.3333435058594" stroke="#976363" strokeType="OUTSIDE">
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color red="1.0" green="1.0" blue="1.0" />
-               </color>
-            </DropShadow>
-         </effect>
-      </CubicCurve>
-      <Label layoutX="99.0" layoutY="116.0" prefHeight="42.0" prefWidth="297.0" text="And where to read it">
+      <Label layoutX="72.0" layoutY="200.0" prefHeight="42.0" prefWidth="388.0" text="where will you lend the book:">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="27.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.3933649289099526" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.534649133682251" blue="0.6973684430122375" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="638.0" layoutY="210.0" prefHeight="56.0" prefWidth="281.0" text="Here are the books">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -629,5 +272,88 @@
             </LinearGradient>
          </textFill>
       </Label>
+      <Label layoutX="611.0" layoutY="253.0" prefHeight="67.0" prefWidth="337.0" text="you've picked to lend!!!">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.3933649289099526" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.534649133682251" blue="0.6973684430122375" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TableView fx:id="allBooks" layoutX="48.0" layoutY="409.0" onMouseClicked="#getRow" prefHeight="435.0" prefWidth="416.0">
+         <columns>
+            <TableColumn fx:id="isbnAll" prefWidth="125.0" text="ISBN" />
+            <TableColumn fx:id="bookIdAll" minWidth="0.0" prefWidth="149.0" text="BookID" />
+            <TableColumn fx:id="stateOfBookAll" prefWidth="141.0" text="State Of Book" />
+         </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <TableView fx:id="lendBooks" layoutX="572.0" layoutY="409.0" onMouseClicked="#getRow" prefHeight="435.0" prefWidth="416.0">
+         <columns>
+            <TableColumn fx:id="isbnLend" prefWidth="125.0" text="ISBN" />
+            <TableColumn fx:id="bookIdLend" minWidth="0.0" prefWidth="149.0" text="BookID" />
+            <TableColumn fx:id="stateOfBookLend" prefWidth="141.0" text="State Of Book" />
+         </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Polyline layoutX="517.0" layoutY="280.0" points="0.0, 559.0, 0.0, -88.0, 0.0, -88.0, 8.0, 559.0" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="0.5308056872037914" endY="0.7393364928909952">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.020099999383091927" green="0.5577870607376099" blue="0.6700000166893005" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="0.5308056872037914" endY="0.7393364928909952">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.020099999383091927" green="0.5577870607376099" blue="0.6700000166893005" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Polyline>
    </children>
 </AnchorPane>
