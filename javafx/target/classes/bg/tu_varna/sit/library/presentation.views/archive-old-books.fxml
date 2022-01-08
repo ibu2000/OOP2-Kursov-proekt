@@ -71,9 +71,10 @@
                   </Button>
                   <TableView fx:id="allDamagedBooks" layoutX="48.0" layoutY="166.0" onMouseClicked="#getRow" prefHeight="628.0" prefWidth="883.0">
                     <columns>
-                      <TableColumn fx:id="isbnCol" prefWidth="265.0" text="ISBN" />
-                        <TableColumn fx:id="BookIdCol" minWidth="0.0" prefWidth="356.0" text="BookID" />
-                      <TableColumn fx:id="StateOfBookCol" prefWidth="272.0" text="State Of Book" />
+                      <TableColumn fx:id="isbnCol" prefWidth="99.0" text="ISBN" />
+                        <TableColumn fx:id="BookIdCol" minWidth="0.0" prefWidth="270.0" text="BookID" />
+                      <TableColumn fx:id="StateOfBookCol" prefWidth="321.0" text="State Of Book" />
+                        <TableColumn fx:id="YearofpublishingCol" prefWidth="192.0" text="year of publishing" />
                     </columns>
                      <effect>
                         <DropShadow height="94.03" radius="52.4375" spread="0.28" width="117.72">
@@ -83,7 +84,7 @@
                         </DropShadow>
                      </effect>
                   </TableView>
-                  <DatePicker layoutX="211.0" layoutY="73.0" prefHeight="42.0" prefWidth="223.0" />
+                  <DatePicker fx:id="year_of_publishing" layoutX="211.0" layoutY="73.0" onAction="#getDate" prefHeight="42.0" prefWidth="223.0" />
                </children>
                <effect>
                   <DropShadow height="148.26" radius="36.565" width="0.0">

@@ -33,6 +33,14 @@ public class ExemplqrModel {
     public ExemplqrModel() {
     }
 
+    public ExemplqrModel(Books idBook, boolean isitArchived, StateOfBooks exsemplqri_stateOfBooks, boolean isitAvailable, LocalDate copyDate) {
+        this.idBook = idBook;
+        this.isitArchived = isitArchived;
+        this.exsemplqri_stateOfBooks = exsemplqri_stateOfBooks;
+        this.isitAvailable = isitAvailable;
+        this.copyDate = copyDate;
+    }
+
     public ExemplqrModel(Books idBook, boolean isitArchived, StateOfBooks exsemplqri_stateOfBooks) {
         this.idBook = idBook;
         this.isitArchived = isitArchived;

@@ -23,6 +23,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class ArchiveOldBooksController implements Initializable {
@@ -42,9 +44,13 @@ public class ArchiveOldBooksController implements Initializable {
     private TableColumn<ExemplqrModel, StateOfBooks> StateOfBookCol;
     @FXML
     private TableColumn<ExemplqrModel, Books> BookIdCol;
+    @FXML
+    private TableColumn<ExemplqrModel, LocalDate>  YearofpublishingCol;
+    @FXML
+    private DatePicker year_of_publishing;
 
 
-
+    LocalDate publishDate;
     BookService bookService = new BookService();
     ExemplqrService exemplqrService = new ExemplqrService();
     Stage s;
@@ -63,8 +69,8 @@ public class ArchiveOldBooksController implements Initializable {
         isbnCol.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
         StateOfBookCol.setCellValueFactory(new PropertyValueFactory<>("exsemplqri_stateOfBooks"));
         BookIdCol.setCellValueFactory(new PropertyValueFactory<>("idBook"));
-
-        ObservableList<ExemplqrModel> list= exemplqrService.getBookCopyWhereDamaged();
+        YearofpublishingCol.setCellValueFactory(new PropertyValueFactory<>("copyDate"));
+        ObservableList<ExemplqrModel> list= exemplqrService.getAllCopies();
         for(ExemplqrModel u : list)
         {
           allDamagedBooks.getItems().add(u);
@@ -77,7 +83,17 @@ public class ArchiveOldBooksController implements Initializable {
     {
         exemplqrModel = allDamagedBooks.getSelectionModel().getSelectedItem();
     }
-
+    @FXML
+    public void getDate()
+    {
+        publishDate  = year_of_publishing.getValue();
+        allDamagedBooks.getItems().clear();
+        ObservableList<ExemplqrModel> list= exemplqrService.getBookOldCopy(publishDate);
+        for(ExemplqrModel u : list)
+        {
+            allDamagedBooks.getItems().add(u);
+        }
+    }
     ExemplqrModel exemplqrModel;
     boolean isitAvailable = true;
     boolean isArchived;
@@ -109,7 +125,7 @@ public class ArchiveOldBooksController implements Initializable {
 
         }
         allDamagedBooks.getItems().clear();
-        ObservableList<ExemplqrModel> list= exemplqrService.getBookCopyWhereDamaged();
+        ObservableList<ExemplqrModel> list= exemplqrService.getBookOldCopy(publishDate);
         for(ExemplqrModel u : list)
         {
             allDamagedBooks.getItems().add(u);

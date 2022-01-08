@@ -11,6 +11,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -93,6 +94,26 @@ public class ExemplqrService {
         }
         return null;
 
+    }
+
+
+    public  ObservableList<ExemplqrModel> getBookOldCopy(LocalDate date)
+    {
+        StateOfBooks state = new StateOfBooks(3, "damaged");
+        Eksemplqri e = new Eksemplqri( state,false);
+        ObservableList<ExemplqrModel> allCopies = getAllCopies();
+        ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
+        for(ExemplqrModel copy : allCopies)
+        {
+            if(copy.getCopyDate().isBefore(date))
+            {
+                if (!(copy.isIsitArchived()))
+                {
+                    copies.add(copy);
+                }
+            }
+        }
+        return copies;
     }
 
 

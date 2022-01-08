@@ -1,6 +1,5 @@
-INSERT INTO status (idStatus, status)VALUES (1, 's1');
-INSERT INTO status (idStatus, status)VALUES (2, 's2');
-INSERT INTO status (idStatus, status)VALUES (3, 's3');
+INSERT INTO status (idStatus, status)VALUES (1, 'pending');
+INSERT INTO status (idStatus, status)VALUES (2, 'not pending');
  
 INSERT INTO usertype (idUserType, UserType)VALUES (1, 'type1');
 INSERT INTO usertype (idUserType, UserType)VALUES (2, 'type2');

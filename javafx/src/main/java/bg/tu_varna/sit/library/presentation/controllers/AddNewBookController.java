@@ -50,7 +50,8 @@ public class AddNewBookController implements Initializable {
     private Button buttonANB_add_copy;
     @FXML
     private Button buttonANB_home;
-
+    @FXML
+    private DatePicker year_of_copy;
     @FXML
     private ComboBox combo_boxANB_state_of_book;
     @FXML
@@ -62,18 +63,15 @@ public class AddNewBookController implements Initializable {
 
 
      LocalDate publishDate;
+     LocalDate copypublishDate;
      BookService BookService = new BookService();
      ExemplqrService ExemplqrService = new ExemplqrService();
      StateofBooksService stateOfBooksService = new StateofBooksService();
-
      Stage s;
-     public AddNewBookController() {
-     }
-
+     public AddNewBookController() {}
      public AddNewBookController(Stage stage) {
       s=stage;
      }
-
      @Override
         public void initialize(URL url, ResourceBundle rb) {
 
@@ -83,7 +81,6 @@ public class AddNewBookController implements Initializable {
          combo_boxANB_state_of_book.getItems().clear();
          combo_boxANB_state_of_book.getItems().addAll(stateOfBooksService.getBookStates());
      }
-
 
      @FXML
      public void  goToHomePage() {
@@ -103,8 +100,13 @@ public class AddNewBookController implements Initializable {
      @FXML
      public void getDate()
      {
-      publishDate = year_of_publishing.getValue();
+      publishDate  = year_of_publishing.getValue();
      }
+    @FXML
+    public void  getDateCopy()
+    {
+        copypublishDate = year_of_copy.getValue();
+    }
 
 
     boolean bookAlreadyExists;
@@ -113,7 +115,7 @@ public class AddNewBookController implements Initializable {
      {
 
       BookListModel addBook = new BookListModel(name_of_book.getText(),author.getText(), genre.getText(), publishDate);
-      if(name_of_book.equals("") || author.equals("") || genre.equals("") || publishDate.equals(""))
+      if(name_of_book.equals("") || author.equals("") || genre.equals("") ||year_of_publishing.equals(""))
       {
        Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
        alert.show();
@@ -135,10 +137,8 @@ public class AddNewBookController implements Initializable {
          combo_boxANB_name_of_book.getItems().addAll(BookService. getBookNames());
      }
 
-
-
      boolean isArchived;
-
+     boolean isAvailable = true;
     @FXML
     public void addCopy()
     {
@@ -155,7 +155,7 @@ public class AddNewBookController implements Initializable {
        Books book = BookService.listviewToEntity(b);
        long id= stateOfBooksService.getBookState(combo_boxANB_state_of_book.getValue().toString());
        StateOfBooks state = new StateOfBooks(id,combo_boxANB_state_of_book.getValue().toString());
-        ExemplqrModel addBook = new ExemplqrModel(book, isArchived, state);
+        ExemplqrModel addBook = new ExemplqrModel(book, isArchived, state, isAvailable, copypublishDate);
         if(combo_boxANB_name_of_book.equals("") || (!radio_buttonANB_archived.isSelected() && !radio_buttonANB_not_archived.isSelected())
                 || combo_boxANB_state_of_book.equals(""))
         {
