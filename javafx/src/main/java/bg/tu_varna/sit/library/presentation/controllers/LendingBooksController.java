@@ -65,6 +65,18 @@ public class LendingBooksController {
         {
             e.printStackTrace();
         }
+
+
     }
+
+    @FXML
+    public void getRow()
+    {
+        exemplqrModel = allBooks.getSelectionModel().getSelectedItem();
+    }
+
+    ExemplqrModel exemplqrModel;
+
+
 
 }

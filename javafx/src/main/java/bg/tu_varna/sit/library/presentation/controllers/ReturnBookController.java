@@ -54,4 +54,15 @@ private TableColumn<ExemplqrModel, StateOfBooks> stateOfBook;
             e.printStackTrace();
         }
     }
+
+
+    @FXML
+    public void getRow()
+    {
+        exemplqrModel = books.getSelectionModel().getSelectedItem();
+    }
+
+    ExemplqrModel exemplqrModel;
+
+
 }

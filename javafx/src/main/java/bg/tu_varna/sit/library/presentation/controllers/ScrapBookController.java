@@ -31,7 +31,7 @@ public class ScrapBookController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         combo_box_scrap_book.getItems().clear();
-        combo_box_scrap_book.getItems().addAll(bookService.getOnlyUserForComboBox());
+      //  combo_box_scrap_book.getItems().addAll(bookService.getOnlyUserForComboBox());
 
     }
     public void ScrapBookHomeToAdmin()

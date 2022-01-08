@@ -79,7 +79,7 @@
             <DropShadow height="73.28" radius="23.07" />
          </effect>
       </Pane>
-      <Label layoutX="429.0" layoutY="87.0" prefHeight="42.0" prefWidth="174.0" text="username:">
+      <Label layoutX="437.0" layoutY="87.0" prefHeight="42.0" prefWidth="174.0" text="username:">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -108,7 +108,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <ComboBox fx:id="combo_boxLB_username" layoutX="319.0" layoutY="129.0" prefHeight="42.0" prefWidth="382.0" style="-fx-background-color: #00738C;">
+      <ComboBox fx:id="combo_boxLB_username" layoutX="325.0" layoutY="129.0" prefHeight="42.0" prefWidth="382.0" style="-fx-background-color: #00738C;">
          <effect>
             <DropShadow blurType="TWO_PASS_BOX" height="17.95" radius="8.385" width="17.59" />
          </effect>
@@ -311,7 +311,7 @@
             <DropShadow />
          </effect>
       </TableView>
-      <TableView fx:id="lendBooks" layoutX="572.0" layoutY="409.0" onMouseClicked="#getRow" prefHeight="435.0" prefWidth="416.0">
+      <TableView fx:id="lendBooks" layoutX="572.0" layoutY="409.0" prefHeight="435.0" prefWidth="416.0">
          <columns>
             <TableColumn fx:id="isbnLend" prefWidth="125.0" text="ISBN" />
             <TableColumn fx:id="bookIdLend" minWidth="0.0" prefWidth="149.0" text="BookID" />
