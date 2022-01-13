@@ -1,17 +1,25 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.ExemplqrService;
 import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.entities.StateOfBooks;
+import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class LendingBooksController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class LendingBooksController implements Initializable {
 
     @FXML
     private ComboBox combo_boxLB_username;
@@ -23,7 +31,6 @@ public class LendingBooksController {
     private RadioButton radio_button_reading_room;
     @FXML
     private RadioButton radio_button_read_at_home;
-
     @FXML
     private TableView<ExemplqrModel> allBooks;
     @FXML
@@ -32,16 +39,25 @@ public class LendingBooksController {
     private TableColumn<ExemplqrModel, Books> bookIdAll;
     @FXML
     private TableColumn<ExemplqrModel, StateOfBooks> stateOfBookAll;
-
     @FXML
     private TableView<ExemplqrModel> lendBooks;
     @FXML
     private TableColumn<ExemplqrModel, Long> isbnLend;
     @FXML
     private TableColumn<ExemplqrModel, Books> bookIdLend;
-    @FXML
-    private TableColumn<ExemplqrModel, StateOfBooks> stateOfBookLend;
 
+    ExemplqrService exemplqrService = new ExemplqrService();
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        isbnAll.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
+        bookIdAll.setCellValueFactory(new PropertyValueFactory<>("idBook"));
+        ObservableList<ExemplqrModel> list = exemplqrService.getAvailableCopy();
+        for(ExemplqrModel u : list)
+        {
+            allBooks.getItems().add(u);
+        }
+    }
 
     Stage s;
     public LendingBooksController() {}
@@ -77,6 +93,21 @@ public class LendingBooksController {
 
     ExemplqrModel exemplqrModel;
 
+
+    boolean isAvailable;
+    @FXML
+    public void addCopyToLendList()
+    {
+      /*  ExemplqrModel selectedItem = allBooks.getSelectionModel().getSelectedItem();
+        allBooks.getItems().remove(selectedItem);*/
+        isAvailable = exemplqrService.ArchiveCopy(exemplqrModel);
+        allBooks.getItems().clear();
+        ObservableList<ExemplqrModel> list= exemplqrService.getAvailableCopy();
+        for(ExemplqrModel u : list)
+        {
+            allBooks.getItems().add(u);
+        }
+    }
 
 
 }

@@ -117,6 +117,22 @@ public class ExemplqrService {
     }
 
 
+
+    public  ObservableList<ExemplqrModel> getAvailableCopy()
+    {
+        ObservableList<ExemplqrModel> allCopies = getAllCopies();
+        ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
+        for(ExemplqrModel copy : allCopies)
+        {
+            if(copy.isIsitAvailable())
+            {
+                    copies.add(copy);
+            }
+        }
+        return copies;
+    }
+
+
     public  ObservableList<ExemplqrModel> getBookCopyWhereDamaged()
     {
         StateOfBooks state = new StateOfBooks(3, "damaged");

@@ -160,7 +160,7 @@
             </LinearGradient>
          </textFill>
       </RadioButton>
-      <Button fx:id="buttonLB_lend_book1" layoutX="189.0" layoutY="333.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add">
+      <Button fx:id="buttonLB_lend_book1" layoutX="189.0" layoutY="333.0" mnemonicParsing="false" onAction="#addCopyToLendList" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -303,9 +303,8 @@
       </Label>
       <TableView fx:id="allBooks" layoutX="48.0" layoutY="409.0" onMouseClicked="#getRow" prefHeight="435.0" prefWidth="416.0">
          <columns>
-            <TableColumn fx:id="isbnAll" prefWidth="125.0" text="ISBN" />
-            <TableColumn fx:id="bookIdAll" minWidth="0.0" prefWidth="149.0" text="BookID" />
-            <TableColumn fx:id="stateOfBookAll" prefWidth="141.0" text="State Of Book" />
+            <TableColumn fx:id="isbnAll" prefWidth="62.0" text="ISBN" />
+            <TableColumn fx:id="bookIdAll" minWidth="0.0" prefWidth="352.0" text="BookID" />
          </columns>
          <effect>
             <DropShadow />
@@ -313,9 +312,8 @@
       </TableView>
       <TableView fx:id="lendBooks" layoutX="572.0" layoutY="409.0" prefHeight="435.0" prefWidth="416.0">
          <columns>
-            <TableColumn fx:id="isbnLend" prefWidth="125.0" text="ISBN" />
-            <TableColumn fx:id="bookIdLend" minWidth="0.0" prefWidth="149.0" text="BookID" />
-            <TableColumn fx:id="stateOfBookLend" prefWidth="141.0" text="State Of Book" />
+            <TableColumn fx:id="isbnLend" prefWidth="63.0" text="ISBN" />
+            <TableColumn fx:id="bookIdLend" minWidth="0.0" prefWidth="352.0" text="BookID" />
          </columns>
          <effect>
             <DropShadow />

@@ -64,8 +64,6 @@ public class ArchiveOldBooksController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
         isbnCol.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
         StateOfBookCol.setCellValueFactory(new PropertyValueFactory<>("exsemplqri_stateOfBooks"));
         BookIdCol.setCellValueFactory(new PropertyValueFactory<>("idBook"));
