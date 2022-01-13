@@ -243,7 +243,6 @@ public class UserService {
         {
             if(b.getUserName().equals(temp.getUserName()))
             {
-
                 return b;
             }
         }

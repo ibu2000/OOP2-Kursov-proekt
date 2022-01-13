@@ -108,7 +108,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <ComboBox fx:id="combo_boxLB_username" layoutX="325.0" layoutY="129.0" prefHeight="42.0" prefWidth="382.0" style="-fx-background-color: #00738C;">
+      <ComboBox fx:id="combo_boxLB_username" layoutX="325.0" layoutY="129.0" onAction="#select" prefHeight="42.0" prefWidth="382.0" style="-fx-background-color: #00738C;">
          <effect>
             <DropShadow blurType="TWO_PASS_BOX" height="17.95" radius="8.385" width="17.59" />
          </effect>

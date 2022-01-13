@@ -23,23 +23,27 @@ public class LENDINFO {
 
     @OneToOne//(cascade = CascadeType.ALL)
     @JoinColumn(name = "eksemplqri_isbnUnikalenNomer",referencedColumnName = "isbnUnikalenNomer",nullable = false)
-    private LENDBOOKS eksemplqri_isbnUnikalenNomer;
+    private Eksemplqri eksemplqri_isbnUnikalenNomer;
+
+    @Column(name = "inChitalnq",nullable = false)
+    private boolean inChitalnq;
+
 
     public LENDINFO() {
     }
 
-    public LENDINFO(long idLendingInfo, Books BOOKS_idBook, LENDBOOKS LENDBOOKS_idLendBook, LENDBOOKS eksemplqri_isbnUnikalenNomer) {
-        this.idLendingInfo = idLendingInfo;
+    public LENDINFO(Books BOOKS_idBook, LENDBOOKS LENDBOOKS_idLendBook, Eksemplqri eksemplqri_isbnUnikalenNomer, boolean inChitalnq) {
         this.BOOKS_idBook = BOOKS_idBook;
         this.LENDBOOKS_idLendBook = LENDBOOKS_idLendBook;
         this.eksemplqri_isbnUnikalenNomer = eksemplqri_isbnUnikalenNomer;
+        this.inChitalnq = inChitalnq;
     }
 
-    public LENDBOOKS getEksemplqri_isbnUnikalenNomer() {
+    public Eksemplqri getEksemplqri_isbnUnikalenNomer() {
         return eksemplqri_isbnUnikalenNomer;
     }
 
-    public void setEksemplqri_isbnUnikalenNomer(LENDBOOKS eksemplqri_isbnUnikalenNomer) {
+    public void setEksemplqri_isbnUnikalenNomer(Eksemplqri eksemplqri_isbnUnikalenNomer) {
         this.eksemplqri_isbnUnikalenNomer = eksemplqri_isbnUnikalenNomer;
     }
 
@@ -67,6 +71,14 @@ public class LENDINFO {
         this.LENDBOOKS_idLendBook = LENDBOOKS_idLendBook;
     }
 
+    public boolean isInChitalnq() {
+        return inChitalnq;
+    }
+
+    public void setInChitalnq(boolean inChitalnq) {
+        this.inChitalnq = inChitalnq;
+    }
+
     @Override
     public String toString() {
         return "LENDINFO{" +
@@ -74,6 +86,7 @@ public class LENDINFO {
                 ", BOOKS_idBook=" + BOOKS_idBook +
                 ", LENDBOOKS_idLendBook=" + LENDBOOKS_idLendBook +
                 ", eksemplqri_isbnUnikalenNomer=" + eksemplqri_isbnUnikalenNomer +
+                ", inChitalnq=" + inChitalnq +
                 '}';
     }
 }

@@ -63,7 +63,6 @@ public class RegistrationController {
         Status status = new Status(1, "pending");
         Date myDate = parseDate("2000-11-04");
 
-
         UserListModel addUser = new UserListModel(tf_RUsername.getText(), tf_RPassword.getText(),myDate, rating, userType, status);
 
 

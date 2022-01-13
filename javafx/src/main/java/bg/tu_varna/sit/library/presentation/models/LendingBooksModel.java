@@ -1,55 +1,33 @@
-package bg.tu_varna.sit.library.data.entities;
+package bg.tu_varna.sit.library.presentation.models;
+
+import bg.tu_varna.sit.library.data.entities.USER;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.time.LocalDate;
 
-@Table(name = "LENDBOOKS")
-@Entity
-public class LENDBOOKS {
+public class LendingBooksModel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idLendBook",nullable = false)
+
     private long idLendBook;
-
-    @Column(name = "dateOfTaking",nullable = false)
     private LocalDate dateOfTaking;
-
-    @OneToOne//(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_idUser", referencedColumnName = "idUser")
     private USER USER_idUser;
-
-    @Column(name = "dateOfReturn",nullable = false)
     private LocalDate dateOfreturn;
 
-
-    public LENDBOOKS(long idLendBook) {
-        this.idLendBook = idLendBook;
+    public LendingBooksModel() {
     }
 
-    public LocalDate getDateOfreturn() {
-        return dateOfreturn;
-    }
-
-    public void setDateOfreturn(LocalDate dateOfreturn) {
-        this.dateOfreturn = dateOfreturn;
-    }
-
-    public LENDBOOKS(long idLendBook, LocalDate dateOfTaking, USER USER_idUser, LocalDate dateOfreturn) {
-        this.idLendBook = idLendBook;
+    public LendingBooksModel(LocalDate dateOfTaking, USER USER_idUser, LocalDate dateOfreturn) {
         this.dateOfTaking = dateOfTaking;
         this.USER_idUser = USER_idUser;
         this.dateOfreturn = dateOfreturn;
     }
 
-    public LENDBOOKS(LocalDate dateOfTaking, USER USER_idUser, LocalDate dateOfreturn) {
+    public LendingBooksModel(long idLendBook, LocalDate dateOfTaking, USER USER_idUser, LocalDate dateOfreturn) {
+        this.idLendBook = idLendBook;
         this.dateOfTaking = dateOfTaking;
         this.USER_idUser = USER_idUser;
         this.dateOfreturn = dateOfreturn;
-    }
-
-    public LENDBOOKS() {
     }
 
     public long getIdLendBook() {
@@ -76,9 +54,17 @@ public class LENDBOOKS {
         this.USER_idUser = USER_idUser;
     }
 
+    public LocalDate getDateOfreturn() {
+        return dateOfreturn;
+    }
+
+    public void setDateOfreturn(LocalDate dateOfreturn) {
+        this.dateOfreturn = dateOfreturn;
+    }
+
     @Override
     public String toString() {
-        return "LENDBOOKS{" +
+        return "LendingBooksModel{" +
                 "idLendBook=" + idLendBook +
                 ", dateOfTaking=" + dateOfTaking +
                 ", USER_idUser=" + USER_idUser +

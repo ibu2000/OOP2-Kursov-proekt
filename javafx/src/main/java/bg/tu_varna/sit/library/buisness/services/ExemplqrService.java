@@ -133,7 +133,7 @@ public class ExemplqrService {
     }
 
 
-    public  ObservableList<ExemplqrModel> getBookCopyWhereDamaged()
+    public ObservableList<ExemplqrModel> getBookCopyWhereDamaged()
     {
         StateOfBooks state = new StateOfBooks(3, "damaged");
         Eksemplqri e = new Eksemplqri( state,false);
@@ -158,6 +158,36 @@ public class ExemplqrService {
             if(u.getIsbnUnikalenNomer() == copy.getIsbnUnikalenNomer())
             {
                 u.setIsitArchived(true);
+                repositoryExemplqri.update(u);
+                return true;
+            }
+        }
+        return true;
+    }
+
+    public boolean MakeAvailable(ExemplqrModel b) {
+        List<Eksemplqri> copies = repositoryExemplqri.getAll();
+        Eksemplqri copy = new Eksemplqri(b.getIsbnUnikalenNomer(), b.getIdBook(), b.getExsemplqri_stateOfBooks(), b.isIsitArchived(),b.isIsitAvailable(),b.getCopyDate());
+        for(Eksemplqri u : copies)
+        {
+            if(u.getIsbnUnikalenNomer() == copy.getIsbnUnikalenNomer())
+            {
+                u.setIsitAvailable(true);
+                repositoryExemplqri.update(u);
+                return true;
+            }
+        }
+        return true;
+    }
+
+    public boolean MakeUnavailable(ExemplqrModel b) {
+        List<Eksemplqri> copies = repositoryExemplqri.getAll();
+        Eksemplqri copy = new Eksemplqri(b.getIsbnUnikalenNomer(), b.getIdBook(), b.getExsemplqri_stateOfBooks(), b.isIsitArchived(),b.isIsitAvailable(),b.getCopyDate());
+        for(Eksemplqri u : copies)
+        {
+            if(u.getIsbnUnikalenNomer() == copy.getIsbnUnikalenNomer())
+            {
+                u.setIsitAvailable(false);
                 repositoryExemplqri.update(u);
                 return true;
             }

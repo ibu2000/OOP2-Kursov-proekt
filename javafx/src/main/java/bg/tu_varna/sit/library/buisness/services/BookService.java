@@ -20,12 +20,10 @@ public class BookService {
 
     public static BookService getInstance() {return BookService.BookServiceHolder.INSTANCE;}
 
-
     private static class BookServiceHolder
     {
         public static final BookService INSTANCE = new BookService();
     }
-
 
 
 
