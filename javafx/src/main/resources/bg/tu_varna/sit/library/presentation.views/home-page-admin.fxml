@@ -17,12 +17,53 @@
 <?import javafx.scene.shape.QuadCurve?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="696.0" prefWidth="1037.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="878.0" prefWidth="1037.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="694.0" prefWidth="1035.0" style="-fx-background-color: #00738C;">
+      <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="876.0" prefWidth="1035.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="687.0" prefWidth="1028.0" style="-fx-background-color: #FFFFFF;">
+            <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="869.0" prefWidth="1028.0" style="-fx-background-color: #FFFFFF;">
                <children>
+                  <Polyline layoutX="82.0" layoutY="124.0" points="925.0, 258.0, -63.0, 258.0, -64.0, 729.0, 924.0, 729.0" strokeType="INSIDE">
+                     <effect>
+                        <DropShadow height="58.01" radius="28.7775" spread="0.21" width="59.1">
+                           <color>
+                              <Color red="0.7324561476707458" green="0.9079678654670715" blue="0.9473684430122375" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="0.42654028436018954">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.699999988079071" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.699999988079071" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Polyline>
                   <ImageView fitHeight="166.0" fitWidth="204.0" layoutX="426.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@books9.png" />
@@ -299,7 +340,7 @@
                         <DropShadow height="22.47" radius="8.17" width="12.21" />
                      </effect>
                   </ImageView>
-                  <Polyline fill="#33cfe1" layoutX="81.0" layoutY="311.0" points="925.0, 2.0, -63.0, 2.0, -63.0, 366.0, 925.0, 366.0" stroke="#00ddff" strokeType="INSIDE">
+                  <Polyline fill="#33cfe1" layoutX="81.0" layoutY="487.0" points="925.0, 2.0, -63.0, 2.0, -63.0, 366.0, 925.0, 366.0" stroke="#00ddff" strokeType="INSIDE">
                      <effect>
                         <DropShadow height="50.31" radius="26.8525" spread="0.21" width="59.1">
                            <color>
@@ -402,9 +443,54 @@
                   </QuadCurve>
                </children>
             </AnchorPane>
+            <Button fx:id="button_create_user" layoutX="23.0" layoutY="386.0" mnemonicParsing="false" onAction="#createUserPage" prefHeight="81.0" prefWidth="315.0" style="-fx-background-color: #00738C;" text="Create user" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+               <effect>
+                  <Glow level="0.29">
+                     <input>
+                        <Reflection bottomOpacity="0.08" fraction="0.4" topOpacity="0.52" />
+                     </input>
+                  </Glow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="button_delete_user" layoutX="358.0" layoutY="386.0" mnemonicParsing="false" onAction="#deleteUserPage" prefHeight="81.0" prefWidth="315.0" style="-fx-background-color: #00738C;" text="Delete user" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+               <effect>
+                  <Glow level="0.29">
+                     <input>
+                        <Reflection bottomOpacity="0.08" fraction="0.4" topOpacity="0.52" />
+                     </input>
+                  </Glow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="button_forms" layoutX="694.0" layoutY="386.0" mnemonicParsing="false" onAction="#formsPage" prefHeight="81.0" prefWidth="315.0" style="-fx-background-color: #00738C;" text="Forms" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+               <effect>
+                  <Glow level="0.29">
+                     <input>
+                        <Reflection bottomOpacity="0.08" fraction="0.4" topOpacity="0.52" />
+                     </input>
+                  </Glow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="25.0" layoutY="321.0" prefHeight="360.0" prefWidth="984.0" style="-fx-background-color: #0a5868;">
+      <AnchorPane layoutX="25.0" layoutY="497.0" prefHeight="360.0" prefWidth="984.0" style="-fx-background-color: #0a5868;">
          <children>
             <Button fx:id="buttonA_lend_book" layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#LendBooks" prefHeight="355.0" prefWidth="245.0" style="-fx-background-color: #00738C;" text="Lend book">
                <font>

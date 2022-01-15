@@ -31,6 +31,9 @@ public class HomePageAdminController {
     private Button buttonA_logout;
     @FXML
     private Button buttonA_scrap_book;
+
+    @FXML
+    private Button button_create_user;
     Stage s;
 
     public HomePageAdminController() {
@@ -113,6 +116,55 @@ public class HomePageAdminController {
             e.printStackTrace();
         }
     }
+
+
+
+
+    @FXML
+    public void createUserPage() {
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.CREATE_USER));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new CreateUserController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void deleteUserPage() {
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.DELETE_USER));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new DeleteUserController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void formsPage() {
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.FORMS));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new FormsController(stage));
+            Parent root2 = fxmlLoader.load();
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 
     @FXML
     public void  LendBooks() {
