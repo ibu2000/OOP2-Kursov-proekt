@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 public class LendingInfoModel {
 
-    private long idLendingInfo;
+    private long idLendInfo;
     private Books BOOKS_idBook;
     private LENDBOOKS LENDBOOKS_idLendBook;
     private Eksemplqri eksemplqri_isbnUnikalenNomer;
@@ -24,12 +24,27 @@ public class LendingInfoModel {
         this.inChitalnq = inChitalnq;
     }
 
-    public long getIdLendingInfo() {
-        return idLendingInfo;
+    public LendingInfoModel(long idLendInfo, Books BOOKS_idBook, LENDBOOKS LENDBOOKS_idLendBook, Eksemplqri eksemplqri_isbnUnikalenNomer, boolean inChitalnq) {
+        this.idLendInfo = idLendInfo;
+        this.BOOKS_idBook = BOOKS_idBook;
+        this.LENDBOOKS_idLendBook = LENDBOOKS_idLendBook;
+        this.eksemplqri_isbnUnikalenNomer = eksemplqri_isbnUnikalenNomer;
+        this.inChitalnq = inChitalnq;
     }
 
-    public void setIdLendingInfo(long idLendingInfo) {
-        this.idLendingInfo = idLendingInfo;
+    public boolean isInChitalnq() {
+        return inChitalnq;
+    }
+    public void setInChitalnq(boolean inChitalnq) {
+        this.inChitalnq = inChitalnq;
+    }
+
+    public long getIdLendInfo() {
+        return idLendInfo;
+    }
+
+    public void setIdLendInfo(long idLendInfo) {
+        this.idLendInfo = idLendInfo;
     }
 
     public Books getBOOKS_idBook() {
@@ -59,7 +74,7 @@ public class LendingInfoModel {
     @Override
     public String toString() {
         return "LendingInfoModel{" +
-                "idLendingInfo=" + idLendingInfo +
+                "idLendingInfo=" + idLendInfo +
                 ", BOOKS_idBook=" + BOOKS_idBook +
                 ", LENDBOOKS_idLendBook=" + LENDBOOKS_idLendBook +
                 ", eksemplqri_isbnUnikalenNomer=" + eksemplqri_isbnUnikalenNomer +

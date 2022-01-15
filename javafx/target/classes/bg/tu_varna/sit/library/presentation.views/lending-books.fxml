@@ -187,7 +187,7 @@
             </LinearGradient>
          </textFill>
       </Button>
-      <Button fx:id="buttonLB_lend_book" layoutX="673.0" layoutY="333.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books">
+      <Button fx:id="buttonLB_lend_book" layoutX="673.0" layoutY="333.0" mnemonicParsing="false" onAction="#LendCopies" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -214,7 +214,7 @@
             </LinearGradient>
          </textFill>
       </Button>
-      <Label layoutX="72.0" layoutY="200.0" prefHeight="42.0" prefWidth="388.0" text="where will you lend the book:">
+      <Label layoutX="47.0" layoutY="207.0" prefHeight="42.0" prefWidth="402.0" text="where will you lend the books:">
          <font>
             <Font name="Arial Rounded MT Bold" size="27.0" />
          </font>

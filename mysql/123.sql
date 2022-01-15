@@ -29,6 +29,7 @@ INSERT INTO stateofbooks (idState, stateOfbooks)VALUES (1, 'new');
 INSERT INTO stateofbooks (idState, stateOfbooks)VALUES (2, 'well preserved');
 INSERT INTO stateofbooks (idState, stateOfbooks)VALUES (3, 'damaged');
 
+INSERT INTO lendbooks (idLendBook, dateOfTaking, user_idUser, dateOfReturn)VALUES (1, '2018-1-11',1,'2018-1-30');
 
 
 

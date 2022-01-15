@@ -1,9 +1,6 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
-import bg.tu_varna.sit.library.buisness.services.BookService;
-import bg.tu_varna.sit.library.buisness.services.ExemplqrService;
-import bg.tu_varna.sit.library.buisness.services.LendingBooksService;
-import bg.tu_varna.sit.library.buisness.services.UserService;
+import bg.tu_varna.sit.library.buisness.services.*;
 import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.data.entities.*;
 import bg.tu_varna.sit.library.presentation.models.*;
@@ -55,6 +52,7 @@ public class LendingBooksController implements Initializable {
     ExemplqrService exemplqrService = new ExemplqrService();
     BookService bookService = new BookService();
     LendingBooksService lendingBooksService = new LendingBooksService();
+    LendingInfoService lendingInfoService = new LendingInfoService();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -109,16 +107,9 @@ public class LendingBooksController implements Initializable {
         bookIdLend.setCellValueFactory(new PropertyValueFactory<>("idBook"));
         ObservableList<ExemplqrModel> toBeTaken = FXCollections.observableArrayList();
         ExemplqrModel selectedItem = allBooks.getSelectionModel().getSelectedItem();
-        if(exemplqrService.MakeUnavailable(selectedItem))
-        {
-            toBeTaken.add(selectedItem);
-        }
-        allBooks.getItems().clear();
+        toBeTaken.add(selectedItem);
+        allBooks.getItems().remove(selectedItem);
         ObservableList<ExemplqrModel> list= exemplqrService.getAvailableCopy();
-        for(ExemplqrModel u : list)
-        {
-            allBooks.getItems().add(u);
-        }
         for(ExemplqrModel u : toBeTaken)
         {
             lendBooks.getItems().add(u);
@@ -137,28 +128,35 @@ public class LendingBooksController implements Initializable {
     }
 
     boolean inChitalnq;
+    boolean notSaved;
     @FXML
-    public void LendCopies()
-    {
-        if(radio_button_read_at_home.isSelected())
-        {
+    public void LendCopies() {
+        if (radio_button_read_at_home.isSelected()) {
             inChitalnq = false;
-        }
-        else if(radio_button_reading_room.isSelected())
-        {
+        } else if (radio_button_reading_room.isSelected()) {
             inChitalnq = true;
         }
-        LendingBooksModel l = lend;
-        LENDBOOKS le = lendingBooksService.listviewToEntity(l);
-        lendingBooksService.AddLendBook(le);
-        ObservableList<ExemplqrModel> listOfCopies= lendBooks.getItems();
-        for(ExemplqrModel u : listOfCopies)
-        {
+        LocalDate dateOfTaking = LocalDate.now();
+        UserListModel uu = userService.GetUser(combo_boxLB_username.getValue().toString());
+        USER user = userService.listviewToEntity(uu);
+        lend = new LendingBooksModel(dateOfTaking, user, dateOfTaking.plusDays(20));
+        lendingBooksService.AddLendBook(lend);
+        LENDBOOKS le = lendingBooksService.listviewToEntity(lend);
+        ObservableList<ExemplqrModel> listOfCopies = lendBooks.getItems();
 
+        for (ExemplqrModel u : listOfCopies)
+        {
             Eksemplqri eks = exemplqrService.listviewToEntity(u);
-            LendingInfoModel lend = new LendingInfoModel(u.getIdBook(), le,eks,inChitalnq);
-            // napish lendingInfoService + funkciite
+            LendingInfoModel lendingInfoModel = new LendingInfoModel(u.getIdBook(), le, eks, inChitalnq);
+            notSaved = lendingInfoService.AddLendInfo(lendingInfoModel);
+            if (!notSaved) {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "lend info has not been saved", ButtonType.OK);
+                alert.show();
+            }
         }
+        Alert alert = new Alert(Alert.AlertType.ERROR, "lend info has been saved", ButtonType.OK);
+        alert.show();
+
     }
 
 

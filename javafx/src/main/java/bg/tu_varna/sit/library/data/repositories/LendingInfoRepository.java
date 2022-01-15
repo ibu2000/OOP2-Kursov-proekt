@@ -7,13 +7,14 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
 public class LendingInfoRepository implements DAORepository<LENDINFO> {
     private static final Logger log = Logger.getLogger(LendingInfoRepository.class);
 
-    private static LendingInfoRepository getInstance() {return LendingInfoRepository.LendingInfoRepositoryHolder.INSTANCE;}
+    public static LendingInfoRepository getInstance() {return LendingInfoRepository.LendingInfoRepositoryHolder.INSTANCE;}
 
     private static class LendingInfoRepositoryHolder {
         public static final LendingInfoRepository INSTANCE =new LendingInfoRepository() ;
@@ -75,7 +76,23 @@ public class LendingInfoRepository implements DAORepository<LENDINFO> {
 
     @Override
     public List<LENDINFO> getAll() {
-        return null;
+
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        List<LENDINFO> books = new LinkedList<>();
+        try {
+            String jpql = "SELECT t FROM LENDINFO t";
+            books.addAll(session.createQuery(jpql, LENDINFO.class).getResultList());
+            log.info("Get all lend info");
+        }
+        catch (Exception e)
+        {
+            log.error("Get lend info error: " + e.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return books;
     }
 }
 

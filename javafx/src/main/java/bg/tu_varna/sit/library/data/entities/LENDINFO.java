@@ -8,8 +8,8 @@ public class LENDINFO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idLendingInfo",nullable = false)
-    private long idLendingInfo;
+    @Column(name = "idLendInfo", nullable = false)
+    private long idLendInfo;
 
 
     @OneToOne//(cascade = CascadeType.ALL)
@@ -17,8 +17,8 @@ public class LENDINFO {
     private Books BOOKS_idBook;
 
 
-    @OneToOne//(cascade = CascadeType.ALL)
-    @JoinColumn(name = "lendingbooks_idLendBook",referencedColumnName = "idLendBook",nullable = false)
+    @OneToOne //(cascade = CascadeType.ALL)
+    @JoinColumn(name = "lendbooks_idLendBook",referencedColumnName = "idLendBook",nullable = false)
     private LENDBOOKS LENDBOOKS_idLendBook;
 
     @OneToOne//(cascade = CascadeType.ALL)
@@ -39,6 +39,10 @@ public class LENDINFO {
         this.inChitalnq = inChitalnq;
     }
 
+    public LENDINFO(Eksemplqri eksemplqri_isbnUnikalenNomer) {
+        this.eksemplqri_isbnUnikalenNomer = eksemplqri_isbnUnikalenNomer;
+    }
+
     public Eksemplqri getEksemplqri_isbnUnikalenNomer() {
         return eksemplqri_isbnUnikalenNomer;
     }
@@ -47,12 +51,12 @@ public class LENDINFO {
         this.eksemplqri_isbnUnikalenNomer = eksemplqri_isbnUnikalenNomer;
     }
 
-    public long getIdLendingInfo() {
-        return idLendingInfo;
+    public long getIdLendInfo() {
+        return idLendInfo;
     }
 
-    public void setIdLendingInfo(long idLendingInfo) {
-        this.idLendingInfo = idLendingInfo;
+    public void setIdLendInfo(long idLendInfo) {
+        this.idLendInfo = idLendInfo;
     }
 
     public Books getBOOKS_idBook() {
@@ -82,7 +86,7 @@ public class LENDINFO {
     @Override
     public String toString() {
         return "LENDINFO{" +
-                "idLendingInfo=" + idLendingInfo +
+                "idLendingInfo=" + idLendInfo +
                 ", BOOKS_idBook=" + BOOKS_idBook +
                 ", LENDBOOKS_idLendBook=" + LENDBOOKS_idLendBook +
                 ", eksemplqri_isbnUnikalenNomer=" + eksemplqri_isbnUnikalenNomer +

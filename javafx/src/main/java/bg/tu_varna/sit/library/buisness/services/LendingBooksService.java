@@ -35,11 +35,12 @@ public ObservableList<LendingBooksModel> getAllLendingBooks()
 
     public LENDBOOKS listviewToEntity(LendingBooksModel a)
     {
-        LENDBOOKS temp = new LENDBOOKS(a.getIdLendBook());
+        LENDBOOKS temp = new LENDBOOKS(a.getDateOfTaking(),a.getUSER_idUser(),a.getDateOfreturn());
         List<LENDBOOKS> books = repositoryLendingBooks.getAll();
         for(LENDBOOKS b: books)
         {
-            if(b.getIdLendBook()==(temp.getIdLendBook()))
+            if(b.getDateOfTaking().equals(temp.getDateOfTaking()) && b.getUSER_idUser().equals(temp.getUSER_idUser())
+            && b.getDateOfreturn().equals(temp.getDateOfreturn()))
             {
                 return b;
             }
@@ -47,7 +48,7 @@ public ObservableList<LendingBooksModel> getAllLendingBooks()
         return  null;
     }
 
-    public boolean AddLendBook(LENDBOOKS addBook) {
+    public boolean AddLendBook(LendingBooksModel addBook) {
         List<LENDBOOKS> books = repositoryLendingBooks.getAll();
         LENDBOOKS book = new LENDBOOKS(addBook.getIdLendBook(), addBook.getDateOfTaking(),addBook.getUSER_idUser(),addBook.getDateOfreturn());
         for(LENDBOOKS b : books)
