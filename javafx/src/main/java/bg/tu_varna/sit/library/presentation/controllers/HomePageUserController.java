@@ -28,6 +28,7 @@ public class HomePageUserController {
     @FXML
     private Label iduser;
 
+    USER userr;
     UserService userService = new UserService();
     Stage s;
     public HomePageUserController()
@@ -40,24 +41,27 @@ public class HomePageUserController {
     public void displayId (USER user)
     {
         iduser.setText( Long.toString(user.getIdUser()));
+        userr = user;
     }
 
     public void  LendBook()
     {
-
-        /*
         try
         {
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.LEND_BOOK));
             Stage stage = new Stage();
-            fxmlLoader.setController(new SearchBooksController(stage));
+            fxmlLoader.setController(new LendingBooksController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            LendingBooksController lendingBooksController = fxmlLoader.getController();
+            lendingBooksController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e)
         {
             e.printStackTrace();
-        }*/
+        }
     }
 
 

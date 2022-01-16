@@ -26,9 +26,11 @@ public class LendingBooksController implements Initializable {
     @FXML
     private ComboBox combo_boxLB_username;
     @FXML
+    private Label iduser;
+    @FXML
     private Button buttonLB_lend_book;
     @FXML
-    private Button buttonLB_home;
+    private Button button_Home;
     @FXML
     private RadioButton radio_button_reading_room;
     @FXML
@@ -93,6 +95,14 @@ public class LendingBooksController implements Initializable {
         }
     }
 
+    USER userr;
+    public void displayId (USER user)
+    {
+        iduser.setText( Long.toString(user.getIdUser()));
+        userr = user;
+    }
+
+
     @FXML
     public void getRow()
     {
@@ -101,6 +111,7 @@ public class LendingBooksController implements Initializable {
     ExemplqrModel exemplqrModel;
 
     boolean isAvailable;
+
     @FXML
     public void addCopyToLendList()
     {   isbnLend.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
@@ -120,11 +131,11 @@ public class LendingBooksController implements Initializable {
     LendingBooksModel lend;
     @FXML
     public void select()
-    {
+    {/*
         LocalDate dateOfTaking = LocalDate.now();
         UserListModel u = userService.GetUser(combo_boxLB_username.getValue().toString());
         USER user = userService.listviewToEntity(u);
-        lend = new LendingBooksModel(dateOfTaking,user,dateOfTaking.plusDays(20));
+        lend = new LendingBooksModel(dateOfTaking,user,dateOfTaking.plusDays(20));*/
     }
 
     boolean inChitalnq;
@@ -137,18 +148,18 @@ public class LendingBooksController implements Initializable {
             inChitalnq = true;
         }
         LocalDate dateOfTaking = LocalDate.now();
-        UserListModel uu = userService.GetUser(combo_boxLB_username.getValue().toString());
-        USER user = userService.listviewToEntity(uu);
-        lend = new LendingBooksModel(dateOfTaking, user, dateOfTaking.plusDays(20));
+        USER user = userService.FindUserByID(userr.getIdUser());
+        lend = new LendingBooksModel(dateOfTaking,user,dateOfTaking.plusDays(20));
         lendingBooksService.AddLendBook(lend);
         LENDBOOKS le = lendingBooksService.listviewToEntity(lend);
         ObservableList<ExemplqrModel> listOfCopies = lendBooks.getItems();
 
-        for (ExemplqrModel u : listOfCopies)
+        for (ExemplqrModel uu : listOfCopies)
         {
-            Eksemplqri eks = exemplqrService.listviewToEntity(u);
-            LendingInfoModel lendingInfoModel = new LendingInfoModel(u.getIdBook(), le, eks, inChitalnq);
+            Eksemplqri eks = exemplqrService.listviewToEntity(uu);
+            LendingInfoModel lendingInfoModel = new LendingInfoModel(uu.getIdBook(), le, eks, inChitalnq);
             notSaved = lendingInfoService.AddLendInfo(lendingInfoModel);
+            exemplqrService.MakeUnavailable(uu);
             if (!notSaved) {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "lend info has not been saved", ButtonType.OK);
                 alert.show();
@@ -159,6 +170,25 @@ public class LendingBooksController implements Initializable {
 
     }
 
+
+
+    @FXML
+    public void goToHomePage() {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_USER));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new HomePageUserController(stage));
+            Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            HomePageUserController homePageUserController = fxmlLoader.getController();
+            homePageUserController.displayId(user);
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
 

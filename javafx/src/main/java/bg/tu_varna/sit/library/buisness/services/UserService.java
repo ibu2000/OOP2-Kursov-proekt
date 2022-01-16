@@ -99,6 +99,20 @@ public class UserService {
 
         return null;
     }
+    public USER FindUserByID(Long a)
+    {
+        List<USER> users = repositoryUser.getAll();
+        for(USER user : users)
+        {
+            if(user.getIdUser()==a)
+            {
+
+                return user;
+            }
+        }
+
+        return null;
+    }
 
     public USER listviewToEntity(UserListModel a)
     {

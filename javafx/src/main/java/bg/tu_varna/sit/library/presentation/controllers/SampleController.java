@@ -99,6 +99,9 @@ public class SampleController {
                         Stage stage = new Stage();
                         fxmlLoader.setController(new HomePageOperatorController(stage));
                         Parent root2 = fxmlLoader.load();
+                        USER user = service.FindUser(userfind);
+                        HomePageUserController homePageUserController = fxmlLoader.getController();
+                        homePageUserController.displayId(user);
                         stage.setScene(new Scene(root2));
                         stage.show();
                     } else if (a == 3) {
@@ -107,6 +110,9 @@ public class SampleController {
                         Stage stage = new Stage();
                         fxmlLoader.setController(new HomePageAdminController(stage));
                         Parent root2 = fxmlLoader.load();
+                        USER user = service.FindUser(userfind);
+                        HomePageUserController homePageUserController = fxmlLoader.getController();
+                        homePageUserController.displayId(user);
                         stage.setScene(new Scene(root2));
 
                         stage.show();
