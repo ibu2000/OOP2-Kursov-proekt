@@ -81,12 +81,16 @@ public class SampleController {
             if (service.UserLogin(userfind)) {
                 try {
                     long a = service.FindUserType(userfind);
+
                     if (a == 1) {
                         s.close();
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_USER));
                         Stage stage = new Stage();
                         fxmlLoader.setController(new HomePageUserController(stage));
                         Parent root2 = fxmlLoader.load();
+                        USER user = service.FindUser(userfind);
+                        HomePageUserController homePageUserController = fxmlLoader.getController();
+                        homePageUserController.displayId(user);
                         stage.setScene(new Scene(root2));
                         stage.show();
                     } else if (a == 2) {

@@ -1,12 +1,16 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
+import bg.tu_varna.sit.library.data.entities.USER;
+import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class HomePageUserController {
@@ -21,8 +25,10 @@ public class HomePageUserController {
     private Button button_user_rating;
     @FXML
     private Button buttonU_logout;
+    @FXML
+    private Label iduser;
 
-
+    UserService userService = new UserService();
     Stage s;
     public HomePageUserController()
     {}
@@ -31,10 +37,15 @@ public class HomePageUserController {
         s = stage;
     }
 
-
+    public void displayId (USER user)
+    {
+        iduser.setText( Long.toString(user.getIdUser()));
+    }
 
     public void  LendBook()
     {
+
+        /*
         try
         {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.LEND_BOOK));
@@ -46,7 +57,7 @@ public class HomePageUserController {
         } catch (Exception e)
         {
             e.printStackTrace();
-        }
+        }*/
     }
 
 

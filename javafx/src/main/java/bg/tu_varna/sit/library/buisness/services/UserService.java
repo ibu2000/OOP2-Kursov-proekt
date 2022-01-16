@@ -84,6 +84,21 @@ public class UserService {
 
         return 0;
     }
+    public USER FindUser(UserListModel a)
+    {
+        USER usr = new USER(a.getUserName(),a.getPassword());
+        List<USER> users = repositoryUser.getAll();
+        for(USER user : users)
+        {
+            if(user.getUserName().equals(usr.getUserName()) && user.getPassword().equals(usr.getPassword()))
+            {
+
+                return user;
+            }
+        }
+
+        return null;
+    }
 
     public USER listviewToEntity(UserListModel a)
     {
