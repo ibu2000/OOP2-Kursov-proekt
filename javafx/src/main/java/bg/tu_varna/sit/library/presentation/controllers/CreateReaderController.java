@@ -12,3 +12,4 @@ public class CreateReaderController {
     @FXML
     private Button buttonCAR_home;
 }
+// tova ne se polzva, polzvame create user
