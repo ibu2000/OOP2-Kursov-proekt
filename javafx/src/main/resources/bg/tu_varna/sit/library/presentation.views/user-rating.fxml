@@ -221,20 +221,36 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button fx:id="button_loyal1" layoutX="79.0" layoutY="656.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="581.0" style="-fx-background-color: #00738C;" text="Home" textFill="WHITE">
+            <Button fx:id="button_loyal1" layoutX="81.0" layoutY="656.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="574.0" style="-fx-background-color: WHITE;" text="Home">
                <font>
                   <Font name="Arial Rounded MT Bold" size="35.0" />
                </font>
                <effect>
-                  <DropShadow height="53.24" radius="27.585" spread="0.05" width="59.1">
+                  <DropShadow height="57.64" radius="28.685000000000002" spread="0.1" width="59.1">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.22077922523021698" />
+                        <Color opacity="0.2199999988079071" />
                      </color>
                      <input>
-                        <Reflection topOpacity="0.0" />
+                        <Reflection topOpacity="0.01" />
                      </input>
                   </DropShadow>
                </effect>
+               <textFill>
+                  <LinearGradient startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.5695175528526306" blue="0.6447368264198303" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
          </children>
       </AnchorPane>
