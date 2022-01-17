@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -52,7 +53,7 @@
             </ImageView>
             <AnchorPane layoutX="-10.0" layoutY="162.0" prefHeight="432.0" prefWidth="1007.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Label layoutX="229.0" layoutY="22.0" prefHeight="41.0" prefWidth="193.0" text="Book name:" textFill="#00738c">
+                  <Label layoutX="229.0" layoutY="21.0" prefHeight="41.0" prefWidth="193.0" text="Book name:" textFill="#00738c">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -69,7 +70,7 @@
                         <DropShadow />
                      </effect>
                   </TableView>
-                  <Button fx:id="buttonSB_searchBook" layoutX="666.0" layoutY="23.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="122.0" style="-fx-background-color: #00738C;" text="Search">
+                  <Button fx:id="buttonSB_searchBook" layoutX="666.0" layoutY="18.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="122.0" style="-fx-background-color: #00738C;" text="Search">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -94,12 +95,48 @@
                            </stops>
                         </LinearGradient>
                      </textFill>
+                     <effect>
+                        <Reflection fraction="0.48" topOpacity="0.37" />
+                     </effect>
                   </Button>
-                  <TextField fx:id="tfSB_search_book" layoutX="410.0" layoutY="30.0" prefHeight="31.0" prefWidth="236.0">
+                  <TextField fx:id="tfSB_search_book" layoutX="410.0" layoutY="27.0" prefHeight="31.0" prefWidth="236.0">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
+                  <Button layoutX="328.0" layoutY="370.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="355.0" style="-fx-background-color: #00738C;" text="Home">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.8199052132701421">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.48092105984687805" blue="0.5657894611358643" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <effect>
+                        <Reflection bottomOpacity="0.21" fraction="0.34">
+                           <input>
+                              <DropShadow height="0.0" radius="4.75" />
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Button>
                </children>
                <effect>
                   <DropShadow height="82.08" radius="40.537499999999994" width="82.07" />
