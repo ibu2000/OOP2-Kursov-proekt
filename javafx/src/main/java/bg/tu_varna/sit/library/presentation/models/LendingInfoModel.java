@@ -5,6 +5,7 @@ import bg.tu_varna.sit.library.data.entities.Eksemplqri;
 import bg.tu_varna.sit.library.data.entities.LENDBOOKS;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 public class LendingInfoModel {
 
@@ -69,6 +70,19 @@ public class LendingInfoModel {
 
     public void setEksemplqri_isbnUnikalenNomer(Eksemplqri eksemplqri_isbnUnikalenNomer) {
         this.eksemplqri_isbnUnikalenNomer = eksemplqri_isbnUnikalenNomer;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof LendingInfoModel)) return false;
+        LendingInfoModel that = (LendingInfoModel) o;
+        return getIdLendInfo() == that.getIdLendInfo() && isInChitalnq() == that.isInChitalnq() && Objects.equals(getBOOKS_idBook(), that.getBOOKS_idBook()) && Objects.equals(getLENDBOOKS_idLendBook(), that.getLENDBOOKS_idLendBook()) && Objects.equals(getEksemplqri_isbnUnikalenNomer(), that.getEksemplqri_isbnUnikalenNomer());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdLendInfo(), getBOOKS_idBook(), getLENDBOOKS_idLendBook(), getEksemplqri_isbnUnikalenNomer(), isInChitalnq());
     }
 
     @Override

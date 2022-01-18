@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.library.buisness.services;
 
+import bg.tu_varna.sit.library.data.entities.Eksemplqri;
 import bg.tu_varna.sit.library.data.entities.LENDBOOKS;
 import bg.tu_varna.sit.library.data.entities.LENDINFO;
 import bg.tu_varna.sit.library.data.repositories.LendBooksRepository;
@@ -16,6 +17,9 @@ public class LendingInfoService {
     private final LendingInfoRepository repositoryLendingInfo = LendingInfoRepository.getInstance();
 
     public static LendingInfoService getInstance() {return LendingInfoService.LendingInfoServiceHolder.INSTANCE;}
+
+
+
 
     private static class LendingInfoServiceHolder
     {
@@ -53,7 +57,7 @@ public class LendingInfoService {
         List<LENDINFO> books = repositoryLendingInfo.getAll();
         for(LENDINFO b: books)
         {
-            if(b.getEksemplqri_isbnUnikalenNomer().equals(temp.getEksemplqri_isbnUnikalenNomer()))
+            if(b.getEksemplqri_isbnUnikalenNomer().getIsbnUnikalenNomer()==(temp.getEksemplqri_isbnUnikalenNomer().getIsbnUnikalenNomer()))
             {
                 return b;
             }
@@ -71,8 +75,53 @@ public class LendingInfoService {
             }
         }
         return null;
+    }
+
+    public ObservableList<LendingInfoModel> getLendingInfoByLendBook(LENDBOOKS lendingBooksModel)
+    {
+        ObservableList<LendingInfoModel> allCopies = getAllLendingInfo();
+        ObservableList<LendingInfoModel> lendInfo = FXCollections.observableArrayList();
+        for(LendingInfoModel b : allCopies)
+        {
+            if(b.getLENDBOOKS_idLendBook().getIdLendBook()==(lendingBooksModel.getIdLendBook()))
+            {
+                lendInfo.add(b);
+            }
+        }
+        return lendInfo;
 
     }
+
+
+    public LendingInfoModel getLendingInfoByExemplqr(Eksemplqri eksemplqr)
+    {
+        ObservableList<LendingInfoModel> allCopies = getAllLendingInfo();
+        for(LendingInfoModel b : allCopies)
+        {
+            if(b.getEksemplqri_isbnUnikalenNomer().getIsbnUnikalenNomer() ==(eksemplqr.getIsbnUnikalenNomer()))
+            {
+                return b;
+            }
+        }
+        return null;
+
+    }
+
+
+    public boolean Deleteinfo(LENDINFO lend) {
+        List<LENDINFO> users =repositoryLendingInfo.getAll();
+        for(LENDINFO u : users)
+        {
+            if(u.getIdLendInfo()==(lend.getIdLendInfo()))
+            {
+                repositoryLendingInfo.delete(u);
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 
 
 

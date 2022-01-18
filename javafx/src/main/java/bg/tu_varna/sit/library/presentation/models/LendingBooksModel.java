@@ -5,6 +5,7 @@ import bg.tu_varna.sit.library.data.entities.USER;
 import javax.persistence.*;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class LendingBooksModel {
 
@@ -60,6 +61,19 @@ public class LendingBooksModel {
 
     public void setDateOfreturn(LocalDate dateOfreturn) {
         this.dateOfreturn = dateOfreturn;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof LendingBooksModel)) return false;
+        LendingBooksModel that = (LendingBooksModel) o;
+        return getIdLendBook() == that.getIdLendBook() && Objects.equals(getDateOfTaking(), that.getDateOfTaking()) && Objects.equals(getUSER_idUser(), that.getUSER_idUser()) && Objects.equals(getDateOfreturn(), that.getDateOfreturn());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdLendBook(), getDateOfTaking(), getUSER_idUser(), getDateOfreturn());
     }
 
     @Override

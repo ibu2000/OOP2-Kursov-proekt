@@ -69,10 +69,14 @@ public class HomePageUserController {
     {
         try
         {
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.RETURN_BOOK));
             Stage stage = new Stage();
             fxmlLoader.setController(new ReturnBookController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            ReturnBookController returnBookController = fxmlLoader.getController();
+            returnBookController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e)

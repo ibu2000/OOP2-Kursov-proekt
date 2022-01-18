@@ -5,6 +5,7 @@ import bg.tu_varna.sit.library.data.repositories.EksemplqriRepository;
 import bg.tu_varna.sit.library.data.repositories.StateOfBooksRepository;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
+import bg.tu_varna.sit.library.presentation.models.LendingInfoModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import bg.tu_varna.sit.library.buisness.services.BookService;
 import javafx.collections.FXCollections;
@@ -21,7 +22,6 @@ public class ExemplqrService {
     private final EksemplqriRepository repositoryExemplqri = EksemplqriRepository.getInstance();
 
     public static ExemplqrService getInstance() {return ExemplqrService.ExemplqrServiceHolder.INSTANCE;}
-
 
 
 
@@ -179,6 +179,25 @@ public class ExemplqrService {
         }
         return true;
     }
+
+    public ObservableList<ExemplqrModel> getLendInfoCopies(ObservableList<LendingInfoModel> lendingInfoModels)
+    {
+        List<Eksemplqri> users = repositoryExemplqri.getAll();
+        ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
+        for(LendingInfoModel u : lendingInfoModels)
+        {
+
+           ExemplqrModel e = new ExemplqrModel(u.getEksemplqri_isbnUnikalenNomer().getIsbnUnikalenNomer(),
+                   u.getEksemplqri_isbnUnikalenNomer().getIdBook(),
+                   u.getEksemplqri_isbnUnikalenNomer().isIsitArchived(),
+                   u.getEksemplqri_isbnUnikalenNomer().getExsemplqri_stateOfBooks(),
+                   u.getEksemplqri_isbnUnikalenNomer().isIsitAvailable(),
+                   u.getEksemplqri_isbnUnikalenNomer().getCopyDate());
+           copies.add(e);
+        }
+        return copies;
+    }
+
 
     public boolean MakeUnavailable(ExemplqrModel b) {
         List<Eksemplqri> copies = repositoryExemplqri.getAll();

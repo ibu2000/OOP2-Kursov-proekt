@@ -24,8 +24,6 @@ import java.util.ResourceBundle;
 public class LendingBooksController implements Initializable {
 
     @FXML
-    private ComboBox combo_boxLB_username;
-    @FXML
     private Label iduser;
     @FXML
     private Button buttonLB_lend_book;
@@ -67,8 +65,6 @@ public class LendingBooksController implements Initializable {
         {
             allBooks.getItems().add(u);
         }
-        combo_boxLB_username.getItems().clear();
-        combo_boxLB_username.getItems().addAll(userService.getUserForComboBox());
     }
 
     Stage s;
@@ -129,15 +125,6 @@ public class LendingBooksController implements Initializable {
 
 
     LendingBooksModel lend;
-    @FXML
-    public void select()
-    {/*
-        LocalDate dateOfTaking = LocalDate.now();
-        UserListModel u = userService.GetUser(combo_boxLB_username.getValue().toString());
-        USER user = userService.listviewToEntity(u);
-        lend = new LendingBooksModel(dateOfTaking,user,dateOfTaking.plusDays(20));*/
-    }
-
     boolean inChitalnq;
     boolean notSaved;
     @FXML
