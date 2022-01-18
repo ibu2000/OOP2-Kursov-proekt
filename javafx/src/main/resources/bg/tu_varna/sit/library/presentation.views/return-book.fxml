@@ -16,13 +16,13 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="672.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="767.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="-51.0" prefHeight="678.0" prefWidth="856.0" style="-fx-background-color: #00738C;">
+      <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="765.0" prefWidth="804.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutY="74.0" prefHeight="444.0" prefWidth="856.0" style="-fx-background-color: #FFFFFF;">
+            <AnchorPane layoutY="82.0" prefHeight="540.0" prefWidth="804.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Label layoutX="233.0" layoutY="17.0" prefHeight="41.0" prefWidth="498.0" text="Choose a book you'd like to ">
+                  <Label layoutX="163.0" layoutY="17.0" prefHeight="41.0" prefWidth="498.0" text="Choose a book you'd like to return">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -50,10 +50,10 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <TableView fx:id="books" layoutX="152.0" layoutY="72.0" onMouseClicked="#getRow" prefHeight="348.0" prefWidth="637.0">
+                  <TableView fx:id="books" layoutX="91.0" layoutY="165.0" onMouseClicked="#getRow" prefHeight="348.0" prefWidth="623.0">
                      <columns>
-                        <TableColumn fx:id="isbn" prefWidth="125.0" text="ISBN" />
-                        <TableColumn fx:id="bookId" minWidth="0.0" prefWidth="511.0" text="BookID" />
+                        <TableColumn fx:id="isbn" prefWidth="228.0" text="ISBN" />
+                        <TableColumn fx:id="bookId" minWidth="0.0" prefWidth="394.0" text="BookID" />
                      </columns>
                      <effect>
                         <DropShadow height="45.44" radius="21.8525" spread="0.11" width="43.97">
@@ -63,17 +63,45 @@
                         </DropShadow>
                      </effect>
                   </TableView>
-                  <Label fx:id="iduser" layoutX="118.0" layoutY="16.0" text="Label">
+                  <Label fx:id="iduser" layoutX="15.0" layoutY="16.0" text="Label">
                      <font>
                         <Font size="29.0" />
                      </font>
                   </Label>
+                  <Button fx:id="show_lend_books_period" layoutX="214.0" layoutY="75.0" mnemonicParsing="false" onAction="#showbooks" prefHeight="65.0" prefWidth="391.0" style="-fx-background-color: WHITE;" text="Show lend books">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <Reflection fraction="0.29" topOpacity="0.26" />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.8333333134651184" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.2666666805744171" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
                </children>
                <effect>
                   <DropShadow height="70.83" radius="34.182500000000005" width="67.9" />
                </effect>
             </AnchorPane>
-            <Label layoutX="190.0" prefHeight="72.0" prefWidth="384.0" text="Return a Book" textFill="WHITE">
+            <Label layoutX="219.0" layoutY="1.0" prefHeight="72.0" prefWidth="384.0" text="Return a Book" textFill="WHITE">
                <font>
                   <Font name="Bell MT Bold" size="60.0" />
                </font>
@@ -81,54 +109,72 @@
                   <Glow level="0.47" />
                </effect>
             </Label>
-            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="664.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="709.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@library_icon.png" />
                </image>
                <effect>
-                  <DropShadow radius="68.5" width="255.0" />
+                  <DropShadow height="32.24" radius="15.620000000000001" width="32.24" />
                </effect>
             </ImageView>
-            <Button fx:id="buttonRAB_return_book" layoutX="367.0" layoutY="559.0" mnemonicParsing="false" onAction="#ReturnBook" prefHeight="50.0" prefWidth="217.0" style="-fx-background-color: WHITE;" text="Return book">
+            <Button fx:id="buttonRAB_return_book" layoutX="198.0" layoutY="640.0" mnemonicParsing="false" onAction="#ReturnBook" prefHeight="50.0" prefWidth="217.0" style="-fx-background-color: WHITE;" text="Return book">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="29.0" />
+                  <Font size="30.0" />
                </font>
                <effect>
-                  <Reflection fraction="0.61" topOpacity="0.43">
+                  <DropShadow>
                      <input>
-                        <DropShadow height="17.59" radius="7.5625" width="14.66" />
+                        <Reflection />
                      </input>
-                  </Reflection>
+                  </DropShadow>
                </effect>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <textFill>
-                  <LinearGradient endX="1.0" endY="0.2559241706161138" startX="1.0">
+                  <LinearGradient endX="1.0" endY="1.0">
                      <stops>
                         <Stop>
                            <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
+                              <Color green="0.8333333134651184" blue="1.0" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color green="0.7194244861602783" blue="1.0" />
+                              <Color green="0.2666666805744171" blue="1.0" />
                            </color>
                         </Stop>
                      </stops>
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button fx:id="home_button" layoutX="631.0" layoutY="557.0" mnemonicParsing="false" onAction="#ReturnToHomePage" prefHeight="54.0" prefWidth="111.0" text="Home">
+            <Button fx:id="home_button" layoutX="446.0" layoutY="640.0" mnemonicParsing="false" onAction="#ReturnToHomePage" prefHeight="65.0" prefWidth="142.0" style="-fx-background-color: WHITE;" text="Home">
                <font>
-                  <Font size="23.0" />
+                  <Font size="30.0" />
                </font>
-            </Button>
-            <Button fx:id="show_lend_books_period" layoutX="101.0" layoutY="557.0" mnemonicParsing="false" onAction="#showbooks" prefHeight="58.0" prefWidth="200.0" text="Show lend books">
-               <font>
-                  <Font size="22.0" />
-               </font>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Reflection />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.8333333134651184" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.2666666805744171" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
          </children>
       </AnchorPane>
