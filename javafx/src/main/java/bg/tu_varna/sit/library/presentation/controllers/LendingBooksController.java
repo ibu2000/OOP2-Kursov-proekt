@@ -26,6 +26,10 @@ public class LendingBooksController implements Initializable {
     @FXML
     private Label iduser;
     @FXML
+    private CheckBox checkbox_home;
+    @FXML
+    private CheckBox checkbox_readingroom;
+    @FXML
     private Button buttonLB_lend_book;
     @FXML
     private Button button_Home;
@@ -57,13 +61,47 @@ public class LendingBooksController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+
+
+    }
+
+
+    public void  CheckBoxes()
+    {
+        if(checkbox_home.isSelected())
+        {
+            checkbox_readingroom.setSelected(false);
+            checkbox_home.setSelected(true);
+        }
+       else if(checkbox_readingroom.isSelected())
+        {
+            checkbox_readingroom.setSelected(true);
+            checkbox_home.setSelected(false);
+        }
+    }
+
+    public void showBooks()
+    {
+        CheckBoxes();
         isbnAll.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
         bookIdAll.setCellValueFactory(new PropertyValueFactory<>("idBook"));
-
         ObservableList<ExemplqrModel> list = exemplqrService.getAvailableCopy();
-        for(ExemplqrModel u : list)
+        allBooks.getItems().clear();
+        if(checkbox_home.isSelected())
         {
-            allBooks.getItems().add(u);
+            list = exemplqrService.getBookUnArchivedCopies(list);
+            for(ExemplqrModel u : list)
+            {
+                allBooks.getItems().add(u);
+            }
+        }
+        else if(checkbox_readingroom.isSelected())
+        {
+            list = exemplqrService.getBookArchivedCopies(list);
+            for(ExemplqrModel u : list)
+            {
+                allBooks.getItems().add(u);
+            }
         }
     }
 
@@ -110,7 +148,9 @@ public class LendingBooksController implements Initializable {
 
     @FXML
     public void addCopyToLendList()
-    {   isbnLend.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
+    {   Alert alert = new Alert(Alert.AlertType.INFORMATION, "Please select where you're going to take the book. (you can only get books for home or for the reading room)", ButtonType.OK);
+        alert.show();
+        isbnLend.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
         bookIdLend.setCellValueFactory(new PropertyValueFactory<>("idBook"));
         ObservableList<ExemplqrModel> toBeTaken = FXCollections.observableArrayList();
         ExemplqrModel selectedItem = allBooks.getSelectionModel().getSelectedItem();
@@ -121,6 +161,9 @@ public class LendingBooksController implements Initializable {
         {
             lendBooks.getItems().add(u);
         }
+        checkbox_readingroom.setDisable(true);
+
+        checkbox_home.setDisable(true);
     }
 
 
@@ -129,9 +172,9 @@ public class LendingBooksController implements Initializable {
     boolean notSaved;
     @FXML
     public void LendCopies() {
-        if (radio_button_read_at_home.isSelected()) {
+        if (checkbox_home.isSelected()) {
             inChitalnq = false;
-        } else if (radio_button_reading_room.isSelected()) {
+        } else if (checkbox_readingroom.isSelected()) {
             inChitalnq = true;
         }
         LocalDate dateOfTaking = LocalDate.now();

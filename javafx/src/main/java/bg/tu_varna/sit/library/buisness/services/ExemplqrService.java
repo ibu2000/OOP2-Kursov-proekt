@@ -229,4 +229,30 @@ public class ExemplqrService {
         return false;
     }
 
+    public  ObservableList<ExemplqrModel> getBookArchivedCopies(ObservableList<ExemplqrModel> list)
+    {
+        ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
+        for(ExemplqrModel copy : list)
+        {
+            if(copy.isIsitArchived())
+            {
+                    copies.add(copy);
+            }
+        }
+        return copies;
+    }
+
+    public  ObservableList<ExemplqrModel> getBookUnArchivedCopies(ObservableList<ExemplqrModel> list)
+    {
+        ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
+        for(ExemplqrModel copy : list)
+        {
+            if(!copy.isIsitArchived())
+            {
+                copies.add(copy);
+            }
+        }
+        return copies;
+    }
+
 }

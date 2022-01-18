@@ -14,12 +14,52 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polyline?>
 <?import javafx.scene.shape.QuadCurve?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1031.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="929.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <QuadCurve controlX="-218.0" controlY="-218.0" endX="299.0" endY="114.86529541015625" layoutX="554.0" layoutY="20.0" opacity="0.98" startX="299.0" startY="-19.99999237060547" strokeType="INSIDE">
+      <Polyline layoutX="64.0" layoutY="340.0" points="-64.0, -22.0, 896.0, -22.0, -64.0, 629.233642578125, 896.0, 629.233642578125" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.4054928123950958" blue="0.5099999904632568" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.4054928123950958" blue="0.5099999904632568" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Polyline>
+      <QuadCurve controlX="-218.0" controlY="-218.0" endX="299.0" endY="114.86529541015625" layoutX="661.0" layoutY="20.0" opacity="0.98" startX="299.0" startY="-19.99999237060547" strokeType="INSIDE">
          <fill>
             <LinearGradient endX="0.023696682464455" endY="0.3649289099526064" startX="0.95260663507109" startY="0.4123222748815165">
                <stops>
@@ -63,14 +103,141 @@
             </LinearGradient>
          </stroke>
       </QuadCurve>
-      <AnchorPane layoutY="93.0" prefHeight="186.0" prefWidth="853.0" style="-fx-background-color: #00738C;">
+      <QuadCurve controlX="1042.0" controlY="-195.8492431640625" endX="263.0" endY="138.3653106689453" layoutX="-419.0" layoutY="44.0" opacity="0.98" startX="263.0" startY="-34.0" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.5402843601895733" startX="0.23696682464454977" startY="0.49289099526066354">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.4638157784938812" blue="0.6184210777282715" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color green="0.4638157784938812" blue="0.6184210777282715" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="0.5971563981042654" endY="0.34123222748815163" startY="0.14218009478672985">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.699999988079071" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color green="0.699999988079071" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </QuadCurve>
+      <AnchorPane layoutY="93.0" prefHeight="225.0" prefWidth="960.0" style="-fx-background-color: #00738C;">
          <children>
-            <ImageView blendMode="MULTIPLY" fitHeight="152.0" fitWidth="492.0" layoutX="352.0" layoutY="1.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+            <Polyline layoutX="119.0" layoutY="103.0" opacity="0.93" points="34.0, -103.0, -119.0, -103.0, -119.0, 122.0, 841.0, -103.0" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.7105262875556946" blue="0.6276316046714783" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.4502369668246446" startY="0.4928909952606635">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.011494252873563218">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.6315789222717285" blue="0.7894737124443054" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Polyline>
+            <Polyline layoutX="598.0" layoutY="153.0" opacity="0.93" points="361.0, -148.76638793945312, 361.0, 71.23361206054688, -598.0, 71.23361206054688, 362.0, -153.0" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.6303317535545023" startX="0.061611374407582936" startY="0.7393364928909952">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.23000000417232513" green="0.17249999940395355" blue="0.17249999940395355" opacity="0.16017316281795502" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.5874100923538208" blue="0.7099999785423279" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.4502369668246446" startY="0.4928909952606635">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.011494252873563218">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.6315789222717285" blue="0.7894737124443054" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Polyline>
+            <ImageView blendMode="MULTIPLY" fitHeight="152.0" fitWidth="492.0" layoutX="411.0" layoutY="1.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@books9.png" />
                </image>
             </ImageView>
-            <Button fx:id="buttonScrapBook_scrap_book" layoutX="219.0" layoutY="66.0" mnemonicParsing="false" onAction="#DeleteOldBooks" prefHeight="56.0" prefWidth="209.0" style="-fx-background-color: WHITE;" text="scrap book">
+            <Button fx:id="buttonScrapBook_scrap_book" layoutX="294.0" layoutY="66.0" mnemonicParsing="false" onAction="#DeleteOldBooks" prefHeight="56.0" prefWidth="209.0" style="-fx-background-color: WHITE;" text="scrap book">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
@@ -105,7 +272,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button fx:id="buttonScrapBook_home" layoutX="468.0" layoutY="66.0" mnemonicParsing="false" onAction="#ScrapBookHomeToAdmin" prefHeight="56.0" prefWidth="127.0" style="-fx-background-color: WHITE;" text="home">
+            <Button fx:id="buttonScrapBook_home" layoutX="548.0" layoutY="67.0" mnemonicParsing="false" onAction="#ScrapBookHomeToAdmin" prefHeight="56.0" prefWidth="127.0" style="-fx-background-color: WHITE;" text="home">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
@@ -145,7 +312,7 @@
             <DropShadow height="44.45" radius="20.9925" width="41.52" />
          </effect>
       </AnchorPane>
-      <Label layoutX="286.0" layoutY="1.0" prefHeight="86.0" prefWidth="302.0" text="Scrap Book">
+      <Label layoutX="340.0" layoutY="1.0" prefHeight="86.0" prefWidth="302.0" text="Scrap Book">
          <font>
             <Font name="Bell MT Bold" size="60.0" />
          </font>
@@ -173,7 +340,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="785.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="882.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@library_icon.png" />
          </image>
@@ -181,133 +348,6 @@
             <DropShadow height="22.47" radius="8.17" width="12.21" />
          </effect>
       </ImageView>
-      <QuadCurve controlX="1353.0" controlY="58.0" endX="476.0" endY="58.0" layoutX="-501.0" layoutY="257.0" opacity="0.98" startX="501.0" startY="-9.0" strokeType="INSIDE">
-         <fill>
-            <LinearGradient endX="0.023696682464455" endY="0.3649289099526064" startX="0.5592417061611374" startY="0.4123222748815165">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color green="0.4638157784938812" blue="0.6184210777282715" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-         <stroke>
-            <LinearGradient endX="1.0" endY="1.0" startY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color green="0.699999988079071" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="0.007662835249042145">
-                     <color>
-                        <Color green="0.699999988079071" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </stroke>
-      </QuadCurve>
-      <QuadCurve controlX="-312.0" controlY="15.0" endX="540.0" endY="72.0" layoutX="313.0" layoutY="243.0" opacity="0.98" startX="540.0" startY="5.0" strokeType="INSIDE">
-         <fill>
-            <LinearGradient endX="0.023696682464455" endY="0.3649289099526064" startX="0.95260663507109" startY="0.4123222748815165">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color green="0.4638157784938812" blue="0.6184210777282715" />
-                     </color>
-                  </Stop>
-                  <Stop offset="0.007662835249042145">
-                     <color>
-                        <Color green="0.4638157784938812" blue="0.6184210777282715" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-         <stroke>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="0.007662835249042145">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color green="0.699999988079071" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </stroke>
-      </QuadCurve>
-      <QuadCurve controlX="642.0" controlY="-296.4083251953125" endX="264.0" endY="58.0" layoutX="-264.0" layoutY="35.0" opacity="0.98" startX="263.0" startY="-34.0" strokeType="INSIDE">
-         <fill>
-            <LinearGradient endX="0.023696682464455" endY="0.3649289099526064" startX="0.95260663507109" startY="0.4123222748815165">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="0.007662835249042145">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color green="0.4638157784938812" blue="0.6184210777282715" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-         <stroke>
-            <LinearGradient endX="0.5971563981042654" endY="0.34123222748815163" startY="0.14218009478672985">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color green="0.699999988079071" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="0.007662835249042145">
-                     <color>
-                        <Color green="0.699999988079071" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </stroke>
-      </QuadCurve>
       <TableView fx:id="allDamagedBooks" layoutX="32.0" layoutY="334.0" onMouseClicked="#getRow" prefHeight="628.0" prefWidth="895.0">
          <columns>
             <TableColumn fx:id="isbnCol" prefWidth="265.0" text="ISBN" />
