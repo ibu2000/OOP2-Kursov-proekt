@@ -61,7 +61,7 @@
                   </Glow>
                </effect>
             </Polygon>
-            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="920.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="925.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@library_icon.png" />
                </image>
@@ -73,6 +73,34 @@
                   </DropShadow>
                </effect>
             </ImageView>
+            <Button fx:id="button_Home" layoutX="814.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: WHITE;" text="Home">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.38862559241706157">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.8333333134651184" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color green="0.08881578594446182" blue="0.3552631437778473" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
          </children>
          <effect>
             <DropShadow height="73.28" radius="23.07" />
@@ -266,8 +294,8 @@
       </Label>
       <TableView fx:id="allBooks" layoutX="48.0" layoutY="409.0" onMouseClicked="#getRow" prefHeight="435.0" prefWidth="416.0">
          <columns>
-            <TableColumn fx:id="isbnAll" prefWidth="62.0" text="ISBN" />
-            <TableColumn fx:id="bookIdAll" minWidth="0.0" prefWidth="352.0" text="BookID" />
+            <TableColumn fx:id="isbnAll" prefWidth="142.0" text="ISBN" />
+            <TableColumn fx:id="bookIdAll" minWidth="0.0" prefWidth="272.0" text="BookID" />
          </columns>
          <effect>
             <DropShadow />
@@ -275,8 +303,8 @@
       </TableView>
       <TableView fx:id="lendBooks" layoutX="572.0" layoutY="409.0" prefHeight="435.0" prefWidth="416.0">
          <columns>
-            <TableColumn fx:id="isbnLend" prefWidth="63.0" text="ISBN" />
-            <TableColumn fx:id="bookIdLend" minWidth="0.0" prefWidth="352.0" text="BookID" />
+            <TableColumn fx:id="isbnLend" prefWidth="148.0" text="ISBN" />
+            <TableColumn fx:id="bookIdLend" minWidth="0.0" prefWidth="267.0" text="BookID" />
          </columns>
          <effect>
             <DropShadow />
@@ -320,11 +348,22 @@
          <font>
             <Font size="29.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.38862559241706157">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.7333333492279053" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Button fx:id="button_Home" layoutX="839.0" layoutY="145.0" mnemonicParsing="false" onAction="#goToHomePage" text="Button">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

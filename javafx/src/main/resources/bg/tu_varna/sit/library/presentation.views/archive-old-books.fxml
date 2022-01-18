@@ -27,17 +27,17 @@
                         <Image url="@books15.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="41.0" layoutY="7.0" prefHeight="41.0" prefWidth="912.0" text="Choose starting release year of the book" textFill="#0e868f">
+                  <Label layoutX="183.0" layoutY="7.0" prefHeight="41.0" prefWidth="593.0" text="Choose starting release year of the book" textFill="#0e868f">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                   </Label>
-                  <Button fx:id="buttonAOB_archive_old_book" layoutX="595.0" layoutY="63.0" mnemonicParsing="false" onAction="#ArchiveOldBooks" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #00738C;" text="Archive old book">
+                  <Button fx:id="buttonAOB_archive_old_book" layoutX="517.0" layoutY="58.0" mnemonicParsing="false" onAction="#ArchiveOldBooks" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #00738C;" text="Archive old book">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                      <effect>
-                        <DropShadow />
+                        <DropShadow height="9.28" radius="4.8725000000000005" width="12.21" />
                      </effect>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -84,7 +84,7 @@
                         </DropShadow>
                      </effect>
                   </TableView>
-                  <DatePicker fx:id="year_of_publishing" layoutX="211.0" layoutY="73.0" onAction="#getDate" prefHeight="42.0" prefWidth="223.0" />
+                  <DatePicker fx:id="year_of_publishing" layoutX="225.0" layoutY="65.0" onAction="#getDate" prefHeight="42.0" prefWidth="223.0" />
                </children>
                <effect>
                   <DropShadow height="148.26" radius="36.565" width="0.0">
@@ -115,7 +115,7 @@
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
                <effect>
-                  <DropShadow height="35.17" radius="17.817500000000003" spread="0.01" width="38.1" />
+                  <DropShadow height="21.99" radius="10.86" spread="0.01" width="23.45" />
                </effect>
                <cursor>
                   <Cursor fx:constant="HAND" />

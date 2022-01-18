@@ -19,6 +19,11 @@
          <children>
             <AnchorPane layoutY="90.0" prefHeight="185.0" prefWidth="734.0" style="-fx-background-color: #FFFFFF;">
                <children>
+                  <ImageView fitHeight="192.0" fitWidth="187.0" layoutX="274.0" layoutY="-1.0" opacity="0.41" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@books5.png" />
+                     </image>
+                  </ImageView>
                   <Button fx:id="buttonCU_create" layoutX="244.0" layoutY="113.0" mnemonicParsing="false" onAction="#createUser" prefHeight="41.0" prefWidth="256.0" style="-fx-background-color: #00738C;" text="Create user" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
@@ -35,7 +40,7 @@
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                   </Label>
-                  <ComboBox fx:id="combo_boxCAU_create_a_user" layoutX="108.0" layoutY="63.0" prefHeight="25.0" prefWidth="528.0">
+                  <ComboBox fx:id="combo_boxCAU_create_a_user" layoutX="108.0" layoutY="63.0" prefHeight="25.0" prefWidth="528.0" promptText="registrations waiting for approval">
                      <effect>
                         <Reflection bottomOpacity="0.2" fraction="0.83" topOpacity="0.57" />
                      </effect>
