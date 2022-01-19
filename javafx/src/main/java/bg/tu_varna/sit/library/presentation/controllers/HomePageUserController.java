@@ -28,7 +28,7 @@ public class HomePageUserController {
     @FXML
     private Label iduser;
 
-    USER userr;
+
     UserService userService = new UserService();
     Stage s;
     public HomePageUserController()
@@ -38,6 +38,8 @@ public class HomePageUserController {
         s = stage;
     }
 
+
+    USER userr;
     public void displayId (USER user)
     {
         iduser.setText( Long.toString(user.getIdUser()));

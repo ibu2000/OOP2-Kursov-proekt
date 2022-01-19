@@ -4,10 +4,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.InnerShadow?>
@@ -107,51 +105,6 @@
             <DropShadow height="73.28" radius="23.07" />
          </effect>
       </Pane>
-      <RadioButton fx:id="radio_button_reading_room" layoutX="304.0" layoutY="187.0" mnemonicParsing="false" onAction="#showBooks" text="Reading room">
-         <font>
-            <Font size="19.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="0.8530805687203792" endY="1.0" startX="0.8436018957345972" startY="0.5118483412322274">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color green="0.4421052634716034" blue="0.5526315569877625" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
-         <toggleGroup>
-            <ToggleGroup fx:id="radioGROUP" />
-         </toggleGroup>
-      </RadioButton>
-      <RadioButton fx:id="radio_button_read_at_home" layoutX="306.0" layoutY="222.0" mnemonicParsing="false" onAction="#showBooks" prefHeight="34.0" prefWidth="135.0" text="Home" toggleGroup="$radioGROUP">
-         <font>
-            <Font size="19.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="0.8530805687203792" endY="1.0" startX="0.8436018957345972" startY="0.5118483412322274">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color green="0.4421052634716034" blue="0.5526315569877625" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </RadioButton>
       <Button fx:id="buttonLB_lend_book1" layoutX="179.0" layoutY="271.0" mnemonicParsing="false" onAction="#addCopyToLendList" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />

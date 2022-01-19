@@ -61,8 +61,8 @@ public class LendingBooksController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-
-
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Please select where you're going to take the book. (you can only get books for home or for the reading room)", ButtonType.OK);
+        alert.show();
     }
 
 
@@ -148,8 +148,7 @@ public class LendingBooksController implements Initializable {
 
     @FXML
     public void addCopyToLendList()
-    {   Alert alert = new Alert(Alert.AlertType.INFORMATION, "Please select where you're going to take the book. (you can only get books for home or for the reading room)", ButtonType.OK);
-        alert.show();
+    {
         isbnLend.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
         bookIdLend.setCellValueFactory(new PropertyValueFactory<>("idBook"));
         ObservableList<ExemplqrModel> toBeTaken = FXCollections.observableArrayList();
@@ -195,7 +194,7 @@ public class LendingBooksController implements Initializable {
                 alert.show();
             }
         }
-        Alert alert = new Alert(Alert.AlertType.ERROR, "lend info has been saved", ButtonType.OK);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "lend info has been saved", ButtonType.OK);
         alert.show();
 
     }
@@ -205,16 +204,46 @@ public class LendingBooksController implements Initializable {
     @FXML
     public void goToHomePage() {
         try {
-            s.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_USER));
-            Stage stage = new Stage();
-            fxmlLoader.setController(new HomePageUserController(stage));
-            Parent root2 = fxmlLoader.load();
+
             USER user = userService.FindUserByID(userr.getIdUser());
-            HomePageUserController homePageUserController = fxmlLoader.getController();
-            homePageUserController.displayId(user);
-            stage.setScene(new Scene(root2));
-            stage.show();
+            long a = user.getUSERTYPE_idUserType().getIdUserType();
+
+
+            if (a == 1)
+            {
+                s.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_USER));
+                Stage stage = new Stage();
+                fxmlLoader.setController(new HomePageUserController(stage));
+                Parent root2 = fxmlLoader.load();
+                HomePageUserController homePageUserController = fxmlLoader.getController();
+                homePageUserController.displayId(user);
+                stage.setScene(new Scene(root2));
+                stage.show();
+            } else if (a == 2)
+            {
+
+                s.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_OPERATOR));
+                Stage stage = new Stage();
+                fxmlLoader.setController(new HomePageOperatorController(stage));
+                Parent root2 = fxmlLoader.load();
+                HomePageOperatorController homePageOperatorController = fxmlLoader.getController();
+                homePageOperatorController.displayId(user);
+                stage.setScene(new Scene(root2));
+                stage.show();
+            } else if (a == 3)
+            {
+                s.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_ADMIN));
+                Stage stage = new Stage();
+                fxmlLoader.setController(new HomePageAdminController(stage));
+                Parent root2 = fxmlLoader.load();
+                HomePageAdminController homePageAdminController = fxmlLoader.getController();
+                homePageAdminController.displayId(user);
+                stage.setScene(new Scene(root2));
+                stage.show();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
