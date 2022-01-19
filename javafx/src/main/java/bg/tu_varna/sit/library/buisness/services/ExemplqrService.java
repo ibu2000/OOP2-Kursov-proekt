@@ -255,4 +255,37 @@ public class ExemplqrService {
         return copies;
     }
 
+    public  ObservableList<ExemplqrModel> getCopiesByBookName(String a)
+    {
+
+        ObservableList<ExemplqrModel> allcopies = getAllCopies();
+        ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
+        for(ExemplqrModel copy : allcopies)
+        {
+            if(copy.getIdBook().getBookName().equals(a))
+            {
+                copies.add(copy);
+            }
+        }
+        return copies;
+    }
+
+
+    public  ObservableList<ExemplqrModel> getCopiesByBookNameandState(String a, long s)
+    {
+
+        ObservableList<ExemplqrModel> allcopies = getAllCopies();
+        ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
+        for(ExemplqrModel copy : allcopies)
+        {
+            if(copy.getIdBook().getBookName().equals(a) && copy.getExsemplqri_stateOfBooks().getIdState() == s)
+            {
+                copies.add(copy);
+            }
+        }
+        return copies;
+    }
+
+
+
 }
