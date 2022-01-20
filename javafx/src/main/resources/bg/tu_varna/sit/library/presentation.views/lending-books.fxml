@@ -22,7 +22,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="861.0" prefWidth="1034.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="780.0" prefWidth="1034.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="-3.0" prefHeight="75.0" prefWidth="1037.0" style="-fx-background-color: #00738C;">
          <children>
@@ -100,12 +100,33 @@
                   </DropShadow>
                </effect>
             </Button>
+            <Label fx:id="iduser" layoutX="54.0" layoutY="15.0" prefHeight="34.0" prefWidth="135.0" text="Label">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.38862559241706157">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.8273381590843201" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.4784172773361206" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
          </children>
          <effect>
             <DropShadow height="73.28" radius="23.07" />
          </effect>
       </Pane>
-      <Button fx:id="buttonLB_lend_book1" layoutX="179.0" layoutY="271.0" mnemonicParsing="false" onAction="#addCopyToLendList" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add">
+      <Button fx:id="buttonLB_lend_book1" layoutX="179.0" layoutY="238.0" mnemonicParsing="false" onAction="#addCopyToLendList" prefHeight="56.0" prefWidth="135.0" style="-fx-background-color: #00738C;" text="add">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -132,7 +153,7 @@
             </LinearGradient>
          </textFill>
       </Button>
-      <Button fx:id="buttonLB_lend_book" layoutX="673.0" layoutY="270.0" mnemonicParsing="false" onAction="#LendCopies" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books">
+      <Button fx:id="buttonLB_lend_book" layoutX="673.0" layoutY="237.0" mnemonicParsing="false" onAction="#LendCopies" prefHeight="56.0" prefWidth="214.0" style="-fx-background-color: #00738C;" text="Lend books">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -159,7 +180,7 @@
             </LinearGradient>
          </textFill>
       </Button>
-      <Label layoutX="47.0" layoutY="144.0" prefHeight="42.0" prefWidth="402.0" text="where will you lend the books:">
+      <Label layoutX="56.0" layoutY="105.0" prefHeight="42.0" prefWidth="402.0" text="where will you lend the books:">
          <font>
             <Font name="Arial Rounded MT Bold" size="27.0" />
          </font>
@@ -188,7 +209,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Label layoutX="638.0" layoutY="147.0" prefHeight="56.0" prefWidth="281.0" text="Here are the books">
+      <Label layoutX="638.0" layoutY="118.0" prefHeight="56.0" prefWidth="281.0" text="Here are the books">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -217,7 +238,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Label layoutX="611.0" layoutY="190.0" prefHeight="67.0" prefWidth="337.0" text="you've picked to lend!!!">
+      <Label layoutX="611.0" layoutY="157.0" prefHeight="67.0" prefWidth="337.0" text="you've picked to lend!!!">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -246,7 +267,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <TableView fx:id="allBooks" layoutX="48.0" layoutY="346.0" onMouseClicked="#getRow" prefHeight="435.0" prefWidth="416.0">
+      <TableView fx:id="allBooks" layoutX="48.0" layoutY="313.0" onMouseClicked="#getRow" prefHeight="435.0" prefWidth="416.0">
          <columns>
             <TableColumn fx:id="isbnAll" prefWidth="142.0" text="ISBN" />
             <TableColumn fx:id="bookIdAll" minWidth="0.0" prefWidth="272.0" text="BookID" />
@@ -255,7 +276,7 @@
             <DropShadow />
          </effect>
       </TableView>
-      <TableView fx:id="lendBooks" layoutX="572.0" layoutY="346.0" prefHeight="435.0" prefWidth="416.0">
+      <TableView fx:id="lendBooks" layoutX="572.0" layoutY="313.0" prefHeight="435.0" prefWidth="416.0">
          <columns>
             <TableColumn fx:id="isbnLend" prefWidth="148.0" text="ISBN" />
             <TableColumn fx:id="bookIdLend" minWidth="0.0" prefWidth="267.0" text="BookID" />
@@ -264,7 +285,7 @@
             <DropShadow />
          </effect>
       </TableView>
-      <Polyline layoutX="517.0" layoutY="280.0" points="0.0, 559.0, 0.0, -88.0, 0.0, -88.0, 8.0, 559.0" strokeType="INSIDE">
+      <Polyline layoutX="517.0" layoutY="204.0" points="0.0, 559.0, 0.0, -88.0, 0.0, -88.0, 8.0, 559.0" strokeType="INSIDE">
          <fill>
             <LinearGradient endX="0.5308056872037914" endY="0.7393364928909952">
                <stops>
@@ -298,33 +319,12 @@
             </LinearGradient>
          </stroke>
       </Polyline>
-      <Label fx:id="iduser" layoutX="74.0" layoutY="108.0" prefHeight="34.0" prefWidth="135.0" text="Label">
-         <font>
-            <Font size="29.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.38862559241706157">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color green="0.7333333492279053" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Label>
-      <CheckBox fx:id="checkbox_home" layoutX="82.0" layoutY="219.0" mnemonicParsing="false" onAction="#showBooks" text="Home">
+      <CheckBox fx:id="checkbox_home" layoutX="187.0" layoutY="186.0" mnemonicParsing="false" onAction="#showBooks" text="Home">
          <font>
             <Font size="17.0" />
          </font>
       </CheckBox>
-      <CheckBox fx:id="checkbox_readingroom" layoutX="83.0" layoutY="191.0" mnemonicParsing="false" onAction="#showBooks" text="Reading room">
+      <CheckBox fx:id="checkbox_readingroom" layoutX="188.0" layoutY="158.0" mnemonicParsing="false" onAction="#showBooks" text="Reading room">
          <font>
             <Font size="17.0" />
          </font>
