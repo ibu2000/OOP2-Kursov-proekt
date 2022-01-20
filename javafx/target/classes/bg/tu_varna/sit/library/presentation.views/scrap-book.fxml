@@ -140,7 +140,7 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                        <Color red="0.023391813039779663" green="0.29512670636177063" blue="0.42105263471603394" />
                      </color>
                   </Stop>
                </stops>
@@ -333,7 +333,7 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.023391813039779663" green="0.29512670636177063" blue="0.42105263471603394" />
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
                      </color>
                   </Stop>
                </stops>
