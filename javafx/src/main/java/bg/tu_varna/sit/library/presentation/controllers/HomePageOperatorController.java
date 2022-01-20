@@ -27,6 +27,8 @@ public class HomePageOperatorController {
     private Button buttonO_logout;
     @FXML
     private Button button_create_user;
+    @FXML
+    private Button user_info;
 
     Stage s;
     public HomePageOperatorController()
@@ -176,6 +178,25 @@ public class HomePageOperatorController {
             Stage stage = new Stage();
             fxmlLoader.setController(new FormsController(stage));
             Parent root2 = fxmlLoader.load();
+
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void userInfo() {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SEARCH_USER_INFO));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new SearchUserInfoController(stage));
+            Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            SearchUserInfoController searchUserInfoController= fxmlLoader.getController();
+            searchUserInfoController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {
