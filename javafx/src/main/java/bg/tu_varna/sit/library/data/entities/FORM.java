@@ -26,20 +26,33 @@ public class FORM {
     @Column(name = "content", nullable = false)
     private String content;
 
+    @Column(name = "status", nullable = false)
+    private String status;
+
     public FORM() {
     }
 
-    public FORM(long idForm, LocalDate submitionDate, USER USER_idUser, String content) {
+    public FORM(long idForm, LocalDate submitionDate, USER USER_idUser, String content, String status) {
         this.idForm = idForm;
         this.submitionDate = submitionDate;
         this.USER_idUser = USER_idUser;
         this.content = content;
+        this.status = status;
     }
 
-    public FORM(LocalDate submitionDate, USER USER_idUser, String content) {
+    public FORM(LocalDate submitionDate, USER USER_idUser, String content, String status) {
         this.submitionDate = submitionDate;
         this.USER_idUser = USER_idUser;
         this.content = content;
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public long getIdForm() {
@@ -66,18 +79,6 @@ public class FORM {
         this.USER_idUser = USER_idUser;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof FORM)) return false;
-        FORM form = (FORM) o;
-        return getIdForm() == form.getIdForm() && Objects.equals(getSubmitionDate(), form.getSubmitionDate()) && Objects.equals(getUSER_idUser(), form.getUSER_idUser());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getIdForm(), getSubmitionDate(), getUSER_idUser());
-    }
 
     public String getContent() {
         return content;
@@ -88,12 +89,26 @@ public class FORM {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof FORM)) return false;
+        FORM form = (FORM) o;
+        return getIdForm() == form.getIdForm() && Objects.equals(getSubmitionDate(), form.getSubmitionDate()) && Objects.equals(getUSER_idUser(), form.getUSER_idUser()) && Objects.equals(getContent(), form.getContent()) && Objects.equals(getStatus(), form.getStatus());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdForm(), getSubmitionDate(), getUSER_idUser(), getContent(), getStatus());
+    }
+
+    @Override
     public String toString() {
         return "FORM{" +
                 "idForm=" + idForm +
                 ", submitionDate=" + submitionDate +
                 ", USER_idUser=" + USER_idUser +
                 ", content='" + content + '\'' +
+                ", status='" + status + '\'' +
                 '}';
     }
 }

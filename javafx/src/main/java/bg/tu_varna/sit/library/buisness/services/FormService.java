@@ -33,7 +33,7 @@ public class FormService {
         List<FORM> copies = formRepository.getAll();
         ObservableList<FormModel> copylist = FXCollections.observableList(
                 copies.stream().map(a -> new FormModel(
-                      a.getIdForm(), a.getSubmitionDate(), a.getUSER_idUser(),a.getContent()
+                      a.getIdForm(), a.getSubmitionDate(), a.getUSER_idUser(),a.getContent(),a.getStatus()
                 )).collect(Collectors.toList()));
         return  copylist;
     }

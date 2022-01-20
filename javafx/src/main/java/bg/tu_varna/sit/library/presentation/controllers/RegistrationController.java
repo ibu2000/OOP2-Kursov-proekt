@@ -63,9 +63,6 @@ public class RegistrationController {
         Status status = new Status(1, "pending");
         Date myDate = parseDate("2000-11-04");
 
-        UserListModel addUser = new UserListModel(tf_RUsername.getText(), tf_RPassword.getText(),myDate, rating, userType, status);
-
-
 
         if(tf_RUsername.equals("") || tf_RPassword.equals("") || tf_RName.equals("") || tf_RE_mail.equals("") || tf_RPhone_number.equals(""))
         {
@@ -74,7 +71,8 @@ public class RegistrationController {
         }
         else
         {
-           userAlreadyExists =  userService.AddUser(addUser);
+            UserListModel addUser = new UserListModel(tf_RUsername.getText(), tf_RPassword.getText(),myDate, rating, userType, status);
+            userAlreadyExists =  userService.AddUser(addUser);
 
             if(userAlreadyExists)
             {
@@ -100,6 +98,9 @@ public class RegistrationController {
                 Alert alert1 = new Alert(Alert.AlertType.INFORMATION, "The Userinfo already exists!", ButtonType.OK);
                 alert1.show();
             }
+
+
+
         }
     }
 

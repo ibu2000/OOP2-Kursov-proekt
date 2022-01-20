@@ -12,21 +12,32 @@ public class FormModel {
     private LocalDate submitionDate;
     private USER USER_idUser;
     private String content;
+    private String status;
 
     public FormModel() {
     }
 
-    public FormModel(long idForm, LocalDate submitionDate, USER USER_idUser, String content) {
+    public FormModel(long idForm, LocalDate submitionDate, USER USER_idUser, String content, String status) {
         this.idForm = idForm;
         this.submitionDate = submitionDate;
         this.USER_idUser = USER_idUser;
         this.content = content;
+        this.status = status;
     }
 
-    public FormModel(LocalDate submitionDate, USER USER_idUser, String content) {
+    public FormModel(LocalDate submitionDate, USER USER_idUser, String content, String status) {
         this.submitionDate = submitionDate;
         this.USER_idUser = USER_idUser;
         this.content = content;
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public long getIdForm() {
@@ -62,25 +73,27 @@ public class FormModel {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof FormModel)) return false;
+        FormModel formModel = (FormModel) o;
+        return getIdForm() == formModel.getIdForm() && Objects.equals(getSubmitionDate(), formModel.getSubmitionDate()) && Objects.equals(getUSER_idUser(), formModel.getUSER_idUser()) && Objects.equals(getContent(), formModel.getContent()) && Objects.equals(getStatus(), formModel.getStatus());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdForm(), getSubmitionDate(), getUSER_idUser(), getContent(), getStatus());
+    }
+
+
+    @Override
     public String toString() {
         return "FormModel{" +
                 "idForm=" + idForm +
                 ", submitionDate=" + submitionDate +
                 ", USER_idUser=" + USER_idUser +
                 ", content='" + content + '\'' +
+                ", status='" + status + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof FormModel)) return false;
-        FormModel formModel = (FormModel) o;
-        return getIdForm() == formModel.getIdForm() && Objects.equals(getSubmitionDate(), formModel.getSubmitionDate()) && Objects.equals(getUSER_idUser(), formModel.getUSER_idUser()) && Objects.equals(getContent(), formModel.getContent());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getIdForm(), getSubmitionDate(), getUSER_idUser(), getContent());
     }
 }
