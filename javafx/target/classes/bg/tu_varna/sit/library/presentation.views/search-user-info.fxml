@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="981.0" style="-fx-background-color: #00738C;">
+         <children>
+            <AnchorPane layoutY="92.0" pickOnBounds="false" prefHeight="602.0" prefWidth="981.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <ImageView blendMode="DARKEN" depthTest="ENABLE" fitHeight="111.0" fitWidth="212.0" layoutX="420.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@books15.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="search_info" layoutX="493.0" layoutY="22.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #00738C;" text="Search">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="9.28" radius="4.8725000000000005" width="12.21" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <textFill>
+                        <LinearGradient endX="0.9810426540284358" endY="0.824644549763033" startX="0.9810426540284359">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.004629629664123058" green="0.9502314925193787" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="0.004629629664123058" green="0.9502314925193787" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.743295019157088">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <TableView fx:id="userInfo" layoutX="20.0" layoutY="110.0" prefHeight="426.0" prefWidth="422.0">
+                     <columns>
+                        <TableColumn fx:id="username" prefWidth="113.0" text="username" />
+                        <TableColumn fx:id="dateOfUserApproval" minWidth="0.0" prefWidth="135.0" text="date of user approval" />
+                        <TableColumn fx:id="rating" prefWidth="101.0" text="rating" />
+                        <TableColumn fx:id="usertype" prefWidth="72.0" text="usertype" />
+                     </columns>
+                     <effect>
+                        <DropShadow height="67.78" radius="27.4375" spread="0.08" width="43.97">
+                           <color>
+                              <Color green="0.48766666650772095" blue="0.7699999809265137" opacity="0.29870128631591797" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </TableView>
+                  <TextField layoutX="155.0" layoutY="29.0">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </TextField>
+                  <TableView fx:id="lendInfo" layoutX="506.0" layoutY="110.0" prefHeight="426.0" prefWidth="422.0">
+                     <columns>
+                        <TableColumn fx:id="idLendInfo" prefWidth="99.0" text="ID lend info" />
+                        <TableColumn fx:id="idLendBook" minWidth="0.0" prefWidth="121.0" text="ID lend book" />
+                        <TableColumn fx:id="isbn" prefWidth="104.0" text="ISBN" />
+                        <TableColumn fx:id="idBook" prefWidth="97.0" text="ID book" />
+                     </columns>
+                     <effect>
+                        <DropShadow height="67.78" radius="27.4375" spread="0.08" width="43.97">
+                           <color>
+                              <Color green="0.48766666650772095" blue="0.7699999809265137" opacity="0.29870128631591797" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </TableView>
+               </children>
+               <effect>
+                  <DropShadow height="148.26" radius="36.565" width="0.0">
+                     <color>
+                        <Color red="0.06578947603702545" green="0.06578947603702545" blue="0.06578947603702545" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </AnchorPane>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="916.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@library_icon.png" />
+               </image>
+               <effect>
+                  <DropShadow height="255.0" radius="127.0" spread="0.22" width="255.0" />
+               </effect>
+            </ImageView>
+            <Label layoutX="262.0" layoutY="10.0" text="Search user info" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="60.0" />
+               </font>
+               <effect>
+                  <Glow level="0.5" />
+               </effect>
+            </Label>
+            <Button fx:id="buttonAOB_home" layoutX="775.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: WHITE;" text="Home">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow height="21.99" radius="10.86" spread="0.01" width="23.45" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <textFill>
+                  <LinearGradient endX="0.9905213270142178" endY="1.0" startX="1.0" startY="0.5924170616113744">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.015350877307355404" green="0.445175439119339" blue="0.5526315569877625" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.45593869731800757">
+                           <color>
+                              <Color red="0.015350877307355404" green="0.445175439119339" blue="0.5526315569877625" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Label fx:id="iduser" layoutX="57.0" layoutY="19.0" prefHeight="44.0" prefWidth="92.0" text="Label">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="31.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.47393364928909953">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.9833333492279053" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9961685823754789">
+                           <color>
+                              <Color green="0.30000001192092896" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.30000001192092896" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
