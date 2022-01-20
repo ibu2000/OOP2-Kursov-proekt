@@ -24,10 +24,10 @@
         <mapping class="bg.tu_varna.sit.library.data.entities.UserInfo"/>
         <mapping class="bg.tu_varna.sit.library.data.entities.LENDBOOKS"/>
         <mapping class="bg.tu_varna.sit.library.data.entities.LENDINFO"/>
-
+        <mapping class="bg.tu_varna.sit.library.data.entities.FORM"/>
         <!--
 
-         <mapping class="bg.tu_varna.sit.library.data.entities.FORM"/>
+
          <mapping class="bg.tu_varna.sit.library.data.entities.BOOKSSTORED"/>
 
 
