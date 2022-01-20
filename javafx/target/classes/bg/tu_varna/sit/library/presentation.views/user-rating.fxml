@@ -173,7 +173,7 @@
                   </DropShadow>
                </effect>
             </TableView>
-            <Button fx:id="button_loyal" layoutX="83.0" layoutY="187.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="250.0" style="-fx-background-color: #00738C;" text="Loyal" textFill="WHITE">
+            <Button fx:id="button_loyal" layoutX="83.0" layoutY="187.0" mnemonicParsing="false" onAction="#Loyal" prefHeight="65.0" prefWidth="250.0" style="-fx-background-color: #00738C;" text="Loyal" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="35.0" />
                </font>
@@ -188,7 +188,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Button fx:id="button_disloyal" layoutX="406.0" layoutY="185.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="250.0" style="-fx-background-color: WHITE;" text="Disloyal">
+            <Button fx:id="button_disloyal" layoutX="406.0" layoutY="185.0" mnemonicParsing="false" onAction="#Disloyal" prefHeight="65.0" prefWidth="250.0" style="-fx-background-color: WHITE;" text="Disloyal">
                <font>
                   <Font name="Arial Rounded MT Bold" size="35.0" />
                </font>
@@ -221,7 +221,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button fx:id="button_loyal1" layoutX="81.0" layoutY="656.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="574.0" style="-fx-background-color: WHITE;" text="Home">
+            <Button layoutX="81.0" layoutY="656.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="66.0" prefWidth="574.0" style="-fx-background-color: WHITE;" text="Home">
                <font>
                   <Font name="Arial Rounded MT Bold" size="35.0" />
                </font>

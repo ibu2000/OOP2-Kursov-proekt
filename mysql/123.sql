@@ -1,9 +1,9 @@
 INSERT INTO status (idStatus, status)VALUES (1, 'pending');
 INSERT INTO status (idStatus, status)VALUES (2, 'not pending');
  
-INSERT INTO usertype (idUserType, UserType)VALUES (1, 'type1');
-INSERT INTO usertype (idUserType, UserType)VALUES (2, 'type2');
-INSERT INTO usertype (idUserType, UserType)VALUES (3, 'type3');
+INSERT INTO usertype (idUserType, UserType)VALUES (1, 'user');
+INSERT INTO usertype (idUserType, UserType)VALUES (2, 'operator');
+INSERT INTO usertype (idUserType, UserType)VALUES (3, 'admin');
 
 
 INSERT INTO books (idBook, bookName, author, genre, yearOfPublishing)VALUES (1, 'bName1', 'author1', 'genre1', '2008-7-04');

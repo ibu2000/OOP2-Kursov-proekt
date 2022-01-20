@@ -1,42 +1,29 @@
-package bg.tu_varna.sit.library.data.entities;
+package bg.tu_varna.sit.library.presentation.models;
 
-import javax.persistence.*;
+import bg.tu_varna.sit.library.data.entities.USER;
+
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
-@Table(name = "FORM")
-@Entity
-public class FORM {
+public class FormModel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idForm", nullable = false)
     private long idForm;
-
-
-    @Column(name = "submitionDate", nullable = false)
     private LocalDate submitionDate;
-
-
-    @OneToOne//(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_idUser", referencedColumnName = "idUser")
     private USER USER_idUser;
-
-    @Column(name = "content", nullable = false)
     private String content;
 
-    public FORM() {
+    public FormModel() {
     }
 
-    public FORM(long idForm, LocalDate submitionDate, USER USER_idUser, String content) {
+    public FormModel(long idForm, LocalDate submitionDate, USER USER_idUser, String content) {
         this.idForm = idForm;
         this.submitionDate = submitionDate;
         this.USER_idUser = USER_idUser;
         this.content = content;
     }
 
-    public FORM(LocalDate submitionDate, USER USER_idUser, String content) {
+    public FormModel(LocalDate submitionDate, USER USER_idUser, String content) {
         this.submitionDate = submitionDate;
         this.USER_idUser = USER_idUser;
         this.content = content;
@@ -66,19 +53,6 @@ public class FORM {
         this.USER_idUser = USER_idUser;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof FORM)) return false;
-        FORM form = (FORM) o;
-        return getIdForm() == form.getIdForm() && Objects.equals(getSubmitionDate(), form.getSubmitionDate()) && Objects.equals(getUSER_idUser(), form.getUSER_idUser());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getIdForm(), getSubmitionDate(), getUSER_idUser());
-    }
-
     public String getContent() {
         return content;
     }
@@ -89,11 +63,24 @@ public class FORM {
 
     @Override
     public String toString() {
-        return "FORM{" +
+        return "FormModel{" +
                 "idForm=" + idForm +
                 ", submitionDate=" + submitionDate +
                 ", USER_idUser=" + USER_idUser +
                 ", content='" + content + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof FormModel)) return false;
+        FormModel formModel = (FormModel) o;
+        return getIdForm() == formModel.getIdForm() && Objects.equals(getSubmitionDate(), formModel.getSubmitionDate()) && Objects.equals(getUSER_idUser(), formModel.getUSER_idUser()) && Objects.equals(getContent(), formModel.getContent());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdForm(), getSubmitionDate(), getUSER_idUser(), getContent());
     }
 }

@@ -244,10 +244,14 @@ public class HomePageAdminController {
     {
         try
         {
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.USER_RATINGS));
             Stage stage = new Stage();
             fxmlLoader.setController(new UserRatingController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            UserRatingController userRatingController = fxmlLoader.getController();
+            userRatingController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e)

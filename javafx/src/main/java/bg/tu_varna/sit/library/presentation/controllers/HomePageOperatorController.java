@@ -90,10 +90,14 @@ public class HomePageOperatorController {
     {
         try
         {
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SEARCH_BOOK));
             Stage stage = new Stage();
             fxmlLoader.setController(new SearchBooksController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            SearchBooksController searchBooksController = fxmlLoader.getController();
+            searchBooksController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e)
@@ -106,10 +110,14 @@ public class HomePageOperatorController {
     {
         try
         {
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.USER_RATINGS));
             Stage stage = new Stage();
             fxmlLoader.setController(new UserRatingController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            UserRatingController userRatingController = fxmlLoader.getController();
+            userRatingController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e)
@@ -134,11 +142,12 @@ public class HomePageOperatorController {
     @FXML
     public void createUserPage() {
         try {
-
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.CREATE_USER));
             Stage stage = new Stage();
             fxmlLoader.setController(new CreateUserController(stage));
             Parent root2 = fxmlLoader.load();
+
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {
@@ -148,7 +157,7 @@ public class HomePageOperatorController {
     @FXML
     public void deleteUserPage() {
         try {
-
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.DELETE_USER));
             Stage stage = new Stage();
             fxmlLoader.setController(new DeleteUserController(stage));
@@ -162,7 +171,7 @@ public class HomePageOperatorController {
     @FXML
     public void formsPage() {
         try {
-
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.FORMS));
             Stage stage = new Stage();
             fxmlLoader.setController(new FormsController(stage));

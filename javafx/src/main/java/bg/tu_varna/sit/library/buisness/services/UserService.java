@@ -281,4 +281,18 @@ public class UserService {
 
 
 
+    public ObservableList<UserListModel> GetUsersByLoyalty(String a)
+    {
+        ObservableList<UserListModel> copies = FXCollections.observableArrayList();
+        ObservableList<UserListModel> allUsers = getAllFields();
+        for(UserListModel b : allUsers)
+        {
+            if(b.getRating().equals(a))
+            {
+               copies.add(b);
+            }
+        }
+       return copies;
+
+    }
 }
