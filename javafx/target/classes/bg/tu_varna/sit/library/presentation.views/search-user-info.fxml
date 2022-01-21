@@ -8,32 +8,67 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polyline?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="662.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="700.0" prefWidth="981.0" style="-fx-background-color: #00738C;">
+      <AnchorPane layoutY="4.0" prefHeight="652.0" prefWidth="981.0" style="-fx-background-color: #00738C;">
          <children>
-            <AnchorPane layoutY="92.0" pickOnBounds="false" prefHeight="602.0" prefWidth="981.0" style="-fx-background-color: #FFFFFF;">
+            <AnchorPane layoutY="92.0" pickOnBounds="false" prefHeight="482.0" prefWidth="981.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <ImageView blendMode="DARKEN" depthTest="ENABLE" fitHeight="111.0" fitWidth="212.0" layoutX="420.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+                  <Polyline layoutX="72.0" layoutY="50.0" points="909.0, -50.0, -72.0, -50.0, -72.0, 506.0, -62.0, -43.0" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.6339912414550781" blue="0.7763158082962036" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.6339912414550781" blue="0.7763158082962036" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Polyline>
+                  <ImageView cache="true" cacheHint="QUALITY" depthTest="ENABLE" fitHeight="661.0" fitWidth="672.0" layoutX="158.0" layoutY="-115.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@books15.png" />
+                        <Image url="@books13.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="search_info" layoutX="493.0" layoutY="22.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #00738C;" text="Search">
+                  <Button fx:id="search_info" layoutX="504.0" layoutY="24.0" mnemonicParsing="false" onAction="#SearchUser" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #00738C;" text="Search">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
                      <effect>
-                        <DropShadow height="9.28" radius="4.8725000000000005" width="12.21" />
+                        <Reflection fraction="0.54" topOpacity="0.16" />
                      </effect>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -65,41 +100,83 @@
                         </LinearGradient>
                      </textFill>
                   </Button>
-                  <TableView fx:id="userInfo" layoutX="20.0" layoutY="110.0" prefHeight="426.0" prefWidth="422.0">
+                  <TableView fx:id="userInfo" layoutX="20.0" layoutY="106.0" prefHeight="426.0" prefWidth="453.0">
                      <columns>
                         <TableColumn fx:id="username" prefWidth="113.0" text="username" />
                         <TableColumn fx:id="dateOfUserApproval" minWidth="0.0" prefWidth="135.0" text="date of user approval" />
                         <TableColumn fx:id="rating" prefWidth="101.0" text="rating" />
-                        <TableColumn fx:id="usertype" prefWidth="72.0" text="usertype" />
+                        <TableColumn fx:id="usertype" prefWidth="103.0" text="usertype" />
                      </columns>
                      <effect>
-                        <DropShadow height="67.78" radius="27.4375" spread="0.08" width="43.97">
+                        <DropShadow blurType="ONE_PASS_BOX" height="21.08" radius="9.8975" spread="0.55" width="20.51">
                            <color>
-                              <Color green="0.48766666650772095" blue="0.7699999809265137" opacity="0.29870128631591797" />
+                              <Color red="0.02800000086426735" green="0.09648920595645905" blue="0.14000000059604645" opacity="0.30000001192092896" />
                            </color>
                         </DropShadow>
                      </effect>
                   </TableView>
-                  <TextField layoutX="155.0" layoutY="29.0">
+                  <TextField fx:id="text_field" layoutX="166.0" layoutY="31.0" prefHeight="44.0" prefWidth="305.0">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="24.0" />
                      </font>
+                     <effect>
+                        <Reflection fraction="0.54" topOpacity="0.16" />
+                     </effect>
                   </TextField>
-                  <TableView fx:id="lendInfo" layoutX="506.0" layoutY="110.0" prefHeight="426.0" prefWidth="422.0">
+                  <TableView fx:id="lendInfo" layoutX="506.0" layoutY="106.0" prefHeight="426.0" prefWidth="453.0">
                      <columns>
-                        <TableColumn fx:id="idLendInfo" prefWidth="99.0" text="ID lend info" />
-                        <TableColumn fx:id="idLendBook" minWidth="0.0" prefWidth="121.0" text="ID lend book" />
-                        <TableColumn fx:id="isbn" prefWidth="104.0" text="ISBN" />
-                        <TableColumn fx:id="idBook" prefWidth="97.0" text="ID book" />
+                        <TableColumn fx:id="idLendInfo" prefWidth="81.66668701171875" text="ID lend info" />
+                        <TableColumn fx:id="idLendBook" minWidth="0.0" prefWidth="87.33331298828125" text="ID lend book" />
+                        <TableColumn fx:id="isbn" prefWidth="100.66668701171875" text="ISBN" />
+                        <TableColumn fx:id="idBook" prefWidth="184.0" text="book" />
                      </columns>
                      <effect>
-                        <DropShadow height="67.78" radius="27.4375" spread="0.08" width="43.97">
+                        <DropShadow blurType="ONE_PASS_BOX" height="21.08" radius="9.8975" spread="0.55" width="20.51">
                            <color>
-                              <Color green="0.48766666650772095" blue="0.7699999809265137" opacity="0.29870128631591797" />
+                              <Color red="0.02800000086426735" green="0.09648920595645905" blue="0.14000000059604645" opacity="0.30000001192092896" />
                            </color>
                         </DropShadow>
                      </effect>
                   </TableView>
+                  <Polyline layoutX="82.0" layoutY="60.0" points="899.0, -60.0, 892.0, 489.0, -82.0, 496.0, 899.0, 496.0" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.6339912414550781" blue="0.7763158082962036" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.6339912414550781" blue="0.7763158082962036" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Polyline>
                </children>
                <effect>
                   <DropShadow height="148.26" radius="36.565" width="0.0">
@@ -185,7 +262,10 @@
             </Label>
          </children>
          <effect>
-            <DropShadow />
+            <DropShadow spread="0.34">
+               <color>
+                  <Color green="0.46043166518211365" blue="1.0" />
+               </color></DropShadow>
          </effect>
       </AnchorPane>
    </children>

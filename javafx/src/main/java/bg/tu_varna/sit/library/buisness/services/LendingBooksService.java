@@ -69,7 +69,7 @@ public ObservableList<LendingBooksModel> getAllLendingBooks()
         List<LENDBOOKS> books = repositoryLendingBooks.getAll();
         for(LENDBOOKS b : books)
         {
-            if(b.getUSER_idUser().equals(user))
+            if(b.getUSER_idUser().getIdUser()==(user.getIdUser()))
             {
                 return b;
             }

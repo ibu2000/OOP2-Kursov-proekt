@@ -78,11 +78,6 @@ public class LendingBooksModel {
 
     @Override
     public String toString() {
-        return "LendingBooksModel{" +
-                "idLendBook=" + idLendBook +
-                ", dateOfTaking=" + dateOfTaking +
-                ", USER_idUser=" + USER_idUser +
-                ", dateOfreturn=" + dateOfreturn +
-                '}';
+        return idLendBook + "";
     }
 }
