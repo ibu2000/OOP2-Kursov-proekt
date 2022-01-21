@@ -112,22 +112,7 @@ public class LendingBooksController implements Initializable {
         s = stage;
     }
 
-    public void ReturnToHomePage()
-    {
-        try
-        {
-            s.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_USER));
-            Stage stage = new Stage();
-            fxmlLoader.setController(new HomePageUserController(stage));
-            Parent root2 = fxmlLoader.load();
-            stage.setScene(new Scene(root2));
-            stage.show();
-        } catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
+
 
     USER userr;
     public void displayId (USER user)

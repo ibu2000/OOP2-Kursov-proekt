@@ -178,7 +178,9 @@ public class HomePageOperatorController {
             Stage stage = new Stage();
             fxmlLoader.setController(new FormsController(stage));
             Parent root2 = fxmlLoader.load();
-
+            USER user = userService.FindUserByID(userr.getIdUser());
+            FormsController formsController = fxmlLoader.getController();
+            formsController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {

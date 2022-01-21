@@ -34,6 +34,8 @@ public class HomePageAdminController {
     @FXML
     private Button buttonA_scrap_book;
     @FXML
+    private Button buttonA_user_info;
+    @FXML
     private Label iduser;
     @FXML
     private Button button_create_user;
@@ -50,9 +52,9 @@ public class HomePageAdminController {
     UserService userService = new UserService();
 
     USER userr;
-    public void displayId (USER user)
-    {
-        iduser.setText( Long.toString(user.getIdUser()));
+
+    public void displayId(USER user) {
+        iduser.setText(Long.toString(user.getIdUser()));
         userr = user;
     }
 
@@ -71,8 +73,9 @@ public class HomePageAdminController {
             e.printStackTrace();
         }
     }
+
     @FXML
-    public void  addNewBook() {
+    public void addNewBook() {
         try {
             s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.ADD_BOOKS));
@@ -85,8 +88,9 @@ public class HomePageAdminController {
             e.printStackTrace();
         }
     }
+
     @FXML
-    public void  PromoteToOperatorPage() {
+    public void PromoteToOperatorPage() {
         try {
             s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.PROMOTE_TO_OPERATOR));
@@ -101,7 +105,7 @@ public class HomePageAdminController {
     }
 
     @FXML
-    public void  archiveBookPage() {
+    public void archiveBookPage() {
         try {
             s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.ARCHIVE_OLD_BOOK));
@@ -114,8 +118,9 @@ public class HomePageAdminController {
             e.printStackTrace();
         }
     }
-   @FXML
-    public void  ScrapBookPage() {
+
+    @FXML
+    public void ScrapBookPage() {
         try {
             s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SCRAP_BOOK));
@@ -128,8 +133,6 @@ public class HomePageAdminController {
             e.printStackTrace();
         }
     }
-
-
 
 
     @FXML
@@ -146,6 +149,7 @@ public class HomePageAdminController {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void deleteUserPage() {
         try {
@@ -160,14 +164,18 @@ public class HomePageAdminController {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void formsPage() {
         try {
-
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.FORMS));
             Stage stage = new Stage();
             fxmlLoader.setController(new FormsController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+           FormsController formsController = fxmlLoader.getController();
+            formsController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {
@@ -176,10 +184,8 @@ public class HomePageAdminController {
     }
 
 
-
-
     @FXML
-    public void  LendBooks() {
+    public void LendBooks() {
         try {
             s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.LEND_BOOK));
@@ -198,10 +204,8 @@ public class HomePageAdminController {
 
 
     @FXML
-    public void  ReturnBook()
-    {
-        try
-        {
+    public void ReturnBook() {
+        try {
             s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.RETURN_BOOK));
             Stage stage = new Stage();
@@ -212,17 +216,14 @@ public class HomePageAdminController {
             returnBookController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
 
-    public void  SearchBooks()
-    {
-        try
-        {
+    public void SearchBooks() {
+        try {
             s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SEARCH_BOOK));
             Stage stage = new Stage();
@@ -233,17 +234,14 @@ public class HomePageAdminController {
             searchBooksController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
 
-    public void  UserRatings()
-    {
-        try
-        {
+    public void UserRatings() {
+        try {
             s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.USER_RATINGS));
             Stage stage = new Stage();
@@ -254,12 +252,30 @@ public class HomePageAdminController {
             userRatingController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        }
+
+
+    @FXML
+    public void userInfo () {
+        try {
+            s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SEARCH_USER_INFO));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new SearchUserInfoController(stage));
+            Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            SearchUserInfoController searchUserInfoController = fxmlLoader.getController();
+            searchUserInfoController.displayId(userr);
+            stage.setScene(new Scene(root2));
+            stage.show();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
 }
 
 

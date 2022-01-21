@@ -122,6 +122,11 @@
                         </LinearGradient>
                      </textFill>
                   </Button>
+                  <Label fx:id="iduser" layoutX="23.0" layoutY="33.0" text="Label">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
                </children>
                <effect>
                   <DropShadow height="108.45" radius="49.447500000000005" width="91.34" />
