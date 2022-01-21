@@ -20,10 +20,54 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="636.0" prefWidth="782.0" style="-fx-background-color: #D6EAD4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="636.0" prefWidth="782.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane prefHeight="85.0" prefWidth="782.0" style="-fx-background-color: #00738C;" AnchorPane.bottomAnchor="551.0">
          <children>
+            <Polyline layoutX="128.0" layoutY="195.0" opacity="0.2" points="-5.0, 37.0, 439.0, -90.0, 301.0, 225.0, -50.0, 331.0" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.8776316046714783" blue="0.9078947305679321" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.2222222222222222">
+                           <color>
+                              <Color green="0.49450957775115967" blue="0.6100000143051147" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.8776316046714783" blue="0.9078947305679321" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.2222222222222222">
+                           <color>
+                              <Color green="0.49450957775115967" blue="0.6100000143051147" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Polyline>
             <ImageView fx:id="libraryImage" fitHeight="65.0" fitWidth="65.0" layoutX="715.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@library_icon.png" />
@@ -107,16 +151,16 @@
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
          <textFill>
-            <LinearGradient endX="1.0" endY="0.5071090047393366" startX="1.0">
+            <LinearGradient endX="1.0" endY="0.023696682464455" startX="1.0">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.8776316046714783" blue="0.9078947305679321" />
                      </color>
                   </Stop>
-                  <Stop offset="0.007662835249042145">
+                  <Stop offset="0.2222222222222222">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.8776316046714783" blue="0.9078947305679321" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
@@ -133,16 +177,16 @@
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
          <textFill>
-            <LinearGradient endX="1.0" endY="0.5071090047393366" startX="1.0">
+            <LinearGradient endX="1.0" endY="0.023696682464455" startX="1.0">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.8776316046714783" blue="0.9078947305679321" />
                      </color>
                   </Stop>
-                  <Stop offset="0.007662835249042145">
+                  <Stop offset="0.2222222222222222">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.8776316046714783" blue="0.9078947305679321" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
@@ -159,16 +203,16 @@
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
          <textFill>
-            <LinearGradient endX="1.0" endY="0.5071090047393366" startX="1.0">
+            <LinearGradient endX="1.0" endY="0.023696682464455" startX="1.0">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.8776316046714783" blue="0.9078947305679321" />
                      </color>
                   </Stop>
-                  <Stop offset="0.007662835249042145">
+                  <Stop offset="0.2222222222222222">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.8776316046714783" blue="0.9078947305679321" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
@@ -185,16 +229,16 @@
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
          <textFill>
-            <LinearGradient endX="1.0" endY="0.5071090047393366" startX="1.0">
+            <LinearGradient endX="1.0" endY="0.023696682464455" startX="1.0">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.8776316046714783" blue="0.9078947305679321" />
                      </color>
                   </Stop>
-                  <Stop offset="0.007662835249042145">
+                  <Stop offset="0.2222222222222222">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.8776316046714783" blue="0.9078947305679321" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
@@ -211,16 +255,16 @@
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
          <textFill>
-            <LinearGradient endX="1.0" endY="0.5071090047393366" startX="1.0">
+            <LinearGradient endX="1.0" endY="0.023696682464455" startX="1.0">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.8776316046714783" blue="0.9078947305679321" />
                      </color>
                   </Stop>
-                  <Stop offset="0.007662835249042145">
+                  <Stop offset="0.2222222222222222">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color green="0.8776316046714783" blue="0.9078947305679321" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
@@ -273,7 +317,7 @@
          <effect>
             <Reflection bottomOpacity="0.13" fraction="0.14" topOpacity="0.41" />
          </effect></TextField>
-      <Button fx:id="button_RSign_up" layoutX="319.0" layoutY="481.0" mnemonicParsing="false" onAction="#addUser" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #00738C;" text="Sign up">
+      <Button fx:id="button_RSign_up" layoutX="321.0" layoutY="481.0" mnemonicParsing="false" onAction="#addUser" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #00738C;" text="Sign up">
          <font>
             <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
@@ -310,7 +354,7 @@
             <Font name="Arial Narrow Italic" size="25.0" />
          </font>
       </Text>
-      <Label layoutX="236.0" layoutY="2.0" prefHeight="72.0" prefWidth="335.0" text="Registration" textFill="WHITE">
+      <Label layoutX="245.0" layoutY="2.0" prefHeight="72.0" prefWidth="335.0" text="Registration" textFill="WHITE">
          <font>
             <Font name="Bell MT Bold" size="60.0" />
          </font>
