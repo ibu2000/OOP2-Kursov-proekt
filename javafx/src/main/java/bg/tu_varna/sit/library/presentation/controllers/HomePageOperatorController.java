@@ -149,7 +149,9 @@ public class HomePageOperatorController {
             Stage stage = new Stage();
             fxmlLoader.setController(new CreateUserController(stage));
             Parent root2 = fxmlLoader.load();
-
+            USER user = userService.FindUserByID(userr.getIdUser());
+            CreateUserController createUserController = fxmlLoader.getController();
+            createUserController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {

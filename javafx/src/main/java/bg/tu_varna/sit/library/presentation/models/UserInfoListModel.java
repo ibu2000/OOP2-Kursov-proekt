@@ -73,11 +73,7 @@ public class UserInfoListModel {
 
     @Override
     public String toString() {
-        return "UserInfoListModel{" +
-                "User_idUser=" + User_idUser +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return
+                name + " " +  phone + " " + email +"";
     }
 }

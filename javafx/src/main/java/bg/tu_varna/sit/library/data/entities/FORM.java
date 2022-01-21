@@ -47,6 +47,10 @@ public class FORM {
         this.status = status;
     }
 
+    public FORM(long idForm) {
+        this.idForm = idForm;
+    }
+
     public String getStatus() {
         return status;
     }

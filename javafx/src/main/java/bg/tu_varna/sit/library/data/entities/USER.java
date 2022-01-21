@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.library.data.entities;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public class USER {
     private String password;
 
     @Column(name = "dateOfUserApproval", nullable = false)
-    private Date dateOfUserApproval;
+    private LocalDate dateOfUserApproval;
 
 
     @Column(name = "rating", nullable = false)
@@ -43,7 +44,7 @@ public class USER {
     public USER() {
     }
 
-    public USER(long idUser, String userName, String password, Date dateOfUserApproval, String rating, Status STATUS_idStatus, UserType USERTYPE_idUserType) {
+    public USER(long idUser, String userName, String password,LocalDate dateOfUserApproval, String rating, Status STATUS_idStatus, UserType USERTYPE_idUserType) {
         this.idUser = idUser;
         this.userName = userName;
         this.password = password;
@@ -91,12 +92,16 @@ public class USER {
         this.password = password;
     }
 
-    public Date getDateOfUserApproval() {
+    public LocalDate getDateOfUserApproval() {
         return dateOfUserApproval;
     }
 
-    public void setDateOfUserApproval(Date dateOfUserApproval) {
+    public void setDateOfUserApproval(LocalDate dateOfUserApproval) {
         this.dateOfUserApproval = dateOfUserApproval;
+    }
+
+    public void setUSERTYPE_idUserType(UserType USERTYPE_idUserType) {
+        this.USERTYPE_idUserType = USERTYPE_idUserType;
     }
 
     public String getRating() {
@@ -138,14 +143,14 @@ public class USER {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof USER)) return false;
         USER user = (USER) o;
-        return Objects.equals(userName, user.userName) && Objects.equals(password, user.password);
+        return getIdUser() == user.getIdUser() && Objects.equals(getUserName(), user.getUserName()) && Objects.equals(getPassword(), user.getPassword()) && Objects.equals(getDateOfUserApproval(), user.getDateOfUserApproval()) && Objects.equals(getRating(), user.getRating()) && Objects.equals(getSTATUS_idStatus(), user.getSTATUS_idStatus()) && Objects.equals(getUSERTYPE_idUserType(), user.getUSERTYPE_idUserType());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userName, password);
+        return Objects.hash(getIdUser(), getUserName(), getPassword(), getDateOfUserApproval(), getRating(), getSTATUS_idStatus(), getUSERTYPE_idUserType());
     }
 }
 

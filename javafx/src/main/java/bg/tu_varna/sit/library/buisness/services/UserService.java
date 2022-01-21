@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -75,7 +76,7 @@ public class UserService {
         List<USER> users = repositoryUser.getAll();
         for(USER user : users)
         {
-            if(user.equals(usr))
+            if(user.getUserName().equals(usr.getUserName()) && user.getPassword().equals(usr.getPassword()))
             {
              long b = user.getUSERTYPE_idUserType().getIdUserType();
              return b;
@@ -222,14 +223,7 @@ public class UserService {
     }
 
 
-    public static Date parseDate(String date)
-    {
-        try {
-            return new SimpleDateFormat("yyyy-MM-dd").parse(date);
-        } catch (ParseException e) {
-            return null;
-        }
-    }
+
 
 
     public boolean CreateUser(UserListModel addUser) {
@@ -239,7 +233,7 @@ public class UserService {
         {
             if(u.getUserName().equals(user.getUserName()))
             {
-                Date myDate = parseDate(java.time.LocalDate.now().toString());
+                LocalDate myDate =  LocalDate.now();;
                 Status status = new Status(2,"not pending");
                 u.setSTATUS_idStatus(status);
                 u.setDateOfUserApproval(myDate);
@@ -267,7 +261,7 @@ public class UserService {
 
     public UserListModel GetUser(String a)
     {   UserListModel temp = new UserListModel(a);
-        ObservableList<UserListModel> allUsers = getAllUsers();
+        ObservableList<UserListModel> allUsers =getAllFields();
         for(UserListModel b : allUsers)
         {
             if(b.getUserName().equals(temp.getUserName()))
@@ -279,6 +273,20 @@ public class UserService {
 
     }
 
+
+    public USER GetUserByName(String a)
+    {
+        List<USER> allUsers =repositoryUser.getAll();
+        for(USER b : allUsers)
+        {
+            if(b.getUserName().equals(a))
+            {
+                return b;
+            }
+        }
+        return null;
+
+    }
 
 
     public ObservableList<UserListModel> GetUsersByLoyalty(String a)
@@ -295,4 +303,6 @@ public class UserService {
        return copies;
 
     }
+
+
 }

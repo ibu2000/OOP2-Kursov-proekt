@@ -2,10 +2,13 @@ package bg.tu_varna.sit.library.buisness.services;
 
 import bg.tu_varna.sit.library.data.entities.Eksemplqri;
 import bg.tu_varna.sit.library.data.entities.FORM;
+import bg.tu_varna.sit.library.data.entities.USER;
 import bg.tu_varna.sit.library.data.repositories.EksemplqriRepository;
 import bg.tu_varna.sit.library.data.repositories.FormRepository;
+import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import bg.tu_varna.sit.library.presentation.models.FormModel;
+import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -43,7 +46,7 @@ public class FormService {
         List<FORM> copies = formRepository.getAll();
          for(FORM e : copies)
         {
-            if(e.equals(addCopy))
+            if(e.getUSER_idUser().equals(addCopy.getUSER_idUser()))
             {
                 return false;
             }
@@ -51,6 +54,69 @@ public class FormService {
         formRepository.save(addCopy);
         return true;
     }
+
+
+
+    public FORM listviewToEntity(FormModel a)
+    {
+        FORM temp = new FORM(a.getIdForm());
+        List<FORM> copies = formRepository.getAll();
+        for(FORM u: copies)
+        {
+            if(u.getIdForm()==temp.getIdForm())
+            {
+                return u;
+            }
+        }
+        return  null;
+    }
+
+    public ObservableList<FormModel> GetFormsByStatus(String a)
+    {
+        ObservableList<FormModel> copies = FXCollections.observableArrayList();
+        ObservableList<FormModel> allUsers = getAllCopies();
+        for(FormModel b : allUsers)
+        {
+            if(b.getStatus().equals(a))
+            {
+                copies.add(b);
+            }
+        }
+        return copies;
+
+    }
+
+
+    public FormModel GetForm(USER user)
+    {
+        ObservableList<FormModel> allForms = getAllCopies();
+        for(FormModel b : allForms)
+        {
+            if(b.getUSER_idUser().getUserName().equals(user.getUserName()))
+            {
+                return b;
+            }
+        }
+        return null;
+
+    }
+
+
+
+    public boolean UpdateForm(FormModel b) {
+        List<FORM> copies = formRepository.getAll();
+       for(FORM u : copies)
+        {
+            if(u.getUSER_idUser().getUserName().equals(b.getUSER_idUser().getUserName()))
+            {
+                u.setStatus("not pending");
+                formRepository.update(u);
+                return true;
+            }
+        }
+        return true;
+    }
+
 
 
 

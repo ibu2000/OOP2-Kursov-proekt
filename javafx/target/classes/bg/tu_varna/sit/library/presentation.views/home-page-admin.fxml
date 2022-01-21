@@ -23,11 +23,11 @@
          <children>
             <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="869.0" prefWidth="1028.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Polyline layoutX="82.0" layoutY="124.0" points="925.0, 258.0, -63.0, 258.0, -64.0, 729.0, 924.0, 729.0" strokeType="INSIDE">
+                  <Polyline layoutX="82.0" layoutY="124.0" points="936.36328125, 244.0, -75.63674926757812, 244.0, -75.63674926757812, 738.0, 936.36328125, 738.0" strokeType="INSIDE">
                      <effect>
-                        <DropShadow height="58.01" radius="28.7775" spread="0.21" width="59.1">
+                        <DropShadow height="58.56" radius="28.915" spread="0.21" width="59.1">
                            <color>
-                              <Color red="0.7324561476707458" green="0.9079678654670715" blue="0.9473684430122375" />
+                              <Color red="0.4312865436077118" green="0.510477602481842" blue="0.5263158082962036" />
                            </color>
                         </DropShadow>
                      </effect>
@@ -41,23 +41,33 @@
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="0.699999988079071" blue="1.0" />
+                                    <Color green="0.49210527539253235" blue="0.6710526347160339" />
                                  </color>
                               </Stop>
                            </stops>
                         </LinearGradient>
                      </fill>
                      <stroke>
-                        <LinearGradient endX="1.0" endY="1.0">
+                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
                            <stops>
                               <Stop>
                                  <color>
                                     <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9961685823754789">
+                                 <color>
+                                    <Color red="0.43421053886413574" green="0.43421053886413574" blue="0.43421053886413574" />
+                                 </color>
+                              </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color green="0.699999988079071" blue="1.0" />
+                                    <Color red="0.43421053886413574" green="0.43421053886413574" blue="0.43421053886413574" />
                                  </color>
                               </Stop>
                            </stops>
@@ -446,53 +456,124 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
+                  <Button fx:id="button_create_user" layoutX="18.0" layoutY="382.0" mnemonicParsing="false" onAction="#createUserPage" prefHeight="81.0" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Create user">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.08056872037914692">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.46043166518211365" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color green="0.46043166518211365" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.43981480598449707" green="1.0" blue="0.8412808775901794" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="button_delete_user" layoutX="260.0" layoutY="382.0" mnemonicParsing="false" onAction="#deleteUserPage" prefHeight="81.0" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Delete user">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.08056872037914692">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.46043166518211365" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color green="0.46043166518211365" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.43981480598449707" green="1.0" blue="0.8412808775901794" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="button_forms" layoutX="516.0" layoutY="382.0" mnemonicParsing="false" onAction="#formsPage" prefHeight="81.0" prefWidth="230.0" style="-fx-background-color: #00738C;" text="Forms">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.08056872037914692">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.46043166518211365" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color green="0.46043166518211365" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.43981480598449707" green="1.0" blue="0.8412808775901794" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="buttonA_user_info" layoutX="773.0" layoutY="382.0" mnemonicParsing="false" onAction="#userInfo" prefHeight="81.0" prefWidth="230.0" style="-fx-background-color: #00738C;" text="User info">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.08056872037914692">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.46043166518211365" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color green="0.46043166518211365" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.43981480598449707" green="1.0" blue="0.8412808775901794" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
                </children>
             </AnchorPane>
-            <Button fx:id="button_create_user" layoutX="23.0" layoutY="386.0" mnemonicParsing="false" onAction="#createUserPage" prefHeight="81.0" prefWidth="315.0" style="-fx-background-color: #00738C;" text="Create user" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="30.0" />
-               </font>
-               <effect>
-                  <Glow level="0.29">
-                     <input>
-                        <Reflection bottomOpacity="0.08" fraction="0.4" topOpacity="0.52" />
-                     </input>
-                  </Glow>
-               </effect>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="button_delete_user" layoutX="358.0" layoutY="386.0" mnemonicParsing="false" onAction="#deleteUserPage" prefHeight="81.0" prefWidth="315.0" style="-fx-background-color: #00738C;" text="Delete user" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="30.0" />
-               </font>
-               <effect>
-                  <Glow level="0.29">
-                     <input>
-                        <Reflection bottomOpacity="0.08" fraction="0.4" topOpacity="0.52" />
-                     </input>
-                  </Glow>
-               </effect>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="button_forms" layoutX="694.0" layoutY="386.0" mnemonicParsing="false" onAction="#formsPage" prefHeight="81.0" prefWidth="315.0" style="-fx-background-color: #00738C;" text="Forms" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="30.0" />
-               </font>
-               <effect>
-                  <Glow level="0.29">
-                     <input>
-                        <Reflection bottomOpacity="0.08" fraction="0.4" topOpacity="0.52" />
-                     </input>
-                  </Glow>
-               </effect>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="25.0" layoutY="497.0" prefHeight="360.0" prefWidth="984.0" style="-fx-background-color: #0a5868;">

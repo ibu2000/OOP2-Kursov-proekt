@@ -48,6 +48,11 @@
                         <Cursor fx:constant="OPEN_HAND" />
                      </cursor>
                   </ComboBox>
+                  <Label fx:id="iduser" layoutX="21.0" layoutY="9.0" text="Label">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
                </children>
                <effect>
                   <DropShadow height="54.23" radius="26.2475" width="52.76" />

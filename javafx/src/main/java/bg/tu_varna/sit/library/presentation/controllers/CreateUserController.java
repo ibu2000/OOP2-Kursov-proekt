@@ -1,11 +1,14 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
 import bg.tu_varna.sit.library.buisness.services.BookService;
+import bg.tu_varna.sit.library.buisness.services.FormService;
 import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.data.entities.Books;
+import bg.tu_varna.sit.library.data.entities.USER;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
+import bg.tu_varna.sit.library.presentation.models.FormModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,11 +28,12 @@ public class CreateUserController implements Initializable{
 
     @FXML
     private ComboBox combo_boxCAU_create_a_user;
-
+    @FXML
+    private Label iduser;
     UserService userService = new UserService();
     Stage s;
     UserService  UserService= new UserService();
-
+    FormService formService = new FormService();
 
     public CreateUserController() {
     }
@@ -56,6 +60,15 @@ public class CreateUserController implements Initializable{
         }
     }
 
+
+    USER userr;
+    public void displayId (USER user)
+    {
+        iduser.setText( Long.toString(user.getIdUser()));
+        userr = user;
+    }
+
+
     boolean isCreated;
     @FXML
     public void createUser()
@@ -73,12 +86,15 @@ public class CreateUserController implements Initializable{
 
             if (isCreated)
             {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The user has been create!", ButtonType.OK);
+                USER user = userService.GetUserByName(username);
+                FormModel form = formService.GetForm(user);
+                formService.UpdateForm(form);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The user has been created!", ButtonType.OK);
                 alert.show();
             }
             else
             {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The user has not been create!", ButtonType.OK);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The user has not been created!", ButtonType.OK);
                 alert.show();
             }
         }
@@ -87,21 +103,55 @@ public class CreateUserController implements Initializable{
         combo_boxCAU_create_a_user.getItems().addAll(UserService.getUserForApproval());
     }
 
-
     @FXML
-    public void  goToHomePage() {
+    public void goToHomePage() {
         try {
-            s.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_OPERATOR));
-            Stage stage = new Stage();
-            fxmlLoader.setController(new HomePageOperatorController(stage));
-            Parent root2 = fxmlLoader.load();
-            stage.setScene(new Scene(root2));
-            stage.show();
+
+            USER user = userService.FindUserByID(userr.getIdUser());
+            long a = user.getUSERTYPE_idUserType().getIdUserType();
+
+
+            if (a == 1)
+            {
+                s.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_USER));
+                Stage stage = new Stage();
+                fxmlLoader.setController(new HomePageUserController(stage));
+                Parent root2 = fxmlLoader.load();
+                HomePageUserController homePageUserController = fxmlLoader.getController();
+                homePageUserController.displayId(user);
+                stage.setScene(new Scene(root2));
+                stage.show();
+            } else if (a == 2)
+            {
+
+                s.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_OPERATOR));
+                Stage stage = new Stage();
+                fxmlLoader.setController(new HomePageOperatorController(stage));
+                Parent root2 = fxmlLoader.load();
+                HomePageOperatorController homePageOperatorController = fxmlLoader.getController();
+                homePageOperatorController.displayId(user);
+                stage.setScene(new Scene(root2));
+                stage.show();
+            } else if (a == 3)
+            {
+                s.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_ADMIN));
+                Stage stage = new Stage();
+                fxmlLoader.setController(new HomePageAdminController(stage));
+                Parent root2 = fxmlLoader.load();
+                HomePageAdminController homePageAdminController = fxmlLoader.getController();
+                homePageAdminController.displayId(user);
+                stage.setScene(new Scene(root2));
+                stage.show();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+
 
 
 

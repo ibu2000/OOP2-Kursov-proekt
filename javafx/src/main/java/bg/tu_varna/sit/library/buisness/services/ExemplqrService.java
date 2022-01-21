@@ -83,19 +83,6 @@ public class ExemplqrService {
         return true;
     }
 
-  public ExemplqrModel GetCopy(ExemplqrModel a)
-    {    ObservableList<ExemplqrModel> allCopies = getAllCopies();
-        for(ExemplqrModel b : allCopies)
-        {
-            if(b.equals(a))
-            {
-                return b;
-            }
-        }
-        return null;
-
-    }
-
 
     public  ObservableList<ExemplqrModel> getBookOldCopy(LocalDate date)
     {
@@ -177,7 +164,7 @@ public class ExemplqrService {
                 return true;
             }
         }
-        return true;
+        return false;
     }
 
     public ObservableList<ExemplqrModel> getLendInfoCopies(ObservableList<LendingInfoModel> lendingInfoModels)

@@ -37,12 +37,7 @@ public class BookService {
         return  booklist;
     }
 
- /*   public ObservableList<BookListModel> getOldBooks() {
-        BookListModel b = new BookListModel();
-        ObservableList<BookListModel> allCopies = getAllBooks();
-        ObservableList<BookListModel> copies = FXCollections.observableArrayList();
 
-    }*/
 
     public ArrayList<String> getBookNames()
     {

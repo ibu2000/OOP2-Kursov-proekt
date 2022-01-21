@@ -5,6 +5,7 @@ import bg.tu_varna.sit.library.data.entities.Status;
 import bg.tu_varna.sit.library.data.entities.UserType;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -13,12 +14,12 @@ public class UserListModel {
     private long idUser;
     private String userName;
     private String password;
-    private Date dateOfUserApproval;
+    private LocalDate dateOfUserApproval;
     private String rating;
     private UserType USERTYEPE_idUserType;
     private Status STATUS_idStatus;
 
-    public UserListModel(long idUser, String userName, String password, Date dateOfUserApproval, String rating, UserType USERTYEPE_idUserType, Status STATUS_idStatus) {
+    public UserListModel(long idUser, String userName, String password, LocalDate dateOfUserApproval, String rating, UserType USERTYEPE_idUserType, Status STATUS_idStatus) {
         this.idUser = idUser;
         this.userName = userName;
         this.password = password;
@@ -33,7 +34,7 @@ public class UserListModel {
 
     }
 
-    public UserListModel(String userName, String password, Date dateOfUserApproval, String rating, UserType USERTYEPE_idUserType, Status STATUS_idStatus) {
+    public UserListModel(String userName, String password, LocalDate dateOfUserApproval, String rating, UserType USERTYEPE_idUserType, Status STATUS_idStatus) {
         this.userName = userName;
         this.password = password;
         this.dateOfUserApproval = dateOfUserApproval;
@@ -86,11 +87,11 @@ public class UserListModel {
         this.password = password;
     }
 
-    public Date getDateOfUserApproval() {
+    public LocalDate getDateOfUserApproval() {
         return dateOfUserApproval;
     }
 
-    public void setDateOfUserApproval(Date dateOfUserApproval) {
+    public void setDateOfUserApproval(LocalDate dateOfUserApproval) {
         this.dateOfUserApproval = dateOfUserApproval;
     }
 
