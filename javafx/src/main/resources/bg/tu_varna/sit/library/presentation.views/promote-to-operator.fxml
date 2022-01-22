@@ -123,6 +123,11 @@
                <effect>
                   <Reflection />
                </effect></ComboBox>
+            <Label fx:id="iduser" layoutY="127.0" text="Label">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
          </children>
          <effect>
             <DropShadow />

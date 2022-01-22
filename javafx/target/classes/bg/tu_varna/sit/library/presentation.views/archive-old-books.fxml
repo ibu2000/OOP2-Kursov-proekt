@@ -85,6 +85,11 @@
                      </effect>
                   </TableView>
                   <DatePicker fx:id="year_of_publishing" layoutX="225.0" layoutY="65.0" onAction="#getDate" prefHeight="42.0" prefWidth="223.0" />
+                  <Label fx:id="iduser" layoutX="-2.0" layoutY="23.0" text="Label">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
                </children>
                <effect>
                   <DropShadow height="148.26" radius="36.565" width="0.0">

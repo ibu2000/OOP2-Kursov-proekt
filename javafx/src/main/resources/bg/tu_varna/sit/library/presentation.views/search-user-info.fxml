@@ -63,7 +63,7 @@
                         <Image url="@books13.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="search_info" layoutX="504.0" layoutY="24.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #00738C;" text="Search">
+                  <Button fx:id="search_info" layoutX="504.0" layoutY="24.0" mnemonicParsing="false" onAction="#SearchUser" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #00738C;" text="Search">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -105,7 +105,7 @@
                         <TableColumn fx:id="username" prefWidth="113.0" text="username" />
                         <TableColumn fx:id="dateOfUserApproval" minWidth="0.0" prefWidth="135.0" text="date of user approval" />
                         <TableColumn fx:id="rating" prefWidth="101.0" text="rating" />
-                        <TableColumn fx:id="usertype" prefWidth="72.0" text="usertype" />
+                        <TableColumn fx:id="usertype" prefWidth="103.0" text="usertype" />
                      </columns>
                      <effect>
                         <DropShadow blurType="ONE_PASS_BOX" height="21.08" radius="9.8975" spread="0.55" width="20.51">
@@ -115,7 +115,7 @@
                         </DropShadow>
                      </effect>
                   </TableView>
-                  <TextField layoutX="166.0" layoutY="31.0" prefHeight="44.0" prefWidth="305.0">
+                  <TextField fx:id="text_field" layoutX="166.0" layoutY="31.0" prefHeight="44.0" prefWidth="305.0">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="24.0" />
                      </font>
@@ -125,10 +125,10 @@
                   </TextField>
                   <TableView fx:id="lendInfo" layoutX="506.0" layoutY="106.0" prefHeight="426.0" prefWidth="453.0">
                      <columns>
-                        <TableColumn fx:id="idLendInfo" prefWidth="99.0" text="ID lend info" />
-                        <TableColumn fx:id="idLendBook" minWidth="0.0" prefWidth="121.0" text="ID lend book" />
-                        <TableColumn fx:id="isbn" prefWidth="104.0" text="ISBN" />
-                        <TableColumn fx:id="idBook" prefWidth="97.0" text="ID book" />
+                        <TableColumn fx:id="idLendInfo" prefWidth="81.66668701171875" text="ID lend info" />
+                        <TableColumn fx:id="idLendBook" minWidth="0.0" prefWidth="87.33331298828125" text="ID lend book" />
+                        <TableColumn fx:id="isbn" prefWidth="100.66668701171875" text="ISBN" />
+                        <TableColumn fx:id="idBook" prefWidth="184.0" text="book" />
                      </columns>
                      <effect>
                         <DropShadow blurType="ONE_PASS_BOX" height="21.08" radius="9.8975" spread="0.55" width="20.51">

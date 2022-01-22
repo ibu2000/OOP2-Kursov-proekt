@@ -13,10 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -29,10 +26,20 @@ public class PromoteToOperatorController  implements Initializable {
     private Button buttonPTO_promote_to_operator;
     @FXML
     private Button buttonPTO_home;
-
+    @FXML
+    private Label iduser;
     Stage s;
-    UserService userService = new UserService();
+
     public PromoteToOperatorController() {
+    }
+
+
+    UserService userService = new UserService();
+    USER userr;
+    public void displayId (USER user)
+    {
+        iduser.setText( Long.toString(user.getIdUser()));
+        userr = user;
     }
 
     public PromoteToOperatorController(Stage stage) {
@@ -77,20 +84,56 @@ public class PromoteToOperatorController  implements Initializable {
         }
     }
 
+
+
     @FXML
     public void goToHomePage() {
         try {
-            s.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_ADMIN));
-            Stage stage = new Stage();
-            fxmlLoader.setController(new HomePageAdminController(stage));
-            Parent root2 = fxmlLoader.load();
-            stage.setScene(new Scene(root2));
-            stage.show();
+
+            USER user = userService.FindUserByID(userr.getIdUser());
+            long a = user.getUSERTYPE_idUserType().getIdUserType();
+
+
+            if (a == 1)
+            {
+                s.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_USER));
+                Stage stage = new Stage();
+                fxmlLoader.setController(new HomePageUserController(stage));
+                Parent root2 = fxmlLoader.load();
+                HomePageUserController homePageUserController = fxmlLoader.getController();
+                homePageUserController.displayId(user);
+                stage.setScene(new Scene(root2));
+                stage.show();
+            } else if (a == 2)
+            {
+
+                s.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_OPERATOR));
+                Stage stage = new Stage();
+                fxmlLoader.setController(new HomePageOperatorController(stage));
+                Parent root2 = fxmlLoader.load();
+                HomePageOperatorController homePageOperatorController = fxmlLoader.getController();
+                homePageOperatorController.displayId(user);
+                stage.setScene(new Scene(root2));
+                stage.show();
+            } else if (a == 3)
+            {
+                s.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_ADMIN));
+                Stage stage = new Stage();
+                fxmlLoader.setController(new HomePageAdminController(stage));
+                Parent root2 = fxmlLoader.load();
+                HomePageAdminController homePageAdminController = fxmlLoader.getController();
+                homePageAdminController.displayId(user);
+                stage.setScene(new Scene(root2));
+                stage.show();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 
 
 

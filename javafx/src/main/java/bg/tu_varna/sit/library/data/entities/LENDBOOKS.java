@@ -78,11 +78,6 @@ public class LENDBOOKS {
 
     @Override
     public String toString() {
-        return "LENDBOOKS{" +
-                "idLendBook=" + idLendBook +
-                ", dateOfTaking=" + dateOfTaking +
-                ", USER_idUser=" + USER_idUser +
-                ", dateOfreturn=" + dateOfreturn +
-                '}';
+        return  idLendBook +"";
     }
 }

@@ -140,7 +140,7 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.023391813039779663" green="0.29512670636177063" blue="0.42105263471603394" />
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
                      </color>
                   </Stop>
                </stops>
@@ -272,7 +272,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button fx:id="buttonScrapBook_home" layoutX="548.0" layoutY="67.0" mnemonicParsing="false" onAction="#ScrapBookHomeToAdmin" prefHeight="56.0" prefWidth="127.0" style="-fx-background-color: WHITE;" text="home">
+            <Button fx:id="buttonScrapBook_home" layoutX="548.0" layoutY="67.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="56.0" prefWidth="127.0" style="-fx-background-color: WHITE;" text="home">
                <font>
                   <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
@@ -333,7 +333,7 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                        <Color red="0.023391813039779663" green="0.29512670636177063" blue="0.42105263471603394" />
                      </color>
                   </Stop>
                </stops>
@@ -362,5 +362,10 @@
             </DropShadow>
          </effect>
       </TableView>
+      <Label fx:id="iduser" layoutX="155.0" layoutY="23.0" text="Label">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

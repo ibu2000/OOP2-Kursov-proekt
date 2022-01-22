@@ -82,6 +82,9 @@ public class HomePageAdminController {
             Stage stage = new Stage();
             fxmlLoader.setController(new AddNewBookController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            AddNewBookController addNewBookController = fxmlLoader.getController();
+            addNewBookController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {
@@ -97,6 +100,9 @@ public class HomePageAdminController {
             Stage stage = new Stage();
             fxmlLoader.setController(new PromoteToOperatorController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+           PromoteToOperatorController promoteToOperatorController = fxmlLoader.getController();
+            promoteToOperatorController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {
@@ -112,6 +118,9 @@ public class HomePageAdminController {
             Stage stage = new Stage();
             fxmlLoader.setController(new ArchiveOldBooksController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            ArchiveOldBooksController archiveOldBooksController = fxmlLoader.getController();
+            archiveOldBooksController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {
@@ -127,6 +136,9 @@ public class HomePageAdminController {
             Stage stage = new Stage();
             fxmlLoader.setController(new ScrapBookController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            ScrapBookController scrapBookController = fxmlLoader.getController();
+            scrapBookController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {
@@ -138,11 +150,14 @@ public class HomePageAdminController {
     @FXML
     public void createUserPage() {
         try {
-
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.CREATE_USER));
             Stage stage = new Stage();
             fxmlLoader.setController(new CreateUserController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            CreateUserController createUserController = fxmlLoader.getController();
+            createUserController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {
@@ -153,11 +168,14 @@ public class HomePageAdminController {
     @FXML
     public void deleteUserPage() {
         try {
-
+            s.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.DELETE_USER));
             Stage stage = new Stage();
             fxmlLoader.setController(new DeleteUserController(stage));
             Parent root2 = fxmlLoader.load();
+            USER user = userService.FindUserByID(userr.getIdUser());
+            DeleteUserController deleteUserController = fxmlLoader.getController();
+            deleteUserController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
         } catch (Exception e) {
