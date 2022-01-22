@@ -464,21 +464,21 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.08056872037914692">
+                        <LinearGradient endY="1.0" startX="1.0" startY="0.08056872037914692">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color green="0.46043166518211365" blue="1.0" />
+                                    <Color red="0.4399999976158142" green="1.0" blue="0.8670503497123718" />
                                  </color>
                               </Stop>
                               <Stop offset="0.007662835249042145">
                                  <color>
-                                    <Color green="0.46043166518211365" blue="1.0" />
+                                    <Color red="0.4399999976158142" green="1.0" blue="0.8670503497123718" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color red="0.43981480598449707" green="1.0" blue="0.8412808775901794" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                            </stops>
@@ -493,21 +493,21 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.08056872037914692">
+                        <LinearGradient endY="1.0" startX="1.0" startY="0.08056872037914692">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color green="0.46043166518211365" blue="1.0" />
+                                    <Color red="0.4399999976158142" green="1.0" blue="0.8670503497123718" />
                                  </color>
                               </Stop>
                               <Stop offset="0.007662835249042145">
                                  <color>
-                                    <Color green="0.46043166518211365" blue="1.0" />
+                                    <Color red="0.4399999976158142" green="1.0" blue="0.8670503497123718" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color red="0.43981480598449707" green="1.0" blue="0.8412808775901794" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                            </stops>
@@ -522,21 +522,21 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.08056872037914692">
+                        <LinearGradient endY="1.0" startX="1.0" startY="0.08056872037914692">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color green="0.46043166518211365" blue="1.0" />
+                                    <Color red="0.4399999976158142" green="1.0" blue="0.8670503497123718" />
                                  </color>
                               </Stop>
                               <Stop offset="0.007662835249042145">
                                  <color>
-                                    <Color green="0.46043166518211365" blue="1.0" />
+                                    <Color red="0.4399999976158142" green="1.0" blue="0.8670503497123718" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color red="0.43981480598449707" green="1.0" blue="0.8412808775901794" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                            </stops>
@@ -551,21 +551,21 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.08056872037914692">
+                        <LinearGradient endY="1.0" startX="1.0" startY="0.08056872037914692">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color green="0.46043166518211365" blue="1.0" />
+                                    <Color red="0.4399999976158142" green="1.0" blue="0.8670503497123718" />
                                  </color>
                               </Stop>
                               <Stop offset="0.007662835249042145">
                                  <color>
-                                    <Color green="0.46043166518211365" blue="1.0" />
+                                    <Color red="0.4399999976158142" green="1.0" blue="0.8670503497123718" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color red="0.43981480598449707" green="1.0" blue="0.8412808775901794" />
+                                    <Color red="1.0" green="1.0" blue="1.0" />
                                  </color>
                               </Stop>
                            </stops>
