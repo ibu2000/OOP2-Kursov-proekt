@@ -1,11 +1,15 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.ExemplqrService;
+import bg.tu_varna.sit.library.buisness.services.LendingBooksService;
 import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.entities.USER;
 import bg.tu_varna.sit.library.data.entities.UserType;
+import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -33,6 +37,8 @@ import static bg.tu_varna.sit.library.common.Constants.View.HOMEPAGE_USER;
 
 import java.io.IOException;
 import java.security.Provider;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SampleController {
@@ -67,7 +73,12 @@ public class SampleController {
 
     public static int userType = 2;
 
+    LendingBooksService lendingBooksService = new LendingBooksService();
     UserService service = new UserService();
+    ExemplqrService exemplqrService = new ExemplqrService();
+
+    boolean late;
+    boolean newUser;
 
     @FXML
     public void userLogin() {
@@ -94,6 +105,16 @@ public class SampleController {
                         homePageUserController.displayId(user);
                         stage.setScene(new Scene(root2));
                         stage.show();
+                        late = lendingBooksService.BooksNotReturnedOnTime(user);
+                        if (late)
+                        {
+                            service.MakeDisloyal(user);
+                            String s = "You haven't returned your books on time, your rating is set to 'bad' until you return them";
+                            homePageUserController.Test(s);
+                        }
+                        else
+                        {}
+
                     } else if (a == 2) {
                         s.close();
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_OPERATOR));
@@ -105,6 +126,25 @@ public class SampleController {
                        homePageOperatorController.displayId(user);
                         stage.setScene(new Scene(root2));
                         stage.show();
+                        late = lendingBooksService.BooksNotReturnedOnTime(user);
+                        if (late)
+                        {
+                            service.MakeDisloyal(user);
+                            String s = "You haven't returned your books on time, your rating is set to 'bad' until you return them";
+                            homePageOperatorController.Test(s);
+                        }
+                        else {String s = " ";}
+
+
+                        ArrayList<String>  list = service.getUserForApproval();
+                        if(list.size() > 0)
+                        {
+                            String s = "A new form has been submitted";
+                            homePageOperatorController.Test(s);
+                        }
+                        else {String s = " ";}
+
+
                     } else if (a == 3) {
                         s.close();
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.HOMEPAGE_ADMIN));
@@ -115,8 +155,35 @@ public class SampleController {
                         HomePageAdminController homePageAdminController = fxmlLoader.getController();
                         homePageAdminController.displayId(user);
                         stage.setScene(new Scene(root2));
-
                         stage.show();
+                        late = lendingBooksService.BooksNotReturnedOnTime(user);
+                        if (late)
+                        {
+                            service.MakeDisloyal(user);
+                            String s = "You haven't returned your books on time, your rating is set to 'bad' until you return them";
+                            homePageAdminController.Test(s);
+                        }
+                        else {String s = " ";}
+
+
+
+                        ArrayList<String>  list = service.getUserForApproval();
+                        if(list.size() > 0)
+                        {
+                            String s = "A new form has been submitted";
+                            homePageAdminController.Test(s);
+                        }
+                        else {String s = " ";}
+
+                        LocalDate date =LocalDate.of(1970, 1, 1);
+                        ObservableList<ExemplqrModel> list1 = exemplqrService.getBookOldCopy(date);
+                        if(list1.size() > 0)
+                        {
+                            String s = "There are old books that need to be archived";
+                            homePageAdminController.Test(s);
+                        }
+                        else {String s = " ";}
+
                     }
                 } catch (Exception e) {
                     e.printStackTrace();

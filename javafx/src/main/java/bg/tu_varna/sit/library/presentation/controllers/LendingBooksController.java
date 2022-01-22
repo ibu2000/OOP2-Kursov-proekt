@@ -61,10 +61,15 @@ public class LendingBooksController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+
+    }
+
+
+    public void showinfo()
+    {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Please select where you're going to take the book. (you can only get books for home or for the reading room)", ButtonType.OK);
         alert.show();
     }
-
 
     public void  CheckBoxes()
     {
@@ -138,16 +143,21 @@ public class LendingBooksController implements Initializable {
         bookIdLend.setCellValueFactory(new PropertyValueFactory<>("idBook"));
         ObservableList<ExemplqrModel> toBeTaken = FXCollections.observableArrayList();
         ExemplqrModel selectedItem = allBooks.getSelectionModel().getSelectedItem();
-        toBeTaken.add(selectedItem);
-        allBooks.getItems().remove(selectedItem);
-        ObservableList<ExemplqrModel> list= exemplqrService.getAvailableCopy();
-        for(ExemplqrModel u : toBeTaken)
+        if(selectedItem == null)
         {
-            lendBooks.getItems().add(u);
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please select a book",ButtonType.OK);
         }
-        checkbox_readingroom.setDisable(true);
+        else {
+            toBeTaken.add(selectedItem);
+            allBooks.getItems().remove(selectedItem);
+            ObservableList<ExemplqrModel> list = exemplqrService.getAvailableCopy();
+            for (ExemplqrModel u : toBeTaken) {
+                lendBooks.getItems().add(u);
+            }
+            checkbox_readingroom.setDisable(true);
 
-        checkbox_home.setDisable(true);
+            checkbox_home.setDisable(true);
+        }
     }
 
 
@@ -162,7 +172,7 @@ public class LendingBooksController implements Initializable {
             inChitalnq = true;
         }
         LocalDate dateOfTaking = LocalDate.now();
-        USER user = userService.FindUserByID(userr.getIdUser());
+         USER user = userService.FindUserByID(userr.getIdUser());
         lend = new LendingBooksModel(dateOfTaking,user,dateOfTaking.plusDays(20));
         lendingBooksService.AddLendBook(lend);
         LENDBOOKS le = lendingBooksService.listviewToEntity(lend);
@@ -179,7 +189,7 @@ public class LendingBooksController implements Initializable {
                 alert.show();
             }
         }
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "lend info has been saved", ButtonType.OK);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Books lent successfully", ButtonType.OK);
         alert.show();
 
     }

@@ -86,8 +86,6 @@ public class ExemplqrService {
 
     public  ObservableList<ExemplqrModel> getBookOldCopy(LocalDate date)
     {
-        StateOfBooks state = new StateOfBooks(3, "damaged");
-        Eksemplqri e = new Eksemplqri( state,false);
         ObservableList<ExemplqrModel> allCopies = getAllCopies();
         ObservableList<ExemplqrModel> copies = FXCollections.observableArrayList();
         for(ExemplqrModel copy : allCopies)

@@ -8,7 +8,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -56,6 +58,12 @@ public class HomePageAdminController {
     public void displayId(USER user) {
         iduser.setText(Long.toString(user.getIdUser()));
         userr = user;
+    }
+
+    public void Test(String a)
+    {
+        Alert alert = new Alert(Alert.AlertType.ERROR, a, ButtonType.OK);
+        alert.show();
     }
 
 
@@ -123,6 +131,7 @@ public class HomePageAdminController {
             archiveOldBooksController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
+            archiveOldBooksController.showBooks();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -215,6 +224,7 @@ public class HomePageAdminController {
             lendingBooksController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
+            lendingBooksController.showinfo();
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -78,7 +78,7 @@ public class ReturnBookController  implements Initializable {
         LENDBOOKS lendingBooksModel = lendingBooksService.getLendingBooksByUser(user);
         if(lendingBooksModel == null)
         {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "You have not lend any books", ButtonType.OK);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "You have not lent any books", ButtonType.OK);
             alert.show();
         }
         else {
@@ -146,24 +146,40 @@ public class ReturnBookController  implements Initializable {
     @FXML
     public void ReturnBook() {
         exemplqrModel = books.getSelectionModel().getSelectedItem();
-        Eksemplqri eksemplqr = exemplqrService.listviewToEntity(exemplqrModel);
-        LendingInfoModel lendingInfoModel = lendingInfoService.getLendingInfoByExemplqr(eksemplqr);
-        LENDINFO lendinfo = lendingInfoService.listviewToEntity(lendingInfoModel);
-        LENDBOOKS lendbooks = lendinfo.getLENDBOOKS_idLendBook();
-        if (lendingInfoService.Deleteinfo(lendinfo)) {
-            exemplqrService.MakeAvailable(exemplqrModel);
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "book has been returned", ButtonType.OK);
-            alert.show();
-        } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "book has not been returned", ButtonType.OK);
-            alert.show();
+        if (exemplqrModel == null)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please select a book", ButtonType.OK);
         }
-        showbooks();
-        if (books.getItems().size() == 0) {
-            if (lendingBooksService.DeleteLendBook(lendbooks)) {
-            } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "lend book has not been deleted", ButtonType.OK);
+        else
+        {
+            Eksemplqri eksemplqr = exemplqrService.listviewToEntity(exemplqrModel);
+            LendingInfoModel lendingInfoModel = lendingInfoService.getLendingInfoByExemplqr(eksemplqr);
+            LENDINFO lendinfo = lendingInfoService.listviewToEntity(lendingInfoModel);
+            LENDBOOKS lendbooks = lendinfo.getLENDBOOKS_idLendBook();
+            if (lendingInfoService.Deleteinfo(lendinfo)) {
+                exemplqrService.MakeAvailable(exemplqrModel);
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "book has been returned", ButtonType.OK);
                 alert.show();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "book has not been returned", ButtonType.OK);
+                alert.show();
+            }
+            showbooks();
+            if (books.getItems().size() == 0) {
+                String a = iduser.getText();
+                long b = Long.parseLong(a);
+                USER user = userService.getUserById(b);
+                boolean late = lendingBooksService.BooksNotReturnedOnTime(user);
+                if (late) {
+                    userService.MakeLoyal(user);
+
+                } else {
+                }
+                if (lendingBooksService.DeleteLendBook(lendbooks)) {
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "lend book has not been deleted", ButtonType.OK);
+                    alert.show();
+                }
             }
         }
     }

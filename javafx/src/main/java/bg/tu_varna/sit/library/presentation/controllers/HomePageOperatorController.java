@@ -7,7 +7,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -46,6 +48,12 @@ public class HomePageOperatorController {
         userr = user;
     }
 
+    public void Test(String a)
+    {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, a, ButtonType.OK);
+        alert.show();
+    }
+
 
     public void  LendBook()
     {
@@ -61,6 +69,7 @@ public class HomePageOperatorController {
             lendingBooksController.displayId(userr);
             stage.setScene(new Scene(root2));
             stage.show();
+            lendingBooksController.showinfo();
         } catch (Exception e)
         {
             e.printStackTrace();

@@ -42,8 +42,7 @@ public ObservableList<LendingBooksModel> getAllLendingBooks()
         List<LENDBOOKS> books = repositoryLendingBooks.getAll();
         for(LENDBOOKS b: books)
         {
-            if(b.getDateOfTaking().equals(temp.getDateOfTaking()) && b.getUSER_idUser().equals(temp.getUSER_idUser())
-            && b.getDateOfreturn().equals(temp.getDateOfreturn()))
+            if(b.getUSER_idUser().getIdUser()==(temp.getUSER_idUser().getIdUser()))
             {
                 return b;
             }
@@ -90,6 +89,22 @@ public ObservableList<LendingBooksModel> getAllLendingBooks()
         return false;
     }
 
+
+    public boolean BooksNotReturnedOnTime(USER user)
+    {
+        List<LENDBOOKS> users =repositoryLendingBooks.getAll();
+        LENDBOOKS lendbooks = getLendingBooksByUser(user);
+        LocalDate localDate = LocalDate.now();
+        if(lendbooks == null)
+        {
+            return false;
+        }
+       else if(localDate.isAfter(lendbooks.getDateOfreturn()))
+        {
+            return true;
+        }
+        else return false;
+    }
 
 
 }

@@ -76,15 +76,7 @@ public class ArchiveOldBooksController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        isbnCol.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
-        StateOfBookCol.setCellValueFactory(new PropertyValueFactory<>("exsemplqri_stateOfBooks"));
-        BookIdCol.setCellValueFactory(new PropertyValueFactory<>("idBook"));
-        YearofpublishingCol.setCellValueFactory(new PropertyValueFactory<>("copyDate"));
-        ObservableList<ExemplqrModel> list= exemplqrService.getAllCopies();
-        for(ExemplqrModel u : list)
-        {
-          allDamagedBooks.getItems().add(u);
-        }
+
     }
 
 
@@ -107,6 +99,27 @@ public class ArchiveOldBooksController implements Initializable {
     ExemplqrModel exemplqrModel;
     boolean isitAvailable = true;
     boolean isArchived;
+
+    public void showBooks()
+    {
+        isbnCol.setCellValueFactory(new PropertyValueFactory<>("isbnUnikalenNomer"));
+        StateOfBookCol.setCellValueFactory(new PropertyValueFactory<>("exsemplqri_stateOfBooks"));
+        BookIdCol.setCellValueFactory(new PropertyValueFactory<>("idBook"));
+        YearofpublishingCol.setCellValueFactory(new PropertyValueFactory<>("copyDate"));
+        LocalDate date =LocalDate.of(1970, 1, 1);
+        ObservableList<ExemplqrModel> list= exemplqrService.getBookOldCopy(date);
+        if(list.size()>0)
+        {
+            for (ExemplqrModel u : list) {
+                allDamagedBooks.getItems().add(u);
+            }
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Currently there are no old books. If you want to archive other books you can do that by selecting a date", ButtonType.OK);
+            alert.show();
+        }
+    }
 
     @FXML
     public void ArchiveOldBooks()
@@ -136,9 +149,16 @@ public class ArchiveOldBooksController implements Initializable {
         }
         allDamagedBooks.getItems().clear();
         ObservableList<ExemplqrModel> list= exemplqrService.getBookOldCopy(publishDate);
-        for(ExemplqrModel u : list)
+        if(list.size()>0)
         {
-            allDamagedBooks.getItems().add(u);
+            for (ExemplqrModel u : list) {
+                allDamagedBooks.getItems().add(u);
+            }
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Currently there are no old books. If you want to archive other books you can do that by selecting a date", ButtonType.OK);
+            alert.show();
         }
     }
     @FXML

@@ -3,17 +3,12 @@ package bg.tu_varna.sit.library.buisness.services;
 import bg.tu_varna.sit.library.data.entities.*;
 import bg.tu_varna.sit.library.data.repositories.UserInfoRepository;
 import bg.tu_varna.sit.library.data.repositories.UserRepository;
-import bg.tu_varna.sit.library.presentation.models.BookListModel;
-import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -289,6 +284,21 @@ public class UserService {
     }
 
 
+    public USER getUserById(Long a)
+    {
+        List<USER> allUsers =repositoryUser.getAll();
+        for(USER b : allUsers)
+        {
+            if(b.getIdUser()==a)
+            {
+                return b;
+            }
+        }
+        return null;
+
+    }
+
+
     public ObservableList<UserListModel> GetUsersByLoyalty(String a)
     {
         ObservableList<UserListModel> copies = FXCollections.observableArrayList();
@@ -301,8 +311,34 @@ public class UserService {
             }
         }
        return copies;
-
     }
+
+
+    public void MakeDisloyal(USER addUser)
+    {
+        List<USER> allUsers = repositoryUser.getAll();
+        for (USER u : allUsers)
+        {
+            if(u.getIdUser()==addUser.getIdUser())
+            {
+                u.setRating("bad");
+                repositoryUser.update(u);
+            }
+        }
+    }
+    public void MakeLoyal(USER addUser)
+    {
+        List<USER> allUsers = repositoryUser.getAll();
+        for (USER u : allUsers)
+        {
+            if(u.getIdUser()==addUser.getIdUser())
+            {
+                u.setRating("good");
+                repositoryUser.update(u);
+            }
+        }
+    }
+
 
 
 }
