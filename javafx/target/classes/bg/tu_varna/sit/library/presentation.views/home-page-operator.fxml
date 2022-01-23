@@ -76,7 +76,7 @@
                            </stops>
                         </LinearGradient>
                      </fill></Polyline>
-                  <Button fx:id="button_create_user" layoutX="20.0" layoutY="301.0" mnemonicParsing="false" onAction="#createUserPage" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: #00738C;" text="Create user" textFill="WHITE">
+                  <Button fx:id="button_create_user" layoutX="20.0" layoutY="301.0" mnemonicParsing="false" onAction="#createUserPage" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: #00738C;" text="Create user">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -93,8 +93,24 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.4691943127962085" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.6833333373069763" blue="1.0" opacity="0.5670995712280273" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Button>
-                  <Button fx:id="button_delete_user" layoutX="301.0" layoutY="301.0" mnemonicParsing="false" onAction="#deleteUserPage" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: #00738C;" text="Delete user" textFill="WHITE">
+                  <Button fx:id="button_delete_user" layoutX="301.0" layoutY="301.0" mnemonicParsing="false" onAction="#deleteUserPage" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: #00738C;" text="Delete user">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -111,8 +127,24 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.4691943127962085" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.6833333373069763" blue="1.0" opacity="0.5670995712280273" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Button>
-                  <Button fx:id="button_forms" layoutX="585.0" layoutY="301.0" mnemonicParsing="false" onAction="#formsPage" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: #00738C;" text="Forms" textFill="WHITE">
+                  <Button fx:id="button_forms" layoutX="585.0" layoutY="301.0" mnemonicParsing="false" onAction="#formsPage" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: #00738C;" text="Forms">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -129,6 +161,22 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.4691943127962085" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.6833333373069763" blue="1.0" opacity="0.5670995712280273" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Button>
                   <Label layoutX="281.0" layoutY="12.0" prefHeight="86.0" prefWidth="603.0" text="Operator home page">
                      <font>
@@ -306,7 +354,7 @@
                         <Font size="33.0" />
                      </font>
                   </Label>
-                  <Button fx:id="user_info" layoutX="873.0" layoutY="301.0" mnemonicParsing="false" onAction="#userInfo" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: #00738C;" text="User info" textFill="WHITE">
+                  <Button fx:id="user_info" layoutX="873.0" layoutY="301.0" mnemonicParsing="false" onAction="#userInfo" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: #00738C;" text="User info">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
                      </font>
@@ -323,6 +371,22 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.4691943127962085" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.6833333373069763" blue="1.0" opacity="0.5670995712280273" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Button>
                </children>
             </AnchorPane>

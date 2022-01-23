@@ -28,7 +28,6 @@ public class HelloApplication extends Application {
 
         if(path !=null)
         {
-           //Parent root =FXMLLoader.load(path);
             FXMLLoader fxmlLoader = new FXMLLoader(path);
             fxmlLoader.setController(new SampleController(stage));
             Parent root = fxmlLoader.load();

@@ -30,7 +30,7 @@
                   <Image url="@books3.png" />
                </image>
             </ImageView>
-            <Label fx:id="loginMessageLabel" layoutX="300.0" layoutY="441.0" prefHeight="39.0" prefWidth="317.0">
+            <Label fx:id="loginMessageLabel" layoutX="306.0" layoutY="255.0" prefHeight="39.0" prefWidth="317.0">
                <font>
                   <Font name="System Italic" size="27.0" />
                </font>
@@ -88,7 +88,7 @@
                      </color>
                   </InnerShadow>
                </effect></PasswordField>
-            <Button fx:id="button_log_in" layoutX="294.0" layoutY="454.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #00738C; -fx-cursor: hand;" text="Login">
+            <Button fx:id="button_log_in" layoutX="294.0" layoutY="454.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #00738C; -fx-cursor: hand;" text="Login" textFill="#fcfcfcf7">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>
@@ -140,7 +140,7 @@
                   </DropShadow>
                </effect>
             </AnchorPane>
-            <Button fx:id="cancelButton" layoutX="292.0" layoutY="578.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #00738C; -fx-cursor: hand;" text="Cancel">
+            <Button fx:id="cancelButton" layoutX="292.0" layoutY="578.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="44.0" prefWidth="262.0" style="-fx-background-color: #00738C; -fx-cursor: hand;" text="Cancel" textFill="#fcfcfc">
                <font>
                   <Font name="Arial Rounded MT Bold" size="24.0" />
                </font>

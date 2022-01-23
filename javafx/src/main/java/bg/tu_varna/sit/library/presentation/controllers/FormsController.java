@@ -46,6 +46,7 @@ public class FormsController implements Initializable {
     private Label iduser;
     Stage s;
     FormService formService = new FormService();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {

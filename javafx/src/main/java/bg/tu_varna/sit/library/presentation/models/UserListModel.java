@@ -19,6 +19,7 @@ public class UserListModel {
     private UserType USERTYEPE_idUserType;
     private Status STATUS_idStatus;
 
+
     public UserListModel(long idUser, String userName, String password, LocalDate dateOfUserApproval, String rating, UserType USERTYEPE_idUserType, Status STATUS_idStatus) {
         this.idUser = idUser;
         this.userName = userName;

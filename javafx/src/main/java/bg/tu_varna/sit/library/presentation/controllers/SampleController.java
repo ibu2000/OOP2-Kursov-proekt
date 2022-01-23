@@ -42,43 +42,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SampleController {
+
     Stage s = new Stage();
 
     @FXML
     private Button button_log_in;
-
     @FXML
     private Button cancelButton;
-
     @FXML
     private Label loginMessageLabel;
-
     @FXML
     private TextField tf_username;
-
     @FXML
     private PasswordField tf_password;
-
     @FXML
     private Button button_sign_up;
 
-    public SampleController() {
+    public SampleController() {}
 
+    public SampleController(Stage stage) { s = stage;
     }
 
-
-    public SampleController(Stage stage) {
-        s = stage;
-    }
-
-    public static int userType = 2;
 
     LendingBooksService lendingBooksService = new LendingBooksService();
     UserService service = new UserService();
     ExemplqrService exemplqrService = new ExemplqrService();
 
     boolean late;
-    boolean newUser;
+
 
     @FXML
     public void userLogin() {
@@ -89,7 +80,8 @@ public class SampleController {
         } else if (!tf_password.getText().equals("") && !tf_username.equals(""))
         {
             UserListModel userfind = new UserListModel(tf_username.getText(), tf_password.getText());
-            if (service.UserLogin(userfind)) {
+            if (service.UserLogin(userfind))
+            {
                 try {
 
                     long a = service.FindUserType(userfind);
