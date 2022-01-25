@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.library.data.entities;
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 
 
@@ -38,6 +39,19 @@ public class Status {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Status)) return false;
+        Status status1 = (Status) o;
+        return getIdStatus() == status1.getIdStatus() && Objects.equals(getStatus(), status1.getStatus());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdStatus(), getStatus());
     }
 
     @Override

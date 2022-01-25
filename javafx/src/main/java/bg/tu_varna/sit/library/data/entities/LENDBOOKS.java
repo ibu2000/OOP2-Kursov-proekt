@@ -3,6 +3,7 @@ package bg.tu_varna.sit.library.data.entities;
 import javax.persistence.*;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Table(name = "LENDBOOKS")
 @Entity
@@ -74,6 +75,19 @@ public class LENDBOOKS {
 
     public void setUSER_idUser(USER USER_idUser) {
         this.USER_idUser = USER_idUser;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof LENDBOOKS)) return false;
+        LENDBOOKS lendbooks = (LENDBOOKS) o;
+        return getIdLendBook() == lendbooks.getIdLendBook() && Objects.equals(getDateOfTaking(), lendbooks.getDateOfTaking()) && Objects.equals(getUSER_idUser(), lendbooks.getUSER_idUser()) && Objects.equals(getDateOfreturn(), lendbooks.getDateOfreturn());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdLendBook(), getDateOfTaking(), getUSER_idUser(), getDateOfreturn());
     }
 
     @Override

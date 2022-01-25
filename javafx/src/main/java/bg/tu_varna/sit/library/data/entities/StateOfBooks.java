@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.library.data.entities;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Table(name = "STATEOFBOOKS")
 @Entity
@@ -40,6 +41,19 @@ public class StateOfBooks {
 
     public void setStateOfBooks(String stateOfBooks) {
         this.stateOfBooks = stateOfBooks;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof StateOfBooks)) return false;
+        StateOfBooks that = (StateOfBooks) o;
+        return getIdState() == that.getIdState() && Objects.equals(getStateOfBooks(), that.getStateOfBooks());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdState(), getStateOfBooks());
     }
 
     @Override

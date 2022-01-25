@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.library.data.entities;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Table(name = "LENDINFO")
 @Entity
@@ -81,6 +82,19 @@ public class LENDINFO {
 
     public void setInChitalnq(boolean inChitalnq) {
         this.inChitalnq = inChitalnq;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof LENDINFO)) return false;
+        LENDINFO lendinfo = (LENDINFO) o;
+        return getIdLendInfo() == lendinfo.getIdLendInfo() && isInChitalnq() == lendinfo.isInChitalnq() && Objects.equals(getBOOKS_idBook(), lendinfo.getBOOKS_idBook()) && Objects.equals(getLENDBOOKS_idLendBook(), lendinfo.getLENDBOOKS_idLendBook()) && Objects.equals(getEksemplqri_isbnUnikalenNomer(), lendinfo.getEksemplqri_isbnUnikalenNomer());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdLendInfo(), getBOOKS_idBook(), getLENDBOOKS_idLendBook(), getEksemplqri_isbnUnikalenNomer(), isInChitalnq());
     }
 
     @Override

@@ -2,6 +2,7 @@ package bg.tu_varna.sit.library.data.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Objects;
 
 
 @Table(name = "USERINFO")
@@ -61,6 +62,19 @@ public class UserInfo implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof UserInfo)) return false;
+        UserInfo userInfo = (UserInfo) o;
+        return Objects.equals(getUser_idUser(), userInfo.getUser_idUser()) && Objects.equals(getName(), userInfo.getName()) && Objects.equals(getPhone(), userInfo.getPhone()) && Objects.equals(getEmail(), userInfo.getEmail());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getUser_idUser(), getName(), getPhone(), getEmail());
     }
 
     @Override

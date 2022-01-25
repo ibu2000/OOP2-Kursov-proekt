@@ -65,6 +65,8 @@ public class UserService {
         return  userlist;
     }
 
+
+
     public long FindUserType(UserListModel a)
     {
         USER usr = new USER(a.getUserName(),a.getPassword());

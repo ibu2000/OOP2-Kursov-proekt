@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.library.data.entities;
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Table(name = "EKSEMPLQRI")
 @Entity
@@ -97,6 +98,19 @@ public class Eksemplqri {
 
     public void setCopyDate(LocalDate copyDate) {
         this.copyDate = copyDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Eksemplqri)) return false;
+        Eksemplqri that = (Eksemplqri) o;
+        return getIsbnUnikalenNomer() == that.getIsbnUnikalenNomer() && isIsitArchived() == that.isIsitArchived() && isIsitAvailable() == that.isIsitAvailable() && Objects.equals(getIdBook(), that.getIdBook()) && Objects.equals(getExsemplqri_stateOfBooks(), that.getExsemplqri_stateOfBooks()) && Objects.equals(getCopyDate(), that.getCopyDate());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIsbnUnikalenNomer(), getIdBook(), getExsemplqri_stateOfBooks(), isIsitArchived(), isIsitAvailable(), getCopyDate());
     }
 
     @Override

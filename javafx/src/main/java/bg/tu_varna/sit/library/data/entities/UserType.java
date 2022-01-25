@@ -2,6 +2,7 @@ package bg.tu_varna.sit.library.data.entities;
 
 
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 
 @Table(name = "USERTYPE")
@@ -39,6 +40,19 @@ public class UserType {
 
     public void setUserType(String userType) {
         this.userType = userType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof UserType)) return false;
+        UserType userType1 = (UserType) o;
+        return getIdUserType() == userType1.getIdUserType() && Objects.equals(getUserType(), userType1.getUserType());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdUserType(), getUserType());
     }
 
     @Override

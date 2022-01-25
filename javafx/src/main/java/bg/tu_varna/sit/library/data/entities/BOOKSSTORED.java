@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.library.data.entities;
 
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 
 @Table(name = "BOOKSSTORED")
@@ -51,6 +52,19 @@ public class BOOKSSTORED {
 
     public void setChitalnq(long chitalnq) {
         this.chitalnq = chitalnq;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof BOOKSSTORED)) return false;
+        BOOKSSTORED that = (BOOKSSTORED) o;
+        return getBOOKS_idBook() == that.getBOOKS_idBook() && getTotal() == that.getTotal() && getAvailable() == that.getAvailable() && getChitalnq() == that.getChitalnq();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getBOOKS_idBook(), getTotal(), getAvailable(), getChitalnq());
     }
 
     @Override
