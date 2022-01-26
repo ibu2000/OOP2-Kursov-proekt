@@ -26,22 +26,16 @@ public class UserServiceTest {
     }
     @Test
     void getAllUserNames() {
-        ObservableList<UserListModel> users = userService.getAllUsersWithTypes();
-        assertEquals(users, userService.getAllUsersWithTypes());
+        ObservableList<UserListModel> users = userService.getAllUserNames();
+        assertEquals(users, userService.getAllUserNames());
     }
     @Test
-    void getAllUsersWithTypes() {
-        ObservableList<UserListModel> users = userService.getAllUsersWithTypes();
-        assertEquals(users, userService.getAllUsersWithTypes());
-    }    @Test
-    void getAllUsersWithTypes() {
-        ObservableList<UserListModel> users = userService.getAllUsersWithTypes();
-        assertEquals(users, userService.getAllUsersWithTypes());
-    }    @Test
-    void getAllUsersWithTypes() {
-        ObservableList<UserListModel> users = userService.getAllUsersWithTypes();
-        assertEquals(users, userService.getAllUsersWithTypes());
+    void getAllFields() {
+        ObservableList<UserListModel> users = userService.getAllFields();
+        assertEquals(users, userService.getAllFields());
     }
+
+
 
 
 
