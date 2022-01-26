@@ -113,6 +113,7 @@ public class UserService {
         return null;
     }
 
+
     public USER listviewToEntity(UserListModel a)
     {
         USER temp = new USER(a.getUserName());
@@ -226,10 +227,9 @@ public class UserService {
 
     public boolean CreateUser(UserListModel addUser) {
         List<USER> users = repositoryUser.getAll();
-        USER user = new USER(addUser.getIdUser(),addUser.getUserName(),addUser.getPassword(),addUser.getDateOfUserApproval(),addUser.getRating(),addUser.getSTATUS_idStatus(),addUser.getUSERTYEPE_idUserType());
         for(USER u : users)
         {
-            if(u.getUserName().equals(user.getUserName()))
+            if(u.getUserName().equals(addUser.getUserName()))
             {
                 LocalDate myDate =  LocalDate.now();;
                 Status status = new Status(2,"not pending");
@@ -239,7 +239,7 @@ public class UserService {
                 return true;
             }
         }
-        return true;
+        return false;
     }
 
 
@@ -258,11 +258,11 @@ public class UserService {
     }
 
     public UserListModel GetUser(String a)
-    {   UserListModel temp = new UserListModel(a);
+    {
         ObservableList<UserListModel> allUsers =getAllFields();
         for(UserListModel b : allUsers)
         {
-            if(b.getUserName().equals(temp.getUserName()))
+            if(b.getUserName().equals(a))
             {
                 return b;
             }
