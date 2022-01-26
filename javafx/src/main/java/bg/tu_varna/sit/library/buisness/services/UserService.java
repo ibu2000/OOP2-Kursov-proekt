@@ -60,7 +60,8 @@ public class UserService {
         List<USER> users = repositoryUser.getAll();
         ObservableList<UserListModel> userlist = FXCollections.observableList(
                 users.stream().map(a -> new UserListModel(
-                      a.getIdUser(), a.getUserName(),a.getPassword(), a.getDateOfUserApproval(), a.getRating(), a.getUSERTYPE_idUserType(),a.getSTATUS_idStatus()
+                      a.getIdUser(), a.getUserName(),a.getPassword(), a.getDateOfUserApproval(),
+                      a.getRating(), a.getUSERTYPE_idUserType(),a.getSTATUS_idStatus()
                 )).collect(Collectors.toList()));
         return  userlist;
     }
