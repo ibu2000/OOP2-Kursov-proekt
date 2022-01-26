@@ -62,7 +62,7 @@ public class HomePageAdminController {
 
     public void Test(String a)
     {
-        Alert alert = new Alert(Alert.AlertType.ERROR, a, ButtonType.OK);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, a, ButtonType.OK);
         alert.show();
     }
 

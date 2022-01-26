@@ -130,14 +130,7 @@ public class USER {
 
     @Override
     public String toString() {
-        return "USER{" +
-                "idUser=" + idUser +
-                ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
-                ", dateOfUserApproval=" + dateOfUserApproval +
-                ", rating='" + rating + '\'' +
-                ", STATUS_idStatus=" + STATUS_idStatus +
-                '}';
+        return  userName + "";
     }
 
 

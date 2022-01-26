@@ -1,9 +1,11 @@
 package bg.tu_varna.sit.library.presentation.controllers;
 
+import bg.tu_varna.sit.library.buisness.services.FormService;
 import bg.tu_varna.sit.library.buisness.services.UserInfoService;
 import bg.tu_varna.sit.library.buisness.services.UserService;
 import bg.tu_varna.sit.library.common.Constants;
 import bg.tu_varna.sit.library.data.entities.USER;
+import bg.tu_varna.sit.library.presentation.models.FormModel;
 import bg.tu_varna.sit.library.presentation.models.UserInfoListModel;
 import bg.tu_varna.sit.library.presentation.models.UserListModel;
 import javafx.fxml.FXML;
@@ -37,7 +39,7 @@ public class DeleteUserController implements Initializable {
         s = stage;
     }
 
-
+    FormService formService = new FormService();
     USER userr;
     public void displayId (USER user)
     {
@@ -102,12 +104,14 @@ public class DeleteUserController implements Initializable {
 
     boolean isDeletedUser;
     boolean isDeletedInfo;
+    boolean isDeletedForm;
     @FXML
     public void DeleteUser()
     {
         String username=combobox_deleteUser.getValue().toString();
         UserListModel b = userService.GetUser(username);
         UserInfoListModel a = userInfoService.getUserInfo(b);
+        USER user = userService.listviewToEntity(b);
         if(combobox_deleteUser.equals(""))
         {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the fields!", ButtonType.OK);
@@ -115,6 +119,8 @@ public class DeleteUserController implements Initializable {
         }
         else
         {
+            FormModel formModel = formService.GetForm(user);
+            isDeletedForm = formService.DeleteForm(formModel);
             isDeletedInfo = userInfoService.DeleteUserInfo(a);
             isDeletedUser = userService.DeleteUser(b);
 

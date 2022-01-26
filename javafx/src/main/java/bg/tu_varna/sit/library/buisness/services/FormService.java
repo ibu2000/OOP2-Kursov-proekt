@@ -118,6 +118,18 @@ public class FormService {
     }
 
 
+    public boolean DeleteForm(FormModel b) {
+        List<FORM> copies = formRepository.getAll();
+        for(FORM u : copies)
+        {
+            if(u.getUSER_idUser().getUserName().equals(b.getUSER_idUser().getUserName()))
+            {
 
+                formRepository.delete(u);
+                return true;
+            }
+        }
+        return true;
+    }
 
 }

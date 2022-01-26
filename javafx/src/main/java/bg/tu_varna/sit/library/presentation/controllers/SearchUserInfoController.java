@@ -98,18 +98,22 @@ public class SearchUserInfoController  implements Initializable {
             idLendBook.setCellValueFactory(new PropertyValueFactory<>("LENDBOOKS_idLendBook"));
 
             LENDBOOKS lendbooks = lendingBooksService.getLendingBooksByUser(user);
-            ObservableList<LendingInfoModel> lendInfos = lendingInfoService.getLendingInfoByLendBook(lendbooks);
-            if(lendInfos.size() > 0)
+            if(lendbooks == null)
             {
-                lendInfo.getItems().clear();
-                for (LendingInfoModel u : lendInfos) {
-                    lendInfo.getItems().add(u);
-                }
-            }
-            else
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "This user hasn't lend any books", ButtonType.OK);
+                Alert alert = new Alert(Alert.AlertType.ERROR,"This user has not lend any books", ButtonType.OK);
                 alert.show();
+            }
+            else {
+                ObservableList<LendingInfoModel> lendInfos = lendingInfoService.getLendingInfoByLendBook(lendbooks);
+                if (lendInfos.size() > 0) {
+                    lendInfo.getItems().clear();
+                    for (LendingInfoModel u : lendInfos) {
+                        lendInfo.getItems().add(u);
+                    }
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "This user hasn't lend any books", ButtonType.OK);
+                    alert.show();
+                }
             }
         }
     }

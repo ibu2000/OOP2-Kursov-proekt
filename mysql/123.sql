@@ -19,10 +19,10 @@ INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYP
 INSERT INTO user (idUser, userName, password, dateOfUserApproval, rating,USERTYPE_idUserType,STATUS_idStatus)VALUES (7, 'u7', 'pas4','2018-1-11', 'good', 1,2);
    
   
- INSERT INTO userinfo (idUser, name, phone, email)VALUES (1, 'name1', 'phone1', 'email1');
- INSERT INTO userinfo (idUser, name, phone, email)VALUES(2, 'ivo','001','abv');
-INSERT INTO userinfo (idUser, name, phone, email)VALUES(3, 'teodora','002','gmail');
-INSERT INTO userinfo (idUser, name, phone, email)VALUES(4, 'haki','003','bg');
+ INSERT INTO userinfo (user_idUser, name, phone, email)VALUES (1, 'name1', 'phone1', 'email1');
+ INSERT INTO userinfo (user_idUser, name, phone, email)VALUES(2, 'ivo','001','abv');
+INSERT INTO userinfo (user_idUser, name, phone, email)VALUES(3, 'teodora','002','gmail');
+INSERT INTO userinfo (user_idUser, name, phone, email)VALUES(4, 'haki','003','bg');
 
 
 INSERT INTO stateofbooks (idState, stateOfbooks)VALUES (1, 'new');
