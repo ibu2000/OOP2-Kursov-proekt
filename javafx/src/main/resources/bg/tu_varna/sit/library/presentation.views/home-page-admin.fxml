@@ -23,57 +23,6 @@
          <children>
             <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="869.0" prefWidth="1028.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Polyline layoutX="82.0" layoutY="124.0" points="936.36328125, 244.0, -75.63674926757812, 244.0, -75.63674926757812, 738.0, 936.36328125, 738.0" strokeType="INSIDE">
-                     <effect>
-                        <DropShadow height="58.56" radius="28.915" spread="0.21" width="59.1">
-                           <color>
-                              <Color red="0.4312865436077118" green="0.510477602481842" blue="0.5263158082962036" />
-                           </color>
-                        </DropShadow>
-                     </effect>
-                     <fill>
-                        <LinearGradient endX="1.0" endY="1.0" startY="0.42654028436018954">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color green="0.49210527539253235" blue="0.6710526347160339" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </fill>
-                     <stroke>
-                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.007662835249042145">
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.9961685823754789">
-                                 <color>
-                                    <Color red="0.43421053886413574" green="0.43421053886413574" blue="0.43421053886413574" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.43421053886413574" green="0.43421053886413574" blue="0.43421053886413574" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </stroke>
-                  </Polyline>
                   <ImageView fitHeight="166.0" fitWidth="204.0" layoutX="426.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@books9.png" />
@@ -200,7 +149,7 @@
                            </stops>
                         </LinearGradient>
                      </fill></QuadCurve>
-                  <QuadCurve controlX="-374.6367492675781" controlY="-136.0" endX="-281.6367492675781" endY="-498.0" layoutX="724.0" layoutY="672.0" opacity="0.13" startX="-153.63671875" startY="-498.0" stroke="WHITE" strokeType="INSIDE">
+                  <QuadCurve controlX="-345.6367492675781" controlY="7.0" endX="-281.6367492675781" endY="-498.0" layoutX="724.0" layoutY="672.0" opacity="0.13" startX="-153.63671875" startY="-498.0" stroke="WHITE" strokeType="INSIDE">
                      <fill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>
@@ -218,6 +167,57 @@
                         </LinearGradient>
                      </fill>
                   </QuadCurve>
+                  <Polyline layoutX="82.0" layoutY="124.0" points="936.36328125, 244.0, -75.63674926757812, 244.0, -75.63674926757812, 738.0, 936.36328125, 738.0" strokeType="INSIDE">
+                     <effect>
+                        <DropShadow height="58.56" radius="28.915" spread="0.21" width="59.1">
+                           <color>
+                              <Color red="0.4312865436077118" green="0.510477602481842" blue="0.5263158082962036" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="0.42654028436018954">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.49210527539253235" blue="0.6710526347160339" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9961685823754789">
+                                 <color>
+                                    <Color red="0.43421053886413574" green="0.43421053886413574" blue="0.43421053886413574" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.43421053886413574" green="0.43421053886413574" blue="0.43421053886413574" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Polyline>
                   <Button fx:id="button_add_new_book" layoutX="47.0" layoutY="126.0" mnemonicParsing="false" onAction="#addNewBook" prefHeight="56.0" prefWidth="245.0" style="-fx-background-color: #00738C;" text="add new book">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="30.0" />
