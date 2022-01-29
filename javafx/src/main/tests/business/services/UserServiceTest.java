@@ -50,6 +50,7 @@ public class UserServiceTest {
         ObservableList<UserListModel> users = userService.getAllUsers();
         assertEquals(users, userService.getAllUsers());
     }
+
     @Test
     void getAllUserNames() {
         ObservableList<UserListModel> users = userService.getAllUserNames();

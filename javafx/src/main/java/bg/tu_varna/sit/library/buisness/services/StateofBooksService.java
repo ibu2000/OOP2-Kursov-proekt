@@ -55,11 +55,10 @@ public class StateofBooksService {
     }
 
     public long getBookState(String a) {
-        StateOfBooks temp = new StateOfBooks(a);
         ObservableList<StateOfBooksModel> allBooks = getAllBookStates();
         for(StateOfBooksModel state : allBooks)
         {
-            if(state.getStateOfBooks().equals(temp.getStateOfBooks()))
+            if(state.getStateOfBooks().equals(a))
             {
                 return state.getIdState();
             }
