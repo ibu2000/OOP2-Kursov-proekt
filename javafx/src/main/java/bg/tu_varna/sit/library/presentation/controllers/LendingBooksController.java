@@ -64,7 +64,6 @@ public class LendingBooksController implements Initializable {
 
     }
 
-
     public void showinfo()
     {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, "Please select where you're going to take the book. (you can only get books for home or for the reading room)", ButtonType.OK);
@@ -118,14 +117,12 @@ public class LendingBooksController implements Initializable {
     }
 
 
-
     USER userr;
     public void displayId (USER user)
     {
         iduser.setText( Long.toString(user.getIdUser()));
         userr = user;
     }
-
 
     @FXML
     public void getRow()
