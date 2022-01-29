@@ -105,7 +105,7 @@ public class SampleController {
                             homePageUserController.Test(s);
                         }
                         else
-                        {}
+                        {String s = " ";}
 
                     } else if (a == 2) {
                         s.close();
@@ -156,9 +156,6 @@ public class SampleController {
                             homePageAdminController.Test(s);
                         }
                         else {String s = " ";}
-
-
-
                         ArrayList<String>  list = service.getUserForApproval();
                         if(list.size() > 0)
                         {

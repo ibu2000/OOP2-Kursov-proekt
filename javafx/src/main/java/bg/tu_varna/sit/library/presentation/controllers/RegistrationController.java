@@ -75,8 +75,7 @@ public class RegistrationController {
 
             if(userAlreadyExists)
             {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "The User has been added!", ButtonType.OK);
-                alert.show();
+
             } else
             {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "User already exists!", ButtonType.OK);
@@ -89,8 +88,6 @@ public class RegistrationController {
 
             if(userInfoAlreadyExists)
             {
-                Alert alert1 = new Alert(Alert.AlertType.INFORMATION, "The Userinfo has been added!", ButtonType.OK);
-                alert1.show();
             }
             else
             {

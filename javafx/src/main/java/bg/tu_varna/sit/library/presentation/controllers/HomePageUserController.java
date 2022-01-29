@@ -75,7 +75,6 @@ public class HomePageUserController {
         }
     }
 
-
     public void  ReturnBook()
     {
         try
@@ -114,7 +113,6 @@ public class HomePageUserController {
             e.printStackTrace();
         }
     }
-
 
     public void  UserRatings()
     {
