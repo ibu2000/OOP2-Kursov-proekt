@@ -65,17 +65,7 @@ public class LendingInfoService {
         return  null;
     }
 
-    public LendingInfoModel GetlendInfo(LendingInfoModel a)
-    {    ObservableList<LendingInfoModel> allCopies = getAllLendingInfo();
-        for(LendingInfoModel b : allCopies)
-        {
-            if(b.getEksemplqri_isbnUnikalenNomer().equals(a.getEksemplqri_isbnUnikalenNomer()))
-            {
-                return b;
-            }
-        }
-        return null;
-    }
+
 
     public ObservableList<LendingInfoModel> getLendingInfoByLendBook(LENDBOOKS lendingBooksModel)
     {
