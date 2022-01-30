@@ -32,6 +32,7 @@ public class HelloApplication extends Application {
             fxmlLoader.setController(new SampleController(stage));
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
+            stage.setResizable(false);
             scene.setFill(Color.TRANSPARENT);
             stage.setTitle(Constants.Values.Title);
             stage.setScene(scene);
