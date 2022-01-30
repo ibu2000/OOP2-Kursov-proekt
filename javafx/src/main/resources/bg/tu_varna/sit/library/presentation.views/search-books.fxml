@@ -235,7 +235,7 @@
                         <Font size="21.0" />
                      </font>
                   </RadioButton>
-                  <Label fx:id="iduser" layoutX="16.0" layoutY="6.0" prefHeight="47.0" prefWidth="65.0" text="Label">
+                  <Label fx:id="iduser" layoutX="16.0" layoutY="6.0" opacity="0.0" prefHeight="47.0" prefWidth="65.0" text="Label">
                      <font>
                         <Font size="22.0" />
                      </font>

@@ -451,7 +451,7 @@
                         </LinearGradient>
                      </stroke>
                   </QuadCurve>
-                  <Label fx:id="iduser" layoutX="89.0" layoutY="60.0" text="Label">
+                  <Label fx:id="iduser" layoutX="89.0" layoutY="60.0" opacity="0.0" text="Label">
                      <font>
                         <Font size="25.0" />
                      </font>

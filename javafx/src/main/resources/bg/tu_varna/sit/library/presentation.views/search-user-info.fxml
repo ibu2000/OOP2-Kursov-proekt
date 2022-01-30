@@ -234,7 +234,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Label fx:id="iduser" layoutX="57.0" layoutY="19.0" prefHeight="44.0" prefWidth="92.0" text="Label">
+            <Label fx:id="iduser" layoutX="57.0" layoutY="19.0" opacity="0.0" prefHeight="44.0" prefWidth="92.0" text="Label">
                <font>
                   <Font name="Arial Rounded MT Bold" size="31.0" />
                </font>

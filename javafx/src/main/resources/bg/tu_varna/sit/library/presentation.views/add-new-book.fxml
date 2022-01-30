@@ -255,7 +255,7 @@
       <QuadCurve controlX="727.0" controlY="278.33331298828125" endX="761.0" endY="293.0" fill="#00738c" layoutX="-191.0" layoutY="339.0" startX="694.3333740234375" startY="293.0" stroke="#00738c" strokeType="INSIDE" />
       <QuadCurve controlX="-18.0" controlY="31.0" endX="-4.0" fill="#81b0b2" layoutX="540.0" layoutY="619.0" startX="-436.0" startY="6.0" stroke="#e5fffe" strokeType="INSIDE" />
       <QuadCurve controlX="-117.0" controlY="26.0" endX="-130.33331298828125" endY="-7.0" fill="#81b0b2" layoutX="666.0" layoutY="626.0" startX="292.33331298828125" startY="-1.0" stroke="#e5fffe" strokeType="INSIDE" />
-      <Label fx:id="iduser" layoutX="14.0" layoutY="25.0" text="Label">
+      <Label fx:id="iduser" layoutX="14.0" layoutY="25.0" opacity="0.0" text="Label">
          <font>
             <Font size="33.0" />
          </font>
