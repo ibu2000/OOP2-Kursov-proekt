@@ -123,7 +123,7 @@
                <effect>
                   <Reflection />
                </effect></ComboBox>
-            <Label fx:id="iduser" layoutY="127.0" text="Label">
+            <Label fx:id="iduser" layoutY="127.0" opacity="0.0" text="Label">
                <font>
                   <Font size="33.0" />
                </font>

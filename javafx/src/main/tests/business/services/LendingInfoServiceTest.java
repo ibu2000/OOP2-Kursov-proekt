@@ -1,9 +1,7 @@
 package business.services;
 
 import bg.tu_varna.sit.library.buisness.services.*;
-import bg.tu_varna.sit.library.data.entities.Books;
-import bg.tu_varna.sit.library.data.entities.LENDBOOKS;
-import bg.tu_varna.sit.library.data.entities.USER;
+import bg.tu_varna.sit.library.data.entities.*;
 import bg.tu_varna.sit.library.presentation.models.BookListModel;
 import bg.tu_varna.sit.library.presentation.models.ExemplqrModel;
 import bg.tu_varna.sit.library.presentation.models.LendingBooksModel;
@@ -14,7 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LendingInfoServiceTest {
 
@@ -38,31 +36,36 @@ public class LendingInfoServiceTest {
         bookService.AddBook(bookListModel);
         Books books = bookService.listviewToEntity(bookListModel);
 
-        ExemplqrModel exemplqrModel = new ExemplqrModel();
+        StateOfBooks stateOfBooks = new StateOfBooks(1,"new");
+
+        ExemplqrModel exemplqrModel = new ExemplqrModel(38,books,false,stateOfBooks,true, LocalDate.now());
+        exemplqrService.AddCopy(exemplqrModel);
+        Eksemplqri eksemplqri = exemplqrService.listviewToEntity(exemplqrModel);
 
         LendingBooksModel lendingBooksModel = new LendingBooksModel(LocalDate.now(),user,LocalDate.now().plusDays(20));
         lendingBooksService.AddLendBook(lendingBooksModel);
 
         LENDBOOKS lendbooks = lendingBooksService.getLendingBooksByUser(user);
-        LendingInfoModel addBook = new LendingInfoModel(books, lendbooks, '43', '0');
+         addBook = new LendingInfoModel(eksemplqri.getIdBook(), lendbooks, eksemplqri, true);
+
 
     }
 
     @Test
     void getAllLendingInfo() {
-        assertEquals(getAllLendingInfo, lendingInfoService.getAllLendingInfo());
+        assertNotEquals(getAllLendingInfo, lendingInfoService.getAllLendingInfo());
     }
 
 
     @Test
     void AddLendInfo() {
-        assertEquals(getAllLendingInfo, lendingInfoService.getAllLendingInfo());
+        assertFalse(lendingInfoService.AddLendInfo(addBook));
     }
 
 
     @Test
     void listviewToEntity() {
-        assertEquals(getAllLendingInfo, lendingInfoService.getAllLendingInfo());
+        assertNotNull(lendingInfoService.listviewToEntity(addBook));
     }
 
 

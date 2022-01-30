@@ -100,7 +100,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label fx:id="iduser" layoutX="54.0" layoutY="15.0" prefHeight="34.0" prefWidth="135.0" text="Label">
+            <Label fx:id="iduser" layoutX="54.0" layoutY="15.0" opacity="0.0" prefHeight="34.0" prefWidth="135.0" text="Label">
                <font>
                   <Font size="29.0" />
                </font>

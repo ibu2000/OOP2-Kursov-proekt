@@ -41,7 +41,7 @@ public class LendingInfoService {
         LENDINFO book = new LENDINFO(addBook.getBOOKS_idBook(),addBook.getLENDBOOKS_idLendBook(),addBook.getEksemplqri_isbnUnikalenNomer(),addBook.isInChitalnq());
         for(LENDINFO b : books)
         {
-            if(b.equals(book))
+            if(b.getEksemplqri_isbnUnikalenNomer().getIsbnUnikalenNomer()==book.getEksemplqri_isbnUnikalenNomer().getIsbnUnikalenNomer())
             {
                 return false;
             }
