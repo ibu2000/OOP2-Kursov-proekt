@@ -252,7 +252,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Label fx:id="iduser" layoutX="27.0" layoutY="21.0" text="Label">
+            <Label fx:id="iduser" layoutX="27.0" layoutY="21.0" opacity="0.0" text="Label">
                <font>
                   <Font size="25.0" />
                </font>
