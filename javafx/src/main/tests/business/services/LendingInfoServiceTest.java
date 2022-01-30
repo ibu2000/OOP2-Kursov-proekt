@@ -44,7 +44,7 @@ public class LendingInfoServiceTest {
         lendingBooksService.AddLendBook(lendingBooksModel);
 
         LENDBOOKS lendbooks = lendingBooksService.getLendingBooksByUser(user);
-        LendingInfoModel addBook = new LendingInfoModel(books, lendbooks, '43', '0');
+//        LendingInfoModel addBook = new LendingInfoModel(books, lendbooks, '43', '0');
 
     }
 
