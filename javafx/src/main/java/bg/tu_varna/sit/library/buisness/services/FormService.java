@@ -59,11 +59,11 @@ public class FormService {
 
     public FORM listviewToEntity(FormModel a)
     {
-        FORM temp = new FORM(a.getIdForm());
+
         List<FORM> copies = formRepository.getAll();
         for(FORM u: copies)
         {
-            if(u.getIdForm()==temp.getIdForm())
+            if(u.getIdForm()==a.getIdForm())
             {
                 return u;
             }
@@ -114,7 +114,7 @@ public class FormService {
                 return true;
             }
         }
-        return true;
+        return false;
     }
 
 
@@ -129,7 +129,7 @@ public class FormService {
                 return true;
             }
         }
-        return true;
+        return false;
     }
 
 }

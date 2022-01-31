@@ -1,7 +1,6 @@
 package bg.tu_varna.sit.library.data.repositories;
 
 import bg.tu_varna.sit.library.data.access.Connection;
-import bg.tu_varna.sit.library.data.entities.Books;
 import bg.tu_varna.sit.library.data.entities.StateOfBooks;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
@@ -73,6 +72,24 @@ public class StateOfBooksRepository implements DAORepository<StateOfBooks>{
     @Override
     public Optional<StateOfBooks> getByIg(Long id) {
         return Optional.empty();
+    }
+
+    public StateOfBooks getByID(int id) {
+        Session session = Connection.openSession();
+        Transaction transaction = session.beginTransaction();
+        List<StateOfBooks> stateOfBooks = new LinkedList<>();
+        try{
+            String jpql = "SELECT a FROM StateOfBooks a WHERE idState ="+id;
+            stateOfBooks.addAll(session.createQuery(jpql, StateOfBooks.class).getResultList());
+            log.info("Successfully got  state!");
+        }catch (Exception e){
+            log.error("Get state of books error: " +e.getMessage());
+        }finally {
+            transaction.commit();
+            session.close();
+        }
+
+        return stateOfBooks.get(0);
     }
 
     @Override
