@@ -147,7 +147,7 @@ public class ExemplqrService {
                 return true;
             }
         }
-        return true;
+        return false;
     }
 
     public boolean MakeAvailable(ExemplqrModel b) {
