@@ -6417,21 +6417,6 @@
 							}
 						},
 						{
-							"_type": "EdgeLabelView",
-							"_id": "AAAAAAF+uwzIVyO1B3A=",
-							"font": "Arial;20;0",
-							"showShadow": false,
-							"left": 2087,
-							"top": 1641,
-							"width": 32.44140625,
-							"height": 20,
-							"alpha": 0.02240563528315295,
-							"distance": 2015.6969018183265,
-							"edgePosition": 1,
-							"text": "+1",
-							"wordWrap": true
-						},
-						{
 							"_type": "UMLAssociationView",
 							"_id": "AAAAAAF+uwzIVyO0RZE=",
 							"_parent": {
@@ -7180,9 +7165,9 @@
 										"$ref": "AAAAAAF+uzPkDbQbeIQ="
 									},
 									"font": "Arial;13;0",
-									"left": 2579,
+									"left": 2578,
 									"top": 1186,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -7726,9 +7711,9 @@
 										"$ref": "AAAAAAF+uzTihLsHQtM="
 									},
 									"font": "Arial;13;0",
-									"left": 843,
+									"left": 842,
 									"top": 489,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -7997,9 +7982,9 @@
 										"$ref": "AAAAAAF+uzVTt7y0eGg="
 									},
 									"font": "Arial;13;0",
-									"left": 1644,
+									"left": 1643,
 									"top": 1219,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -8206,9 +8191,9 @@
 										"$ref": "AAAAAAF+uzXX5MIObak="
 									},
 									"font": "Arial;13;0",
-									"left": 1158,
+									"left": 1157,
 									"top": 1180,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -8477,9 +8462,9 @@
 										"$ref": "AAAAAAF+uzY3T8RSCig="
 									},
 									"font": "Arial;13;0",
-									"left": 1208,
+									"left": 1207,
 									"top": 249,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
