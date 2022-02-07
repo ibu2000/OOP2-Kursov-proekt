@@ -170,25 +170,30 @@ public class LendingBooksController implements Initializable {
         }
         LocalDate dateOfTaking = LocalDate.now();
          USER user = userService.FindUserByID(userr.getIdUser());
-        lend = new LendingBooksModel(dateOfTaking,user,dateOfTaking.plusDays(20));
-        lendingBooksService.AddLendBook(lend);
-        LENDBOOKS le = lendingBooksService.listviewToEntity(lend);
-        ObservableList<ExemplqrModel> listOfCopies = lendBooks.getItems();
+        LENDBOOKS lendingBooksModel = lendingBooksService.getLendingBooksByUser(user);
+        if(lendingBooksModel == null) {
+            lend = new LendingBooksModel(dateOfTaking, user, dateOfTaking.plusDays(20));
+            lendingBooksService.AddLendBook(lend);
+            LENDBOOKS le = lendingBooksService.listviewToEntity(lend);
+            ObservableList<ExemplqrModel> listOfCopies = lendBooks.getItems();
 
-        for (ExemplqrModel uu : listOfCopies)
-        {
-            Eksemplqri eks = exemplqrService.listviewToEntity(uu);
-            LendingInfoModel lendingInfoModel = new LendingInfoModel(uu.getIdBook(), le, eks, inChitalnq);
-            notSaved = lendingInfoService.AddLendInfo(lendingInfoModel);
-            exemplqrService.MakeUnavailable(uu);
-            if (!notSaved) {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "lend info has not been saved", ButtonType.OK);
-                alert.show();
+            for (ExemplqrModel uu : listOfCopies) {
+                Eksemplqri eks = exemplqrService.listviewToEntity(uu);
+                LendingInfoModel lendingInfoModel = new LendingInfoModel(uu.getIdBook(), le, eks, inChitalnq);
+                notSaved = lendingInfoService.AddLendInfo(lendingInfoModel);
+                exemplqrService.MakeUnavailable(uu);
+                if (!notSaved) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "lend info has not been saved", ButtonType.OK);
+                    alert.show();
+                }
             }
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Books lent successfully", ButtonType.OK);
+            alert.show();
         }
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Books lent successfully", ButtonType.OK);
-        alert.show();
-
+        else{
+            Alert alert = new Alert(Alert.AlertType.ERROR, "You have already lent books", ButtonType.OK);
+            alert.show();
+        }
     }
 
 
